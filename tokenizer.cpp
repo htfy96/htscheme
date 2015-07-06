@@ -1,4 +1,5 @@
 #include "tokenizer.hpp"
+#include "types.hpp"
 #include <string>
 #include <vector>
 #include <list>
@@ -16,14 +17,14 @@ namespace
 
 Tokenizer::Tokenizer(const std::vector<std::string>& lines)
 {
-    tokenize(lines);
+    split(lines);
 }
 
-void Tokenizer::tokenize(const std::vector<std::string>& lines)
+void Tokenizer::split(const std::vector<std::string>& lines)
 {
     bool inStr = false;
-    tokens.clear();
-    tokens.push_back("");
+    rawTokens.clear();
+    rawTokens.push_back("");
     for (size_t i=0; i<lines.size(); ++i)
     {
         size_t pos=0;
@@ -35,12 +36,12 @@ void Tokenizer::tokenize(const std::vector<std::string>& lines)
             if (inStr)
             {
                 while(pos<lines[i].size() && !isChar(lines[i], pos, '"'))
-                  tokens.rbegin() -> push_back(lines[i][pos++]);
+                  rawTokens.rbegin() -> push_back(lines[i][pos++]);
                 if (pos<lines[i].size())
                 {
-                    tokens.rbegin() -> push_back('"');
+                    rawTokens.rbegin() -> push_back('"');
                     inStr = false;
-                    tokens.push_back("");
+                    rawTokens.push_back("");
                     ++pos;
                 }
             }
@@ -64,33 +65,32 @@ void Tokenizer::tokenize(const std::vector<std::string>& lines)
                   {
                       if (inStr)
                       {
-                          tokens.rbegin() -> push_back(t[j]);
+                          rawTokens.rbegin() -> push_back(t[j]);
                           if (isChar(t, j, '"'))
                             inStr = false;
                       } else
                       {
                           if (isChar(t, j, '(') || isChar(t, j, ')'))
                           {
-                              tokens.push_back(char2Str(t[j]));
-                              tokens.push_back("");
+                              rawTokens.push_back(char2Str(t[j]));
+                              rawTokens.push_back("");
                           }
                           else if (isChar(t, j, '"'))
                           {
-                              //std::cout<<"jahaha"<<std::endl;
-                              tokens.push_back(char2Str(t[j]));
+                              rawTokens.push_back(char2Str(t[j]));
                               inStr = true;
                           }
                           else
-                            tokens.rbegin() -> push_back(t[j]);
+                            rawTokens.rbegin() -> push_back(t[j]);
                       }
 
                   }
 
-                if (!inStr)tokens.push_back("");
+                if (!inStr)rawTokens.push_back("");
             } //if (inStr) else
         } //while
-        if (inStr) tokens.rbegin() -> push_back('\n'); else tokens.push_back("");
+        if (inStr) rawTokens.rbegin() -> push_back('\n'); else rawTokens.push_back("");
     } //for
-    tokens.remove_if(cond);
+    rawTokens.remove_if(cond);
 
 }//function

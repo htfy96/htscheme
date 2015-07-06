@@ -5,7 +5,7 @@
 
 SchemeUnit::SchemeUnit(std::istream& schemeStream)
 {
-    this -> preprocess(schemeStream);
+    preprocess(schemeStream);
 }
 
 void SchemeUnit::preprocess(std::istream& schemeStream)

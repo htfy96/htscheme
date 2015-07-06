@@ -3,12 +3,13 @@
 #include <string>
 #include <list>
 #include <vector>
+#include "types.hpp"
 class Tokenizer
 {
     public:
         Tokenizer(const std::vector<std::string>& lines);
-        void tokenize(const std::vector<std::string>& lines);
-        std::list<std::string> tokens;
+        void split(const std::vector<std::string>& lines);
+        std::list<std::string> rawTokens;
 };
 
 #endif
