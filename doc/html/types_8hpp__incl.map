@@ -1,2 +1,11 @@
 <map id="types.hpp" name="types.hpp">
+<area shape="rect" id="node5" href="$all_8hpp.html" title="types/all.hpp" alt="" coords="381,80,461,107"/>
+<area shape="rect" id="node6" href="$rational_8hpp.html" title="rational.hpp" alt="" coords="572,155,649,181"/>
+<area shape="rect" id="node13" href="$float_8hpp.html" title="float.hpp" alt="" coords="433,155,497,181"/>
+<area shape="rect" id="node14" href="$string_8hpp.html" title="string.hpp" alt="" coords="30,155,100,181"/>
+<area shape="rect" id="node15" href="$boolean_8hpp.html" title="boolean.hpp" alt="" coords="246,155,324,181"/>
+<area shape="rect" id="node16" href="$parenthesis_8hpp.html" title="parenthesis.hpp" alt="" coords="125,155,221,181"/>
+<area shape="rect" id="node17" href="$ops_8hpp.html" title="ops.hpp" alt="" coords="348,155,408,181"/>
+<area shape="rect" id="node7" href="$arch_8hpp.html" title="arch.hpp" alt="" coords="314,229,376,256"/>
+<area shape="rect" id="node8" href="$bigint_8hpp.html" title="utility/bigint.hpp" alt="" coords="774,229,870,256"/>
 </map>

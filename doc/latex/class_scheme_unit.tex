@@ -16,12 +16,53 @@ void \hyperlink{class_scheme_unit_a2dde8109fffd4bb83f74f5788253ffb2}{preprocess}
 \item 
 std\+::vector$<$ std\+::string $>$ \hyperlink{class_scheme_unit_a03fe6130875cfc25975efc5a6f7981da}{lines}
 \end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_scheme_unit_a90a5ac4883401fe1c38226a54ce9f43d}{Multiline\+Comment\+Status} \{ \hyperlink{class_scheme_unit_a90a5ac4883401fe1c38226a54ce9f43dafd3c8126c0b4840138b5586975c6c24e}{Neutral}, 
+\hyperlink{class_scheme_unit_a90a5ac4883401fe1c38226a54ce9f43da92f34af4ca75d006abe1f83629308d9d}{Comment\+Start}, 
+\hyperlink{class_scheme_unit_a90a5ac4883401fe1c38226a54ce9f43da9e9ce5882d904a46fe5fc0daa9f7194a}{Comment\+End}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_scheme_unit_ae40572c01bc15883f4bb0d69044f859f}{strip\+Semi\+Colon} (std\+::string \&line)
+\item 
+\hyperlink{class_scheme_unit_a90a5ac4883401fe1c38226a54ce9f43d}{Multiline\+Comment\+Status} \hyperlink{class_scheme_unit_a0d43b5caa10f37002e656efadedba4bc}{process\+Multiline\+Comment} (std\+::string \&line)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_scheme_unit_adcc6f95c968825e3e31d5203ce84e2e8}{in\+Comment}
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 
 
 Definition at line 8 of file preprocessor.\+hpp.
+
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_scheme_unit_a90a5ac4883401fe1c38226a54ce9f43d}{}\index{Scheme\+Unit@{Scheme\+Unit}!Multiline\+Comment\+Status@{Multiline\+Comment\+Status}}
+\index{Multiline\+Comment\+Status@{Multiline\+Comment\+Status}!Scheme\+Unit@{Scheme\+Unit}}
+\subsubsection[{Multiline\+Comment\+Status}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Scheme\+Unit\+::\+Multiline\+Comment\+Status}\hspace{0.3cm}{\ttfamily [private]}}\label{class_scheme_unit_a90a5ac4883401fe1c38226a54ce9f43d}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Neutral@{Neutral}!Scheme\+Unit@{Scheme\+Unit}}\index{Scheme\+Unit@{Scheme\+Unit}!Neutral@{Neutral}}\item[{\em 
+\hypertarget{class_scheme_unit_a90a5ac4883401fe1c38226a54ce9f43dafd3c8126c0b4840138b5586975c6c24e}{}Neutral\label{class_scheme_unit_a90a5ac4883401fe1c38226a54ce9f43dafd3c8126c0b4840138b5586975c6c24e}
+}]\index{Comment\+Start@{Comment\+Start}!Scheme\+Unit@{Scheme\+Unit}}\index{Scheme\+Unit@{Scheme\+Unit}!Comment\+Start@{Comment\+Start}}\item[{\em 
+\hypertarget{class_scheme_unit_a90a5ac4883401fe1c38226a54ce9f43da92f34af4ca75d006abe1f83629308d9d}{}Comment\+Start\label{class_scheme_unit_a90a5ac4883401fe1c38226a54ce9f43da92f34af4ca75d006abe1f83629308d9d}
+}]\index{Comment\+End@{Comment\+End}!Scheme\+Unit@{Scheme\+Unit}}\index{Scheme\+Unit@{Scheme\+Unit}!Comment\+End@{Comment\+End}}\item[{\em 
+\hypertarget{class_scheme_unit_a90a5ac4883401fe1c38226a54ce9f43da9e9ce5882d904a46fe5fc0daa9f7194a}{}Comment\+End\label{class_scheme_unit_a90a5ac4883401fe1c38226a54ce9f43da9e9ce5882d904a46fe5fc0daa9f7194a}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 12 of file preprocessor.\+hpp.
 
 
 
@@ -51,9 +92,38 @@ Definition at line 6 of file preprocessor.\+cpp.
 
 Definition at line 11 of file preprocessor.\+cpp.
 
+\hypertarget{class_scheme_unit_a0d43b5caa10f37002e656efadedba4bc}{}\index{Scheme\+Unit@{Scheme\+Unit}!process\+Multiline\+Comment@{process\+Multiline\+Comment}}
+\index{process\+Multiline\+Comment@{process\+Multiline\+Comment}!Scheme\+Unit@{Scheme\+Unit}}
+\subsubsection[{process\+Multiline\+Comment}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scheme\+Unit\+::\+Multiline\+Comment\+Status} Scheme\+Unit\+::process\+Multiline\+Comment (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{line}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_scheme_unit_a0d43b5caa10f37002e656efadedba4bc}
+
+
+Definition at line 27 of file preprocessor.\+cpp.
+
+\hypertarget{class_scheme_unit_ae40572c01bc15883f4bb0d69044f859f}{}\index{Scheme\+Unit@{Scheme\+Unit}!strip\+Semi\+Colon@{strip\+Semi\+Colon}}
+\index{strip\+Semi\+Colon@{strip\+Semi\+Colon}!Scheme\+Unit@{Scheme\+Unit}}
+\subsubsection[{strip\+Semi\+Colon}]{\setlength{\rightskip}{0pt plus 5cm}void Scheme\+Unit\+::strip\+Semi\+Colon (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{line}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_scheme_unit_ae40572c01bc15883f4bb0d69044f859f}
+
+
+Definition at line 50 of file preprocessor.\+cpp.
+
 
 
 \subsection{Member Data Documentation}
+\hypertarget{class_scheme_unit_adcc6f95c968825e3e31d5203ce84e2e8}{}\index{Scheme\+Unit@{Scheme\+Unit}!in\+Comment@{in\+Comment}}
+\index{in\+Comment@{in\+Comment}!Scheme\+Unit@{Scheme\+Unit}}
+\subsubsection[{in\+Comment}]{\setlength{\rightskip}{0pt plus 5cm}bool Scheme\+Unit\+::in\+Comment\hspace{0.3cm}{\ttfamily [private]}}\label{class_scheme_unit_adcc6f95c968825e3e31d5203ce84e2e8}
+
+
+Definition at line 11 of file preprocessor.\+hpp.
+
 \hypertarget{class_scheme_unit_a03fe6130875cfc25975efc5a6f7981da}{}\index{Scheme\+Unit@{Scheme\+Unit}!lines@{lines}}
 \index{lines@{lines}!Scheme\+Unit@{Scheme\+Unit}}
 \subsubsection[{lines}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$ Scheme\+Unit\+::lines}\label{class_scheme_unit_a03fe6130875cfc25975efc5a6f7981da}

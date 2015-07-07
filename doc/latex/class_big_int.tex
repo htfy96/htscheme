@@ -51,6 +51,32 @@ bool \hyperlink{class_big_int_ae5bdb87103df4be652062b015a1fa653}{operator$>$=} (
 \item 
 bool \hyperlink{class_big_int_ada9b7b9e96bb3aad13c48637397b6f31}{operator$<$=} (const \hyperlink{class_big_int}{Big\+Int} \&b) const 
 \end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_big_int_a9b728ee8c6214feee03d15885dc3f877}{is\+Zero} () const 
+\item 
+\hyperlink{class_big_int}{Big\+Int} \& \hyperlink{class_big_int_a51120af6199fce924122ec944d65ce00}{raw\+Plus} (const \hyperlink{class_big_int}{Big\+Int} \&b)
+\item 
+\hyperlink{class_big_int}{Big\+Int} \& \hyperlink{class_big_int_a467335bcd608b80a7e09ae3ce112b95c}{raw\+Minus} (const \hyperlink{class_big_int}{Big\+Int} \&b)
+\item 
+std\+::pair$<$ \hyperlink{class_big_int}{Big\+Int} \&, \hyperlink{class_big_int}{Big\+Int} $>$ \hyperlink{class_big_int_a5a7f5fa6ddac244484ec62d3187ebb92}{divandmod} (const \hyperlink{class_big_int}{Big\+Int} \&b)
+\item 
+bool \hyperlink{class_big_int_af71469db665f6e014869def10d28e62f}{raw\+Smaller} (const \hyperlink{class_big_int}{Big\+Int} \&b) const 
+\item 
+bool \hyperlink{class_big_int_a70b66d14ed0dd00b329abfc339368717}{raw\+Greater} (const \hyperlink{class_big_int}{Big\+Int} \&b) const 
+\item 
+\hyperlink{class_big_int}{Big\+Int} \& \hyperlink{class_big_int_a2f8c95c555bc0bcde86daf4de40730c5}{set\+Sign} (const bool sign)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ int32\+\_\+t $>$ \hyperlink{class_big_int_a55b39aa05dd18b09fe30df43e13936d9}{d}
+\item 
+size\+\_\+t \hyperlink{class_big_int_a72594f018514454b2bf2a398ed21e4a6}{len}
+\item 
+bool \hyperlink{class_big_int_afc36eaf290d1b537127ba9f651b5db86}{non\+Neg}
+\end{DoxyCompactItemize}
 \subsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
@@ -127,6 +153,28 @@ Definition at line 35 of file bigint.\+cpp.
 
 
 Definition at line 56 of file bigint.\+cpp.
+
+\hypertarget{class_big_int_a5a7f5fa6ddac244484ec62d3187ebb92}{}\index{Big\+Int@{Big\+Int}!divandmod@{divandmod}}
+\index{divandmod@{divandmod}!Big\+Int@{Big\+Int}}
+\subsubsection[{divandmod}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$ {\bf Big\+Int} \&, {\bf Big\+Int} $>$ Big\+Int\+::divandmod (
+\begin{DoxyParamCaption}
+\item[{const {\bf Big\+Int} \&}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_big_int_a5a7f5fa6ddac244484ec62d3187ebb92}
+
+
+Definition at line 315 of file bigint.\+cpp.
+
+\hypertarget{class_big_int_a9b728ee8c6214feee03d15885dc3f877}{}\index{Big\+Int@{Big\+Int}!is\+Zero@{is\+Zero}}
+\index{is\+Zero@{is\+Zero}!Big\+Int@{Big\+Int}}
+\subsubsection[{is\+Zero}]{\setlength{\rightskip}{0pt plus 5cm}bool Big\+Int\+::is\+Zero (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}\label{class_big_int_a9b728ee8c6214feee03d15885dc3f877}
+
+
+Definition at line 15 of file bigint.\+cpp.
 
 \hypertarget{class_big_int_ad6a59ed7dedbe35433c1a83ca751fe88}{}\index{Big\+Int@{Big\+Int}!operator"!=@{operator"!=}}
 \index{operator"!=@{operator"!=}!Big\+Int@{Big\+Int}}
@@ -315,6 +363,61 @@ Definition at line 133 of file bigint.\+cpp.
 
 Definition at line 151 of file bigint.\+cpp.
 
+\hypertarget{class_big_int_a70b66d14ed0dd00b329abfc339368717}{}\index{Big\+Int@{Big\+Int}!raw\+Greater@{raw\+Greater}}
+\index{raw\+Greater@{raw\+Greater}!Big\+Int@{Big\+Int}}
+\subsubsection[{raw\+Greater}]{\setlength{\rightskip}{0pt plus 5cm}bool Big\+Int\+::raw\+Greater (
+\begin{DoxyParamCaption}
+\item[{const {\bf Big\+Int} \&}]{b}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}\label{class_big_int_a70b66d14ed0dd00b329abfc339368717}
+
+
+Definition at line 119 of file bigint.\+cpp.
+
+\hypertarget{class_big_int_a467335bcd608b80a7e09ae3ce112b95c}{}\index{Big\+Int@{Big\+Int}!raw\+Minus@{raw\+Minus}}
+\index{raw\+Minus@{raw\+Minus}!Big\+Int@{Big\+Int}}
+\subsubsection[{raw\+Minus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Big\+Int} \& Big\+Int\+::raw\+Minus (
+\begin{DoxyParamCaption}
+\item[{const {\bf Big\+Int} \&}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_big_int_a467335bcd608b80a7e09ae3ce112b95c}
+
+
+Definition at line 182 of file bigint.\+cpp.
+
+\hypertarget{class_big_int_a51120af6199fce924122ec944d65ce00}{}\index{Big\+Int@{Big\+Int}!raw\+Plus@{raw\+Plus}}
+\index{raw\+Plus@{raw\+Plus}!Big\+Int@{Big\+Int}}
+\subsubsection[{raw\+Plus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Big\+Int} \& Big\+Int\+::raw\+Plus (
+\begin{DoxyParamCaption}
+\item[{const {\bf Big\+Int} \&}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_big_int_a51120af6199fce924122ec944d65ce00}
+
+
+Definition at line 161 of file bigint.\+cpp.
+
+\hypertarget{class_big_int_af71469db665f6e014869def10d28e62f}{}\index{Big\+Int@{Big\+Int}!raw\+Smaller@{raw\+Smaller}}
+\index{raw\+Smaller@{raw\+Smaller}!Big\+Int@{Big\+Int}}
+\subsubsection[{raw\+Smaller}]{\setlength{\rightskip}{0pt plus 5cm}bool Big\+Int\+::raw\+Smaller (
+\begin{DoxyParamCaption}
+\item[{const {\bf Big\+Int} \&}]{b}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}\label{class_big_int_af71469db665f6e014869def10d28e62f}
+
+
+Definition at line 114 of file bigint.\+cpp.
+
+\hypertarget{class_big_int_a2f8c95c555bc0bcde86daf4de40730c5}{}\index{Big\+Int@{Big\+Int}!set\+Sign@{set\+Sign}}
+\index{set\+Sign@{set\+Sign}!Big\+Int@{Big\+Int}}
+\subsubsection[{set\+Sign}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Big\+Int} \& Big\+Int\+::set\+Sign (
+\begin{DoxyParamCaption}
+\item[{const bool}]{sign}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_big_int_a2f8c95c555bc0bcde86daf4de40730c5}
+
+
+Definition at line 309 of file bigint.\+cpp.
+
 
 
 \subsection{Friends And Related Function Documentation}
@@ -353,6 +456,30 @@ Definition at line 240 of file bigint.\+cpp.
 
 
 Definition at line 104 of file bigint.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_big_int_a55b39aa05dd18b09fe30df43e13936d9}{}\index{Big\+Int@{Big\+Int}!d@{d}}
+\index{d@{d}!Big\+Int@{Big\+Int}}
+\subsubsection[{d}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$int32\+\_\+t$>$ Big\+Int\+::d\hspace{0.3cm}{\ttfamily [private]}}\label{class_big_int_a55b39aa05dd18b09fe30df43e13936d9}
+
+
+Definition at line 14 of file bigint.\+hpp.
+
+\hypertarget{class_big_int_a72594f018514454b2bf2a398ed21e4a6}{}\index{Big\+Int@{Big\+Int}!len@{len}}
+\index{len@{len}!Big\+Int@{Big\+Int}}
+\subsubsection[{len}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Big\+Int\+::len\hspace{0.3cm}{\ttfamily [private]}}\label{class_big_int_a72594f018514454b2bf2a398ed21e4a6}
+
+
+Definition at line 15 of file bigint.\+hpp.
+
+\hypertarget{class_big_int_afc36eaf290d1b537127ba9f651b5db86}{}\index{Big\+Int@{Big\+Int}!non\+Neg@{non\+Neg}}
+\index{non\+Neg@{non\+Neg}!Big\+Int@{Big\+Int}}
+\subsubsection[{non\+Neg}]{\setlength{\rightskip}{0pt plus 5cm}bool Big\+Int\+::non\+Neg\hspace{0.3cm}{\ttfamily [private]}}\label{class_big_int_afc36eaf290d1b537127ba9f651b5db86}
+
+
+Definition at line 16 of file bigint.\+hpp.
 
 
 

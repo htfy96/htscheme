@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>ht&#39;s Scheme Intepreter: types/parenthesis.hpp File Reference</title>
+<title>ht&#39;s Scheme Interpreter: types/parenthesis.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">ht&#39;s Scheme Intepreter
+   <div id="projectname">ht&#39;s Scheme Interpreter
    &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">a simplified scheme interpreter implementation</div>
@@ -106,25 +106,74 @@ $(document).ready(function(){initNavTree('parenthesis_8hpp.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">parenthesis.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;cstddef&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="arch_8hpp_source.html">arch.hpp</a>&quot;</code><br />
+<code>#include &lt;string&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for parenthesis.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="parenthesis_8hpp__incl.png" border="0" usemap="#types_2parenthesis_8hpp" alt=""/></div>
+<map name="types_2parenthesis_8hpp" id="types_2parenthesis_8hpp">
+<area shape="rect" id="node2" href="arch_8hpp.html" title="arch.hpp" alt="" coords="92,80,155,107"/></map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="parenthesis_8hpp__dep__incl.png" border="0" usemap="#types_2parenthesis_8hppdep" alt=""/></div>
+<map name="types_2parenthesis_8hppdep" id="types_2parenthesis_8hppdep">
+<area shape="rect" id="node2" href="all_8hpp.html" title="types/all.hpp" alt="" coords="115,80,195,107"/><area shape="rect" id="node3" href="types_8hpp.html" title="types.hpp" alt="" coords="121,155,189,181"/><area shape="rect" id="node4" href="tokenizer_8hpp.html" title="tokenizer.hpp" alt="" coords="72,229,157,256"/><area shape="rect" id="node6" href="tokenizer_8cpp.html" title="tokenizer.cpp" alt="" coords="153,304,237,331"/><area shape="rect" id="node5" href="tokenizertest_8cpp.html" title="test/tokenizertest.cpp" alt="" coords="5,304,128,331"/></map>
 </div>
 </div>
 <p><a href="parenthesis_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_parenthesis_info.html">ParenthesisInfo</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:acaed96232ffc6b1d815e2f9e7e4882d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parenthesis_8hpp.html#acaed96232ffc6b1d815e2f9e7e4882d0">isLeftParenthesis</a> (const std::string &amp;token)</td></tr>
+<tr class="separator:acaed96232ffc6b1d815e2f9e7e4882d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0701d29856ffb57ad3ec12dbb0d71d9f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parenthesis_8hpp.html#a0701d29856ffb57ad3ec12dbb0d71d9f">isRightParenthesis</a> (const std::string &amp;token)</td></tr>
+<tr class="separator:a0701d29856ffb57ad3ec12dbb0d71d9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="acaed96232ffc6b1d815e2f9e7e4882d0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isLeftParenthesis </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>token</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="parenthesis_8hpp_source.html#l00005">5</a> of file <a class="el" href="parenthesis_8hpp_source.html">parenthesis.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0701d29856ffb57ad3ec12dbb0d71d9f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isRightParenthesis </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>token</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="parenthesis_8hpp_source.html#l00006">6</a> of file <a class="el" href="parenthesis_8hpp_source.html">parenthesis.hpp</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

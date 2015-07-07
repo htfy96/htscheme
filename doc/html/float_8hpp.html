@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>ht&#39;s Scheme Intepreter: types/float.hpp File Reference</title>
+<title>ht&#39;s Scheme Interpreter: types/float.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">ht&#39;s Scheme Intepreter
+   <div id="projectname">ht&#39;s Scheme Interpreter
    &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">a simplified scheme interpreter implementation</div>
@@ -106,18 +106,42 @@ $(document).ready(function(){initNavTree('float_8hpp.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">float.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &quot;<a class="el" href="arch_8hpp_source.html">arch.hpp</a>&quot;</code><br />
+<code>#include &lt;string&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for float.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="float_8hpp__incl.png" border="0" usemap="#types_2float_8hpp" alt=""/></div>
+<map name="types_2float_8hpp" id="types_2float_8hpp">
+<area shape="rect" id="node2" href="arch_8hpp.html" title="arch.hpp" alt="" coords="92,80,155,107"/></map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="float_8hpp__dep__incl.png" border="0" usemap="#types_2float_8hppdep" alt=""/></div>
+<map name="types_2float_8hppdep" id="types_2float_8hppdep">
+<area shape="rect" id="node2" href="all_8hpp.html" title="types/all.hpp" alt="" coords="115,80,195,107"/><area shape="rect" id="node7" href="float_8cpp.html" title="types/float.cpp" alt="" coords="219,80,309,107"/><area shape="rect" id="node3" href="types_8hpp.html" title="types.hpp" alt="" coords="121,155,189,181"/><area shape="rect" id="node4" href="tokenizer_8hpp.html" title="tokenizer.hpp" alt="" coords="72,229,157,256"/><area shape="rect" id="node6" href="tokenizer_8cpp.html" title="tokenizer.cpp" alt="" coords="153,304,237,331"/><area shape="rect" id="node5" href="tokenizertest_8cpp.html" title="test/tokenizertest.cpp" alt="" coords="5,304,128,331"/></map>
+</div>
+</div>
 <p><a href="float_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a262844e4d29c844e2c448abe0ce82f14"><td class="memItemLeft" align="right" valign="top">typedef double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="float_8hpp.html#a262844e4d29c844e2c448abe0ce82f14">FloatType</a></td></tr>
 <tr class="separator:a262844e4d29c844e2c448abe0ce82f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a2b3841344945adf05970367e441ce957"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="float_8hpp.html#a2b3841344945adf05970367e441ce957">isFloat</a> (const std::string &amp;token)</td></tr>
+<tr class="separator:a2b3841344945adf05970367e441ce957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a191ff454f9fc10c402996d43d92591e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="union_extra_info.html">ExtraInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="float_8hpp.html#a191ff454f9fc10c402996d43d92591e2">getFloatExtraInfo</a> (const std::string &amp;token)</td></tr>
+<tr class="separator:a191ff454f9fc10c402996d43d92591e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a class="anchor" id="a262844e4d29c844e2c448abe0ce82f14"></a>
@@ -130,7 +154,42 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="float_8hpp_source.html#l00003">3</a> of file <a class="el" href="float_8hpp_source.html">float.hpp</a>.</p>
+<p>Definition at line <a class="el" href="float_8hpp_source.html#l00005">5</a> of file <a class="el" href="float_8hpp_source.html">float.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a191ff454f9fc10c402996d43d92591e2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="union_extra_info.html">ExtraInfo</a> getFloatExtraInfo </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>token</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2b3841344945adf05970367e441ce957"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isFloat </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>token</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="float_8cpp_source.html#l00041">41</a> of file <a class="el" href="float_8cpp_source.html">float.cpp</a>.</p>
 
 </div>
 </div>

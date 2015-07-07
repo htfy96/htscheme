@@ -4,5 +4,7 @@ var searchData=
   ['bigint_2ecpp',['bigint.cpp',['../bigint_8cpp.html',1,'']]],
   ['bigint_2ehpp',['bigint.hpp',['../bigint_8hpp.html',1,'']]],
   ['biginttest_2ecpp',['biginttest.cpp',['../biginttest_8cpp.html',1,'']]],
-  ['boolean',['Boolean',['../types_8hpp.html#aa520fbf142ba1e7e659590c07da31921a3e74f2723415f1cc3cc2f3883f68add8',1,'types.hpp']]]
+  ['boolean',['boolean',['../union_extra_info.html#aca965abbb21d8d62613031fd4c335d82',1,'ExtraInfo::boolean()'],['../all_8hpp.html#aa520fbf142ba1e7e659590c07da31921a3e74f2723415f1cc3cc2f3883f68add8',1,'Boolean():&#160;all.hpp']]],
+  ['boolean_2ehpp',['boolean.hpp',['../boolean_8hpp.html',1,'']]],
+  ['booleantype',['BooleanType',['../boolean_8hpp.html#a0302c79f6d6b93d902af278d1191e054',1,'boolean.hpp']]]
 ];

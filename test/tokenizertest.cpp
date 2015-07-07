@@ -11,7 +11,7 @@ int main()
     ifstream ifs("test/tokenizer.test"); 
     SchemeUnit s(ifs);
     Tokenizer t(s.lines);
-    for_each(t.tokens.begin(), t.tokens.end(), [](const string& c) {cout<<c<<endl; });
+    for_each(t.tokens.begin(), t.tokens.end(), [](const string& c) { /* pending */ });
     
 
     return 0;

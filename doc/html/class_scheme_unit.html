@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>ht&#39;s Scheme Intepreter: SchemeUnit Class Reference</title>
+<title>ht&#39;s Scheme Interpreter: SchemeUnit Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">ht&#39;s Scheme Intepreter
+   <div id="projectname">ht&#39;s Scheme Interpreter
    &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">a simplified scheme interpreter implementation</div>
@@ -109,6 +109,9 @@ $(document).ready(function(){initNavTree('class_scheme_unit.html','');});
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_scheme_unit-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SchemeUnit Class Reference</div>  </div>
@@ -128,11 +131,62 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a03fe6130875cfc25975efc5a6f7981da"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scheme_unit.html#a03fe6130875cfc25975efc5a6f7981da">lines</a></td></tr>
 <tr class="separator:a03fe6130875cfc25975efc5a6f7981da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:a90a5ac4883401fe1c38226a54ce9f43d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scheme_unit.html#a90a5ac4883401fe1c38226a54ce9f43d">MultilineCommentStatus</a> { <a class="el" href="class_scheme_unit.html#a90a5ac4883401fe1c38226a54ce9f43dafd3c8126c0b4840138b5586975c6c24e">Neutral</a>, 
+<a class="el" href="class_scheme_unit.html#a90a5ac4883401fe1c38226a54ce9f43da92f34af4ca75d006abe1f83629308d9d">CommentStart</a>, 
+<a class="el" href="class_scheme_unit.html#a90a5ac4883401fe1c38226a54ce9f43da9e9ce5882d904a46fe5fc0daa9f7194a">CommentEnd</a>
+ }</td></tr>
+<tr class="separator:a90a5ac4883401fe1c38226a54ce9f43d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ae40572c01bc15883f4bb0d69044f859f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scheme_unit.html#ae40572c01bc15883f4bb0d69044f859f">stripSemiColon</a> (std::string &amp;line)</td></tr>
+<tr class="separator:ae40572c01bc15883f4bb0d69044f859f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d43b5caa10f37002e656efadedba4bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scheme_unit.html#a90a5ac4883401fe1c38226a54ce9f43d">MultilineCommentStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scheme_unit.html#a0d43b5caa10f37002e656efadedba4bc">processMultilineComment</a> (std::string &amp;line)</td></tr>
+<tr class="separator:a0d43b5caa10f37002e656efadedba4bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:adcc6f95c968825e3e31d5203ce84e2e8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scheme_unit.html#adcc6f95c968825e3e31d5203ce84e2e8">inComment</a></td></tr>
+<tr class="separator:adcc6f95c968825e3e31d5203ce84e2e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="preprocessor_8hpp_source.html#l00008">8</a> of file <a class="el" href="preprocessor_8hpp_source.html">preprocessor.hpp</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="a90a5ac4883401fe1c38226a54ce9f43d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_scheme_unit.html#a90a5ac4883401fe1c38226a54ce9f43d">SchemeUnit::MultilineCommentStatus</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a90a5ac4883401fe1c38226a54ce9f43dafd3c8126c0b4840138b5586975c6c24e"></a>Neutral&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a90a5ac4883401fe1c38226a54ce9f43da92f34af4ca75d006abe1f83629308d9d"></a>CommentStart&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a90a5ac4883401fe1c38226a54ce9f43da9e9ce5882d904a46fe5fc0daa9f7194a"></a>CommentEnd&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="preprocessor_8hpp_source.html#l00012">12</a> of file <a class="el" href="preprocessor_8hpp_source.html">preprocessor.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a403e550c702c23689ff9be1d40a5847c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -170,7 +224,81 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a0d43b5caa10f37002e656efadedba4bc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_scheme_unit.html#a90a5ac4883401fe1c38226a54ce9f43d">SchemeUnit::MultilineCommentStatus</a> SchemeUnit::processMultilineComment </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="preprocessor_8cpp_source.html#l00027">27</a> of file <a class="el" href="preprocessor_8cpp_source.html">preprocessor.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae40572c01bc15883f4bb0d69044f859f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SchemeUnit::stripSemiColon </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="preprocessor_8cpp_source.html#l00050">50</a> of file <a class="el" href="preprocessor_8cpp_source.html">preprocessor.cpp</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="adcc6f95c968825e3e31d5203ce84e2e8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SchemeUnit::inComment</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="preprocessor_8hpp_source.html#l00011">11</a> of file <a class="el" href="preprocessor_8hpp_source.html">preprocessor.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a03fe6130875cfc25975efc5a6f7981da"></a>
 <div class="memitem">
 <div class="memproto">

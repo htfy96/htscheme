@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['database',['database',['../_8ycm__extra__conf_8py.html#a64dbaa3229ec575b68ec333442e10cee',1,'.ycm_extra_conf.py']]],
-  ['depth',['depth',['../struct_parenthesis_info.html#adc597d13835a1102eefb3f8fa3147997',1,'ParenthesisInfo']]]
+  ['checkerfunc',['checkerFunc',['../struct_checker.html#a5f7c0eb1e12fb66165024172098144d0',1,'Checker']]],
+  ['checkers',['checkers',['../types_8hpp.html#ae64c523606e03e814b9143ebeaca5d82',1,'types.hpp']]],
+  ['compilation_5fdatabase_5ffolder',['compilation_database_folder',['../_8ycm__extra__conf_8py.html#a6a4d7e96c7bc9093b406af626b7936a2',1,'.ycm_extra_conf.py']]]
 ];

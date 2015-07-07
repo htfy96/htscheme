@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>ht&#39;s Scheme Intepreter: BigInt Class Reference</title>
+<title>ht&#39;s Scheme Interpreter: BigInt Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">ht&#39;s Scheme Intepreter
+   <div id="projectname">ht&#39;s Scheme Interpreter
    &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">a simplified scheme interpreter implementation</div>
@@ -108,6 +108,8 @@ $(document).ready(function(){initNavTree('class_big_int.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="class_big_int-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -163,6 +165,32 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae5bdb87103df4be652062b015a1fa653"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada9b7b9e96bb3aad13c48637397b6f31"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_big_int.html#ada9b7b9e96bb3aad13c48637397b6f31">operator&lt;=</a> (const <a class="el" href="class_big_int.html">BigInt</a> &amp;b) const </td></tr>
 <tr class="separator:ada9b7b9e96bb3aad13c48637397b6f31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a9b728ee8c6214feee03d15885dc3f877"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_big_int.html#a9b728ee8c6214feee03d15885dc3f877">isZero</a> () const </td></tr>
+<tr class="separator:a9b728ee8c6214feee03d15885dc3f877"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51120af6199fce924122ec944d65ce00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_big_int.html">BigInt</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_big_int.html#a51120af6199fce924122ec944d65ce00">rawPlus</a> (const <a class="el" href="class_big_int.html">BigInt</a> &amp;b)</td></tr>
+<tr class="separator:a51120af6199fce924122ec944d65ce00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a467335bcd608b80a7e09ae3ce112b95c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_big_int.html">BigInt</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_big_int.html#a467335bcd608b80a7e09ae3ce112b95c">rawMinus</a> (const <a class="el" href="class_big_int.html">BigInt</a> &amp;b)</td></tr>
+<tr class="separator:a467335bcd608b80a7e09ae3ce112b95c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a7f5fa6ddac244484ec62d3187ebb92"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="class_big_int.html">BigInt</a> &amp;, <a class="el" href="class_big_int.html">BigInt</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_big_int.html#a5a7f5fa6ddac244484ec62d3187ebb92">divandmod</a> (const <a class="el" href="class_big_int.html">BigInt</a> &amp;b)</td></tr>
+<tr class="separator:a5a7f5fa6ddac244484ec62d3187ebb92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af71469db665f6e014869def10d28e62f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_big_int.html#af71469db665f6e014869def10d28e62f">rawSmaller</a> (const <a class="el" href="class_big_int.html">BigInt</a> &amp;b) const </td></tr>
+<tr class="separator:af71469db665f6e014869def10d28e62f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70b66d14ed0dd00b329abfc339368717"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_big_int.html#a70b66d14ed0dd00b329abfc339368717">rawGreater</a> (const <a class="el" href="class_big_int.html">BigInt</a> &amp;b) const </td></tr>
+<tr class="separator:a70b66d14ed0dd00b329abfc339368717"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f8c95c555bc0bcde86daf4de40730c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_big_int.html">BigInt</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_big_int.html#a2f8c95c555bc0bcde86daf4de40730c5">setSign</a> (const bool sign)</td></tr>
+<tr class="separator:a2f8c95c555bc0bcde86daf4de40730c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a55b39aa05dd18b09fe30df43e13936d9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_big_int.html#a55b39aa05dd18b09fe30df43e13936d9">d</a></td></tr>
+<tr class="separator:a55b39aa05dd18b09fe30df43e13936d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72594f018514454b2bf2a398ed21e4a6"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_big_int.html#a72594f018514454b2bf2a398ed21e4a6">len</a></td></tr>
+<tr class="separator:a72594f018514454b2bf2a398ed21e4a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc36eaf290d1b537127ba9f651b5db86"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_big_int.html#afc36eaf290d1b537127ba9f651b5db86">nonNeg</a></td></tr>
+<tr class="separator:afc36eaf290d1b537127ba9f651b5db86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -265,6 +293,57 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="bigint_8cpp_source.html#l00056">56</a> of file <a class="el" href="bigint_8cpp_source.html">bigint.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5a7f5fa6ddac244484ec62d3187ebb92"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; <a class="el" href="class_big_int.html">BigInt</a> &amp;, <a class="el" href="class_big_int.html">BigInt</a> &gt; BigInt::divandmod </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_big_int.html">BigInt</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bigint_8cpp_source.html#l00315">315</a> of file <a class="el" href="bigint_8cpp_source.html">bigint.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9b728ee8c6214feee03d15885dc3f877"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BigInt::isZero </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bigint_8cpp_source.html#l00015">15</a> of file <a class="el" href="bigint_8cpp_source.html">bigint.cpp</a>.</p>
 
 </div>
 </div>
@@ -573,6 +652,136 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a70b66d14ed0dd00b329abfc339368717"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BigInt::rawGreater </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_big_int.html">BigInt</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bigint_8cpp_source.html#l00119">119</a> of file <a class="el" href="bigint_8cpp_source.html">bigint.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a467335bcd608b80a7e09ae3ce112b95c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_big_int.html">BigInt</a> &amp; BigInt::rawMinus </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_big_int.html">BigInt</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bigint_8cpp_source.html#l00182">182</a> of file <a class="el" href="bigint_8cpp_source.html">bigint.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a51120af6199fce924122ec944d65ce00"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_big_int.html">BigInt</a> &amp; BigInt::rawPlus </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_big_int.html">BigInt</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bigint_8cpp_source.html#l00161">161</a> of file <a class="el" href="bigint_8cpp_source.html">bigint.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af71469db665f6e014869def10d28e62f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BigInt::rawSmaller </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_big_int.html">BigInt</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bigint_8cpp_source.html#l00114">114</a> of file <a class="el" href="bigint_8cpp_source.html">bigint.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2f8c95c555bc0bcde86daf4de40730c5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_big_int.html">BigInt</a> &amp; BigInt::setSign </td>
+          <td>(</td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>sign</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bigint_8cpp_source.html#l00309">309</a> of file <a class="el" href="bigint_8cpp_source.html">bigint.cpp</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
 <a class="anchor" id="a0d8814d1177634c5e0ee08e2bbccf328"></a>
 <div class="memitem">
@@ -681,6 +890,73 @@ template&lt;typename CompareFunc &gt; </div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="bigint_8cpp_source.html#l00104">104</a> of file <a class="el" href="bigint_8cpp_source.html">bigint.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a55b39aa05dd18b09fe30df43e13936d9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int32_t&gt; BigInt::d</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bigint_8hpp_source.html#l00014">14</a> of file <a class="el" href="bigint_8hpp_source.html">bigint.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a72594f018514454b2bf2a398ed21e4a6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t BigInt::len</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bigint_8hpp_source.html#l00015">15</a> of file <a class="el" href="bigint_8hpp_source.html">bigint.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afc36eaf290d1b537127ba9f651b5db86"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BigInt::nonNeg</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bigint_8hpp_source.html#l00016">16</a> of file <a class="el" href="bigint_8hpp_source.html">bigint.hpp</a>.</p>
 
 </div>
 </div>

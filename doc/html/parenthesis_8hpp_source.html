@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>ht&#39;s Scheme Intepreter: types/parenthesis.hpp Source File</title>
+<title>ht&#39;s Scheme Interpreter: types/parenthesis.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">ht&#39;s Scheme Intepreter
+   <div id="projectname">ht&#39;s Scheme Interpreter
    &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">a simplified scheme interpreter implementation</div>
@@ -109,18 +109,16 @@ $(document).ready(function(){initNavTree('parenthesis_8hpp_source.html','');});
 <div class="title">parenthesis.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="parenthesis_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __SCHEME_TYPES_PARENTHESIS</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __SCHEME_TYPES_PARENTHESIS</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;cstddef&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="struct_parenthesis_info.html">    4</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_parenthesis_info.html">ParenthesisInfo</a></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="struct_parenthesis_info.html#a42759243dab890dc42d22120daef0440">    6</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="struct_parenthesis_info.html#a42759243dab890dc42d22120daef0440">pairPos</a>;</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="struct_parenthesis_info.html#adc597d13835a1102eefb3f8fa3147997">    7</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="struct_parenthesis_info.html#adc597d13835a1102eefb3f8fa3147997">depth</a>;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;};</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="struct_parenthesis_info_html"><div class="ttname"><a href="struct_parenthesis_info.html">ParenthesisInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="parenthesis_8hpp_source.html#l00004">parenthesis.hpp:4</a></div></div>
-<div class="ttc" id="struct_parenthesis_info_html_a42759243dab890dc42d22120daef0440"><div class="ttname"><a href="struct_parenthesis_info.html#a42759243dab890dc42d22120daef0440">ParenthesisInfo::pairPos</a></div><div class="ttdeci">size_t pairPos</div><div class="ttdef"><b>Definition:</b> <a href="parenthesis_8hpp_source.html#l00006">parenthesis.hpp:6</a></div></div>
-<div class="ttc" id="struct_parenthesis_info_html_adc597d13835a1102eefb3f8fa3147997"><div class="ttname"><a href="struct_parenthesis_info.html#adc597d13835a1102eefb3f8fa3147997">ParenthesisInfo::depth</a></div><div class="ttdeci">size_t depth</div><div class="ttdef"><b>Definition:</b> <a href="parenthesis_8hpp_source.html#l00007">parenthesis.hpp:7</a></div></div>
+<a href="parenthesis_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">__SCHEME_TYPES_PARENTHESIS</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">__SCHEME_TYPES_PARENTHESIS</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="arch_8hpp.html">&quot;arch.hpp&quot;</a></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">string</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="parenthesis_8hpp.html#acaed96232ffc6b1d815e2f9e7e4882d0">    5</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="parenthesis_8hpp.html#acaed96232ffc6b1d815e2f9e7e4882d0">isLeftParenthesis</a>(<span class="keyword">const</span> std::string&amp; token) { <span class="keywordflow">return</span> token == <span class="stringliteral">&quot;(&quot;</span>; }</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="parenthesis_8hpp.html#a0701d29856ffb57ad3ec12dbb0d71d9f">    6</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="parenthesis_8hpp.html#a0701d29856ffb57ad3ec12dbb0d71d9f">isRightParenthesis</a>(<span class="keyword">const</span> std::string&amp; token) { <span class="keywordflow">return</span> token == <span class="stringliteral">&quot;)&quot;</span>; }</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
+<div class="ttc" id="parenthesis_8hpp_html_a0701d29856ffb57ad3ec12dbb0d71d9f"><div class="ttname"><a href="parenthesis_8hpp.html#a0701d29856ffb57ad3ec12dbb0d71d9f">isRightParenthesis</a></div><div class="ttdeci">bool isRightParenthesis(const std::string &amp;token)</div><div class="ttdef"><b>Definition:</b> <a href="parenthesis_8hpp_source.html#l00006">parenthesis.hpp:6</a></div></div>
+<div class="ttc" id="parenthesis_8hpp_html_acaed96232ffc6b1d815e2f9e7e4882d0"><div class="ttname"><a href="parenthesis_8hpp.html#acaed96232ffc6b1d815e2f9e7e4882d0">isLeftParenthesis</a></div><div class="ttdeci">bool isLeftParenthesis(const std::string &amp;token)</div><div class="ttdef"><b>Definition:</b> <a href="parenthesis_8hpp_source.html#l00005">parenthesis.hpp:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
