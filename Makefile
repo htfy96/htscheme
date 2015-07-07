@@ -1,5 +1,5 @@
 CPPFLAGS = -I . -I .. -g -O2 -pipe -std=gnu++0x 
-CXX = g++
+CXX = ccache clang++
 
 preprocessortest: test/preprocessortest.cpp preprocessor.o
 	$(CXX) $(CPPFLAGS) $^  -o $@ 
@@ -13,6 +13,7 @@ biginttest: test/biginttest.cpp utility/bigint.o
 .PHONY: clean
 
 OBJ = $(wildcard *.o test/*.o utility/*.o types/*.o)
+BIN = $(wildcard preprocessortest tokenizertest biginttest)
 
 clean:
-	rm $(OBJ); rm -r preprocessortest tokenizertest biginttest
+	rm $(OBJ); rm $(BIN);

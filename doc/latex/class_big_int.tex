@@ -21,9 +21,11 @@
 \item 
 \hyperlink{class_big_int}{Big\+Int} \& \hyperlink{class_big_int_a164befb196d794282a927e1a490bb939}{operator-\/=} (const \hyperlink{class_big_int}{Big\+Int} \&b)
 \item 
-\hyperlink{class_big_int}{Big\+Int} \& \hyperlink{class_big_int_a8ac25b6a719f26833ad5550496c7a31d}{operator$\ast$=} (const \hyperlink{class_big_int}{Big\+Int} \&b)
+\hyperlink{class_big_int}{Big\+Int} \& \hyperlink{class_big_int_aaf4a32e323d4f67fc6c04462ed812461}{operator$\ast$=} (const \hyperlink{class_big_int}{Big\+Int} \&b)
 \item 
-\hyperlink{class_big_int}{Big\+Int} \& \hyperlink{class_big_int_aec211c9b6e6c0cc3c018ea31d63a0c16}{operator/=} (const \hyperlink{class_big_int}{Big\+Int} \&b)
+\hyperlink{class_big_int}{Big\+Int} \& \hyperlink{class_big_int_a72d43b327dc95e500d71c667f891cbb8}{operator/=} (const \hyperlink{class_big_int}{Big\+Int} \&b)
+\item 
+\hyperlink{class_big_int}{Big\+Int} \& \hyperlink{class_big_int_aa88327d018c8dc6fbb006e1b8b9ce964}{operator\%=} (const \hyperlink{class_big_int}{Big\+Int} \&b)
 \item 
 \hyperlink{class_big_int}{Big\+Int} \hyperlink{class_big_int_a468c8997e2ec45ef37d5ff32becc5818}{operator+} (const \hyperlink{class_big_int}{Big\+Int} \&b) const 
 \item 
@@ -32,6 +34,8 @@
 \hyperlink{class_big_int}{Big\+Int} \hyperlink{class_big_int_aa4e3204ae4a0c81e8e33d0a848078a8d}{operator$\ast$} (const \hyperlink{class_big_int}{Big\+Int} \&b) const 
 \item 
 \hyperlink{class_big_int}{Big\+Int} \hyperlink{class_big_int_ab5679019b8821c01b161147495e21a4e}{operator/} (const \hyperlink{class_big_int}{Big\+Int} \&b) const 
+\item 
+\hyperlink{class_big_int}{Big\+Int} \hyperlink{class_big_int_ae9bbf1128217cb469123350f92e4c62f}{operator\%} (const \hyperlink{class_big_int}{Big\+Int} \&b) const 
 \item 
 \hyperlink{class_big_int}{Big\+Int} \hyperlink{class_big_int_a56350bc8395ed38c2afdbb4554e56b1f}{operator-\/} () const 
 \item 
@@ -61,7 +65,7 @@ std\+::ostream \& \hyperlink{class_big_int_a0d8814d1177634c5e0ee08e2bbccf328}{op
 \subsection{Detailed Description}
 
 
-Definition at line 10 of file bigint.\+hpp.
+Definition at line 11 of file bigint.\+hpp.
 
 
 
@@ -75,7 +79,7 @@ Definition at line 10 of file bigint.\+hpp.
 )}\label{class_big_int_a4421e6c1883874512f1b04543dafc64a}
 
 
-Definition at line 19 of file bigint.\+cpp.
+Definition at line 20 of file bigint.\+cpp.
 
 \hypertarget{class_big_int_abe13ffcbf871ddb97365a73120ca0b6f}{}\index{Big\+Int@{Big\+Int}!Big\+Int@{Big\+Int}}
 \index{Big\+Int@{Big\+Int}!Big\+Int@{Big\+Int}}
@@ -86,7 +90,7 @@ Definition at line 19 of file bigint.\+cpp.
 )}\label{class_big_int_abe13ffcbf871ddb97365a73120ca0b6f}
 
 
-Definition at line 24 of file bigint.\+cpp.
+Definition at line 25 of file bigint.\+cpp.
 
 \hypertarget{class_big_int_af677021c0987fc2a48da06837ed29c58}{}\index{Big\+Int@{Big\+Int}!Big\+Int@{Big\+Int}}
 \index{Big\+Int@{Big\+Int}!Big\+Int@{Big\+Int}}
@@ -97,7 +101,7 @@ Definition at line 24 of file bigint.\+cpp.
 )}\label{class_big_int_af677021c0987fc2a48da06837ed29c58}
 
 
-Definition at line 29 of file bigint.\+cpp.
+Definition at line 30 of file bigint.\+cpp.
 
 
 
@@ -111,7 +115,7 @@ Definition at line 29 of file bigint.\+cpp.
 )}\label{class_big_int_a43652944006a9ace4fa3d8e1c0ed3213}
 
 
-Definition at line 34 of file bigint.\+cpp.
+Definition at line 35 of file bigint.\+cpp.
 
 \hypertarget{class_big_int_acc4942cf0af7096ec328735c75f8fcfe}{}\index{Big\+Int@{Big\+Int}!assign@{assign}}
 \index{assign@{assign}!Big\+Int@{Big\+Int}}
@@ -122,7 +126,7 @@ Definition at line 34 of file bigint.\+cpp.
 )}\label{class_big_int_acc4942cf0af7096ec328735c75f8fcfe}
 
 
-Definition at line 55 of file bigint.\+cpp.
+Definition at line 56 of file bigint.\+cpp.
 
 \hypertarget{class_big_int_ad6a59ed7dedbe35433c1a83ca751fe88}{}\index{Big\+Int@{Big\+Int}!operator"!=@{operator"!=}}
 \index{operator"!=@{operator"!=}!Big\+Int@{Big\+Int}}
@@ -133,7 +137,29 @@ Definition at line 55 of file bigint.\+cpp.
 ) const}\label{class_big_int_ad6a59ed7dedbe35433c1a83ca751fe88}
 
 
-Definition at line 145 of file bigint.\+cpp.
+Definition at line 146 of file bigint.\+cpp.
+
+\hypertarget{class_big_int_ae9bbf1128217cb469123350f92e4c62f}{}\index{Big\+Int@{Big\+Int}!operator\%@{operator\%}}
+\index{operator\%@{operator\%}!Big\+Int@{Big\+Int}}
+\subsubsection[{operator\%}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Big\+Int} Big\+Int\+::operator\% (
+\begin{DoxyParamCaption}
+\item[{const {\bf Big\+Int} \&}]{b}
+\end{DoxyParamCaption}
+) const}\label{class_big_int_ae9bbf1128217cb469123350f92e4c62f}
+
+
+Definition at line 370 of file bigint.\+cpp.
+
+\hypertarget{class_big_int_aa88327d018c8dc6fbb006e1b8b9ce964}{}\index{Big\+Int@{Big\+Int}!operator\%=@{operator\%=}}
+\index{operator\%=@{operator\%=}!Big\+Int@{Big\+Int}}
+\subsubsection[{operator\%=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Big\+Int} \& Big\+Int\+::operator\%= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Big\+Int} \&}]{b}
+\end{DoxyParamCaption}
+)}\label{class_big_int_aa88327d018c8dc6fbb006e1b8b9ce964}
+
+
+Definition at line 364 of file bigint.\+cpp.
 
 \hypertarget{class_big_int_aa4e3204ae4a0c81e8e33d0a848078a8d}{}\index{Big\+Int@{Big\+Int}!operator$\ast$@{operator$\ast$}}
 \index{operator$\ast$@{operator$\ast$}!Big\+Int@{Big\+Int}}
@@ -142,13 +168,21 @@ Definition at line 145 of file bigint.\+cpp.
 \item[{const {\bf Big\+Int} \&}]{b}
 \end{DoxyParamCaption}
 ) const}\label{class_big_int_aa4e3204ae4a0c81e8e33d0a848078a8d}
-\hypertarget{class_big_int_a8ac25b6a719f26833ad5550496c7a31d}{}\index{Big\+Int@{Big\+Int}!operator$\ast$=@{operator$\ast$=}}
+
+
+Definition at line 278 of file bigint.\+cpp.
+
+\hypertarget{class_big_int_aaf4a32e323d4f67fc6c04462ed812461}{}\index{Big\+Int@{Big\+Int}!operator$\ast$=@{operator$\ast$=}}
 \index{operator$\ast$=@{operator$\ast$=}!Big\+Int@{Big\+Int}}
-\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Big\+Int}\& Big\+Int\+::operator$\ast$= (
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Big\+Int} \& Big\+Int\+::operator$\ast$= (
 \begin{DoxyParamCaption}
 \item[{const {\bf Big\+Int} \&}]{b}
 \end{DoxyParamCaption}
-)}\label{class_big_int_a8ac25b6a719f26833ad5550496c7a31d}
+)}\label{class_big_int_aaf4a32e323d4f67fc6c04462ed812461}
+
+
+Definition at line 303 of file bigint.\+cpp.
+
 \hypertarget{class_big_int_a468c8997e2ec45ef37d5ff32becc5818}{}\index{Big\+Int@{Big\+Int}!operator+@{operator+}}
 \index{operator+@{operator+}!Big\+Int@{Big\+Int}}
 \subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Big\+Int} Big\+Int\+::operator+ (
@@ -158,7 +192,7 @@ Definition at line 145 of file bigint.\+cpp.
 ) const}\label{class_big_int_a468c8997e2ec45ef37d5ff32becc5818}
 
 
-Definition at line 261 of file bigint.\+cpp.
+Definition at line 264 of file bigint.\+cpp.
 
 \hypertarget{class_big_int_a5768b8d21f3cc80a85cdea09a8769a22}{}\index{Big\+Int@{Big\+Int}!operator+=@{operator+=}}
 \index{operator+=@{operator+=}!Big\+Int@{Big\+Int}}
@@ -169,7 +203,7 @@ Definition at line 261 of file bigint.\+cpp.
 )}\label{class_big_int_a5768b8d21f3cc80a85cdea09a8769a22}
 
 
-Definition at line 199 of file bigint.\+cpp.
+Definition at line 202 of file bigint.\+cpp.
 
 \hypertarget{class_big_int_a64ef59813d4221635ae33f8de10f88cb}{}\index{Big\+Int@{Big\+Int}!operator-\/@{operator-\/}}
 \index{operator-\/@{operator-\/}!Big\+Int@{Big\+Int}}
@@ -180,7 +214,7 @@ Definition at line 199 of file bigint.\+cpp.
 ) const}\label{class_big_int_a64ef59813d4221635ae33f8de10f88cb}
 
 
-Definition at line 268 of file bigint.\+cpp.
+Definition at line 271 of file bigint.\+cpp.
 
 \hypertarget{class_big_int_a56350bc8395ed38c2afdbb4554e56b1f}{}\index{Big\+Int@{Big\+Int}!operator-\/@{operator-\/}}
 \index{operator-\/@{operator-\/}!Big\+Int@{Big\+Int}}
@@ -191,7 +225,7 @@ Definition at line 268 of file bigint.\+cpp.
 ) const}\label{class_big_int_a56350bc8395ed38c2afdbb4554e56b1f}
 
 
-Definition at line 94 of file bigint.\+cpp.
+Definition at line 95 of file bigint.\+cpp.
 
 \hypertarget{class_big_int_a164befb196d794282a927e1a490bb939}{}\index{Big\+Int@{Big\+Int}!operator-\/=@{operator-\/=}}
 \index{operator-\/=@{operator-\/=}!Big\+Int@{Big\+Int}}
@@ -202,7 +236,7 @@ Definition at line 94 of file bigint.\+cpp.
 )}\label{class_big_int_a164befb196d794282a927e1a490bb939}
 
 
-Definition at line 232 of file bigint.\+cpp.
+Definition at line 235 of file bigint.\+cpp.
 
 \hypertarget{class_big_int_ab5679019b8821c01b161147495e21a4e}{}\index{Big\+Int@{Big\+Int}!operator/@{operator/}}
 \index{operator/@{operator/}!Big\+Int@{Big\+Int}}
@@ -211,13 +245,21 @@ Definition at line 232 of file bigint.\+cpp.
 \item[{const {\bf Big\+Int} \&}]{b}
 \end{DoxyParamCaption}
 ) const}\label{class_big_int_ab5679019b8821c01b161147495e21a4e}
-\hypertarget{class_big_int_aec211c9b6e6c0cc3c018ea31d63a0c16}{}\index{Big\+Int@{Big\+Int}!operator/=@{operator/=}}
+
+
+Definition at line 358 of file bigint.\+cpp.
+
+\hypertarget{class_big_int_a72d43b327dc95e500d71c667f891cbb8}{}\index{Big\+Int@{Big\+Int}!operator/=@{operator/=}}
 \index{operator/=@{operator/=}!Big\+Int@{Big\+Int}}
-\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Big\+Int}\& Big\+Int\+::operator/= (
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Big\+Int} \& Big\+Int\+::operator/= (
 \begin{DoxyParamCaption}
 \item[{const {\bf Big\+Int} \&}]{b}
 \end{DoxyParamCaption}
-)}\label{class_big_int_aec211c9b6e6c0cc3c018ea31d63a0c16}
+)}\label{class_big_int_a72d43b327dc95e500d71c667f891cbb8}
+
+
+Definition at line 353 of file bigint.\+cpp.
+
 \hypertarget{class_big_int_a56b4522f02907f0d719809a0e81c525e}{}\index{Big\+Int@{Big\+Int}!operator$<$@{operator$<$}}
 \index{operator$<$@{operator$<$}!Big\+Int@{Big\+Int}}
 \subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}bool Big\+Int\+::operator$<$ (
@@ -227,7 +269,7 @@ Definition at line 232 of file bigint.\+cpp.
 ) const}\label{class_big_int_a56b4522f02907f0d719809a0e81c525e}
 
 
-Definition at line 123 of file bigint.\+cpp.
+Definition at line 124 of file bigint.\+cpp.
 
 \hypertarget{class_big_int_ada9b7b9e96bb3aad13c48637397b6f31}{}\index{Big\+Int@{Big\+Int}!operator$<$=@{operator$<$=}}
 \index{operator$<$=@{operator$<$=}!Big\+Int@{Big\+Int}}
@@ -238,7 +280,7 @@ Definition at line 123 of file bigint.\+cpp.
 ) const}\label{class_big_int_ada9b7b9e96bb3aad13c48637397b6f31}
 
 
-Definition at line 155 of file bigint.\+cpp.
+Definition at line 156 of file bigint.\+cpp.
 
 \hypertarget{class_big_int_a057d936831e7a103a1830366c990602f}{}\index{Big\+Int@{Big\+Int}!operator==@{operator==}}
 \index{operator==@{operator==}!Big\+Int@{Big\+Int}}
@@ -249,7 +291,7 @@ Definition at line 155 of file bigint.\+cpp.
 ) const}\label{class_big_int_a057d936831e7a103a1830366c990602f}
 
 
-Definition at line 137 of file bigint.\+cpp.
+Definition at line 138 of file bigint.\+cpp.
 
 \hypertarget{class_big_int_a4631ce319f6617a43a4dc89127953ebb}{}\index{Big\+Int@{Big\+Int}!operator$>$@{operator$>$}}
 \index{operator$>$@{operator$>$}!Big\+Int@{Big\+Int}}
@@ -260,7 +302,7 @@ Definition at line 137 of file bigint.\+cpp.
 ) const}\label{class_big_int_a4631ce319f6617a43a4dc89127953ebb}
 
 
-Definition at line 132 of file bigint.\+cpp.
+Definition at line 133 of file bigint.\+cpp.
 
 \hypertarget{class_big_int_ae5bdb87103df4be652062b015a1fa653}{}\index{Big\+Int@{Big\+Int}!operator$>$=@{operator$>$=}}
 \index{operator$>$=@{operator$>$=}!Big\+Int@{Big\+Int}}
@@ -271,7 +313,7 @@ Definition at line 132 of file bigint.\+cpp.
 ) const}\label{class_big_int_ae5bdb87103df4be652062b015a1fa653}
 
 
-Definition at line 150 of file bigint.\+cpp.
+Definition at line 151 of file bigint.\+cpp.
 
 
 
@@ -286,7 +328,7 @@ Definition at line 150 of file bigint.\+cpp.
 )\hspace{0.3cm}{\ttfamily [friend]}}\label{class_big_int_a0d8814d1177634c5e0ee08e2bbccf328}
 
 
-Definition at line 245 of file bigint.\+cpp.
+Definition at line 248 of file bigint.\+cpp.
 
 \hypertarget{class_big_int_abfb3d978331870b4cba82ece17354f44}{}\index{Big\+Int@{Big\+Int}!operator$>$$>$@{operator$>$$>$}}
 \index{operator$>$$>$@{operator$>$$>$}!Big\+Int@{Big\+Int}}
@@ -298,7 +340,7 @@ Definition at line 245 of file bigint.\+cpp.
 )\hspace{0.3cm}{\ttfamily [friend]}}\label{class_big_int_abfb3d978331870b4cba82ece17354f44}
 
 
-Definition at line 237 of file bigint.\+cpp.
+Definition at line 240 of file bigint.\+cpp.
 
 \hypertarget{class_big_int_a95ccae99f465fac11bf28196f62dac03}{}\index{Big\+Int@{Big\+Int}!raw\+Compare@{raw\+Compare}}
 \index{raw\+Compare@{raw\+Compare}!Big\+Int@{Big\+Int}}
@@ -310,7 +352,7 @@ Definition at line 237 of file bigint.\+cpp.
 )\hspace{0.3cm}{\ttfamily [friend]}}\label{class_big_int_a95ccae99f465fac11bf28196f62dac03}
 
 
-Definition at line 103 of file bigint.\+cpp.
+Definition at line 104 of file bigint.\+cpp.
 
 
 
