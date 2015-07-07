@@ -1,6 +1,7 @@
 var NAVTREE =
 [
   [ "ht's Scheme Intepreter", "index.html", [
+    [ "htScheme", "md__r_e_a_d_m_e.html", null ],
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
       [ "Class Index", "classes.html", null ],

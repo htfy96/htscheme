@@ -12,7 +12,7 @@ var class_big_int =
     [ "operator+=", "class_big_int.html#a5768b8d21f3cc80a85cdea09a8769a22", null ],
     [ "operator-", "class_big_int.html#a64ef59813d4221635ae33f8de10f88cb", null ],
     [ "operator-", "class_big_int.html#a56350bc8395ed38c2afdbb4554e56b1f", null ],
-    [ "operator-=", "class_big_int.html#ae345c8d60957dd9d2e4c8357dac94ba2", null ],
+    [ "operator-=", "class_big_int.html#a164befb196d794282a927e1a490bb939", null ],
     [ "operator/", "class_big_int.html#ab5679019b8821c01b161147495e21a4e", null ],
     [ "operator/=", "class_big_int.html#aec211c9b6e6c0cc3c018ea31d63a0c16", null ],
     [ "operator<", "class_big_int.html#a56b4522f02907f0d719809a0e81c525e", null ],
@@ -21,5 +21,6 @@ var class_big_int =
     [ "operator>", "class_big_int.html#a4631ce319f6617a43a4dc89127953ebb", null ],
     [ "operator>=", "class_big_int.html#ae5bdb87103df4be652062b015a1fa653", null ],
     [ "operator<<", "class_big_int.html#a0d8814d1177634c5e0ee08e2bbccf328", null ],
-    [ "operator>>", "class_big_int.html#abfb3d978331870b4cba82ece17354f44", null ]
+    [ "operator>>", "class_big_int.html#abfb3d978331870b4cba82ece17354f44", null ],
+    [ "rawCompare", "class_big_int.html#a95ccae99f465fac11bf28196f62dac03", null ]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['leftparenthesis',['LeftParenthesis',['../types_8hpp.html#aa520fbf142ba1e7e659590c07da31921a0e229922772e1ebbe231bb76b1d0674e',1,'types.hpp']]],
-  ['lines',['lines',['../class_scheme_unit.html#a03fe6130875cfc25975efc5a6f7981da',1,'SchemeUnit']]]
+  ['ischar',['isChar',['../strutility_8hpp.html#ae25c1abd5f5eaf0f14c30e568634d19b',1,'strutility.hpp']]],
+  ['isheaderfile',['IsHeaderFile',['../_8ycm__extra__conf_8py.html#a6bb59f541be0dcbde53eba606d48ddf8',1,'.ycm_extra_conf.py']]]
 ];

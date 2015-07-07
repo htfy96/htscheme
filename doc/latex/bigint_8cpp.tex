@@ -8,8 +8,64 @@
 {\ttfamily \#include $<$cmath$>$}\\*
 {\ttfamily \#include $<$cctype$>$}\\*
 {\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include $<$cassert$>$}\\*
 {\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$functional$>$}\\*
 {\ttfamily \#include \char`\"{}bigint.\+hpp\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}utility/strutility.\+hpp\char`\"{}}\\*
 Include dependency graph for bigint.\+cpp\+:
-% FIG 0
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bigint_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Compare\+Func $>$ }\\bool \hyperlink{bigint_8cpp_a95ccae99f465fac11bf28196f62dac03}{raw\+Compare} (const \hyperlink{class_big_int}{Big\+Int} \&a, const \hyperlink{class_big_int}{Big\+Int} \&b)
+\item 
+std\+::istream \& \hyperlink{bigint_8cpp_abfb3d978331870b4cba82ece17354f44}{operator$>$$>$} (std\+::istream \&i, \hyperlink{class_big_int}{Big\+Int} \&b)
+\item 
+std\+::ostream \& \hyperlink{bigint_8cpp_a0d8814d1177634c5e0ee08e2bbccf328}{operator$<$$<$} (std\+::ostream \&o, const \hyperlink{class_big_int}{Big\+Int} \&b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{bigint_8cpp_a0d8814d1177634c5e0ee08e2bbccf328}{}\index{bigint.\+cpp@{bigint.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!bigint.\+cpp@{bigint.\+cpp}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{o, }
+\item[{const {\bf Big\+Int} \&}]{b}
+\end{DoxyParamCaption}
+)}\label{bigint_8cpp_a0d8814d1177634c5e0ee08e2bbccf328}
+
+
+Definition at line 245 of file bigint.\+cpp.
+
+\hypertarget{bigint_8cpp_abfb3d978331870b4cba82ece17354f44}{}\index{bigint.\+cpp@{bigint.\+cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!bigint.\+cpp@{bigint.\+cpp}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{i, }
+\item[{{\bf Big\+Int} \&}]{b}
+\end{DoxyParamCaption}
+)}\label{bigint_8cpp_abfb3d978331870b4cba82ece17354f44}
+
+
+Definition at line 237 of file bigint.\+cpp.
+
+\hypertarget{bigint_8cpp_a95ccae99f465fac11bf28196f62dac03}{}\index{bigint.\+cpp@{bigint.\+cpp}!raw\+Compare@{raw\+Compare}}
+\index{raw\+Compare@{raw\+Compare}!bigint.\+cpp@{bigint.\+cpp}}
+\subsubsection[{raw\+Compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Compare\+Func $>$ bool raw\+Compare (
+\begin{DoxyParamCaption}
+\item[{const {\bf Big\+Int} \&}]{a, }
+\item[{const {\bf Big\+Int} \&}]{b}
+\end{DoxyParamCaption}
+)}\label{bigint_8cpp_a95ccae99f465fac11bf28196f62dac03}
+
+
+Definition at line 103 of file bigint.\+cpp.
+

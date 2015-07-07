@@ -5,6 +5,8 @@
 #include <vector>
 #include <string>
 #include <cstddef>
+
+
 class BigInt
 {
     private:
@@ -14,6 +16,8 @@ class BigInt
         bool isZero() const;
         BigInt& rawPlus(const BigInt& b);
         BigInt& rawMinus(const BigInt& b);
+        bool rawSmaller(const BigInt& b) const;
+        bool rawGreater(const BigInt& b) const;
     public:
         BigInt(long long num);
         BigInt(const std::string& s);
@@ -37,6 +41,7 @@ class BigInt
         bool operator != (const BigInt& b) const;
         bool operator >= (const BigInt& b) const;
         bool operator <= (const BigInt& b) const;
+        template<typename CompareFunc> friend bool rawCompare(const BigInt& a, const BigInt& b);
 
 };
 #endif
