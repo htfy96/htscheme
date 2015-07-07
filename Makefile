@@ -1,5 +1,5 @@
-CPPFLAGS = -I . -I .. -g -pipe -std=gnu++0x 
-CXX = clang++
+CPPFLAGS = -I . -I .. -g -O2 -pipe -std=gnu++0x 
+CXX = g++
 
 preprocessortest: test/preprocessortest.cpp preprocessor.o
 	$(CXX) $(CPPFLAGS) $^  -o $@ 

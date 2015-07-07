@@ -11,5 +11,13 @@ int main()
     cout<<(a += b)<<endl;
     cout<< a+123 <<endl;
     cout<< a-12450 <<endl;
+    BigInt c;
+    for (int i=0;i<10;++i)
+    {
+        c*=10;
+        c+=i;
+    }
+    cout<<c<<endl;
+    cout << c*-c <<endl;
     return 0;
 }

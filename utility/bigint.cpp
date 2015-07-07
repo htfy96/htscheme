@@ -177,6 +177,7 @@ BigInt& BigInt::rawPlus(const BigInt& b)
     return *this;
 }
 
+
 BigInt& BigInt::rawMinus(const BigInt& b)
 {
     int32_t jw =0;
@@ -271,3 +272,36 @@ BigInt BigInt::operator- (const BigInt& b) const
     ans -= b;
     return ans;
 }
+
+BigInt BigInt::operator* (const BigInt& b) const
+{
+    //std::cout<<" LOG: MULTI"<< *this<<" "<<b<<std::endl;
+    BigInt ans;
+    std::vector<int32_t> &v= ans.d;
+    v.resize(len+b.len+1, 0);
+    for (size_t i=0; i<len; ++i)
+      for (size_t j=0; j<b.len; ++j)
+        v[i+j] += d[i] * b.d[j];
+    int32_t jw = 0;
+    for (size_t i=0; i<len + b.len; ++i)
+    {
+        v[i] += jw;
+        jw = v[i] / 10000;
+        v[i] %= 10000;
+    }
+    assert(jw==0);
+    ans.len = len + b.len;
+    while (ans.len>1 && v[ans.len-1]==0) --ans.len;
+
+    ans.nonNeg = !( nonNeg ^ b.nonNeg );
+    if (isZero() || b.isZero()) ans.nonNeg=true;
+    return ans;
+}
+
+BigInt& BigInt::operator *= (const BigInt& b)
+{
+    *this = (*this * b);
+    return *this;
+}
+    
+
