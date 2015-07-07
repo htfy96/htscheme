@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['schemeunit',['SchemeUnit',['../class_scheme_unit.html#a403e550c702c23689ff9be1d40a5847c',1,'SchemeUnit']]],
-  ['split',['split',['../class_tokenizer.html#a8bd8a4eb5df764f6128028daa0e9044b',1,'Tokenizer']]],
-  ['stre',['stre',['../preprocessortest_8cpp.html#a777949afad88957e993568613aa2dd3d',1,'preprocessortest.cpp']]]
+  ['rawcompare',['rawCompare',['../bigint_8cpp.html#a95ccae99f465fac11bf28196f62dac03',1,'bigint.cpp']]],
+  ['rawgreater',['rawGreater',['../class_big_int.html#a70b66d14ed0dd00b329abfc339368717',1,'BigInt']]],
+  ['rawminus',['rawMinus',['../class_big_int.html#a467335bcd608b80a7e09ae3ce112b95c',1,'BigInt']]],
+  ['rawplus',['rawPlus',['../class_big_int.html#a51120af6199fce924122ec944d65ce00',1,'BigInt']]],
+  ['rawsmaller',['rawSmaller',['../class_big_int.html#af71469db665f6e014869def10d28e62f',1,'BigInt']]],
+  ['reduce',['reduce',['../class_rational_type.html#ab0173d0fb9a0ca208d52cae36adee9bc',1,'RationalType']]]
 ];

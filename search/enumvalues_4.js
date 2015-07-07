@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['rational',['Rational',['../types_8hpp.html#aa520fbf142ba1e7e659590c07da31921ac484461d6c31e2ef0d6ea82009ad1575',1,'types.hpp']]],
-  ['rightparenthesis',['RightParenthesis',['../types_8hpp.html#aa520fbf142ba1e7e659590c07da31921aa6ae499ba91edf718de60cefdb91e070',1,'types.hpp']]]
+  ['neutral',['Neutral',['../class_scheme_unit.html#a90a5ac4883401fe1c38226a54ce9f43dafd3c8126c0b4840138b5586975c6c24e',1,'SchemeUnit']]]
 ];

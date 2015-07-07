@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rationaltype',['RationalType',['../class_rational_type.html',1,'']]]
+  ['extrainfo',['ExtraInfo',['../union_extra_info.html',1,'']]]
 ];

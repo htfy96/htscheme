@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>ht&#39;s Scheme Intepreter: test/tokenizertest.cpp Source File</title>
+<title>ht&#39;s Scheme Interpreter: test/tokenizertest.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">ht&#39;s Scheme Intepreter
+   <div id="projectname">ht&#39;s Scheme Interpreter
    &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">a simplified scheme interpreter implementation</div>
@@ -48,6 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -108,33 +109,30 @@ $(document).ready(function(){initNavTree('tokenizertest_8cpp_source.html','');})
 <div class="title">tokenizertest.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="tokenizertest_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="preprocessor_8hpp.html">preprocessor.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="tokenizer_8hpp.html">tokenizer.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<a href="tokenizertest_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="preprocessor_8hpp.html">&quot;preprocessor.hpp&quot;</a></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="tokenizer_8hpp.html">&quot;tokenizer.hpp&quot;</a></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">iostream</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">fstream</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">algorithm</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">string</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using</span> <span class="keyword">namespace</span> std;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="tokenizertest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">    9</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="tokenizertest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    ifstream ifs(<span class="stringliteral">&quot;test/tokenizer.test&quot;</span>); </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_scheme_unit.html">SchemeUnit</a> <a class="code" href="preprocessortest_8cpp.html#a10d1ea193b80aa2128e080646057d11c">s</a>(ifs);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_tokenizer.html">Tokenizer</a> t(s.<a class="code" href="class_scheme_unit.html#a03fe6130875cfc25975efc5a6f7981da">lines</a>);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    for_each(t.tokens.begin(), t.tokens.end(), [](<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; c) {cout&lt;&lt;c&lt;&lt;endl; });</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    ifstream ifs(<span class="stringliteral">&quot;test/tokenizer.test&quot;</span>);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_scheme_unit.html">SchemeUnit</a> s<a class="code" href="class_scheme_unit.html#a403e550c702c23689ff9be1d40a5847c">(</a>ifs<a class="code" href="class_scheme_unit.html#a403e550c702c23689ff9be1d40a5847c">)</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_tokenizer.html">Tokenizer</a> t<a class="code" href="class_tokenizer.html#a6edc9ba4af94d2aa55f48a83c903800f">(</a>s<a class="code" href="class_scheme_unit.html#a03fe6130875cfc25975efc5a6f7981da">.</a><a class="code" href="class_scheme_unit.html#a03fe6130875cfc25975efc5a6f7981da">lines</a><a class="code" href="class_tokenizer.html#a6edc9ba4af94d2aa55f48a83c903800f">)</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    for_each(t.tokens.begin(), t.tokens.end(), [](<span class="keyword">const</span> string&amp; c) { <span class="comment">/* pending */</span> });</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="ttc" id="preprocessortest_8cpp_html_a10d1ea193b80aa2128e080646057d11c"><div class="ttname"><a href="preprocessortest_8cpp.html#a10d1ea193b80aa2128e080646057d11c">s</a></div><div class="ttdeci">SchemeUnit s(stre)</div></div>
-<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
+<div class="ttc" id="class_scheme_unit_html_a403e550c702c23689ff9be1d40a5847c"><div class="ttname"><a href="class_scheme_unit.html#a403e550c702c23689ff9be1d40a5847c">SchemeUnit::SchemeUnit</a></div><div class="ttdeci">SchemeUnit(std::istream &amp;schemeStream)</div><div class="ttdef"><b>Definition:</b> <a href="preprocessor_8cpp_source.html#l00006">preprocessor.cpp:6</a></div></div>
 <div class="ttc" id="class_scheme_unit_html"><div class="ttname"><a href="class_scheme_unit.html">SchemeUnit</a></div><div class="ttdef"><b>Definition:</b> <a href="preprocessor_8hpp_source.html#l00008">preprocessor.hpp:8</a></div></div>
+<div class="ttc" id="class_tokenizer_html_a6edc9ba4af94d2aa55f48a83c903800f"><div class="ttname"><a href="class_tokenizer.html#a6edc9ba4af94d2aa55f48a83c903800f">Tokenizer::Tokenizer</a></div><div class="ttdeci">Tokenizer(const std::vector&lt; std::string &gt; &amp;lines)</div><div class="ttdef"><b>Definition:</b> <a href="tokenizer_8cpp_source.html#l00018">tokenizer.cpp:18</a></div></div>
 <div class="ttc" id="class_tokenizer_html"><div class="ttname"><a href="class_tokenizer.html">Tokenizer</a></div><div class="ttdef"><b>Definition:</b> <a href="tokenizer_8hpp_source.html#l00007">tokenizer.hpp:7</a></div></div>
 <div class="ttc" id="tokenizertest_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="tokenizertest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="tokenizertest_8cpp_source.html#l00009">tokenizertest.cpp:9</a></div></div>
-<div class="ttc" id="tokenizer_8hpp_html"><div class="ttname"><a href="tokenizer_8hpp.html">tokenizer.hpp</a></div></div>
 <div class="ttc" id="class_scheme_unit_html_a03fe6130875cfc25975efc5a6f7981da"><div class="ttname"><a href="class_scheme_unit.html#a03fe6130875cfc25975efc5a6f7981da">SchemeUnit::lines</a></div><div class="ttdeci">std::vector&lt; std::string &gt; lines</div><div class="ttdef"><b>Definition:</b> <a href="preprocessor_8hpp_source.html#l00017">preprocessor.hpp:17</a></div></div>
-<div class="ttc" id="preprocessor_8hpp_html"><div class="ttname"><a href="preprocessor_8hpp.html">preprocessor.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

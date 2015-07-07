@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['flags',['flags',['../_8ycm__extra__conf_8py.html#abd73d8e4551f1a637280b3876d1ae2e3',1,'.ycm_extra_conf.py']]],
-  ['flagsforfile',['FlagsForFile',['../_8ycm__extra__conf_8py.html#a51f8bcdc9a3b791e6a88d798e6c786b3',1,'.ycm_extra_conf.py']]],
-  ['float',['Float',['../types_8hpp.html#aa520fbf142ba1e7e659590c07da31921ad67b0ee7230dcecb610254e4e5e589cd',1,'types.hpp']]],
-  ['float_2ehpp',['float.hpp',['../float_8hpp.html',1,'']]],
-  ['floattype',['FloatType',['../float_8hpp.html#a262844e4d29c844e2c448abe0ce82f14',1,'float.hpp']]]
+  ['extrainfo',['ExtraInfo',['../union_extra_info.html',1,'ExtraInfo'],['../struct_token.html#a4f87d42e49694469c8a97080e4831370',1,'Token::extraInfo()']]],
+  ['extrainfofunc',['extraInfoFunc',['../struct_checker.html#a4d1a63a813dbc6b1668e8568d04b4cbc',1,'Checker::extraInfoFunc()'],['../all_8hpp.html#a54711df39cdddaf5689936689dbe279e',1,'ExtraInfoFunc():&#160;all.hpp'],['../arch_8hpp.html#a54711df39cdddaf5689936689dbe279e',1,'ExtraInfoFunc():&#160;arch.hpp']]]
 ];

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>ht&#39;s Scheme Intepreter: types/float.hpp Source File</title>
+<title>ht&#39;s Scheme Interpreter: types/float.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">ht&#39;s Scheme Intepreter
+   <div id="projectname">ht&#39;s Scheme Interpreter
    &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">a simplified scheme interpreter implementation</div>
@@ -48,6 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -108,11 +109,18 @@ $(document).ready(function(){initNavTree('float_8hpp_source.html','');});
 <div class="title">float.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="float_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __SCHEME_TYPES_FLOAT</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __SCHEME_TYPES_FLOAT</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="float_8hpp.html#a262844e4d29c844e2c448abe0ce82f14">    3</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">double</span> <a class="code" href="float_8hpp.html#a262844e4d29c844e2c448abe0ce82f14">FloatType</a>;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="float_8hpp_html_a262844e4d29c844e2c448abe0ce82f14"><div class="ttname"><a href="float_8hpp.html#a262844e4d29c844e2c448abe0ce82f14">FloatType</a></div><div class="ttdeci">double FloatType</div><div class="ttdef"><b>Definition:</b> <a href="float_8hpp_source.html#l00003">float.hpp:3</a></div></div>
+<a href="float_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">__SCHEME_TYPES_FLOAT</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">__SCHEME_TYPES_FLOAT</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="arch_8hpp.html">&quot;arch.hpp&quot;</a></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">string</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="float_8hpp.html#a262844e4d29c844e2c448abe0ce82f14">    5</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">double</span> <a class="code" href="float_8hpp.html#a262844e4d29c844e2c448abe0ce82f14">FloatType</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="float_8cpp.html#a2b3841344945adf05970367e441ce957">isFloat</a>(<span class="keyword">const</span> std::string&amp; token);</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<a class="code" href="union_extra_info.html">ExtraInfo</a> <a class="code" href="float_8hpp.html#a191ff454f9fc10c402996d43d92591e2">getFloatExtraInfo</a>(<span class="keyword">const</span> std::string&amp; token);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
+<div class="ttc" id="union_extra_info_html"><div class="ttname"><a href="union_extra_info.html">ExtraInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="all_8hpp_source.html#l00023">all.hpp:23</a></div></div>
+<div class="ttc" id="float_8hpp_html_a191ff454f9fc10c402996d43d92591e2"><div class="ttname"><a href="float_8hpp.html#a191ff454f9fc10c402996d43d92591e2">getFloatExtraInfo</a></div><div class="ttdeci">ExtraInfo getFloatExtraInfo(const std::string &amp;token)</div></div>
+<div class="ttc" id="float_8cpp_html_a2b3841344945adf05970367e441ce957"><div class="ttname"><a href="float_8cpp.html#a2b3841344945adf05970367e441ce957">isFloat</a></div><div class="ttdeci">bool isFloat(const std::string &amp;token)</div><div class="ttdef"><b>Definition:</b> <a href="float_8cpp_source.html#l00041">float.cpp:41</a></div></div>
+<div class="ttc" id="float_8hpp_html_a262844e4d29c844e2c448abe0ce82f14"><div class="ttname"><a href="float_8hpp.html#a262844e4d29c844e2c448abe0ce82f14">FloatType</a></div><div class="ttdeci">double FloatType</div><div class="ttdef"><b>Definition:</b> <a href="float_8hpp_source.html#l00005">float.hpp:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
