@@ -12,5 +12,7 @@ biginttest: test/biginttest.cpp utility/bigint.o
 
 .PHONY: clean
 
+OBJ = $(wildcard *.o test/*.o utility/*.o types/*.o)
+
 clean:
-	rm -r *.o; rm -r preprocessortest tokenizertest
+	rm $(OBJ); rm -r preprocessortest tokenizertest biginttest
