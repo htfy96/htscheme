@@ -18,6 +18,12 @@ int main()
         c+=i;
     }
     cout<<c<<endl;
-    cout << c*-c <<endl;
+    cout << c* -c <<endl;
+    cout<< (BigInt(2247192) > 12345) <<endl;
+    cout << c/276 <<endl;
+    cout << c%277 <<endl;
+
+    BigInt d("1234567890123456789"), e("277277277");
+    cout<<d%e<<endl;
     return 0;
 }

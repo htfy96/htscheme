@@ -8,6 +8,7 @@
 #include <stdexcept>
 #include <cassert>
 #include <algorithm>
+#include <utility>
 #include <functional>
 #include "bigint.hpp"
 #include "utility/strutility.hpp"
@@ -104,7 +105,7 @@ bool rawCompare(const BigInt& a, const BigInt& b)
 {
     CompareFunc com = CompareFunc();
     if (a.len != b.len ) return com(a.len, b.len);
-    for (size_t i=0; i<a.len; ++i)
+    for (int i=a.len-1; i>=0; --i)
       if (a.d[i] != b.d[i])
         return com(a.d[i],b.d[i]);
     return false;
@@ -181,6 +182,7 @@ BigInt& BigInt::rawPlus(const BigInt& b)
 BigInt& BigInt::rawMinus(const BigInt& b)
 {
     int32_t jw =0;
+    //std::cout<< "LOG: "<<*this<< " "<<b<<std::endl;
     for (size_t i=0; i<len; ++i)
     {
         d[i] -= (i<b.len ? b.d[i] : 0) + jw;
@@ -302,6 +304,73 @@ BigInt& BigInt::operator *= (const BigInt& b)
 {
     *this = (*this * b);
     return *this;
+}
+
+BigInt& BigInt::setSign(const bool sign)
+{
+    nonNeg = sign;
+    return *this;
+}
+
+std::pair<BigInt&, BigInt> BigInt::divandmod(const BigInt& b)
+{
+    if (b.isZero()) throw std::runtime_error("division to zero");
+    nonNeg = !(nonNeg ^ b.nonNeg);
+    if (isZero()) nonNeg =true;
+    BigInt ten(10000), now;
+    //std::cout<<b<<std::endl;
+    for(int i=len-1; i>=0; --i)
+    {
+        now *= ten;
+        now += d[i];
+        d[i]=0;
+        int32_t l=0, r=10000;
+        int32_t mid = (l+r)/2;
+        while (l<r-1)
+        {
+            mid = (l+r)/2;
+            //std::cout<< l <<" "<<r<<" "<<(b*mid).setSign(true)<<" "<<now<<" "<<((b*mid).setSign(true)>now)<<std::endl;
+            if ((b*mid).setSign(true)>now)
+              r=mid-1;
+            else
+              l=mid;
+        }
+        mid =r;
+        //std::cout<<" after iter"<<l<<" "<<r<<std::endl;
+        while (mid>1 &&  (b*mid).setSign(true)>now) --mid;
+        d[i]=mid;
+        //std::cout<<" log in "<< __func__<< mid << " "<<now <<" "<<(b*mid).setSign(true) <<std::endl;
+        now-=(b*mid).setSign(true);
+    }
+    while (len>1 && d[len-1]==0) --len;
+
+    std::pair<BigInt&, BigInt> ans(*this, now);
+    return ans;
+}
+
+
+    
+BigInt& BigInt::operator/= (const BigInt& b)
+{
+    return divandmod(b).first;
+}
+
+BigInt BigInt::operator / (const BigInt& b) const
+{
+    BigInt ans(*this);
+    return ans/=b; 
+}
+
+BigInt& BigInt::operator %= (const BigInt& b)
+{
+    *this = divandmod(b).second;
+    return *this;
+}
+
+BigInt BigInt::operator % (const BigInt& b) const
+{
+    BigInt ans(*this);
+    return ans %= b;
 }
     
 
