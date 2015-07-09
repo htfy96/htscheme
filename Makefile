@@ -1,9 +1,9 @@
-CPPFLAGS = -I . -I $(CURDIR) -isystem $(CURDIR)/sys -g -O2 -pipe -std=gnu++0x 
+CPPFLAGS = -I . -I $(CURDIR) -isystem $(CURDIR)/sys  -g -O2 -pipe -std=gnu++0x 
 CXX = ccache clang++
 
 INTEST = -D INTEST
 OBJ = $(wildcard *.o test/*.o utility/*.o types/*.o)
-BIN = $(wildcard preprocessortest tokenizertest biginttest typestest)
+BIN = $(wildcard preprocessortest tokenizertest biginttest typestest asttest)
 TYPESCPP = $(wildcard types/*.cpp)
 TYPES = $(patsubst %.cpp,%.o,$(TYPESCPP))
 BASICTYPES = $(filter-out types/all.o, $(TYPES))
@@ -16,6 +16,9 @@ tokenizertest: test/tokenizertest.cpp tokenizer.o preprocessor.o $(TYPES)
 
 biginttest: test/biginttest.cpp utility/bigint.o 
 	$(CXX) $(CPPFLAGS) $(INTEST) $^  -o $@
+
+asttest: test/asttest.cpp preprocessor.o tokenizer.o ast.o $(TYPES)
+	$(CXX) $(CPPFLAGS) $(INTEST) $^ -o $@
 
 .PHONY: clean
 

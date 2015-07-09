@@ -41,7 +41,7 @@ struct Token
 struct ParserVisitor
 {
     static bool ok;
-    static string token;
+    static std::string token;
     static TokenType tokenType;
     static InfoTypes info;
     template<typename T> void operator () (T& )
@@ -57,10 +57,14 @@ struct ParserVisitor
 
     static void parse(const string& token_)
     {
-        token = token_;
-        ok = false;
+        std::cout<< token_ ;
+        std::cout<<" : "<<token <<std::endl;
+        ParserVisitor::token = token_;
+        ParserVisitor::ok = false;
         boost::mpl::for_each<parsers> (ParserVisitor());
     }
+
+    static void init();
 };
 
 

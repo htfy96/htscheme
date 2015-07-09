@@ -12,6 +12,7 @@ class Tokenizer
         void parse(const std::list<std::string>& rawTokens);
         std::list<std::string> rawTokens;
         std::list<Token> tokens;
+        bool complete;
 };
 
 #endif

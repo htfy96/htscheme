@@ -24,6 +24,7 @@ Tokenizer::Tokenizer(const std::vector<std::string>& lines)
 void Tokenizer::split(const std::vector<std::string>& lines)
 {
     bool inStr = false;
+    complete = true;
     rawTokens.clear();
     rawTokens.push_back("");
     for (size_t i=0; i<lines.size(); ++i)
@@ -92,7 +93,7 @@ void Tokenizer::split(const std::vector<std::string>& lines)
         } //while
         if (inStr) rawTokens.rbegin() -> push_back('\n'); else rawTokens.push_back("");
     } //for
-    if (inStr) throw std::runtime_error("string doesn't terminate as expected");
+    complete &= inStr;
     rawTokens.remove_if(cond);
 
 }//function
@@ -100,6 +101,8 @@ void Tokenizer::split(const std::vector<std::string>& lines)
 void Tokenizer::parse(const std::list<std::string> & rawTokens)
 {
     tokens.clear();
+    int dep = 0;
+    ParserVisitor();
     for_each(rawTokens.begin(), rawTokens.end(), [&](const std::string& rawToken)
                 {
                 ParserVisitor::parse(rawToken);
@@ -108,6 +111,9 @@ void Tokenizer::parse(const std::list<std::string> & rawTokens)
                 token.tokenType = ParserVisitor::tokenType;
                 token.info = ParserVisitor::info;
                 tokens.push_back(token);
+                if (token.tokenType == LeftParenthesis) ++dep;
+                if (token.tokenType == RightParenthesis) --dep;
                 }
             );
+    complete &= (dep==0);
 }
