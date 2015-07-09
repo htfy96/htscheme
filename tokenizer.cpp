@@ -18,6 +18,7 @@ namespace
 Tokenizer::Tokenizer(const std::vector<std::string>& lines)
 {
     split(lines);
+    parse(rawTokens);
 }
 
 void Tokenizer::split(const std::vector<std::string>& lines)
@@ -91,6 +92,22 @@ void Tokenizer::split(const std::vector<std::string>& lines)
         } //while
         if (inStr) rawTokens.rbegin() -> push_back('\n'); else rawTokens.push_back("");
     } //for
+    if (inStr) throw std::runtime_error("string doesn't terminate as expected");
     rawTokens.remove_if(cond);
 
 }//function
+
+void Tokenizer::parse(const std::list<std::string> & rawTokens)
+{
+    tokens.clear();
+    for_each(rawTokens.begin(), rawTokens.end(), [&](const std::string& rawToken)
+                {
+                ParserVisitor::parse(rawToken);
+                if (!ParserVisitor::ok) throw runtime_error("unrecognized token:"+rawToken);
+                Token token;
+                token.tokenType = ParserVisitor::tokenType;
+                token.info = ParserVisitor::info;
+                tokens.push_back(token);
+                }
+            );
+}

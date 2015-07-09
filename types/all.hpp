@@ -35,7 +35,7 @@ int
 struct Token
 {
     TokenType tokenType;
-    InfoTypes infoType;
+    InfoTypes info;
 };
 
 struct ParserVisitor

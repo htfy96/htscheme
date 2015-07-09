@@ -1,11 +1,3 @@
-(string-ref "hi the
- dsfdsfdsf
- re" 0)
-(case c
- ((#\a) 1)
- ((#\b) 2)
- ((#\c) 3)
- (else 4))
-(print " this is my ' bes
- t choice \#" ")
-("")
+(+ 
+ (* 3.76 1e8) -13.32 (/ 5 2.9)
+ )

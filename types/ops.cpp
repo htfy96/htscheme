@@ -8,10 +8,10 @@ OpPlusParser::InfoType OpPlusParser::get(const std::string& token) { return 0; }
 bool OpMinusParser::judge(const std::string& token) { return token == "-"; }
 OpMinusParser::InfoType OpMinusParser::get(const std::string& token) { return 0; }
 
-bool OpMultiplyParser::judge(const std::string& token) { return token == "-"; }
+bool OpMultiplyParser::judge(const std::string& token) { return token == "*"; }
 OpMultiplyParser::InfoType OpMultiplyParser::get(const std::string& token) { return 0; }
 
-bool OpDivideParser::judge(const std::string& token) { return token == "-"; }
+bool OpDivideParser::judge(const std::string& token) { return token == "/"; }
 OpDivideParser::InfoType OpDivideParser::get(const std::string& token) { return 0; }
 
 const TokenType OpPlusParser::type = OpPlus;
