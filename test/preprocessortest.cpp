@@ -1,3 +1,4 @@
+#ifdef INTEST
 #include "preprocessor.hpp"
 #include <iostream>
 #include <fstream>
@@ -10,3 +11,4 @@ int main()
       cout<<s.lines[i]<<endl;
     return 0;
 }
+#endif

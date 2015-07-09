@@ -1,5 +1,5 @@
 var struct_token =
 [
-    [ "extraInfo", "struct_token.html#a4f87d42e49694469c8a97080e4831370", null ],
-    [ "type", "struct_token.html#a67919af9f3a80dc0b28a0ab1e6d5bf8a", null ]
+    [ "infoType", "struct_token.html#a725d6f27445b5fdbb28a551c121779eb", null ],
+    [ "tokenType", "struct_token.html#a3d2b3146021ae2acd9e1b33bf5e59c78", null ]
 ];

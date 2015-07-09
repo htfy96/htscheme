@@ -1,12 +1,12 @@
 <map id="tokenizer.hpp" name="tokenizer.hpp">
-<area shape="rect" id="node5" href="$types_8hpp.html" title="types.hpp" alt="" coords="717,80,785,107"/>
-<area shape="rect" id="node8" href="$all_8hpp.html" title="types/all.hpp" alt="" coords="368,155,448,181"/>
-<area shape="rect" id="node9" href="$rational_8hpp.html" title="rational.hpp" alt="" coords="636,229,713,256"/>
-<area shape="rect" id="node15" href="$float_8hpp.html" title="float.hpp" alt="" coords="324,229,388,256"/>
-<area shape="rect" id="node16" href="$string_8hpp.html" title="string.hpp" alt="" coords="145,229,215,256"/>
-<area shape="rect" id="node17" href="$boolean_8hpp.html" title="boolean.hpp" alt="" coords="533,229,611,256"/>
-<area shape="rect" id="node18" href="$parenthesis_8hpp.html" title="parenthesis.hpp" alt="" coords="412,229,508,256"/>
-<area shape="rect" id="node19" href="$ops_8hpp.html" title="ops.hpp" alt="" coords="239,229,299,256"/>
-<area shape="rect" id="node10" href="$arch_8hpp.html" title="arch.hpp" alt="" coords="429,304,491,331"/>
-<area shape="rect" id="node11" href="$bigint_8hpp.html" title="utility/bigint.hpp" alt="" coords="788,304,884,331"/>
+<area shape="rect" id="node5" href="$types_8hpp.html" title="types.hpp" alt="" coords="929,80,997,107"/>
+<area shape="rect" id="node6" href="$all_8hpp.html" title="types/all.hpp" alt="" coords="633,155,713,181"/>
+<area shape="rect" id="node14" href="$arch_8hpp.html" title="arch.hpp" alt="" coords="566,304,629,331"/>
+<area shape="rect" id="node15" href="$rational_8hpp.html" title="rational.hpp" alt="" coords="837,229,915,256"/>
+<area shape="rect" id="node21" href="$float_8hpp.html" title="float.hpp" alt="" coords="93,229,157,256"/>
+<area shape="rect" id="node22" href="$string_8hpp.html" title="string.hpp" alt="" coords="266,229,337,256"/>
+<area shape="rect" id="node23" href="$boolean_8hpp.html" title="boolean.hpp" alt="" coords="361,229,439,256"/>
+<area shape="rect" id="node24" href="$parenthesis_8hpp.html" title="parenthesis.hpp" alt="" coords="515,229,611,256"/>
+<area shape="rect" id="node25" href="$ops_8hpp.html" title="ops.hpp" alt="" coords="182,229,242,256"/>
+<area shape="rect" id="node16" href="$bigint_8hpp.html" title="utility/bigint.hpp" alt="" coords="1187,304,1283,331"/>
 </map>

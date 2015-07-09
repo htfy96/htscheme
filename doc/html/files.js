@@ -12,5 +12,5 @@ var files =
     [ "tokenizer.hpp", "tokenizer_8hpp.html", [
       [ "Tokenizer", "class_tokenizer.html", "class_tokenizer" ]
     ] ],
-    [ "types.hpp", "types_8hpp.html", "types_8hpp" ]
+    [ "types.hpp", "types_8hpp.html", null ]
 ];

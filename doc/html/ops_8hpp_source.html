@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">ht&#39;s Scheme Interpreter
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">a simplified scheme interpreter implementation</div>
   </td>
@@ -113,15 +113,14 @@ $(document).ready(function(){initNavTree('ops_8hpp_source.html','');});
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">__SCHEME_TYPES_OPS</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">string</span><span class="preprocessor">&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="arch_8hpp.html">&quot;arch.hpp&quot;</a></div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="ops_8hpp.html#a89da48501eb3a62de48a9af3bf491db0">    5</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="ops_8hpp.html#a89da48501eb3a62de48a9af3bf491db0">isOpPlus</a>(<span class="keyword">const</span> std::string&amp; token) { <span class="keywordflow">return</span> token == <span class="stringliteral">&quot;+&quot;</span>; }</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="ops_8hpp.html#aa1799bc579d94cac1a637508a45d32f4">    6</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="ops_8hpp.html#aa1799bc579d94cac1a637508a45d32f4">isOpMinus</a>(<span class="keyword">const</span> std::string&amp; token) { <span class="keywordflow">return</span> token == <span class="stringliteral">&quot;-&quot;</span>; }</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="ops_8hpp.html#a5bdb313ae2a47362b2017cb200a117e7">    7</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="ops_8hpp.html#a5bdb313ae2a47362b2017cb200a117e7">isOpMultiply</a>(<span class="keyword">const</span> std::string&amp; token) { <span class="keywordflow">return</span> token == <span class="stringliteral">&quot;*&quot;</span>; }</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="ops_8hpp.html#a61c440bf29f62f9213869184f2192ca8">    8</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="ops_8hpp.html#a61c440bf29f62f9213869184f2192ca8">isOpDevide</a>(<span class="keyword">const</span> std::string&amp; token) { <span class="keywordflow">return</span> token == <span class="stringliteral">&quot;/&quot;</span>; }</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
-<div class="ttc" id="ops_8hpp_html_a89da48501eb3a62de48a9af3bf491db0"><div class="ttname"><a href="ops_8hpp.html#a89da48501eb3a62de48a9af3bf491db0">isOpPlus</a></div><div class="ttdeci">bool isOpPlus(const std::string &amp;token)</div><div class="ttdef"><b>Definition:</b> <a href="ops_8hpp_source.html#l00005">ops.hpp:5</a></div></div>
-<div class="ttc" id="ops_8hpp_html_aa1799bc579d94cac1a637508a45d32f4"><div class="ttname"><a href="ops_8hpp.html#aa1799bc579d94cac1a637508a45d32f4">isOpMinus</a></div><div class="ttdeci">bool isOpMinus(const std::string &amp;token)</div><div class="ttdef"><b>Definition:</b> <a href="ops_8hpp_source.html#l00006">ops.hpp:6</a></div></div>
-<div class="ttc" id="ops_8hpp_html_a61c440bf29f62f9213869184f2192ca8"><div class="ttname"><a href="ops_8hpp.html#a61c440bf29f62f9213869184f2192ca8">isOpDevide</a></div><div class="ttdeci">bool isOpDevide(const std::string &amp;token)</div><div class="ttdef"><b>Definition:</b> <a href="ops_8hpp_source.html#l00008">ops.hpp:8</a></div></div>
-<div class="ttc" id="ops_8hpp_html_a5bdb313ae2a47362b2017cb200a117e7"><div class="ttname"><a href="ops_8hpp.html#a5bdb313ae2a47362b2017cb200a117e7">isOpMultiply</a></div><div class="ttdeci">bool isOpMultiply(const std::string &amp;token)</div><div class="ttdef"><b>Definition:</b> <a href="ops_8hpp_source.html#l00007">ops.hpp:7</a></div></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<a class="code" href="arch_8hpp.html#a669f5b829a7373f20602e4c063e01d99">PARSER_DECLARATION</a>(OpPlusParser, OpPlus, <span class="keywordtype">int</span>)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<a class="code" href="arch_8hpp.html#a669f5b829a7373f20602e4c063e01d99">PARSER_DECLARATION</a>(OpMinusParser, OpMinus, <span class="keywordtype">int</span>)</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<a class="code" href="arch_8hpp.html#a669f5b829a7373f20602e4c063e01d99">PARSER_DECLARATION</a>(OpMultiplyParser, OpMultiply, <span class="keywordtype">int</span>)</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<a class="code" href="arch_8hpp.html#a669f5b829a7373f20602e4c063e01d99">PARSER_DECLARATION</a>(OpDivideParser, OpDivide, <span class="keywordtype">int</span>)</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
+<div class="ttc" id="arch_8hpp_html_a669f5b829a7373f20602e4c063e01d99"><div class="ttname"><a href="arch_8hpp.html#a669f5b829a7373f20602e4c063e01d99">PARSER_DECLARATION</a></div><div class="ttdeci">#define PARSER_DECLARATION(NAME_, TYPE_, INFOTYPE_)</div><div class="ttdef"><b>Definition:</b> <a href="arch_8hpp_source.html#l00030">arch.hpp:30</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

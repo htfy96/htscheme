@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['extrainfofunc',['ExtraInfoFunc',['../all_8hpp.html#a54711df39cdddaf5689936689dbe279e',1,'ExtraInfoFunc():&#160;all.hpp'],['../arch_8hpp.html#a54711df39cdddaf5689936689dbe279e',1,'ExtraInfoFunc():&#160;arch.hpp']]]
+  ['parsers',['parsers',['../all_8hpp.html#a1b68d70eafaa9266abeb2ebba1112d68',1,'all.hpp']]]
 ];

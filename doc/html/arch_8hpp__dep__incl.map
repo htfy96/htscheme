@@ -1,14 +1,19 @@
 <map id="types/arch.hpp" name="types/arch.hpp">
-<area shape="rect" id="node2" href="$rational_8hpp.html" title="types/rational.hpp" alt="" coords="5,80,111,107"/>
-<area shape="rect" id="node8" href="$float_8hpp.html" title="types/float.hpp" alt="" coords="651,80,743,107"/>
-<area shape="rect" id="node9" href="$float_8cpp.html" title="types/float.cpp" alt="" coords="693,155,783,181"/>
-<area shape="rect" id="node10" href="$string_8hpp.html" title="types/string.hpp" alt="" coords="135,80,234,107"/>
-<area shape="rect" id="node11" href="$boolean_8hpp.html" title="types/boolean.hpp" alt="" coords="258,80,365,107"/>
-<area shape="rect" id="node12" href="$parenthesis_8hpp.html" title="types/parenthesis.hpp" alt="" coords="389,80,513,107"/>
-<area shape="rect" id="node13" href="$ops_8hpp.html" title="types/ops.hpp" alt="" coords="538,80,626,107"/>
-<area shape="rect" id="node3" href="$all_8hpp.html" title="types/all.hpp" alt="" coords="341,155,421,181"/>
-<area shape="rect" id="node4" href="$types_8hpp.html" title="types.hpp" alt="" coords="347,229,415,256"/>
-<area shape="rect" id="node5" href="$tokenizer_8hpp.html" title="tokenizer.hpp" alt="" coords="298,304,383,331"/>
-<area shape="rect" id="node7" href="$tokenizer_8cpp.html" title="tokenizer.cpp" alt="" coords="379,379,463,405"/>
-<area shape="rect" id="node6" href="$tokenizertest_8cpp.html" title="test/tokenizertest.cpp" alt="" coords="231,379,354,405"/>
+<area shape="rect" id="node2" href="$all_8hpp.html" title="types/all.hpp" alt="" coords="356,155,436,181"/>
+<area shape="rect" id="node10" href="$rational_8hpp.html" title="types/rational.hpp" alt="" coords="215,80,321,107"/>
+<area shape="rect" id="node11" href="$float_8hpp.html" title="types/float.hpp" alt="" coords="47,80,139,107"/>
+<area shape="rect" id="node12" href="$float_8cpp.html" title="types/float.cpp" alt="" coords="5,155,96,181"/>
+<area shape="rect" id="node13" href="$string_8hpp.html" title="types/string.hpp" alt="" coords="345,80,444,107"/>
+<area shape="rect" id="node14" href="$boolean_8hpp.html" title="types/boolean.hpp" alt="" coords="617,80,724,107"/>
+<area shape="rect" id="node15" href="$boolean_8cpp.html" title="types/boolean.cpp" alt="" coords="643,155,749,181"/>
+<area shape="rect" id="node16" href="$parenthesis_8hpp.html" title="types/parenthesis.hpp" alt="" coords="469,80,593,107"/>
+<area shape="rect" id="node17" href="$ops_8hpp.html" title="types/ops.hpp" alt="" coords="799,80,887,107"/>
+<area shape="rect" id="node18" href="$ops_8cpp.html" title="types/ops.cpp" alt="" coords="839,155,926,181"/>
+<area shape="rect" id="node3" href="$types_8hpp.html" title="types.hpp" alt="" coords="363,229,431,256"/>
+<area shape="rect" id="node8" href="$all_8cpp.html" title="types/all.cpp" alt="" coords="261,229,339,256"/>
+<area shape="rect" id="node9" href="$parenthesis_8cpp.html" title="types/parenthesis.cpp" alt="" coords="464,229,587,256"/>
+<area shape="rect" id="node4" href="$tokenizer_8hpp.html" title="tokenizer.hpp" alt="" coords="275,304,360,331"/>
+<area shape="rect" id="node6" href="$tokenizer_8cpp.html" title="tokenizer.cpp" alt="" coords="355,379,439,405"/>
+<area shape="rect" id="node7" href="$typestest_8cpp.html" title="test/typestest.cpp" alt="" coords="435,304,541,331"/>
+<area shape="rect" id="node5" href="$tokenizertest_8cpp.html" title="test/tokenizertest.cpp" alt="" coords="208,379,331,405"/>
 </map>

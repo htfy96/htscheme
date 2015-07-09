@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['checker',['Checker',['../struct_checker.html',1,'']]]
+  ['parservisitor',['ParserVisitor',['../struct_parser_visitor.html',1,'']]]
 ];

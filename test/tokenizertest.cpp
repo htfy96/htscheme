@@ -1,3 +1,4 @@
+#ifdef INTEST
 #include "preprocessor.hpp"
 #include "tokenizer.hpp"
 #include <iostream>
@@ -16,4 +17,5 @@ int main()
 
     return 0;
 }
+#endif
 

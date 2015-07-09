@@ -1,14 +1,39 @@
 #ifndef __SCHEME_TYPES_ARCH
 #define __SCHEME_TYPES_ARCH
 
-#include <cstddef>
+#include <iostream>
 #include <string>
-#include <stdexcept>
+#include <boost/mpl/vector.hpp>
+#include <boost/mpl/size.hpp>
+#include <boost/mpl/for_each.hpp>
+#include <boost/mpl/at.hpp>
+#include <boost/variant.hpp>
+#include <boost/preprocessor.hpp>
 
-union ExtraInfo;
-typedef bool (*CheckerFuncType) (const std::string&);
-typedef ExtraInfo (*ExtraInfoFunc) (const std::string&);
 
-ExtraInfo getnullExtraInfo(const std::string s);
+using namespace std;
+
+enum TokenType
+{
+    LeftParenthesis,
+    RightParenthesis,
+    OpPlus,
+    OpMinus,
+    OpMultiply,
+    OpDivide,
+    Float,
+    Rational,
+    String,
+    Boolean
+};
+
+#define PARSER_DECLARATION(NAME_,TYPE_,INFOTYPE_) \
+struct NAME_ \
+{               \
+    typedef INFOTYPE_ InfoType; \
+    static const TokenType type;      \
+    static bool judge(const std::string& token); \
+    static InfoType get(const std::string& token);  \
+};  
 
 #endif

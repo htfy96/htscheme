@@ -4,7 +4,10 @@ var searchData=
   ['bigint_2ecpp',['bigint.cpp',['../bigint_8cpp.html',1,'']]],
   ['bigint_2ehpp',['bigint.hpp',['../bigint_8hpp.html',1,'']]],
   ['biginttest_2ecpp',['biginttest.cpp',['../biginttest_8cpp.html',1,'']]],
-  ['boolean',['boolean',['../union_extra_info.html#aca965abbb21d8d62613031fd4c335d82',1,'ExtraInfo::boolean()'],['../all_8hpp.html#aa520fbf142ba1e7e659590c07da31921a3e74f2723415f1cc3cc2f3883f68add8',1,'Boolean():&#160;all.hpp']]],
+  ['boolean',['Boolean',['../arch_8hpp.html#aa520fbf142ba1e7e659590c07da31921a3e74f2723415f1cc3cc2f3883f68add8',1,'arch.hpp']]],
+  ['boolean_2ecpp',['boolean.cpp',['../boolean_8cpp.html',1,'']]],
   ['boolean_2ehpp',['boolean.hpp',['../boolean_8hpp.html',1,'']]],
-  ['booleantype',['BooleanType',['../boolean_8hpp.html#a0302c79f6d6b93d902af278d1191e054',1,'boolean.hpp']]]
+  ['booleantype',['BooleanType',['../boolean_8hpp.html#a0302c79f6d6b93d902af278d1191e054',1,'boolean.hpp']]],
+  ['boost_5fpp_5flocal_5flimits',['BOOST_PP_LOCAL_LIMITS',['../all_8hpp.html#ac172a4a9fd76e79c6cc98fbbf0faf9db',1,'all.hpp']]],
+  ['boost_5fpp_5flocal_5fmacro',['BOOST_PP_LOCAL_MACRO',['../all_8hpp.html#a10331126934b04ed44afb0e1ed1cecf4',1,'all.hpp']]]
 ];

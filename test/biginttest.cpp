@@ -1,3 +1,5 @@
+#ifdef INTEST
+
 #include "utility/bigint.hpp"
 #include <iostream>
 #include <string>
@@ -27,3 +29,5 @@ int main()
     cout<<d%e<<endl;
     return 0;
 }
+
+#endif

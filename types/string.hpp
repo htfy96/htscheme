@@ -2,5 +2,6 @@
 #define __SCHEME_TYPES_STRING
 #include "arch.hpp"
 #include <string>
-typedef std::string StringType;
+
+PARSER_DECLARATION(StringParser, String, std::string)
 #endif

@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">ht&#39;s Scheme Interpreter
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">a simplified scheme interpreter implementation</div>
   </td>
@@ -106,85 +106,138 @@ $(document).ready(function(){initNavTree('arch_8hpp.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">arch.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;cstddef&gt;</code><br />
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &lt;stdexcept&gt;</code><br />
+<code>#include &lt;boost/mpl/vector.hpp&gt;</code><br />
+<code>#include &lt;boost/mpl/size.hpp&gt;</code><br />
+<code>#include &lt;boost/mpl/for_each.hpp&gt;</code><br />
+<code>#include &lt;boost/mpl/at.hpp&gt;</code><br />
+<code>#include &lt;boost/variant.hpp&gt;</code><br />
+<code>#include &lt;boost/preprocessor.hpp&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for arch.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="arch_8hpp__incl.png" border="0" usemap="#types_2arch_8hpp" alt=""/></div>
+<map name="types_2arch_8hpp" id="types_2arch_8hpp">
+</map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="arch_8hpp__dep__incl.png" border="0" usemap="#types_2arch_8hppdep" alt=""/></div>
 <map name="types_2arch_8hppdep" id="types_2arch_8hppdep">
-<area shape="rect" id="node2" href="rational_8hpp.html" title="types/rational.hpp" alt="" coords="5,80,111,107"/><area shape="rect" id="node8" href="float_8hpp.html" title="types/float.hpp" alt="" coords="651,80,743,107"/><area shape="rect" id="node9" href="float_8cpp.html" title="types/float.cpp" alt="" coords="693,155,783,181"/><area shape="rect" id="node10" href="string_8hpp.html" title="types/string.hpp" alt="" coords="135,80,234,107"/><area shape="rect" id="node11" href="boolean_8hpp.html" title="types/boolean.hpp" alt="" coords="258,80,365,107"/><area shape="rect" id="node12" href="parenthesis_8hpp.html" title="types/parenthesis.hpp" alt="" coords="389,80,513,107"/><area shape="rect" id="node13" href="ops_8hpp.html" title="types/ops.hpp" alt="" coords="538,80,626,107"/><area shape="rect" id="node3" href="all_8hpp.html" title="types/all.hpp" alt="" coords="341,155,421,181"/><area shape="rect" id="node4" href="types_8hpp.html" title="types.hpp" alt="" coords="347,229,415,256"/><area shape="rect" id="node5" href="tokenizer_8hpp.html" title="tokenizer.hpp" alt="" coords="298,304,383,331"/><area shape="rect" id="node7" href="tokenizer_8cpp.html" title="tokenizer.cpp" alt="" coords="379,379,463,405"/><area shape="rect" id="node6" href="tokenizertest_8cpp.html" title="test/tokenizertest.cpp" alt="" coords="231,379,354,405"/></map>
+<area shape="rect" id="node2" href="all_8hpp.html" title="types/all.hpp" alt="" coords="356,155,436,181"/><area shape="rect" id="node10" href="rational_8hpp.html" title="types/rational.hpp" alt="" coords="215,80,321,107"/><area shape="rect" id="node11" href="float_8hpp.html" title="types/float.hpp" alt="" coords="47,80,139,107"/><area shape="rect" id="node12" href="float_8cpp.html" title="types/float.cpp" alt="" coords="5,155,96,181"/><area shape="rect" id="node13" href="string_8hpp.html" title="types/string.hpp" alt="" coords="345,80,444,107"/><area shape="rect" id="node14" href="boolean_8hpp.html" title="types/boolean.hpp" alt="" coords="617,80,724,107"/><area shape="rect" id="node15" href="boolean_8cpp.html" title="types/boolean.cpp" alt="" coords="643,155,749,181"/><area shape="rect" id="node16" href="parenthesis_8hpp.html" title="types/parenthesis.hpp" alt="" coords="469,80,593,107"/><area shape="rect" id="node17" href="ops_8hpp.html" title="types/ops.hpp" alt="" coords="799,80,887,107"/><area shape="rect" id="node18" href="ops_8cpp.html" title="types/ops.cpp" alt="" coords="839,155,926,181"/><area shape="rect" id="node3" href="types_8hpp.html" title="types.hpp" alt="" coords="363,229,431,256"/><area shape="rect" id="node8" href="all_8cpp.html" title="types/all.cpp" alt="" coords="261,229,339,256"/><area shape="rect" id="node9" href="parenthesis_8cpp.html" title="types/parenthesis.cpp" alt="" coords="464,229,587,256"/><area shape="rect" id="node4" href="tokenizer_8hpp.html" title="tokenizer.hpp" alt="" coords="275,304,360,331"/><area shape="rect" id="node6" href="tokenizer_8cpp.html" title="tokenizer.cpp" alt="" coords="355,379,439,405"/><area shape="rect" id="node7" href="typestest_8cpp.html" title="test/typestest.cpp" alt="" coords="435,304,541,331"/><area shape="rect" id="node5" href="tokenizertest_8cpp.html" title="test/tokenizertest.cpp" alt="" coords="208,379,331,405"/></map>
 </div>
 </div>
 <p><a href="arch_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a13b498be54dff1ea392069f686d1ec34"><td class="memItemLeft" align="right" valign="top">typedef bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arch_8hpp.html#a13b498be54dff1ea392069f686d1ec34">CheckerFuncType</a>) (const std::string &amp;)</td></tr>
-<tr class="separator:a13b498be54dff1ea392069f686d1ec34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54711df39cdddaf5689936689dbe279e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="union_extra_info.html">ExtraInfo</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arch_8hpp.html#a54711df39cdddaf5689936689dbe279e">ExtraInfoFunc</a>) (const std::string &amp;)</td></tr>
-<tr class="separator:a54711df39cdddaf5689936689dbe279e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a669f5b829a7373f20602e4c063e01d99"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arch_8hpp.html#a669f5b829a7373f20602e4c063e01d99">PARSER_DECLARATION</a>(NAME_,  TYPE_,  INFOTYPE_)</td></tr>
+<tr class="separator:a669f5b829a7373f20602e4c063e01d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a79915a19c0739234422cae83eec98a5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="union_extra_info.html">ExtraInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arch_8hpp.html#a79915a19c0739234422cae83eec98a5c">getnullExtraInfo</a> (const std::string <a class="el" href="preprocessortest_8cpp.html#a10d1ea193b80aa2128e080646057d11c">s</a>)</td></tr>
-<tr class="separator:a79915a19c0739234422cae83eec98a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:aa520fbf142ba1e7e659590c07da31921"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arch_8hpp.html#aa520fbf142ba1e7e659590c07da31921">TokenType</a> { <br />
+&#160;&#160;<a class="el" href="arch_8hpp.html#aa520fbf142ba1e7e659590c07da31921a0e229922772e1ebbe231bb76b1d0674e">LeftParenthesis</a>, 
+<a class="el" href="arch_8hpp.html#aa520fbf142ba1e7e659590c07da31921aa6ae499ba91edf718de60cefdb91e070">RightParenthesis</a>, 
+<a class="el" href="arch_8hpp.html#aa520fbf142ba1e7e659590c07da31921a553e6f09de6793cb7e48368fae2c7afe">OpPlus</a>, 
+<a class="el" href="arch_8hpp.html#aa520fbf142ba1e7e659590c07da31921aaa3c8287ef3b1b2f65ca22def9d514c8">OpMinus</a>, 
+<br />
+&#160;&#160;<a class="el" href="arch_8hpp.html#aa520fbf142ba1e7e659590c07da31921aa18a9690cbc2e7c5e8df90b8278b9221">OpMultiply</a>, 
+<a class="el" href="arch_8hpp.html#aa520fbf142ba1e7e659590c07da31921a6271add987abf4c1f4c420ffa7b505ac">OpDivide</a>, 
+<a class="el" href="arch_8hpp.html#aa520fbf142ba1e7e659590c07da31921ad67b0ee7230dcecb610254e4e5e589cd">Float</a>, 
+<a class="el" href="arch_8hpp.html#aa520fbf142ba1e7e659590c07da31921ac484461d6c31e2ef0d6ea82009ad1575">Rational</a>, 
+<br />
+&#160;&#160;<a class="el" href="arch_8hpp.html#aa520fbf142ba1e7e659590c07da31921ade17ec82ff106e0c2b4417f5ca231eae">String</a>, 
+<a class="el" href="arch_8hpp.html#aa520fbf142ba1e7e659590c07da31921a3e74f2723415f1cc3cc2f3883f68add8">Boolean</a>
+<br />
+ }</td></tr>
+<tr class="separator:aa520fbf142ba1e7e659590c07da31921"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a class="anchor" id="a13b498be54dff1ea392069f686d1ec34"></a>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a669f5b829a7373f20602e4c063e01d99"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef bool(* CheckerFuncType) (const std::string &amp;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="arch_8hpp_source.html#l00009">9</a> of file <a class="el" href="arch_8hpp_source.html">arch.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a54711df39cdddaf5689936689dbe279e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="union_extra_info.html">ExtraInfo</a>(* ExtraInfoFunc) (const std::string &amp;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="arch_8hpp_source.html#l00010">10</a> of file <a class="el" href="arch_8hpp_source.html">arch.hpp</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a79915a19c0739234422cae83eec98a5c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="union_extra_info.html">ExtraInfo</a> getnullExtraInfo </td>
+          <td class="memname">#define PARSER_DECLARATION</td>
           <td>(</td>
-          <td class="paramtype">const std::string&#160;</td>
-          <td class="paramname"><em>s</em></td><td>)</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">NAME_, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">TYPE_, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">INFOTYPE_&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">struct </span>NAME_ \</div>
+<div class="line">{               \</div>
+<div class="line">    typedef INFOTYPE_ InfoType; \</div>
+<div class="line">    static <span class="keyword">const</span> <a class="code" href="arch_8hpp.html#aa520fbf142ba1e7e659590c07da31921">TokenType</a> type;      \</div>
+<div class="line">    static <span class="keywordtype">bool</span> judge(<span class="keyword">const</span> std::string&amp; token); \</div>
+<div class="line">    static InfoType <span class="keyword">get</span>(<span class="keyword">const</span> std::string&amp; token);  \</div>
+<div class="line">};</div>
+<div class="ttc" id="arch_8hpp_html_aa520fbf142ba1e7e659590c07da31921"><div class="ttname"><a href="arch_8hpp.html#aa520fbf142ba1e7e659590c07da31921">TokenType</a></div><div class="ttdeci">TokenType</div><div class="ttdef"><b>Definition:</b> <a href="arch_8hpp_source.html#l00016">arch.hpp:16</a></div></div>
+</div><!-- fragment -->
+<p>Definition at line <a class="el" href="arch_8hpp_source.html#l00030">30</a> of file <a class="el" href="arch_8hpp_source.html">arch.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="aa520fbf142ba1e7e659590c07da31921"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="arch_8hpp.html#aa520fbf142ba1e7e659590c07da31921">TokenType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="aa520fbf142ba1e7e659590c07da31921a0e229922772e1ebbe231bb76b1d0674e"></a>LeftParenthesis&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa520fbf142ba1e7e659590c07da31921aa6ae499ba91edf718de60cefdb91e070"></a>RightParenthesis&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa520fbf142ba1e7e659590c07da31921a553e6f09de6793cb7e48368fae2c7afe"></a>OpPlus&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa520fbf142ba1e7e659590c07da31921aaa3c8287ef3b1b2f65ca22def9d514c8"></a>OpMinus&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa520fbf142ba1e7e659590c07da31921aa18a9690cbc2e7c5e8df90b8278b9221"></a>OpMultiply&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa520fbf142ba1e7e659590c07da31921a6271add987abf4c1f4c420ffa7b505ac"></a>OpDivide&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa520fbf142ba1e7e659590c07da31921ad67b0ee7230dcecb610254e4e5e589cd"></a>Float&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa520fbf142ba1e7e659590c07da31921ac484461d6c31e2ef0d6ea82009ad1575"></a>Rational&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa520fbf142ba1e7e659590c07da31921ade17ec82ff106e0c2b4417f5ca231eae"></a>String&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa520fbf142ba1e7e659590c07da31921a3e74f2723415f1cc3cc2f3883f68add8"></a>Boolean&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="arch_8hpp_source.html#l00016">16</a> of file <a class="el" href="arch_8hpp_source.html">arch.hpp</a>.</p>
 
 </div>
 </div>

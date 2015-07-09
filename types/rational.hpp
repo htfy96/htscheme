@@ -9,4 +9,6 @@ class RationalType
         BigInt num, den;
         void reduce();
 };
+
+PARSER_DECLARATION(RationalParser, Rational, RationalType)
 #endif

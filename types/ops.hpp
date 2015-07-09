@@ -2,8 +2,10 @@
 #define __SCHEME_TYPES_OPS
 #include <string>
 #include "arch.hpp"
-bool isOpPlus(const std::string& token) { return token == "+"; }
-bool isOpMinus(const std::string& token) { return token == "-"; }
-bool isOpMultiply(const std::string& token) { return token == "*"; }
-bool isOpDevide(const std::string& token) { return token == "/"; }
+PARSER_DECLARATION(OpPlusParser, OpPlus, int)
+PARSER_DECLARATION(OpMinusParser, OpMinus, int)
+PARSER_DECLARATION(OpMultiplyParser, OpMultiply, int)
+PARSER_DECLARATION(OpDivideParser, OpDivide, int)
+
+
 #endif

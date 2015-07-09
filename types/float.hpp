@@ -2,7 +2,7 @@
 #define __SCHEME_TYPES_FLOAT
 #include "arch.hpp"
 #include <string>
-typedef double FloatType;
-bool isFloat(const std::string& token);
-ExtraInfo getFloatExtraInfo(const std::string& token);
+
+PARSER_DECLARATION(FloatParser, Float, double)
+    
 #endif
