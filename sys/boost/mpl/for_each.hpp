@@ -106,7 +106,7 @@ template<
     , typename F
     >
 inline
-void for_each(F f, Sequence* = 0)
+void for_each(const F &f, Sequence* = 0)
 {
     for_each<Sequence, identity<> >(f);
 }

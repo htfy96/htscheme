@@ -40,31 +40,32 @@ struct Token
 
 struct ParserVisitor
 {
-    static bool ok;
-    static std::string token;
-    static TokenType tokenType;
-    static InfoTypes info;
+    static bool ok ;
+    std::string token;
+    TokenType tokenType;
+    InfoTypes info;
     template<typename T> void operator () (T& )
     {
-        if (ok) return;
-        if (T::judge(ParserVisitor::token)) 
+        if (this->ok) return;
+        cout<<" identifying T="<< typeid(T).name() <<" "<<this->token<<endl;
+        if (T::judge(this->token)) 
         {
-            ok=true;
-            ParserVisitor::tokenType = T::type;
-            ParserVisitor::info = T::get(token);
+            cout<<"ok"<<endl;
+            this->ok=true;
+            this->tokenType = T::type;
+            this->info = T::get(this->token);
         }
     }
 
-    static void parse(const string& token_)
+    void parse(const string& token_)
     {
         std::cout<< token_ ;
         std::cout<<" : "<<token <<std::endl;
-        ParserVisitor::token = token_;
-        ParserVisitor::ok = false;
-        boost::mpl::for_each<parsers> (ParserVisitor());
+        this->token = token_;
+        this->ok = false;
+        boost::mpl::for_each<parsers> (*this);
     }
 
-    static void init();
 };
 
 
