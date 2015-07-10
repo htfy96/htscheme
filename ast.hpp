@@ -1,6 +1,7 @@
 #ifndef __SCHEME_AST
 #define __SCHEME_AST
 #include <list>
+#include <iosfwd>
 #include "types.hpp"
 
 enum NodeType {Bracket, Simple};
@@ -24,6 +25,7 @@ class AST
         void buildAST(const std::list<Token> &tokens);
         AST (const std::list<Token> &tokens);
         AST();
+        friend std::ostream& operator << (std::ostream& o, const AST& ast);
 };
 
 

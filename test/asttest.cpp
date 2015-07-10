@@ -14,6 +14,7 @@ Tokenizer tz(su.lines);
 int main()
 {
     AST ast(tz.tokens);
+    cout<<ast<<endl;
 
 }
 

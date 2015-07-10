@@ -1,6 +1,7 @@
 #include "ast.hpp"
 #include <list>
 #include <algorithm>
+#include <iostream>
 #include <cassert>
 
 ASTNode* ASTNode::add(const ASTNode& node)
@@ -58,3 +59,25 @@ void AST::buildAST(const std::list<Token> &tokens)
         }
     }
 }
+
+namespace
+
+{
+    void print(std::ostream& o, int dep, const ASTNode& astnode)
+    {
+        for(int i=0;i<dep;++i) o<<' ';
+        o<< "Type:"<<astnode.type <<" Token:"<< astnode.token.info <<" TokenType:"<<astnode.token.tokenType<<std::endl;
+        std::for_each( astnode.ch.begin(), astnode.ch.end(), [dep,&o](ASTNode* chn) 
+                    {
+                    print(o, dep+8, *chn);
+                    });
+    }
+}
+
+std::ostream& operator << (std::ostream& o, const AST& ast)
+{
+    ::print(o, 0, ast.astHead);
+    return o;
+}
+
+

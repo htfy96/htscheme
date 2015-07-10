@@ -47,10 +47,10 @@ struct ParserVisitor
     template<typename T> void operator () (T& )
     {
         if (this->ok) return;
-        cout<<" identifying T="<< typeid(T).name() <<" "<<this->token<<endl;
+        //cout<<" identifying T="<< typeid(T).name() <<" "<<this->token<<endl;
         if (T::judge(this->token)) 
         {
-            cout<<"ok"<<endl;
+            //cout<<"ok"<<endl;
             this->ok=true;
             this->tokenType = T::type;
             this->info = T::get(this->token);
