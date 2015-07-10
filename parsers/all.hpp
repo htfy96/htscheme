@@ -6,6 +6,7 @@
 #include <boost/mpl/vector.hpp>
 #include <boost/mpl/for_each.hpp>
 #include <boost/variant.hpp>
+#include <vector>
 
 #include "ast.hpp"
 
@@ -17,14 +18,15 @@ typedef boost::variant<int, OpPlusASTParser , OpMinusASTParser> ParserType;
 
 class ParsersHelper
 {
-    ParserType a[boost::mpl::size<ParsersType>::value];
-    int cnt;
+    std::shared_ptr<std::vector<ParserType>> a;
     int cur;
     ASTNode* nod;
     enum {Construct, Parse} state;
     public:
-    ParsersHelper() : cnt(0)
+
+    ParsersHelper()  
     {
+        a = std::make_shared< std::vector<ParserType>>( std::vector<ParserType>() );
         state = Construct;
         boost::mpl::for_each< ParsersType > (*this);
     }
@@ -45,15 +47,13 @@ class ParsersHelper
         {
             case Construct:
                 {
-                    a[cnt] = T();
-                    ++cnt;
+                    a->push_back(T());
                     break;
                 }
             case Parse:
                 {
-                    cout<< typeid(T).name()<<"   "<<a[cur].type().name()<<endl;
-                    if (boost::get< T > (a[cur]).judge(*nod, *this))
-                      boost::get<T>(a[cur]).parse(*nod, *this);
+                    if (boost::get< T > (a->at(cur)) .judge(*nod, *this))
+                      boost::get<T>(a->at(cur)).parse(*nod, *this);
                     ++cur;
                     cout<<"finished!"<<endl;
                     break;
