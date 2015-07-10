@@ -2,4 +2,3 @@
 #include <string>
 
 
-bool ParserVisitor::ok = false;

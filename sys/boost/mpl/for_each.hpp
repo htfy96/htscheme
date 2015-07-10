@@ -44,7 +44,7 @@ struct for_each_impl
           Iterator*
         , LastIterator*
         , TransformFunc*
-        , F
+        , const F&
         )
     {
     }
@@ -63,7 +63,7 @@ struct for_each_impl<false>
           Iterator*
         , LastIterator*
         , TransformFunc* 
-        , F f
+        , F &f
         )
     {
         typedef typename deref<Iterator>::type item;
@@ -90,7 +90,7 @@ template<
     , typename F
     >
 inline
-void for_each(F f, Sequence* = 0, TransformOp* = 0)
+void for_each(F& f, Sequence* = 0, TransformOp* = 0)
 {
     BOOST_MPL_ASSERT(( is_sequence<Sequence> ));
 
@@ -106,7 +106,7 @@ template<
     , typename F
     >
 inline
-void for_each(const F &f, Sequence* = 0)
+void for_each(F &f, Sequence* = 0)
 {
     for_each<Sequence, identity<> >(f);
 }
