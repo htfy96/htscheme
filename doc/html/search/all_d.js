@@ -11,5 +11,6 @@ var searchData=
   ['rawtokens',['rawTokens',['../class_tokenizer.html#a89707ad3a758fc9ec58f00d92d5fc622',1,'Tokenizer']]],
   ['readme_2emd',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
   ['reduce',['reduce',['../class_rational_type.html#ab0173d0fb9a0ca208d52cae36adee9bc',1,'RationalType']]],
+  ['remove',['remove',['../struct_a_s_t_node.html#a5198921818aa511746856219cec0b637',1,'ASTNode']]],
   ['rightparenthesis',['RightParenthesis',['../arch_8hpp.html#aa520fbf142ba1e7e659590c07da31921aa6ae499ba91edf718de60cefdb91e070',1,'arch.hpp']]]
 ];

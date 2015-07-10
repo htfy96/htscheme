@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">ht&#39;s Scheme Interpreter
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">a simplified scheme interpreter implementation</div>
   </td>
@@ -136,8 +136,17 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
 
 <h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
+<li>add()
+: <a class="el" href="struct_a_s_t_node.html#adbcbd09d75a8056a48e9e9071ad8fa3e">ASTNode</a>
+</li>
 <li>assign()
 : <a class="el" href="class_big_int.html#a43652944006a9ace4fa3d8e1c0ed3213">BigInt</a>
+</li>
+<li>AST()
+: <a class="el" href="class_a_s_t.html#a2daa6c636071ad4e888897a93e3dd380">AST</a>
+</li>
+<li>astHead
+: <a class="el" href="class_a_s_t.html#aaa30ec872fa91242f5c9cb7a5041b307">AST</a>
 </li>
 </ul>
 
@@ -146,15 +155,24 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>BigInt()
 : <a class="el" href="class_big_int.html#a4421e6c1883874512f1b04543dafc64a">BigInt</a>
 </li>
+<li>buildAST()
+: <a class="el" href="class_a_s_t.html#a8fe6207ce46b87c2febdc6ebdf0be6dd">AST</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
+<li>ch
+: <a class="el" href="struct_a_s_t_node.html#ab50690af3aacf5c7dbd0440505fd5595">ASTNode</a>
+</li>
 <li>CommentEnd
 : <a class="el" href="class_scheme_unit.html#a90a5ac4883401fe1c38226a54ce9f43da9e9ce5882d904a46fe5fc0daa9f7194a">SchemeUnit</a>
 </li>
 <li>CommentStart
 : <a class="el" href="class_scheme_unit.html#a90a5ac4883401fe1c38226a54ce9f43da92f34af4ca75d006abe1f83629308d9d">SchemeUnit</a>
+</li>
+<li>complete
+: <a class="el" href="class_tokenizer.html#a330a4cce0cbf3ebfbe601d97022d1ed4">Tokenizer</a>
 </li>
 </ul>
 
@@ -178,9 +196,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>info
 : <a class="el" href="struct_parser_visitor.html#a44159efad79cb74d477675367d8dcc3f">ParserVisitor</a>
-</li>
-<li>infoType
-: <a class="el" href="struct_token.html#a725d6f27445b5fdbb28a551c121779eb">Token</a>
+, <a class="el" href="struct_token.html#a4c338f6ca199f4a8575e877d36d03a06">Token</a>
 </li>
 <li>isZero()
 : <a class="el" href="class_big_int.html#a9b728ee8c6214feee03d15885dc3f877">BigInt</a>
@@ -262,7 +278,8 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="class_big_int.html#a56b4522f02907f0d719809a0e81c525e">BigInt</a>
 </li>
 <li>operator&lt;&lt;
-: <a class="el" href="class_big_int.html#a0d8814d1177634c5e0ee08e2bbccf328">BigInt</a>
+: <a class="el" href="class_a_s_t.html#a92b9f335ac976192dab86fc6b59d357b">AST</a>
+, <a class="el" href="class_big_int.html#a0d8814d1177634c5e0ee08e2bbccf328">BigInt</a>
 </li>
 <li>operator&lt;=()
 : <a class="el" href="class_big_int.html#ada9b7b9e96bb3aad13c48637397b6f31">BigInt</a>
@@ -283,8 +300,12 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
+<li>parent
+: <a class="el" href="struct_a_s_t_node.html#aaa1e479bfeb485d93a4866f9c2daf171">ASTNode</a>
+</li>
 <li>parse()
-: <a class="el" href="struct_parser_visitor.html#a1523a32a4a10f8b392ee7fb8b41e6924">ParserVisitor</a>
+: <a class="el" href="struct_parser_visitor.html#a241c6d04c5a0e736ee477d5d93af8ac7">ParserVisitor</a>
+, <a class="el" href="class_tokenizer.html#ae928efe72c00908a3529747b4cfd01d5">Tokenizer</a>
 </li>
 <li>preprocess()
 : <a class="el" href="class_scheme_unit.html#a2dde8109fffd4bb83f74f5788253ffb2">SchemeUnit</a>
@@ -317,6 +338,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>reduce()
 : <a class="el" href="class_rational_type.html#ab0173d0fb9a0ca208d52cae36adee9bc">RationalType</a>
 </li>
+<li>remove()
+: <a class="el" href="struct_a_s_t_node.html#a5198921818aa511746856219cec0b637">ASTNode</a>
+</li>
 </ul>
 
 
@@ -338,7 +362,8 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 <h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
 <li>token
-: <a class="el" href="struct_parser_visitor.html#aab2e2f58eb35027426d9e70f78f20169">ParserVisitor</a>
+: <a class="el" href="struct_a_s_t_node.html#a99c0fc8e2fe4c99fbe85d0d195cfab57">ASTNode</a>
+, <a class="el" href="struct_parser_visitor.html#a75c39e97645b48c171b9912440aa9ca2">ParserVisitor</a>
 </li>
 <li>Tokenizer()
 : <a class="el" href="class_tokenizer.html#a6edc9ba4af94d2aa55f48a83c903800f">Tokenizer</a>
@@ -349,6 +374,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>tokenType
 : <a class="el" href="struct_parser_visitor.html#acaa4d8ca1662ec314ae2a8f048f6aca3">ParserVisitor</a>
 , <a class="el" href="struct_token.html#a3d2b3146021ae2acd9e1b33bf5e59c78">Token</a>
+</li>
+<li>type
+: <a class="el" href="struct_a_s_t_node.html#a34086f3bc5af008f08f255c8ec57ba21">ASTNode</a>
 </li>
 </ul>
 </div><!-- contents -->

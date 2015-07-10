@@ -12,8 +12,8 @@
 <area shape="rect" id="node3" href="$types_8hpp.html" title="types.hpp" alt="" coords="363,229,431,256"/>
 <area shape="rect" id="node8" href="$all_8cpp.html" title="types/all.cpp" alt="" coords="261,229,339,256"/>
 <area shape="rect" id="node9" href="$parenthesis_8cpp.html" title="types/parenthesis.cpp" alt="" coords="464,229,587,256"/>
-<area shape="rect" id="node4" href="$tokenizer_8hpp.html" title="tokenizer.hpp" alt="" coords="275,304,360,331"/>
-<area shape="rect" id="node6" href="$tokenizer_8cpp.html" title="tokenizer.cpp" alt="" coords="355,379,439,405"/>
-<area shape="rect" id="node7" href="$typestest_8cpp.html" title="test/typestest.cpp" alt="" coords="435,304,541,331"/>
-<area shape="rect" id="node5" href="$tokenizertest_8cpp.html" title="test/tokenizertest.cpp" alt="" coords="208,379,331,405"/>
+<area shape="rect" id="node4" href="$ast_8hpp.html" title="ast.hpp" alt="" coords="302,304,359,331"/>
+<area shape="rect" id="node6" href="$tokenizer_8hpp.html" title="tokenizer.hpp" alt="" coords="435,304,520,331"/>
+<area shape="rect" id="node7" href="$tokenizer_8cpp.html" title="tokenizer.cpp" alt="" coords="409,379,493,405"/>
+<area shape="rect" id="node5" href="$ast_8cpp.html" title="ast.cpp" alt="" coords="303,379,359,405"/>
 </map>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['parservisitor',['ParserVisitor',['../struct_parser_visitor.html',1,'']]]
+  ['bigint',['BigInt',['../class_big_int.html',1,'']]]
 ];

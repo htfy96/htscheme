@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">ht&#39;s Scheme Interpreter
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">a simplified scheme interpreter implementation</div>
   </td>
@@ -123,6 +123,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6edc9ba4af94d2aa55f48a83c903800f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bd8a4eb5df764f6128028daa0e9044b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tokenizer.html#a8bd8a4eb5df764f6128028daa0e9044b">split</a> (const std::vector&lt; std::string &gt; &amp;lines)</td></tr>
 <tr class="separator:a8bd8a4eb5df764f6128028daa0e9044b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae928efe72c00908a3529747b4cfd01d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tokenizer.html#ae928efe72c00908a3529747b4cfd01d5">parse</a> (const std::list&lt; std::string &gt; &amp;<a class="el" href="class_tokenizer.html#a89707ad3a758fc9ec58f00d92d5fc622">rawTokens</a>)</td></tr>
+<tr class="separator:ae928efe72c00908a3529747b4cfd01d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -130,6 +132,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a89707ad3a758fc9ec58f00d92d5fc622"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae547093dbd03b3e70373147e4669d9fa"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="struct_token.html">Token</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tokenizer.html#ae547093dbd03b3e70373147e4669d9fa">tokens</a></td></tr>
 <tr class="separator:ae547093dbd03b3e70373147e4669d9fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a330a4cce0cbf3ebfbe601d97022d1ed4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tokenizer.html#a330a4cce0cbf3ebfbe601d97022d1ed4">complete</a></td></tr>
+<tr class="separator:a330a4cce0cbf3ebfbe601d97022d1ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -154,6 +158,24 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ae928efe72c00908a3529747b4cfd01d5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tokenizer::parse </td>
+          <td>(</td>
+          <td class="paramtype">const std::list&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rawTokens</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="tokenizer_8cpp_source.html#l00101">101</a> of file <a class="el" href="tokenizer_8cpp_source.html">tokenizer.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a8bd8a4eb5df764f6128028daa0e9044b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -168,11 +190,25 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tokenizer_8cpp_source.html#l00023">23</a> of file <a class="el" href="tokenizer_8cpp_source.html">tokenizer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="tokenizer_8cpp_source.html#l00024">24</a> of file <a class="el" href="tokenizer_8cpp_source.html">tokenizer.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a330a4cce0cbf3ebfbe601d97022d1ed4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tokenizer::complete</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="tokenizer_8hpp_source.html#l00015">15</a> of file <a class="el" href="tokenizer_8hpp_source.html">tokenizer.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a89707ad3a758fc9ec58f00d92d5fc622"></a>
 <div class="memitem">
 <div class="memproto">
@@ -183,7 +219,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tokenizer_8hpp_source.html#l00012">12</a> of file <a class="el" href="tokenizer_8hpp_source.html">tokenizer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tokenizer_8hpp_source.html#l00013">13</a> of file <a class="el" href="tokenizer_8hpp_source.html">tokenizer.hpp</a>.</p>
 
 </div>
 </div>
@@ -197,7 +233,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="tokenizer_8hpp_source.html#l00013">13</a> of file <a class="el" href="tokenizer_8hpp_source.html">tokenizer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="tokenizer_8hpp_source.html#l00014">14</a> of file <a class="el" href="tokenizer_8hpp_source.html">tokenizer.hpp</a>.</p>
 
 </div>
 </div>

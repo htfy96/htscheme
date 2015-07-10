@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['len',['len',['../class_big_int.html#a72594f018514454b2bf2a398ed21e4a6',1,'BigInt']]],
-  ['lines',['lines',['../class_scheme_unit.html#a03fe6130875cfc25975efc5a6f7981da',1,'SchemeUnit']]]
+  ['incomment',['inComment',['../class_scheme_unit.html#adcc6f95c968825e3e31d5203ce84e2e8',1,'SchemeUnit']]],
+  ['info',['info',['../struct_token.html#a4c338f6ca199f4a8575e877d36d03a06',1,'Token::info()'],['../struct_parser_visitor.html#a44159efad79cb74d477675367d8dcc3f',1,'ParserVisitor::info()']]]
 ];

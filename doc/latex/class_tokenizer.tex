@@ -10,6 +10,8 @@
 \hyperlink{class_tokenizer_a6edc9ba4af94d2aa55f48a83c903800f}{Tokenizer} (const std\+::vector$<$ std\+::string $>$ \&lines)
 \item 
 void \hyperlink{class_tokenizer_a8bd8a4eb5df764f6128028daa0e9044b}{split} (const std\+::vector$<$ std\+::string $>$ \&lines)
+\item 
+void \hyperlink{class_tokenizer_ae928efe72c00908a3529747b4cfd01d5}{parse} (const std\+::list$<$ std\+::string $>$ \&\hyperlink{class_tokenizer_a89707ad3a758fc9ec58f00d92d5fc622}{raw\+Tokens})
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -17,6 +19,8 @@ void \hyperlink{class_tokenizer_a8bd8a4eb5df764f6128028daa0e9044b}{split} (const
 std\+::list$<$ std\+::string $>$ \hyperlink{class_tokenizer_a89707ad3a758fc9ec58f00d92d5fc622}{raw\+Tokens}
 \item 
 std\+::list$<$ \hyperlink{struct_token}{Token} $>$ \hyperlink{class_tokenizer_ae547093dbd03b3e70373147e4669d9fa}{tokens}
+\item 
+bool \hyperlink{class_tokenizer_a330a4cce0cbf3ebfbe601d97022d1ed4}{complete}
 \end{DoxyCompactItemize}
 
 
@@ -42,6 +46,17 @@ Definition at line 18 of file tokenizer.\+cpp.
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_tokenizer_ae928efe72c00908a3529747b4cfd01d5}{}\index{Tokenizer@{Tokenizer}!parse@{parse}}
+\index{parse@{parse}!Tokenizer@{Tokenizer}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\+::parse (
+\begin{DoxyParamCaption}
+\item[{const std\+::list$<$ std\+::string $>$ \&}]{raw\+Tokens}
+\end{DoxyParamCaption}
+)}\label{class_tokenizer_ae928efe72c00908a3529747b4cfd01d5}
+
+
+Definition at line 101 of file tokenizer.\+cpp.
+
 \hypertarget{class_tokenizer_a8bd8a4eb5df764f6128028daa0e9044b}{}\index{Tokenizer@{Tokenizer}!split@{split}}
 \index{split@{split}!Tokenizer@{Tokenizer}}
 \subsubsection[{split}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\+::split (
@@ -51,24 +66,31 @@ Definition at line 18 of file tokenizer.\+cpp.
 )}\label{class_tokenizer_a8bd8a4eb5df764f6128028daa0e9044b}
 
 
-Definition at line 23 of file tokenizer.\+cpp.
+Definition at line 24 of file tokenizer.\+cpp.
 
 
 
 \subsection{Member Data Documentation}
+\hypertarget{class_tokenizer_a330a4cce0cbf3ebfbe601d97022d1ed4}{}\index{Tokenizer@{Tokenizer}!complete@{complete}}
+\index{complete@{complete}!Tokenizer@{Tokenizer}}
+\subsubsection[{complete}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\+::complete}\label{class_tokenizer_a330a4cce0cbf3ebfbe601d97022d1ed4}
+
+
+Definition at line 15 of file tokenizer.\+hpp.
+
 \hypertarget{class_tokenizer_a89707ad3a758fc9ec58f00d92d5fc622}{}\index{Tokenizer@{Tokenizer}!raw\+Tokens@{raw\+Tokens}}
 \index{raw\+Tokens@{raw\+Tokens}!Tokenizer@{Tokenizer}}
 \subsubsection[{raw\+Tokens}]{\setlength{\rightskip}{0pt plus 5cm}std\+::list$<$std\+::string$>$ Tokenizer\+::raw\+Tokens}\label{class_tokenizer_a89707ad3a758fc9ec58f00d92d5fc622}
 
 
-Definition at line 12 of file tokenizer.\+hpp.
+Definition at line 13 of file tokenizer.\+hpp.
 
 \hypertarget{class_tokenizer_ae547093dbd03b3e70373147e4669d9fa}{}\index{Tokenizer@{Tokenizer}!tokens@{tokens}}
 \index{tokens@{tokens}!Tokenizer@{Tokenizer}}
 \subsubsection[{tokens}]{\setlength{\rightskip}{0pt plus 5cm}std\+::list$<${\bf Token}$>$ Tokenizer\+::tokens}\label{class_tokenizer_ae547093dbd03b3e70373147e4669d9fa}
 
 
-Definition at line 13 of file tokenizer.\+hpp.
+Definition at line 14 of file tokenizer.\+hpp.
 
 
 

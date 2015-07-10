@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tokentype',['TokenType',['../arch_8hpp.html#aa520fbf142ba1e7e659590c07da31921',1,'arch.hpp']]]
+  ['nodetype',['NodeType',['../ast_8hpp.html#acac9cbaeea226ed297804c012dc12b16',1,'ast.hpp']]]
 ];

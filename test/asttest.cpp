@@ -15,8 +15,6 @@ int main()
 {
     AST ast(tz.tokens);
     cout<<ast<<endl;
-
 }
-
 
 #endif
