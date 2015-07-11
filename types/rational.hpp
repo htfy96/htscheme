@@ -3,6 +3,6 @@
 #include "arch.hpp"
 #include "utility/rationaltype.hpp"
 
-
 PARSER_DECLARATION(RationalParser, Rational, RationalType)
+
 #endif

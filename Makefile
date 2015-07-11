@@ -14,6 +14,10 @@ PARSERSCPP = $(wildcard parsers/*.cpp)
 PARSERSHPP = $(wildcard parsers/*.hpp)
 PARSERS = $(patsubst %.cpp,%.o,$(PARSERSCPP)) $(TYPESHPP)
 
+UTILITYCPP = $(wildcard utility/*.cpp)
+UTILITYHPP = $(wildcard utility/*.hpp)
+UTILITY = $(patsubst %.cpp,%.o,$(UTILITYCPP)) $(UTILITYHPP)
+
 BASICTYPES = $(filter-out types/all.o, $(TYPES))
 
 DEP = dep.d
@@ -23,16 +27,16 @@ include $(DEP)
 preprocessortest: test/preprocessortest.o preprocessor.o
 	$(CXX) $(CPPFLAGS) $(INTEST) $^  -o $@ 
 
-tokenizertest: test/tokenizertest.o tokenizer.o preprocessor.o $(TYPES) 
+tokenizertest: test/tokenizertest.o tokenizer.o preprocessor.o $(TYPES) $(UTILITY)
 	$(CXX) $(CPPFLAGS) $(INTEST) $(filter %.o,$^)  -o $@
 
 biginttest: test/biginttest.o utility/bigint.o 
 	$(CXX) $(CPPFLAGS) $(INTEST) $^  -o $@
 
-asttest: test/asttest.o preprocessor.o tokenizer.o ast.o $(TYPES) 
+asttest: test/asttest.o preprocessor.o tokenizer.o ast.o $(TYPES) $(UTILITY)
 	$(CXX) $(CPPFLAGS) $(INTEST) $(filter %.o,$^) -o $@
 
-parserstest: test/parserstest.o preprocessor.o tokenizer.o ast.o $(TYPES) $(PARSERS) 
+parserstest: test/parserstest.o preprocessor.o tokenizer.o ast.o $(TYPES) $(PARSERS) $(UTILITY)
 	$(CXX) $(CPPFLAGS) $(INTEST) $(filter %.o,$^) -o $@
 
 rationaltypetest: test/rationaltypetest.o utility/rationaltype.o utility/bigint.o

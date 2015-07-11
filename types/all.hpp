@@ -17,13 +17,19 @@
 #include "parenthesis.hpp"
 #include "ops.hpp"
 
+//Add your parser name here
+#define PARSERS_TUPLE (BooleanParser, FloatParser, \
+                        OpPlusParser, OpMinusParser, OpMultiplyParser, OpDivideParser , RationalParser ,\
+                        StringParser , LeftParenthesisParser, RightParenthesisParser)
 
 
-typedef boost::mpl::vector< BooleanParser, FloatParser, \
-            OpPlusParser, OpMinusParser, OpMultiplyParser, OpDivideParser/* , RationalParser,\
-            StringParser*/ , LeftParenthesisParser, RightParenthesisParser> parsers;
+#define PARSERS_SIZE BOOST_PP_TUPLE_SIZE(PARSERS_TUPLE)
 
-#define BOOST_PP_LOCAL_LIMITS (0,7)
+typedef boost::mpl::vector< 
+BOOST_PP_TUPLE_REM_CTOR(PARSERS_TUPLE)
+> parsers;
+
+#define BOOST_PP_LOCAL_LIMITS (0,PARSERS_SIZE-1)
 #define BOOST_PP_LOCAL_MACRO(N) \
     boost::mpl::at_c<parsers, N>::type::InfoType, 
 
@@ -44,30 +50,20 @@ struct ParserVisitor
     std::string token;
     TokenType tokenType;
     InfoTypes info;
-    template<typename T> void operator () (T& )
-    {
-        if (this->ok) return;
-        //cout<<" identifying T="<< typeid(T).name() <<" "<<this->token<<endl;
-        if (T::judge(this->token)) 
-        {
-            this->ok=true;
-            this->tokenType = T::type;
-            this->info = T::get(this->token);
-        }
-    }
-
-    void parse(const string& token_)
-    {
-        //std::cout<< token_ ;
-        //std::cout<<" : "<<token <<std::endl;
-        this->token = token_;
-        this->ok = false;
-        
-        boost::mpl::for_each<parsers> (*this);
-    }
-
+    template<typename T> void operator () (T& );
+    void parse(const string& token_);
 };
 
 
-
+template<typename T> void ParserVisitor::operator () (T& )
+{
+    if (this->ok) return;
+    //cout<<" identifying T="<< typeid(T).name() <<" "<<this->token<<endl;
+    if (T::judge(this->token)) 
+    {
+        this->ok=true;
+        this->tokenType = T::type;
+        this->info = T::get(this->token);
+    }
+}
 #endif

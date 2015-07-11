@@ -13,6 +13,7 @@
 
 using namespace std;
 
+//Add your TokenType Here
 enum TokenType
 {
     LeftParenthesis,
