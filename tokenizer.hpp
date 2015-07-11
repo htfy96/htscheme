@@ -7,6 +7,7 @@
 class Tokenizer
 {
     public:
+        Tokenizer();
         Tokenizer(const std::vector<std::string>& lines);
         void split(const std::vector<std::string>& lines);
         void parse(const std::list<std::string>& rawTokens);

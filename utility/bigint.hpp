@@ -46,6 +46,7 @@ class BigInt
         bool operator != (const BigInt& b) const;
         bool operator >= (const BigInt& b) const;
         bool operator <= (const BigInt& b) const;
+        explicit operator double();
         template<typename CompareFunc> friend bool rawCompare(const BigInt& a, const BigInt& b);
         friend BigInt gcd(BigInt a, BigInt b);
         friend class RationalType;

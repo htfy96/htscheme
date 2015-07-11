@@ -384,5 +384,17 @@ BigInt gcd(BigInt a, BigInt b)
     }
     return a;
 }
+
+BigInt::operator double()
+{
+    double res=0;
+    for(size_t i=0;i<len;++i)
+    {
+        res *= 10000;
+        res += d[i];
+    }
+    if (!nonNeg) res = -res;
+    return res;
+}   
         
 

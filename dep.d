@@ -1,3 +1,8 @@
+all.o: parsers/all.cpp parsers/all.hpp ast.hpp types.hpp types/all.hpp \
+  types/arch.hpp types/rational.hpp utility/rationaltype.hpp \
+  utility/bigint.hpp types/float.hpp types/string.hpp types/boolean.hpp \
+  types/parenthesis.hpp types/ops.hpp parsers/opplus.hpp \
+  parsers/arch.hpp parsers/opminus.hpp
 opminus.o: parsers/opminus.cpp parsers/opminus.hpp ast.hpp types.hpp \
   types/all.hpp types/arch.hpp types/rational.hpp \
   utility/rationaltype.hpp utility/bigint.hpp types/float.hpp \

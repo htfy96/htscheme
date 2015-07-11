@@ -15,6 +15,9 @@ namespace
     inline bool cond( const std::string& s) { return !s.size(); }
 }
 
+Tokenizer::Tokenizer()
+{ }
+
 Tokenizer::Tokenizer(const std::vector<std::string>& lines)
 {
     split(lines);
@@ -93,7 +96,7 @@ void Tokenizer::split(const std::vector<std::string>& lines)
         } //while
         if (inStr) rawTokens.rbegin() -> push_back('\n'); else rawTokens.push_back("");
     } //for
-    complete &= inStr;
+    complete &= !inStr;
     rawTokens.remove_if(cond);
 
 }//function
@@ -107,10 +110,11 @@ void Tokenizer::parse(const std::list<std::string> & rawTokens)
     for_each(rawTokens.begin(), rawTokens.end(), [&](const std::string& rawToken)
                 {
                 parserVisitor.parse(rawToken);
-                if (!parserVisitor.ok) throw runtime_error("unrecognized token: `"+rawToken+"`");
+                if (!parserVisitor.ok) throw std::runtime_error("unrecognized token: `"+rawToken+"`");
                 Token token;
                 token.tokenType = parserVisitor.tokenType;
                 token.info = parserVisitor.info;
+                token.raw = rawToken;
                 tokens.push_back(token);
                 if (token.tokenType == LeftParenthesis) ++dep;
                 if (token.tokenType == RightParenthesis) --dep;

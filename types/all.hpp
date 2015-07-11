@@ -18,8 +18,8 @@
 #include "ops.hpp"
 
 //Add your parser name here
-#define PARSERS_TUPLE (BooleanParser, FloatParser, \
-                        OpPlusParser, OpMinusParser, OpMultiplyParser, OpDivideParser , RationalParser ,\
+#define PARSERS_TUPLE (BooleanParser, RationalParser, \
+                        OpPlusParser, OpMinusParser, OpMultiplyParser, OpDivideParser , FloatParser ,\
                         StringParser , LeftParenthesisParser, RightParenthesisParser)
 
 
@@ -42,6 +42,7 @@ struct Token
 {
     TokenType tokenType;
     InfoTypes info;
+    std::string raw;
 };
 
 struct ParserVisitor

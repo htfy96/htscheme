@@ -32,6 +32,7 @@ class ParsersHelper
     std::shared_ptr<std::vector<ParserType>> a;
     int cur;
     ASTNode* nod;
+    bool ok;
     enum {Construct, Parse} state;
     public:
 // there is nothing to do here  
@@ -52,9 +53,12 @@ template <typename T> void ParsersHelper::operator() (T&)
         case Parse:
             {
                 if (boost::get< T > (a->at(cur)) .judge(*nod, *this))
-                  boost::get<T>(a->at(cur)).parse(*nod, *this);
+                {
+                    boost::get<T>(a->at(cur)).parse(*nod, *this);
+                    ok=true;
+                }   
                 ++cur;
-                cout<<"finished!"<<endl;
+                //cout<<"finished!"<<endl;
                 break;
             }
     }

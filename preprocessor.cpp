@@ -3,6 +3,9 @@
 #include <cstddef>
 #include "preprocessor.hpp"
 
+SchemeUnit::SchemeUnit()
+{ }
+
 SchemeUnit::SchemeUnit(std::istream& schemeStream)
 {
     preprocess(schemeStream);
@@ -12,6 +15,7 @@ void SchemeUnit::preprocess(std::istream& schemeStream)
 {
     inComment = false;
     static std::string buffer;
+    lines.clear();
     while (!schemeStream.eof())
     {
         getline(schemeStream, buffer);

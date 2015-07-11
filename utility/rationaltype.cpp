@@ -95,3 +95,8 @@ std::ostream& operator <<(std::ostream& o, const RationalType& a)
     return o;
 }
 
+RationalType::operator double()
+{
+    return up_.operator double() / down_.operator double();
+}
+

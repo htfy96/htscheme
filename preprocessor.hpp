@@ -13,6 +13,7 @@ class SchemeUnit
         void stripSemiColon(std::string& line);
         MultilineCommentStatus processMultilineComment( std::string& line);
     public:
+        SchemeUnit();
         SchemeUnit(std::istream& schemeStream);
         std::vector<std::string> lines;
         void preprocess(std::istream& schemeStream);
