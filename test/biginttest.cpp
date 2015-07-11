@@ -27,6 +27,8 @@ int main()
 
     BigInt d("1234567890123456789"), e("277277277");
     cout<<d%e<<endl;
+    cout<<gcd(d,e)<<endl;
+    cout<<gcd(BigInt(90423409128),BigInt(238903485493212))<<endl;
     return 0;
 }
 

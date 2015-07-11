@@ -23,7 +23,7 @@ class ParsersHelper
     ASTNode* nod;
     enum {Construct, Parse} state;
     public:
-
+// there is nothing to do here  
     ParsersHelper()  
     {
         a = std::make_shared< std::vector<ParserType>>( std::vector<ParserType>() );
@@ -60,7 +60,6 @@ class ParsersHelper
                 }
         }
     }
-
 };
 #endif
 

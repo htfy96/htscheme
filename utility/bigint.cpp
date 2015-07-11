@@ -373,4 +373,16 @@ BigInt BigInt::operator % (const BigInt& b) const
     return ans %= b;
 }
     
+BigInt gcd(BigInt a, BigInt b)
+{
+    BigInt c;
+    while (!b.isZero())
+    {
+        c=b;
+        b=a%b;
+        a=c;
+    }
+    return a;
+}
+        
 

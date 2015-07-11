@@ -50,7 +50,6 @@ struct ParserVisitor
         //cout<<" identifying T="<< typeid(T).name() <<" "<<this->token<<endl;
         if (T::judge(this->token)) 
         {
-            //cout<<"ok"<<endl;
             this->ok=true;
             this->tokenType = T::type;
             this->info = T::get(this->token);
