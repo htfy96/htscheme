@@ -153,11 +153,9 @@ In this section, we will try to add a new `Rational` type of token.
 Open `types/arch.hpp`, add `Rational` to `enum TokenType{ ... , Rational }`
 
 ####Step2: Register the Rational Parser
- - Open `types/all.hpp`, add `RationalParser` to `typedef boost::mpl :: vector<..., RationalParser> parsers ` 
+ - Open `types/all.hpp`, add `RationalParser` to `#define PARSERS_TUPLE (..., RationalParser)`
 
- - Change `#define BOOST_PP_LOCAL_LIMITS (0,7)` to `#define BOOST_PP_LOCAL_LIMITS (0,8)` where `8` is the number of items in `<...>parsers`
-
-- `#include "rational.hpp"`
+ - `#include "rational.hpp"`
 
 ####Step3: Write the Header
  - Create `types/rational.hpp`, then include your declaration of your `RationalType` and `"arch.hpp"`
