@@ -100,6 +100,7 @@ void Tokenizer::split(const std::vector<std::string>& lines)
 
 void Tokenizer::parse(const std::list<std::string> & rawTokens)
 {
+    if (!complete) return;
     tokens.clear();
     int dep = 0;
     ParserVisitor parserVisitor;
