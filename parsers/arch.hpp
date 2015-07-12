@@ -6,7 +6,7 @@ class ParsersHelper;
 class ASTParser
 {
     public:
-        virtual bool judge(const PASTNode astnode, const ParsersHelper& parserHelper);
-        virtual void parse(PASTNode astnode, ParsersHelper& parserHelper);
+        virtual bool judge(const PASTNode astnode, const ParsersHelper& parserHelper) =0;
+        virtual void parse(PASTNode astnode, ParsersHelper& parserHelper) =0;
 };
 #endif
