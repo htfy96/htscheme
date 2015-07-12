@@ -8,6 +8,7 @@ int main()
 {
     RationalType a,b;
     cin>>a>>b;
+    cout<<a.operator double()<<endl;
     cout<<a+b<<endl;
     cout<<a-b<<endl;
     cout<<a*b<<endl;

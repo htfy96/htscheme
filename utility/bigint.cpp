@@ -388,11 +388,13 @@ BigInt gcd(BigInt a, BigInt b)
 BigInt::operator double()
 {
     double res=0;
-    for(size_t i=0;i<len;++i)
+    for(int i=len-1;i>=0;--i)
     {
         res *= 10000;
         res += d[i];
     }
+    //std::cout<<*this<<std::endl;
+    //std::cout<< res<<std::endl;
     if (!nonNeg) res = -res;
     return res;
 }   
