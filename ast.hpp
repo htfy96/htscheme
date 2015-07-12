@@ -3,17 +3,22 @@
 #include <list>
 #include <iosfwd>
 #include "types.hpp"
+#include <memory>
 
 enum NodeType {Bracket, Simple};
-struct ASTNode
+struct ASTNode;
+typedef std::shared_ptr<ASTNode> PASTNode;
+struct ASTNode: public std::enable_shared_from_this<ASTNode>
 {
     NodeType type;
     Token token;
-    ASTNode* parent;
-    std::list<ASTNode*> ch;
+    std::shared_ptr<ASTNode> parent;
+    std::list< std::shared_ptr<ASTNode> > ch;
 
     /************************/
-    ASTNode* add(const ASTNode& node);
+    ASTNode();
+    ASTNode(const NodeType& nodeType_, const Token& token_, PASTNode parent_);
+    std::shared_ptr<ASTNode> add(const ASTNode &node);
     void remove();
 };
 
@@ -21,7 +26,7 @@ struct ASTNode
 class AST
 {
     public:
-        ASTNode astHead;
+        PASTNode astHead;
         void buildAST(const std::list<Token> &tokens);
         AST (const std::list<Token> &tokens);
         AST();

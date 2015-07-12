@@ -1,5 +1,4 @@
-
-#include "opminus.hpp"
+#include "opdivide.hpp"
 #include "ast.hpp"
 #include "all.hpp"
 #include "types.hpp"
@@ -9,15 +8,15 @@
 #include <string>
 #include <memory>
 
-bool OpMinusASTParser::judge(const PASTNode astnode, const ParsersHelper& parserHelper)
+bool OpDivideASTParser::judge(const PASTNode astnode, const ParsersHelper& parserHelper)
 {   
-    return astnode->ch.size() &&  (*astnode->ch.begin())->token.tokenType == OpMinus; 
+    return astnode->ch.size() &&  (*astnode->ch.begin())->token.tokenType == OpDivide; 
 }
 
-void OpMinusASTParser::parse(PASTNode astnode, ParsersHelper& parserHelper)
+void OpDivideASTParser::parse(PASTNode astnode, ParsersHelper& parserHelper)
 {
     if (astnode->ch.size()<2)
-        throw std::runtime_error(" - operator must have at least one parameter ");
+        throw std::runtime_error(" / operator must have at least one parameter ");
     astnode->type = Simple;
     auto secondCh = ++astnode->ch.begin();
     astnode->token = (*secondCh)->token;
@@ -27,31 +26,30 @@ void OpMinusASTParser::parse(PASTNode astnode, ParsersHelper& parserHelper)
                 {                
                 myParserHelper.parse(an);
                 if (an->token.tokenType!= Rational && an->token.tokenType!=Float)
-                throw std::runtime_error("An error raises in "+std::string(__func__)+" :Parameter "+an->token.raw+" of - is neither Float nor RationalType");
+                throw std::runtime_error("An error raises in "+std::string(__func__)+" :Parameter "+an->token.raw+" of / is neither Float nor RationalType");
 
                 if (astnode->token.tokenType == Rational)
                 {
                     RationalParser::InfoType v1 = boost::get<RationalParser::InfoType>(astnode->token.info);
                     if (an->token.tokenType == Rational)
-                        astnode->token.info = v1 - boost::get<RationalParser::InfoType>(an->token.info);
+                        astnode->token.info = v1 / boost::get<RationalParser::InfoType>(an->token.info);
                     else
                     {
                         astnode->token.tokenType = Float;
-                        astnode->token.info = v1.operator double() - boost::get<FloatParser::InfoType>(an->token.info);
+                        astnode->token.info = v1.operator double() / boost::get<FloatParser::InfoType>(an->token.info);
                     }
                 }
                 else
                 {
                     FloatParser::InfoType v2 = boost::get<FloatParser::InfoType>(astnode->token.info);
                     if (an->token.tokenType == Rational)
-                      astnode->token.info = v2 - boost::get<RationalParser::InfoType>(an->token.info).operator double();
+                      astnode->token.info = v2 / boost::get<RationalParser::InfoType>(an->token.info).operator double();
                     else
-                      astnode->token.info = v2 - boost::get<FloatParser::InfoType>(an->token.info);
+                      astnode->token.info = v2 / boost::get<FloatParser::InfoType>(an->token.info);
                 }
 
               
                 });
     astnode->remove();
-    //cout<<astnode.token.info<<endl;
 }
     

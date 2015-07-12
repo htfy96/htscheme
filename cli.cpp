@@ -2,6 +2,7 @@
 #include "tokenizer.hpp"
 #include "ast.hpp"
 #include "parsers.hpp"
+#include "utility/debug.hpp"
 
 #include <iostream>
 #include <sstream>
@@ -9,6 +10,7 @@
 #include <iomanip>
 #include <stdexcept>
 #include <algorithm>
+#include <memory>
 
 const std::string banner = "Welcome to htScheme! This version was compiled on "+std::string(__DATE__)+ \
                             " at "+std::string(__TIME__);
@@ -19,6 +21,7 @@ ParsersHelper ph;
 char *buf;
 int main()
 {
+    INDEBUG = false;
     std::string sent = "";
     std::string line;
 
@@ -34,6 +37,7 @@ int main()
             {
                 if (sent!="") std::cout<<"... ";
                 std::getline(std::cin, line);
+                if (cin.eof()) return 0;
                 sent += line + '\n';
                 std::stringstream ss(sent);
                 //std::cout<<sent<<std::endl;
@@ -50,15 +54,16 @@ int main()
             //std::cout<<" complete" <<endl;
 
             ast.buildAST(to.tokens);
-            //cout<<ast<<endl;
-            std::for_each(ast.astHead.ch.begin(), ast.astHead.ch.end(), [&](ASTNode* astnode)
+            LOG(ast)
+            std::for_each(ast.astHead->ch.begin(), ast.astHead->ch.end(), [&](std::shared_ptr<ASTNode> astnode)
                         {
                         //cout<<astnode<<endl;
                         //cout<<astnode->token.info<<endl;
-                        ph.parse(*astnode);
+                        LOG("parsing@! "<< astnode->token.info)
+                        ph.parse(astnode);
                         std::cout<< astnode->token.info <<" ";
                         });
-            if (ast.astHead.ch.size())
+            if (ast.astHead->ch.size())
               std::cout<<std::endl;
             sent = "";
         } catch (std::runtime_error& re)

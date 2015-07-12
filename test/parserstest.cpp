@@ -20,7 +20,7 @@ int main()
 {
     cout<<tn.complete<<endl;
     cout<< ast<<endl;
-    ph.parse( **ast.astHead.ch.begin());
+    ph.parse( * ast.astHead->ch.begin());
     cout<<ast<<endl;
 }
 

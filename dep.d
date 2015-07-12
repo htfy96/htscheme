@@ -2,17 +2,32 @@ all.o: parsers/all.cpp parsers/all.hpp ast.hpp types.hpp types/all.hpp \
   types/arch.hpp types/rational.hpp utility/rationaltype.hpp \
   utility/bigint.hpp types/float.hpp types/string.hpp types/boolean.hpp \
   types/parenthesis.hpp types/ops.hpp parsers/opplus.hpp \
-  parsers/arch.hpp parsers/opminus.hpp
+  parsers/arch.hpp parsers/opminus.hpp parsers/opmultiply.hpp \
+  parsers/opdivide.hpp utility/debug.hpp
+opdivide.o: parsers/opdivide.cpp parsers/opdivide.hpp ast.hpp types.hpp \
+  types/all.hpp types/arch.hpp types/rational.hpp \
+  utility/rationaltype.hpp utility/bigint.hpp types/float.hpp \
+  types/string.hpp types/boolean.hpp types/parenthesis.hpp types/ops.hpp \
+  parsers/arch.hpp parsers/all.hpp parsers/opplus.hpp \
+  parsers/opminus.hpp parsers/opmultiply.hpp
 opminus.o: parsers/opminus.cpp parsers/opminus.hpp ast.hpp types.hpp \
   types/all.hpp types/arch.hpp types/rational.hpp \
   utility/rationaltype.hpp utility/bigint.hpp types/float.hpp \
   types/string.hpp types/boolean.hpp types/parenthesis.hpp types/ops.hpp \
-  parsers/arch.hpp parsers/all.hpp parsers/opplus.hpp
+  parsers/arch.hpp parsers/all.hpp parsers/opplus.hpp \
+  parsers/opmultiply.hpp parsers/opdivide.hpp
+opmultiply.o: parsers/opmultiply.cpp parsers/opmultiply.hpp ast.hpp \
+  types.hpp types/all.hpp types/arch.hpp types/rational.hpp \
+  utility/rationaltype.hpp utility/bigint.hpp types/float.hpp \
+  types/string.hpp types/boolean.hpp types/parenthesis.hpp types/ops.hpp \
+  parsers/arch.hpp parsers/all.hpp parsers/opplus.hpp \
+  parsers/opminus.hpp parsers/opdivide.hpp
 opplus.o: parsers/opplus.cpp parsers/opplus.hpp ast.hpp types.hpp \
   types/all.hpp types/arch.hpp types/rational.hpp \
   utility/rationaltype.hpp utility/bigint.hpp types/float.hpp \
   types/string.hpp types/boolean.hpp types/parenthesis.hpp types/ops.hpp \
-  parsers/arch.hpp parsers/all.hpp parsers/opminus.hpp
+  parsers/arch.hpp parsers/all.hpp parsers/opminus.hpp \
+  parsers/opmultiply.hpp parsers/opdivide.hpp
 asttest.o: test/asttest.cpp ast.hpp types.hpp types/all.hpp \
   types/arch.hpp types/rational.hpp utility/rationaltype.hpp \
   utility/bigint.hpp types/float.hpp types/string.hpp types/boolean.hpp \
@@ -23,7 +38,8 @@ parserstest.o: test/parserstest.cpp preprocessor.hpp tokenizer.hpp \
   utility/rationaltype.hpp utility/bigint.hpp types/float.hpp \
   types/string.hpp types/boolean.hpp types/parenthesis.hpp types/ops.hpp \
   ast.hpp parsers.hpp parsers/all.hpp parsers/opplus.hpp \
-  parsers/arch.hpp parsers/opminus.hpp
+  parsers/arch.hpp parsers/opminus.hpp parsers/opmultiply.hpp \
+  parsers/opdivide.hpp
 preprocessortest.o: test/preprocessortest.cpp preprocessor.hpp
 rationaltypetest.o: test/rationaltypetest.cpp utility/rationaltype.hpp \
   utility/bigint.hpp
@@ -55,6 +71,7 @@ string.o: types/string.cpp types/string.hpp types/arch.hpp types/all.hpp \
   types/float.hpp types/boolean.hpp types/parenthesis.hpp types/ops.hpp \
   utility/strutility.hpp
 bigint.o: utility/bigint.cpp utility/bigint.hpp utility/strutility.hpp
+debug.o: utility/debug.cpp utility/debug.hpp
 rationaltype.o: utility/rationaltype.cpp utility/rationaltype.hpp \
   utility/bigint.hpp
 simplenum.o: utility/simplenum.cpp utility/simplenum.hpp

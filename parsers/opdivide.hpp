@@ -1,8 +1,8 @@
-#ifndef __SCHEME_PARSERS_OPMINUS
-#define __SCHEME_PARSERS_OPMINUS
+#ifndef __SCHEME_PARSERS_OPDIVIDE
+#define __SCHEME_PARSERS_OPDIVIDE
 #include "ast.hpp"
 #include "arch.hpp"
-class OpMinusASTParser
+class OpDivideASTParser
 {
     public:
         bool judge(const PASTNode astnode, const ParsersHelper& parserHelper);

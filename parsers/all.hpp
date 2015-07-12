@@ -8,14 +8,18 @@
 #include <boost/variant.hpp>
 #include <boost/preprocessor.hpp>
 #include <vector>
-
 #include "ast.hpp"
 
 #include "opplus.hpp"
+
 #include "opminus.hpp"
+#include "opmultiply.hpp"
+#include "opdivide.hpp"
+
+#include <memory>
 
 //Add your AST Parser here
-#define ASTPARSERS_TUPLE (OpPlusASTParser, OpMinusASTParser)
+#define ASTPARSERS_TUPLE (OpPlusASTParser, OpMinusASTParser, OpMultiplyASTParser, OpDivideASTParser)
 
 
 #define AST_TUPLESIZE BOOST_PP_TUPLE_SIZE(ASTPARSERS_TUPLE)
@@ -31,13 +35,13 @@ class ParsersHelper
 {
     std::shared_ptr<std::vector<ParserType>> a;
     int cur;
-    ASTNode* nod;
+    PASTNode nod;
     bool ok;
     enum {Construct, Parse} state;
     public:
 // there is nothing to do here  
     ParsersHelper();
-    void parse(ASTNode& astnode);
+    void parse(PASTNode astnode);
     template <typename T> void operator() (T&);
 };
 
@@ -52,9 +56,9 @@ template <typename T> void ParsersHelper::operator() (T&)
             }
         case Parse:
             {
-                if (boost::get< T > (a->at(cur)) .judge(*nod, *this))
+                if (boost::get< T > (a->at(cur)) .judge(nod, *this))
                 {
-                    boost::get<T>(a->at(cur)).parse(*nod, *this);
+                    boost::get<T>(a->at(cur)).parse(nod, *this);
                     ok=true;
                 }   
                 ++cur;

@@ -5,8 +5,8 @@
 class OpPlusASTParser
 {
     public:
-        bool judge(const ASTNode& astnode, const ParsersHelper& parserHelper);
-        void parse(ASTNode& astnode, ParsersHelper& parserHelper);
+        bool judge(const PASTNode astnode, const ParsersHelper& parserHelper);
+        void parse(PASTNode astnode, ParsersHelper& parserHelper);
 };
 
 
