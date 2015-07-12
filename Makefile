@@ -2,7 +2,7 @@ CPPFLAGS = -I . -I $(CURDIR) -isystem $(CURDIR)/sys   -std=c++11
 CXX = g++
 
 INTEST = -D INTEST
-
+CXX += $(INTEST)
 OBJ = $(wildcard *.o test/*.o utility/*.o types/*.o parsers/*.o)
 BIN = $(wildcard cli preprocessortest tokenizertest biginttest typestest asttest parserstest rationaltypetest)
 
