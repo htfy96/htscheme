@@ -45,7 +45,7 @@ void OpDivideASTParser::parse(PASTNode astnode, ParsersHelper& parserHelper)
                 else
                 {
                     LOG(astnode->token.info.type().name()<<" | "<<astnode->token.tokenType)
-                    cout<<astnode->token.raw<<endl;
+                    //cout<<astnode->token.raw<<endl;
                     FloatParser::InfoType v2 = boost::get<FloatParser::InfoType>(astnode->token.info);
                     if (an->token.tokenType == Rational)
                       astnode->token.info = v2 / boost::get<RationalParser::InfoType>(an->token.info).operator double();
