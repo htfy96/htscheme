@@ -1,5 +1,5 @@
 CPPFLAGS = -I . -I $(CURDIR) -isystem $(CURDIR)/sys  -ggdb  -pipe -std=c++11 
-CXX = ccache clang++
+CXX = g++
 
 INTEST = -D INTEST
 CPPFLAGS += $(INTEST)

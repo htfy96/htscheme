@@ -79,6 +79,7 @@ struct Token
 {
     TokenType tokenType; //enum TokenType {OpPlus, ...}
     InfoTypes info; //typedef boost::variant<InfoType1, ...> InfoTypes
+    std::string raw; //raw token
 };
 ```
 
@@ -90,7 +91,7 @@ There is an extra variable `Tokenizer::complete` in this class, which represents
 class AST
 {
     public:
-        ASTNode astHead;
+        PASTNode astHead; //typedef std::shared_ptr<ASTNode> PASTNode
         void buildAST(const std::list<Token> &tokens);
         AST (const std::list<Token> &tokens);
         AST();
@@ -105,10 +106,10 @@ struct ASTNode
 {
     NodeType type; //enum NodeType {Bracket, Simple};
     Token token;
-    ASTNode* parent;
-    std::list<ASTNode*> ch;
+    PASTNode parent;
+    std::list<PASTNode> ch;
 
-    ASTNode* add(const ASTNode& node); //ch.push_back(new ASTNode(node))
+    ASTNode* add(const ASTNode& node); //ch.push_back(std::make_shared<ASTNode>(ASTNode(node))
     void remove(); //Recursively remove all its children then clear ch 
 };
 ```
@@ -133,10 +134,10 @@ The main part of `parsers.hpp` is in `parsers/all.hpp`
 class ParsersHelper
 {
     ParsersHelper();
-    void parse(ASTNode& astnode);
+    void parse(PASTNode astnode);
 };
 ```
-Provide a reference of `ASTNode` to an instance of `ParsersHelper::parse`, then `ParsersHelper` will call according `xxxASTParser::parse(ASTNode& parent, ParsersHelper& helper)` to recursively calculate the result of a subtree of AST with its root as `astnode`. 
+Provide a smart pointer of `ASTNode` to an instance of `ParsersHelper::parse`, then `ParsersHelper` will call according `xxxASTParser::parse(PASTNode parent, ParsersHelper& helper)` to recursively calculate the result of a subtree of AST with its root as `astnode`. 
 After `ParsersHelper::parse`, `astnode.type` will become `Simple`. 
 If `astnode` is already a `Simple` node, nothing will be done.
 
@@ -150,6 +151,8 @@ Type:1 Token.info:0 TokenType:0 //headNode
 
 
 ###Add your own Token Parser
+
+ > An token parser is a struct with static member functions which judge whether a string is a token of this type then convert it to InfoType
 
 In this section, we will try to add a new `Rational` type of token.
 
@@ -173,4 +176,14 @@ Open `types/arch.hpp`, add `Rational` to `enum TokenType{ ... , Rational }`
  - Implement `bool RationalParser::judge(const std::string& token)` which returns whether a token is a rational token 
  and
  `RationalParser::InfoType RationalParser::get(const std::string& token)` which converts the token to `RationalParser::InfoType`(aka `RationalType`)
- - `const TokenType RationalParser::type = Rational; `
+ - `const TokenType RationalParser::type = Rational;`
+
+###Add your own AST Parser
+
+ > An AST parser is a struct inheritating `ASTParser`, which judges whether it can parse a subtree of AST then parse it.
+
+ > Note: In token parser there is only static functions, but an AST parser will be instantiated before we use it, therefore
+ > it could include some data members (e.g a database)
+
+
+
