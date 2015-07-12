@@ -283,7 +283,11 @@ BigInt BigInt::operator* (const BigInt& b) const
     v.resize(len+b.len+1, 0);
     for (size_t i=0; i<len; ++i)
       for (size_t j=0; j<b.len; ++j)
+      {
         v[i+j] += d[i] * b.d[j];
+        v[i+j+1] += v[i+j]/10000;
+        v[i+j] %= 10000;
+      }
     int32_t jw = 0;
     for (size_t i=0; i<len + b.len; ++i)
     {

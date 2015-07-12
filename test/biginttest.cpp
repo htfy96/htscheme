@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-    BigInt a(24324215), b("-2432415455435");
+    BigInt a(24324215), b("-2432415455435"); /*
     cout<<a<<endl;
     cout<<b<<endl;
     cout<<(a += b)<<endl;
@@ -28,12 +28,19 @@ int main()
     BigInt d("1234567890123456789"), e("277277277");
     cout<<d%e<<endl;
     cout<<gcd(d,e)<<endl;
-    cout<<gcd(BigInt(90423409128),BigInt(238903485493212))<<endl;
+    cout<<gcd(BigInt(90423409128),BigInt(238903485493212))<<endl; */
     a=999999514;
     b=888846518;
-    for (int i=0;i<10000;++i)
-      a*=b;
-    cout<<a<<endl;
+    BigInt ans(1);
+    int k=10000;
+    while (k)
+    {
+        if (k % 2==1) ans=ans*b;
+        ans=ans*ans;
+        k/=2;
+    }
+    cout<<ans<<endl;
+
     return 0;
 }
 
