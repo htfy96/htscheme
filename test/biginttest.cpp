@@ -29,6 +29,11 @@ int main()
     cout<<d%e<<endl;
     cout<<gcd(d,e)<<endl;
     cout<<gcd(BigInt(90423409128),BigInt(238903485493212))<<endl;
+    a=999999514;
+    b=888846518;
+    for (int i=0;i<10000;++i)
+      a*=b;
+    cout<<a<<endl;
     return 0;
 }
 
