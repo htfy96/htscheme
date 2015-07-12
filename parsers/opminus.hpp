@@ -2,7 +2,7 @@
 #define __SCHEME_PARSERS_OPMINUS
 #include "ast.hpp"
 #include "arch.hpp"
-class OpMinusASTParser
+class OpMinusASTParser:public ASTParser
 {
     public:
         bool judge(const PASTNode astnode, const ParsersHelper& parserHelper);

@@ -4,22 +4,12 @@
 
 {\ttfamily \#include $<$all.\+hpp$>$}
 
-
-
-Collaboration diagram for Parsers\+Helper\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=181pt]{class_parsers_helper__coll__graph}
-\end{center}
-\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_parsers_helper_a4abfe81f7251ffe4635c2ed2e482645d}{Parsers\+Helper} ()
 \item 
-void \hyperlink{class_parsers_helper_aa3c66d731d1e5e762aedc61d36e97cc6}{parse} (\hyperlink{struct_a_s_t_node}{A\+S\+T\+Node} \&astnode)
+void \hyperlink{class_parsers_helper_a21ce6213ee29e0459dd655c6803db00b}{parse} (\hyperlink{ast_8hpp_ab65291a3ef1ea9ec8e3d396783b77e46}{P\+A\+S\+T\+Node} astnode)
 \item 
 {\footnotesize template$<$typename T $>$ }\\void \hyperlink{class_parsers_helper_affae95c60593e3a8154f29e7b10daf17}{operator()} (T \&)
 \end{DoxyCompactItemize}
@@ -37,7 +27,7 @@ std\+::shared\+\_\+ptr$<$ std\+::vector$<$ \hyperlink{parsers_2all_8hpp_abe36ed7
 \item 
 int \hyperlink{class_parsers_helper_a51c199f259d9aadab7d02681c9e57c49}{cur}
 \item 
-\hyperlink{struct_a_s_t_node}{A\+S\+T\+Node} $\ast$ \hyperlink{class_parsers_helper_a241ca292b5a231634a4486120c1d4b9f}{nod}
+\hyperlink{ast_8hpp_ab65291a3ef1ea9ec8e3d396783b77e46}{P\+A\+S\+T\+Node} \hyperlink{class_parsers_helper_a37f84842cb32827280bff1663f43d750}{nod}
 \item 
 bool \hyperlink{class_parsers_helper_a88e598a10d698b0962efa12ee6121436}{ok}
 \item 
@@ -48,7 +38,7 @@ enum Parsers\+Helper\+:: \{ ... \}  \hyperlink{class_parsers_helper_a268b5522cce
 \subsection{Detailed Description}
 
 
-Definition at line 30 of file all.\+hpp.
+Definition at line 34 of file all.\+hpp.
 
 
 
@@ -65,7 +55,7 @@ Definition at line 30 of file all.\+hpp.
 \end{Desc}
 
 
-Definition at line 36 of file all.\+hpp.
+Definition at line 40 of file all.\+hpp.
 
 
 
@@ -79,7 +69,7 @@ Definition at line 36 of file all.\+hpp.
 )}\label{class_parsers_helper_a4abfe81f7251ffe4635c2ed2e482645d}
 
 
-Definition at line 5 of file all.\+cpp.
+Definition at line 7 of file all.\+cpp.
 
 
 
@@ -93,18 +83,18 @@ Definition at line 5 of file all.\+cpp.
 )}\label{class_parsers_helper_affae95c60593e3a8154f29e7b10daf17}
 
 
-Definition at line 44 of file all.\+hpp.
+Definition at line 48 of file all.\+hpp.
 
-\hypertarget{class_parsers_helper_aa3c66d731d1e5e762aedc61d36e97cc6}{}\index{Parsers\+Helper@{Parsers\+Helper}!parse@{parse}}
+\hypertarget{class_parsers_helper_a21ce6213ee29e0459dd655c6803db00b}{}\index{Parsers\+Helper@{Parsers\+Helper}!parse@{parse}}
 \index{parse@{parse}!Parsers\+Helper@{Parsers\+Helper}}
 \subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}void Parsers\+Helper\+::parse (
 \begin{DoxyParamCaption}
-\item[{{\bf A\+S\+T\+Node} \&}]{astnode}
+\item[{{\bf P\+A\+S\+T\+Node}}]{astnode}
 \end{DoxyParamCaption}
-)}\label{class_parsers_helper_aa3c66d731d1e5e762aedc61d36e97cc6}
+)}\label{class_parsers_helper_a21ce6213ee29e0459dd655c6803db00b}
 
 
-Definition at line 12 of file all.\+cpp.
+Definition at line 15 of file all.\+cpp.
 
 
 
@@ -114,28 +104,28 @@ Definition at line 12 of file all.\+cpp.
 \subsubsection[{a}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$std\+::vector$<${\bf Parser\+Type}$>$ $>$ Parsers\+Helper\+::a\hspace{0.3cm}{\ttfamily [private]}}\label{class_parsers_helper_a1c30abdf7ce5ad7d5e67237f88f18223}
 
 
-Definition at line 32 of file all.\+hpp.
+Definition at line 36 of file all.\+hpp.
 
 \hypertarget{class_parsers_helper_a51c199f259d9aadab7d02681c9e57c49}{}\index{Parsers\+Helper@{Parsers\+Helper}!cur@{cur}}
 \index{cur@{cur}!Parsers\+Helper@{Parsers\+Helper}}
 \subsubsection[{cur}]{\setlength{\rightskip}{0pt plus 5cm}int Parsers\+Helper\+::cur\hspace{0.3cm}{\ttfamily [private]}}\label{class_parsers_helper_a51c199f259d9aadab7d02681c9e57c49}
 
 
-Definition at line 33 of file all.\+hpp.
+Definition at line 37 of file all.\+hpp.
 
-\hypertarget{class_parsers_helper_a241ca292b5a231634a4486120c1d4b9f}{}\index{Parsers\+Helper@{Parsers\+Helper}!nod@{nod}}
+\hypertarget{class_parsers_helper_a37f84842cb32827280bff1663f43d750}{}\index{Parsers\+Helper@{Parsers\+Helper}!nod@{nod}}
 \index{nod@{nod}!Parsers\+Helper@{Parsers\+Helper}}
-\subsubsection[{nod}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\+S\+T\+Node}$\ast$ Parsers\+Helper\+::nod\hspace{0.3cm}{\ttfamily [private]}}\label{class_parsers_helper_a241ca292b5a231634a4486120c1d4b9f}
+\subsubsection[{nod}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+A\+S\+T\+Node} Parsers\+Helper\+::nod\hspace{0.3cm}{\ttfamily [private]}}\label{class_parsers_helper_a37f84842cb32827280bff1663f43d750}
 
 
-Definition at line 34 of file all.\+hpp.
+Definition at line 38 of file all.\+hpp.
 
 \hypertarget{class_parsers_helper_a88e598a10d698b0962efa12ee6121436}{}\index{Parsers\+Helper@{Parsers\+Helper}!ok@{ok}}
 \index{ok@{ok}!Parsers\+Helper@{Parsers\+Helper}}
 \subsubsection[{ok}]{\setlength{\rightskip}{0pt plus 5cm}bool Parsers\+Helper\+::ok\hspace{0.3cm}{\ttfamily [private]}}\label{class_parsers_helper_a88e598a10d698b0962efa12ee6121436}
 
 
-Definition at line 35 of file all.\+hpp.
+Definition at line 39 of file all.\+hpp.
 
 \hypertarget{class_parsers_helper_a268b5522cce719a0c28d3e48d9b5cc04}{}\index{Parsers\+Helper@{Parsers\+Helper}!state@{state}}
 \index{state@{state}!Parsers\+Helper@{Parsers\+Helper}}

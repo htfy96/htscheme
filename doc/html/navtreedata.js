@@ -33,7 +33,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_8ycm__extra__conf_8py.html",
-"struct_token.html#ad77981ec051c2380c38459f8c4392dad"
+"simplenum_8cpp_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

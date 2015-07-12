@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['parent',['parent',['../struct_a_s_t_node.html#aaa1e479bfeb485d93a4866f9c2daf171',1,'ASTNode']]],
+  ['parent',['parent',['../struct_a_s_t_node.html#a10d45a101e919c96194bae61c447ad01',1,'ASTNode']]],
   ['parenthesis_2ecpp',['parenthesis.cpp',['../parenthesis_8cpp.html',1,'']]],
   ['parenthesis_2ehpp',['parenthesis.hpp',['../parenthesis_8hpp.html',1,'']]],
-  ['parse',['Parse',['../class_parsers_helper.html#ac5239b5c4a61b2f239f668b738f613beae4bcb2b09e1ae01be6741b0d5dff5252',1,'ParsersHelper::Parse()'],['../struct_parser_visitor.html#a241c6d04c5a0e736ee477d5d93af8ac7',1,'ParserVisitor::parse()'],['../class_tokenizer.html#ae928efe72c00908a3529747b4cfd01d5',1,'Tokenizer::parse()'],['../class_parsers_helper.html#aa3c66d731d1e5e762aedc61d36e97cc6',1,'ParsersHelper::parse()'],['../class_op_plus_a_s_t_parser.html#afa55f86d5fa18f2e9d0df1753db28c74',1,'OpPlusASTParser::parse()'],['../class_op_minus_a_s_t_parser.html#a7e3739bcb6a04afc33d6f2e2f523a2f0',1,'OpMinusASTParser::parse()']]],
+  ['parse',['parse',['../struct_parser_visitor.html#a241c6d04c5a0e736ee477d5d93af8ac7',1,'ParserVisitor::parse()'],['../class_tokenizer.html#ae928efe72c00908a3529747b4cfd01d5',1,'Tokenizer::parse()'],['../class_parsers_helper.html#a21ce6213ee29e0459dd655c6803db00b',1,'ParsersHelper::parse()'],['../class_op_plus_a_s_t_parser.html#a0198d6f6c65f75cfc75b1f56c84bda6a',1,'OpPlusASTParser::parse()'],['../class_a_s_t_parser.html#ab514c1a1b88592974cb6c2f94f482127',1,'ASTParser::parse()'],['../class_op_minus_a_s_t_parser.html#a3ab524f258bae905a075ad004d69c918',1,'OpMinusASTParser::parse()'],['../class_op_multiply_a_s_t_parser.html#a91903f8ea235e1bfd7e7c668347a4707',1,'OpMultiplyASTParser::parse()'],['../class_op_divide_a_s_t_parser.html#ac6f5f2861b13513887621304f5d2ac6d',1,'OpDivideASTParser::parse()'],['../class_parsers_helper.html#ac5239b5c4a61b2f239f668b738f613beae4bcb2b09e1ae01be6741b0d5dff5252',1,'ParsersHelper::Parse()']]],
   ['parser_5fdeclaration',['PARSER_DECLARATION',['../types_2arch_8hpp.html#a669f5b829a7373f20602e4c063e01d99',1,'arch.hpp']]],
   ['parsers',['parsers',['../types_2all_8hpp.html#afcef35a3105632771c01dd22a5cb2bba',1,'all.hpp']]],
   ['parsers_2ehpp',['parsers.hpp',['../parsers_8hpp.html',1,'']]],
@@ -14,6 +14,7 @@ var searchData=
   ['parserstype',['ParsersType',['../parsers_2all_8hpp.html#ab9fa23d554df0c47fde3d3fa1dba7e02',1,'all.hpp']]],
   ['parsertype',['ParserType',['../parsers_2all_8hpp.html#abe36ed7c3b8a2eebe6d943c84fe72b9c',1,'all.hpp']]],
   ['parservisitor',['ParserVisitor',['../struct_parser_visitor.html',1,'']]],
+  ['pastnode',['PASTNode',['../ast_8hpp.html#ab65291a3ef1ea9ec8e3d396783b77e46',1,'ast.hpp']]],
   ['ph',['ph',['../cli_8cpp.html#a4f3be538f49b526f4d43c11dae9e0cf9',1,'cli.cpp']]],
   ['preprocess',['preprocess',['../class_scheme_unit.html#a2dde8109fffd4bb83f74f5788253ffb2',1,'SchemeUnit']]],
   ['preprocessor_2ecpp',['preprocessor.cpp',['../preprocessor_8cpp.html',1,'']]],

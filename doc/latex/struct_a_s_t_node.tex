@@ -6,17 +6,30 @@
 
 
 
+Inheritance diagram for A\+S\+T\+Node\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{struct_a_s_t_node__inherit__graph}
+\end{center}
+\end{figure}
+
+
 Collaboration diagram for A\+S\+T\+Node\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=173pt]{struct_a_s_t_node__coll__graph}
+\includegraphics[width=236pt]{struct_a_s_t_node__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{struct_a_s_t_node}{A\+S\+T\+Node} $\ast$ \hyperlink{struct_a_s_t_node_adbcbd09d75a8056a48e9e9071ad8fa3e}{add} (const \hyperlink{struct_a_s_t_node}{A\+S\+T\+Node} \&node)
+\hyperlink{struct_a_s_t_node_a1196ed4f19c0b62cdc42fe35946b91d2}{A\+S\+T\+Node} ()
+\item 
+\hyperlink{struct_a_s_t_node_a5992f969de0c4f71fb5094c6afebb63a}{A\+S\+T\+Node} (const \hyperlink{ast_8hpp_acac9cbaeea226ed297804c012dc12b16}{Node\+Type} \&node\+Type\+\_\+, const \hyperlink{struct_token}{Token} \&token\+\_\+, \hyperlink{ast_8hpp_ab65291a3ef1ea9ec8e3d396783b77e46}{P\+A\+S\+T\+Node} parent\+\_\+)
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{struct_a_s_t_node}{A\+S\+T\+Node} $>$ \hyperlink{struct_a_s_t_node_a95fc5e987ba87b6cadd7ab54a86f44ff}{add} (const \hyperlink{struct_a_s_t_node}{A\+S\+T\+Node} \&node)
 \item 
 void \hyperlink{struct_a_s_t_node_a5198921818aa511746856219cec0b637}{remove} ()
 \end{DoxyCompactItemize}
@@ -27,30 +40,57 @@ void \hyperlink{struct_a_s_t_node_a5198921818aa511746856219cec0b637}{remove} ()
 \item 
 \hyperlink{struct_token}{Token} \hyperlink{struct_a_s_t_node_a99c0fc8e2fe4c99fbe85d0d195cfab57}{token}
 \item 
-\hyperlink{struct_a_s_t_node}{A\+S\+T\+Node} $\ast$ \hyperlink{struct_a_s_t_node_aaa1e479bfeb485d93a4866f9c2daf171}{parent}
+std\+::shared\+\_\+ptr$<$ \hyperlink{struct_a_s_t_node}{A\+S\+T\+Node} $>$ \hyperlink{struct_a_s_t_node_a10d45a101e919c96194bae61c447ad01}{parent}
 \item 
-std\+::list$<$ \hyperlink{struct_a_s_t_node}{A\+S\+T\+Node} $\ast$ $>$ \hyperlink{struct_a_s_t_node_ab50690af3aacf5c7dbd0440505fd5595}{ch}
+std\+::list$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{struct_a_s_t_node}{A\+S\+T\+Node} $>$ $>$ \hyperlink{struct_a_s_t_node_a699a56f40c22c31468573943be9acf73}{ch}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 
 
-Definition at line 8 of file ast.\+hpp.
+Definition at line 11 of file ast.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{struct_a_s_t_node_a1196ed4f19c0b62cdc42fe35946b91d2}{}\index{A\+S\+T\+Node@{A\+S\+T\+Node}!A\+S\+T\+Node@{A\+S\+T\+Node}}
+\index{A\+S\+T\+Node@{A\+S\+T\+Node}!A\+S\+T\+Node@{A\+S\+T\+Node}}
+\subsubsection[{A\+S\+T\+Node}]{\setlength{\rightskip}{0pt plus 5cm}A\+S\+T\+Node\+::\+A\+S\+T\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{struct_a_s_t_node_a1196ed4f19c0b62cdc42fe35946b91d2}
+
+
+Definition at line 22 of file ast.\+cpp.
+
+\hypertarget{struct_a_s_t_node_a5992f969de0c4f71fb5094c6afebb63a}{}\index{A\+S\+T\+Node@{A\+S\+T\+Node}!A\+S\+T\+Node@{A\+S\+T\+Node}}
+\index{A\+S\+T\+Node@{A\+S\+T\+Node}!A\+S\+T\+Node@{A\+S\+T\+Node}}
+\subsubsection[{A\+S\+T\+Node}]{\setlength{\rightskip}{0pt plus 5cm}A\+S\+T\+Node\+::\+A\+S\+T\+Node (
+\begin{DoxyParamCaption}
+\item[{const {\bf Node\+Type} \&}]{node\+Type\+\_\+, }
+\item[{const {\bf Token} \&}]{token\+\_\+, }
+\item[{{\bf P\+A\+S\+T\+Node}}]{parent\+\_\+}
+\end{DoxyParamCaption}
+)}\label{struct_a_s_t_node_a5992f969de0c4f71fb5094c6afebb63a}
+
+
+Definition at line 24 of file ast.\+cpp.
 
 
 
 \subsection{Member Function Documentation}
-\hypertarget{struct_a_s_t_node_adbcbd09d75a8056a48e9e9071ad8fa3e}{}\index{A\+S\+T\+Node@{A\+S\+T\+Node}!add@{add}}
+\hypertarget{struct_a_s_t_node_a95fc5e987ba87b6cadd7ab54a86f44ff}{}\index{A\+S\+T\+Node@{A\+S\+T\+Node}!add@{add}}
 \index{add@{add}!A\+S\+T\+Node@{A\+S\+T\+Node}}
-\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\+S\+T\+Node} $\ast$ A\+S\+T\+Node\+::add (
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf A\+S\+T\+Node} $>$ A\+S\+T\+Node\+::add (
 \begin{DoxyParamCaption}
 \item[{const {\bf A\+S\+T\+Node} \&}]{node}
 \end{DoxyParamCaption}
-)}\label{struct_a_s_t_node_adbcbd09d75a8056a48e9e9071ad8fa3e}
+)}\label{struct_a_s_t_node_a95fc5e987ba87b6cadd7ab54a86f44ff}
 
 
-Definition at line 7 of file ast.\+cpp.
+Definition at line 9 of file ast.\+cpp.
 
 \hypertarget{struct_a_s_t_node_a5198921818aa511746856219cec0b637}{}\index{A\+S\+T\+Node@{A\+S\+T\+Node}!remove@{remove}}
 \index{remove@{remove}!A\+S\+T\+Node@{A\+S\+T\+Node}}
@@ -61,38 +101,38 @@ Definition at line 7 of file ast.\+cpp.
 )}\label{struct_a_s_t_node_a5198921818aa511746856219cec0b637}
 
 
-Definition at line 14 of file ast.\+cpp.
+Definition at line 16 of file ast.\+cpp.
 
 
 
 \subsection{Member Data Documentation}
-\hypertarget{struct_a_s_t_node_ab50690af3aacf5c7dbd0440505fd5595}{}\index{A\+S\+T\+Node@{A\+S\+T\+Node}!ch@{ch}}
+\hypertarget{struct_a_s_t_node_a699a56f40c22c31468573943be9acf73}{}\index{A\+S\+T\+Node@{A\+S\+T\+Node}!ch@{ch}}
 \index{ch@{ch}!A\+S\+T\+Node@{A\+S\+T\+Node}}
-\subsubsection[{ch}]{\setlength{\rightskip}{0pt plus 5cm}std\+::list$<${\bf A\+S\+T\+Node}$\ast$$>$ A\+S\+T\+Node\+::ch}\label{struct_a_s_t_node_ab50690af3aacf5c7dbd0440505fd5595}
+\subsubsection[{ch}]{\setlength{\rightskip}{0pt plus 5cm}std\+::list$<$ std\+::shared\+\_\+ptr$<${\bf A\+S\+T\+Node}$>$ $>$ A\+S\+T\+Node\+::ch}\label{struct_a_s_t_node_a699a56f40c22c31468573943be9acf73}
 
 
-Definition at line 13 of file ast.\+hpp.
+Definition at line 16 of file ast.\+hpp.
 
-\hypertarget{struct_a_s_t_node_aaa1e479bfeb485d93a4866f9c2daf171}{}\index{A\+S\+T\+Node@{A\+S\+T\+Node}!parent@{parent}}
+\hypertarget{struct_a_s_t_node_a10d45a101e919c96194bae61c447ad01}{}\index{A\+S\+T\+Node@{A\+S\+T\+Node}!parent@{parent}}
 \index{parent@{parent}!A\+S\+T\+Node@{A\+S\+T\+Node}}
-\subsubsection[{parent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\+S\+T\+Node}$\ast$ A\+S\+T\+Node\+::parent}\label{struct_a_s_t_node_aaa1e479bfeb485d93a4866f9c2daf171}
+\subsubsection[{parent}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf A\+S\+T\+Node}$>$ A\+S\+T\+Node\+::parent}\label{struct_a_s_t_node_a10d45a101e919c96194bae61c447ad01}
 
 
-Definition at line 12 of file ast.\+hpp.
+Definition at line 15 of file ast.\+hpp.
 
 \hypertarget{struct_a_s_t_node_a99c0fc8e2fe4c99fbe85d0d195cfab57}{}\index{A\+S\+T\+Node@{A\+S\+T\+Node}!token@{token}}
 \index{token@{token}!A\+S\+T\+Node@{A\+S\+T\+Node}}
 \subsubsection[{token}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Token} A\+S\+T\+Node\+::token}\label{struct_a_s_t_node_a99c0fc8e2fe4c99fbe85d0d195cfab57}
 
 
-Definition at line 11 of file ast.\+hpp.
+Definition at line 14 of file ast.\+hpp.
 
 \hypertarget{struct_a_s_t_node_a34086f3bc5af008f08f255c8ec57ba21}{}\index{A\+S\+T\+Node@{A\+S\+T\+Node}!type@{type}}
 \index{type@{type}!A\+S\+T\+Node@{A\+S\+T\+Node}}
 \subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node\+Type} A\+S\+T\+Node\+::type}\label{struct_a_s_t_node_a34086f3bc5af008f08f255c8ec57ba21}
 
 
-Definition at line 10 of file ast.\+hpp.
+Definition at line 13 of file ast.\+hpp.
 
 
 

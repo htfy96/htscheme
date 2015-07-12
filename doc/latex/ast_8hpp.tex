@@ -3,8 +3,8 @@
 {\ttfamily \#include $<$list$>$}\\*
 {\ttfamily \#include $<$iosfwd$>$}\\*
 {\ttfamily \#include \char`\"{}types.\+hpp\char`\"{}}\\*
-Include dependency graph for ast.\+hpp\+:
-\nopagebreak
+{\ttfamily \#include $<$memory$>$}\\*
+Include dependency graph for ast.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,6 +26,11 @@ struct \hyperlink{struct_a_s_t_node}{A\+S\+T\+Node}
 \item 
 class \hyperlink{class_a_s_t}{A\+S\+T}
 \end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \hyperlink{struct_a_s_t_node}{A\+S\+T\+Node} $>$ \hyperlink{ast_8hpp_ab65291a3ef1ea9ec8e3d396783b77e46}{P\+A\+S\+T\+Node}
+\end{DoxyCompactItemize}
 \subsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
@@ -33,6 +38,16 @@ enum \hyperlink{ast_8hpp_acac9cbaeea226ed297804c012dc12b16}{Node\+Type} \{ \hype
 \hyperlink{ast_8hpp_acac9cbaeea226ed297804c012dc12b16aebfbf7dc5cde0772efb1aa49712bd76b}{Simple}
  \}
 \end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{ast_8hpp_ab65291a3ef1ea9ec8e3d396783b77e46}{}\index{ast.\+hpp@{ast.\+hpp}!P\+A\+S\+T\+Node@{P\+A\+S\+T\+Node}}
+\index{P\+A\+S\+T\+Node@{P\+A\+S\+T\+Node}!ast.\+hpp@{ast.\+hpp}}
+\subsubsection[{P\+A\+S\+T\+Node}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::shared\+\_\+ptr$<${\bf A\+S\+T\+Node}$>$ {\bf P\+A\+S\+T\+Node}}\label{ast_8hpp_ab65291a3ef1ea9ec8e3d396783b77e46}
+
+
+Definition at line 9 of file ast.\+hpp.
+
 
 
 \subsection{Enumeration Type Documentation}
@@ -50,5 +65,5 @@ enum \hyperlink{ast_8hpp_acac9cbaeea226ed297804c012dc12b16}{Node\+Type} \{ \hype
 \end{Desc}
 
 
-Definition at line 7 of file ast.\+hpp.
+Definition at line 8 of file ast.\+hpp.
 

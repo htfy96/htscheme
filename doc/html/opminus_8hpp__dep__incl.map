@@ -1,8 +1,10 @@
 <map id="parsers/opminus.hpp" name="parsers/opminus.hpp">
-<area shape="rect" id="node2" href="$parsers_2all_8hpp.html" title="parsers/all.hpp" alt="" coords="229,80,318,107"/>
-<area shape="rect" id="node6" href="$opminus_8cpp.html" title="parsers/opminus.cpp" alt="" coords="352,155,469,181"/>
+<area shape="rect" id="node2" href="$parsers_2all_8hpp.html" title="parsers/all.hpp" alt="" coords="381,80,470,107"/>
+<area shape="rect" id="node7" href="$opminus_8cpp.html" title="parsers/opminus.cpp" alt="" coords="645,155,763,181"/>
 <area shape="rect" id="node3" href="$parsers_8hpp.html" title="parsers.hpp" alt="" coords="5,155,83,181"/>
 <area shape="rect" id="node5" href="$parsers_2all_8cpp.html" title="parsers/all.cpp" alt="" coords="107,155,195,181"/>
-<area shape="rect" id="node7" href="$opplus_8cpp.html" title="parsers/opplus.cpp" alt="" coords="219,155,328,181"/>
+<area shape="rect" id="node6" href="$opdivide_8cpp.html" title="parsers/opdivide.cpp" alt="" coords="219,155,338,181"/>
+<area shape="rect" id="node8" href="$opmultiply_8cpp.html" title="parsers/opmultiply.cpp" alt="" coords="363,155,488,181"/>
+<area shape="rect" id="node9" href="$opplus_8cpp.html" title="parsers/opplus.cpp" alt="" coords="512,155,621,181"/>
 <area shape="rect" id="node4" href="$cli_8cpp.html" title="cli.cpp" alt="" coords="19,229,69,256"/>
 </map>

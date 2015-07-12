@@ -4,6 +4,8 @@ var dir_64e73385a8b7738563c26ce10415b58d =
     [ "bigint.hpp", "bigint_8hpp.html", [
       [ "BigInt", "class_big_int.html", "class_big_int" ]
     ] ],
+    [ "debug.cpp", "debug_8cpp.html", "debug_8cpp" ],
+    [ "debug.hpp", "debug_8hpp.html", "debug_8hpp" ],
     [ "rationaltype.cpp", "rationaltype_8cpp.html", "rationaltype_8cpp" ],
     [ "rationaltype.hpp", "rationaltype_8hpp.html", [
       [ "RationalType", "class_rational_type.html", "class_rational_type" ]

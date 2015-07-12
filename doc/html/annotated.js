@@ -2,8 +2,11 @@ var annotated =
 [
     [ "AST", "class_a_s_t.html", "class_a_s_t" ],
     [ "ASTNode", "struct_a_s_t_node.html", "struct_a_s_t_node" ],
+    [ "ASTParser", "class_a_s_t_parser.html", "class_a_s_t_parser" ],
     [ "BigInt", "class_big_int.html", "class_big_int" ],
+    [ "OpDivideASTParser", "class_op_divide_a_s_t_parser.html", "class_op_divide_a_s_t_parser" ],
     [ "OpMinusASTParser", "class_op_minus_a_s_t_parser.html", "class_op_minus_a_s_t_parser" ],
+    [ "OpMultiplyASTParser", "class_op_multiply_a_s_t_parser.html", "class_op_multiply_a_s_t_parser" ],
     [ "OpPlusASTParser", "class_op_plus_a_s_t_parser.html", "class_op_plus_a_s_t_parser" ],
     [ "ParsersHelper", "class_parsers_helper.html", "class_parsers_helper" ],
     [ "ParserVisitor", "struct_parser_visitor.html", "struct_parser_visitor" ],

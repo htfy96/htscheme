@@ -10,6 +10,9 @@
 {\ttfamily \#include \char`\"{}ast.\+hpp\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}opplus.\+hpp\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}opminus.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opmultiply.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}opdivide.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$memory$>$}\\*
 Include dependency graph for all.\+hpp\+:
 \nopagebreak
 \begin{figure}[H]
@@ -18,8 +21,7 @@ Include dependency graph for all.\+hpp\+:
 \includegraphics[width=350pt]{parsers_2all_8hpp__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -34,7 +36,7 @@ class \hyperlink{class_parsers_helper}{Parsers\+Helper}
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{parsers_2all_8hpp_aad31e7dafe6570a7db6c133878e332e0}{A\+S\+T\+P\+A\+R\+S\+E\+R\+S\+\_\+\+T\+U\+P\+L\+E}~(\hyperlink{class_op_plus_a_s_t_parser}{Op\+Plus\+A\+S\+T\+Parser}, \hyperlink{class_op_minus_a_s_t_parser}{Op\+Minus\+A\+S\+T\+Parser})
+\#define \hyperlink{parsers_2all_8hpp_aad31e7dafe6570a7db6c133878e332e0}{A\+S\+T\+P\+A\+R\+S\+E\+R\+S\+\_\+\+T\+U\+P\+L\+E}~(\hyperlink{class_op_plus_a_s_t_parser}{Op\+Plus\+A\+S\+T\+Parser}, \hyperlink{class_op_minus_a_s_t_parser}{Op\+Minus\+A\+S\+T\+Parser}, \hyperlink{class_op_multiply_a_s_t_parser}{Op\+Multiply\+A\+S\+T\+Parser}, \hyperlink{class_op_divide_a_s_t_parser}{Op\+Divide\+A\+S\+T\+Parser})
 \item 
 \#define \hyperlink{parsers_2all_8hpp_a8a7554aba7ebc57553814b35aaaaa1a2}{A\+S\+T\+\_\+\+T\+U\+P\+L\+E\+S\+I\+Z\+E}~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+T\+U\+P\+L\+E\+\_\+\+S\+I\+Z\+E(\hyperlink{parsers_2all_8hpp_aad31e7dafe6570a7db6c133878e332e0}{A\+S\+T\+P\+A\+R\+S\+E\+R\+S\+\_\+\+T\+U\+P\+L\+E})
 \end{DoxyCompactItemize}
@@ -53,14 +55,14 @@ typedef boost\+::variant$<$ int, $>$ \hyperlink{parsers_2all_8hpp_abe36ed7c3b8a2
 \subsubsection[{A\+S\+T\+\_\+\+T\+U\+P\+L\+E\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+S\+T\+\_\+\+T\+U\+P\+L\+E\+S\+I\+Z\+E~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+T\+U\+P\+L\+E\+\_\+\+S\+I\+Z\+E({\bf A\+S\+T\+P\+A\+R\+S\+E\+R\+S\+\_\+\+T\+U\+P\+L\+E})}\label{parsers_2all_8hpp_a8a7554aba7ebc57553814b35aaaaa1a2}
 
 
-Definition at line 21 of file all.\+hpp.
+Definition at line 25 of file all.\+hpp.
 
 \hypertarget{parsers_2all_8hpp_aad31e7dafe6570a7db6c133878e332e0}{}\index{parsers/all.\+hpp@{parsers/all.\+hpp}!A\+S\+T\+P\+A\+R\+S\+E\+R\+S\+\_\+\+T\+U\+P\+L\+E@{A\+S\+T\+P\+A\+R\+S\+E\+R\+S\+\_\+\+T\+U\+P\+L\+E}}
 \index{A\+S\+T\+P\+A\+R\+S\+E\+R\+S\+\_\+\+T\+U\+P\+L\+E@{A\+S\+T\+P\+A\+R\+S\+E\+R\+S\+\_\+\+T\+U\+P\+L\+E}!parsers/all.\+hpp@{parsers/all.\+hpp}}
-\subsubsection[{A\+S\+T\+P\+A\+R\+S\+E\+R\+S\+\_\+\+T\+U\+P\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+S\+T\+P\+A\+R\+S\+E\+R\+S\+\_\+\+T\+U\+P\+L\+E~({\bf Op\+Plus\+A\+S\+T\+Parser}, {\bf Op\+Minus\+A\+S\+T\+Parser})}\label{parsers_2all_8hpp_aad31e7dafe6570a7db6c133878e332e0}
+\subsubsection[{A\+S\+T\+P\+A\+R\+S\+E\+R\+S\+\_\+\+T\+U\+P\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+S\+T\+P\+A\+R\+S\+E\+R\+S\+\_\+\+T\+U\+P\+L\+E~({\bf Op\+Plus\+A\+S\+T\+Parser}, {\bf Op\+Minus\+A\+S\+T\+Parser}, {\bf Op\+Multiply\+A\+S\+T\+Parser}, {\bf Op\+Divide\+A\+S\+T\+Parser})}\label{parsers_2all_8hpp_aad31e7dafe6570a7db6c133878e332e0}
 
 
-Definition at line 18 of file all.\+hpp.
+Definition at line 22 of file all.\+hpp.
 
 
 
@@ -70,12 +72,12 @@ Definition at line 18 of file all.\+hpp.
 \subsubsection[{Parsers\+Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\+::mpl\+::vector$<$$>$ {\bf Parsers\+Type}}\label{parsers_2all_8hpp_ab9fa23d554df0c47fde3d3fa1dba7e02}
 
 
-Definition at line 25 of file all.\+hpp.
+Definition at line 29 of file all.\+hpp.
 
 \hypertarget{parsers_2all_8hpp_abe36ed7c3b8a2eebe6d943c84fe72b9c}{}\index{parsers/all.\+hpp@{parsers/all.\+hpp}!Parser\+Type@{Parser\+Type}}
 \index{Parser\+Type@{Parser\+Type}!parsers/all.\+hpp@{parsers/all.\+hpp}}
 \subsubsection[{Parser\+Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\+::variant$<$int, $>$ {\bf Parser\+Type}}\label{parsers_2all_8hpp_abe36ed7c3b8a2eebe6d943c84fe72b9c}
 
 
-Definition at line 28 of file all.\+hpp.
+Definition at line 32 of file all.\+hpp.
 
