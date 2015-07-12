@@ -2,6 +2,7 @@
 #include "ast.hpp"
 #include "all.hpp"
 #include "types.hpp"
+#include "utility/debug.hpp"
 #include <algorithm>
 #include <cassert>
 #include <stdexcept>
@@ -18,9 +19,11 @@ void OpDivideASTParser::parse(PASTNode astnode, ParsersHelper& parserHelper)
     if (astnode->ch.size()<2)
         throw std::runtime_error(" / operator must have at least one parameter ");
     astnode->type = Simple;
-    auto secondCh = ++astnode->ch.begin();
-    astnode->token = (*secondCh)->token;
     auto myParserHelper(parserHelper);
+    auto secondCh = ++astnode->ch.begin();
+    myParserHelper.parse(*secondCh);
+    astnode->token = (*secondCh)->token;
+    LOG((*secondCh)->token.info)
     //cout<<astnode.token.info<<endl;
     std::for_each( ++secondCh, astnode->ch.end(), [&myParserHelper, &astnode](std::shared_ptr<ASTNode> an)
                 {                
@@ -41,6 +44,8 @@ void OpDivideASTParser::parse(PASTNode astnode, ParsersHelper& parserHelper)
                 }
                 else
                 {
+                    LOG(astnode->token.info.type().name()<<" | "<<astnode->token.tokenType)
+                    cout<<astnode->token.raw<<endl;
                     FloatParser::InfoType v2 = boost::get<FloatParser::InfoType>(astnode->token.info);
                     if (an->token.tokenType == Rational)
                       astnode->token.info = v2 / boost::get<RationalParser::InfoType>(an->token.info).operator double();

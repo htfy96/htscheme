@@ -18,10 +18,11 @@ void OpMinusASTParser::parse(PASTNode astnode, ParsersHelper& parserHelper)
 {
     if (astnode->ch.size()<2)
         throw std::runtime_error(" - operator must have at least one parameter ");
+    auto myParserHelper(parserHelper);
     astnode->type = Simple;
     auto secondCh = ++astnode->ch.begin();
+    myParserHelper.parse(*secondCh);
     astnode->token = (*secondCh)->token;
-    auto myParserHelper(parserHelper);
     //cout<<astnode.token.info<<endl;
     std::for_each( ++secondCh, astnode->ch.end(), [&myParserHelper, &astnode](std::shared_ptr<ASTNode> an)
                 {                
