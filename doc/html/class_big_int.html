@@ -73,6 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -165,6 +166,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae5bdb87103df4be652062b015a1fa653"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada9b7b9e96bb3aad13c48637397b6f31"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_big_int.html#ada9b7b9e96bb3aad13c48637397b6f31">operator&lt;=</a> (const <a class="el" href="class_big_int.html">BigInt</a> &amp;b) const </td></tr>
 <tr class="separator:ada9b7b9e96bb3aad13c48637397b6f31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79b9a7b9d93e3c0a932491d613d618e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_big_int.html#a79b9a7b9d93e3c0a932491d613d618e5">operator double</a> ()</td></tr>
+<tr class="separator:a79b9a7b9d93e3c0a932491d613d618e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -194,6 +197,8 @@ Private Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
+<tr class="memitem:ac8333f53b448f1cebfd3288e276ea6a3"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_big_int.html#ac8333f53b448f1cebfd3288e276ea6a3">RationalType</a></td></tr>
+<tr class="separator:ac8333f53b448f1cebfd3288e276ea6a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfb3d978331870b4cba82ece17354f44"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_big_int.html#abfb3d978331870b4cba82ece17354f44">operator&gt;&gt;</a> (std::istream &amp;i, <a class="el" href="class_big_int.html">BigInt</a> &amp;b)</td></tr>
 <tr class="separator:abfb3d978331870b4cba82ece17354f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d8814d1177634c5e0ee08e2bbccf328"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_big_int.html#a0d8814d1177634c5e0ee08e2bbccf328">operator&lt;&lt;</a> (std::ostream &amp;o, const <a class="el" href="class_big_int.html">BigInt</a> &amp;b)</td></tr>
@@ -201,6 +206,8 @@ Friends</h2></td></tr>
 <tr class="memitem:a95ccae99f465fac11bf28196f62dac03"><td class="memTemplParams" colspan="2">template&lt;typename CompareFunc &gt; </td></tr>
 <tr class="memitem:a95ccae99f465fac11bf28196f62dac03"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_big_int.html#a95ccae99f465fac11bf28196f62dac03">rawCompare</a> (const <a class="el" href="class_big_int.html">BigInt</a> &amp;a, const <a class="el" href="class_big_int.html">BigInt</a> &amp;b)</td></tr>
 <tr class="separator:a95ccae99f465fac11bf28196f62dac03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1e6ea48e6ed1d605d5f45ed64053273"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_big_int.html">BigInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_big_int.html#aa1e6ea48e6ed1d605d5f45ed64053273">gcd</a> (<a class="el" href="class_big_int.html">BigInt</a> a, <a class="el" href="class_big_int.html">BigInt</a> b)</td></tr>
+<tr class="separator:aa1e6ea48e6ed1d605d5f45ed64053273"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -344,6 +351,31 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="bigint_8cpp_source.html#l00015">15</a> of file <a class="el" href="bigint_8cpp_source.html">bigint.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a79b9a7b9d93e3c0a932491d613d618e5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BigInt::operator double </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bigint_8cpp_source.html#l00388">388</a> of file <a class="el" href="bigint_8cpp_source.html">bigint.cpp</a>.</p>
 
 </div>
 </div>
@@ -783,6 +815,42 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a class="anchor" id="aa1e6ea48e6ed1d605d5f45ed64053273"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_big_int.html">BigInt</a> gcd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_big_int.html">BigInt</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_big_int.html">BigInt</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bigint_8cpp_source.html#l00376">376</a> of file <a class="el" href="bigint_8cpp_source.html">bigint.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a0d8814d1177634c5e0ee08e2bbccf328"></a>
 <div class="memitem">
 <div class="memproto">
@@ -852,6 +920,28 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="bigint_8cpp_source.html#l00240">240</a> of file <a class="el" href="bigint_8cpp_source.html">bigint.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac8333f53b448f1cebfd3288e276ea6a3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_rational_type.html">RationalType</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bigint_8hpp_source.html#l00052">52</a> of file <a class="el" href="bigint_8hpp_source.html">bigint.hpp</a>.</p>
 
 </div>
 </div>

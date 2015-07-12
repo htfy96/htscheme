@@ -1,0 +1,110 @@
+\hypertarget{types_2arch_8hpp}{}\section{types/arch.hpp File Reference}
+\label{types_2arch_8hpp}\index{types/arch.\+hpp@{types/arch.\+hpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$boost/mpl/vector.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/mpl/size.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/mpl/for\+\_\+each.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/mpl/at.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/variant.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/preprocessor.\+hpp$>$}\\*
+Include dependency graph for arch.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{types_2arch_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{types_2arch_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{types_2arch_8hpp_a669f5b829a7373f20602e4c063e01d99}{P\+A\+R\+S\+E\+R\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+O\+N}(N\+A\+M\+E\+\_\+,  T\+Y\+P\+E\+\_\+,  I\+N\+F\+O\+T\+Y\+P\+E\+\_\+)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921}{Token\+Type} \{ \\*
+\hyperlink{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921a0e229922772e1ebbe231bb76b1d0674e}{Left\+Parenthesis}, 
+\hyperlink{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921aa6ae499ba91edf718de60cefdb91e070}{Right\+Parenthesis}, 
+\hyperlink{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921a553e6f09de6793cb7e48368fae2c7afe}{Op\+Plus}, 
+\hyperlink{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921aaa3c8287ef3b1b2f65ca22def9d514c8}{Op\+Minus}, 
+\\*
+\hyperlink{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921aa18a9690cbc2e7c5e8df90b8278b9221}{Op\+Multiply}, 
+\hyperlink{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921a6271add987abf4c1f4c420ffa7b505ac}{Op\+Divide}, 
+\hyperlink{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921ad67b0ee7230dcecb610254e4e5e589cd}{Float}, 
+\hyperlink{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921ac484461d6c31e2ef0d6ea82009ad1575}{Rational}, 
+\\*
+\hyperlink{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921ade17ec82ff106e0c2b4417f5ca231eae}{String}, 
+\hyperlink{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921a3e74f2723415f1cc3cc2f3883f68add8}{Boolean}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{types_2arch_8hpp_a669f5b829a7373f20602e4c063e01d99}{}\index{types/arch.\+hpp@{types/arch.\+hpp}!P\+A\+R\+S\+E\+R\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+O\+N@{P\+A\+R\+S\+E\+R\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+O\+N}}
+\index{P\+A\+R\+S\+E\+R\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+O\+N@{P\+A\+R\+S\+E\+R\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+O\+N}!types/arch.\+hpp@{types/arch.\+hpp}}
+\subsubsection[{P\+A\+R\+S\+E\+R\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+A\+R\+S\+E\+R\+\_\+\+D\+E\+C\+L\+A\+R\+A\+T\+I\+O\+N(
+\begin{DoxyParamCaption}
+\item[{}]{N\+A\+M\+E\+\_\+, }
+\item[{}]{T\+Y\+P\+E\+\_\+, }
+\item[{}]{I\+N\+F\+O\+T\+Y\+P\+E\+\_\+}
+\end{DoxyParamCaption}
+)}\label{types_2arch_8hpp_a669f5b829a7373f20602e4c063e01d99}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{struct }NAME\_ \(\backslash\)
+\{               \(\backslash\)
+    typedef INFOTYPE\_ InfoType; \(\backslash\)
+    static \textcolor{keyword}{const} \hyperlink{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921}{TokenType} type;      \(\backslash\)
+    static \textcolor{keywordtype}{bool} judge(\textcolor{keyword}{const} std::string& token); \(\backslash\)
+    static InfoType \textcolor{keyword}{get}(\textcolor{keyword}{const} std::string& token);  \(\backslash\)
+\};
+\end{DoxyCode}
+
+
+Definition at line 31 of file arch.\+hpp.
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921}{}\index{types/arch.\+hpp@{types/arch.\+hpp}!Token\+Type@{Token\+Type}}
+\index{Token\+Type@{Token\+Type}!types/arch.\+hpp@{types/arch.\+hpp}}
+\subsubsection[{Token\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Token\+Type}}\label{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Left\+Parenthesis@{Left\+Parenthesis}!types/arch.\+hpp@{types/arch.\+hpp}}\index{types/arch.\+hpp@{types/arch.\+hpp}!Left\+Parenthesis@{Left\+Parenthesis}}\item[{\em 
+\hypertarget{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921a0e229922772e1ebbe231bb76b1d0674e}{}Left\+Parenthesis\label{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921a0e229922772e1ebbe231bb76b1d0674e}
+}]\index{Right\+Parenthesis@{Right\+Parenthesis}!types/arch.\+hpp@{types/arch.\+hpp}}\index{types/arch.\+hpp@{types/arch.\+hpp}!Right\+Parenthesis@{Right\+Parenthesis}}\item[{\em 
+\hypertarget{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921aa6ae499ba91edf718de60cefdb91e070}{}Right\+Parenthesis\label{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921aa6ae499ba91edf718de60cefdb91e070}
+}]\index{Op\+Plus@{Op\+Plus}!types/arch.\+hpp@{types/arch.\+hpp}}\index{types/arch.\+hpp@{types/arch.\+hpp}!Op\+Plus@{Op\+Plus}}\item[{\em 
+\hypertarget{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921a553e6f09de6793cb7e48368fae2c7afe}{}Op\+Plus\label{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921a553e6f09de6793cb7e48368fae2c7afe}
+}]\index{Op\+Minus@{Op\+Minus}!types/arch.\+hpp@{types/arch.\+hpp}}\index{types/arch.\+hpp@{types/arch.\+hpp}!Op\+Minus@{Op\+Minus}}\item[{\em 
+\hypertarget{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921aaa3c8287ef3b1b2f65ca22def9d514c8}{}Op\+Minus\label{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921aaa3c8287ef3b1b2f65ca22def9d514c8}
+}]\index{Op\+Multiply@{Op\+Multiply}!types/arch.\+hpp@{types/arch.\+hpp}}\index{types/arch.\+hpp@{types/arch.\+hpp}!Op\+Multiply@{Op\+Multiply}}\item[{\em 
+\hypertarget{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921aa18a9690cbc2e7c5e8df90b8278b9221}{}Op\+Multiply\label{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921aa18a9690cbc2e7c5e8df90b8278b9221}
+}]\index{Op\+Divide@{Op\+Divide}!types/arch.\+hpp@{types/arch.\+hpp}}\index{types/arch.\+hpp@{types/arch.\+hpp}!Op\+Divide@{Op\+Divide}}\item[{\em 
+\hypertarget{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921a6271add987abf4c1f4c420ffa7b505ac}{}Op\+Divide\label{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921a6271add987abf4c1f4c420ffa7b505ac}
+}]\index{Float@{Float}!types/arch.\+hpp@{types/arch.\+hpp}}\index{types/arch.\+hpp@{types/arch.\+hpp}!Float@{Float}}\item[{\em 
+\hypertarget{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921ad67b0ee7230dcecb610254e4e5e589cd}{}Float\label{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921ad67b0ee7230dcecb610254e4e5e589cd}
+}]\index{Rational@{Rational}!types/arch.\+hpp@{types/arch.\+hpp}}\index{types/arch.\+hpp@{types/arch.\+hpp}!Rational@{Rational}}\item[{\em 
+\hypertarget{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921ac484461d6c31e2ef0d6ea82009ad1575}{}Rational\label{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921ac484461d6c31e2ef0d6ea82009ad1575}
+}]\index{String@{String}!types/arch.\+hpp@{types/arch.\+hpp}}\index{types/arch.\+hpp@{types/arch.\+hpp}!String@{String}}\item[{\em 
+\hypertarget{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921ade17ec82ff106e0c2b4417f5ca231eae}{}String\label{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921ade17ec82ff106e0c2b4417f5ca231eae}
+}]\index{Boolean@{Boolean}!types/arch.\+hpp@{types/arch.\+hpp}}\index{types/arch.\+hpp@{types/arch.\+hpp}!Boolean@{Boolean}}\item[{\em 
+\hypertarget{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921a3e74f2723415f1cc3cc2f3883f68add8}{}Boolean\label{types_2arch_8hpp_aa520fbf142ba1e7e659590c07da31921a3e74f2723415f1cc3cc2f3883f68add8}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 17 of file arch.\+hpp.
+

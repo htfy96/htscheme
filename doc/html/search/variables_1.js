@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['ch',['ch',['../struct_a_s_t_node.html#ab50690af3aacf5c7dbd0440505fd5595',1,'ASTNode']]],
-  ['compilation_5fdatabase_5ffolder',['compilation_database_folder',['../_8ycm__extra__conf_8py.html#a6a4d7e96c7bc9093b406af626b7936a2',1,'.ycm_extra_conf.py']]],
-  ['complete',['complete',['../class_tokenizer.html#a330a4cce0cbf3ebfbe601d97022d1ed4',1,'Tokenizer']]]
+  ['banner',['banner',['../cli_8cpp.html#a575d73a6aa36ed1a2a565301481cf822',1,'cli.cpp']]],
+  ['buf',['buf',['../cli_8cpp.html#a1fe855c208bc17a51a4d34fefdb2d5b1',1,'cli.cpp']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['rational',['Rational',['../arch_8hpp.html#aa520fbf142ba1e7e659590c07da31921ac484461d6c31e2ef0d6ea82009ad1575',1,'arch.hpp']]],
-  ['rightparenthesis',['RightParenthesis',['../arch_8hpp.html#aa520fbf142ba1e7e659590c07da31921aa6ae499ba91edf718de60cefdb91e070',1,'arch.hpp']]]
+  ['parse',['Parse',['../class_parsers_helper.html#ac5239b5c4a61b2f239f668b738f613beae4bcb2b09e1ae01be6741b0d5dff5252',1,'ParsersHelper']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['parser_5fdeclaration',['PARSER_DECLARATION',['../arch_8hpp.html#a669f5b829a7373f20602e4c063e01d99',1,'arch.hpp']]]
+  ['boost_5fpp_5flocal_5flimits',['BOOST_PP_LOCAL_LIMITS',['../types_2all_8hpp.html#ac172a4a9fd76e79c6cc98fbbf0faf9db',1,'all.hpp']]],
+  ['boost_5fpp_5flocal_5fmacro',['BOOST_PP_LOCAL_MACRO',['../types_2all_8hpp.html#a10331126934b04ed44afb0e1ed1cecf4',1,'all.hpp']]]
 ];

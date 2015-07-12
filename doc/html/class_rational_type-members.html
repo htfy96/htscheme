@@ -73,6 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -113,9 +114,21 @@ $(document).ready(function(){initNavTree('class_rational_type.html','');});
 
 <p>This is the complete list of members for <a class="el" href="class_rational_type.html">RationalType</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_rational_type.html#a627974c03034d239eb30970d30bba030">den</a></td><td class="entry"><a class="el" href="class_rational_type.html">RationalType</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_rational_type.html#a58e9bbd85d6b1e294f4c43e0720aab1b">num</a></td><td class="entry"><a class="el" href="class_rational_type.html">RationalType</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_rational_type.html#ab0173d0fb9a0ca208d52cae36adee9bc">reduce</a>()</td><td class="entry"><a class="el" href="class_rational_type.html">RationalType</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_rational_type.html#ac8ef6030f321ab6402d6469f860e7a05">down_</a></td><td class="entry"><a class="el" href="class_rational_type.html">RationalType</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_rational_type.html#a82ffd1cfc06edee058b86122a99acf99">operator double</a>()</td><td class="entry"><a class="el" href="class_rational_type.html">RationalType</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_rational_type.html#a1d5f9a09c2fca52e24d6b167359d6ea5">operator*=</a>(const RationalType &amp;b)</td><td class="entry"><a class="el" href="class_rational_type.html">RationalType</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_rational_type.html#a1a1f4ed1f3830f6c4d161d54f59c6e9c">operator+=</a>(const RationalType &amp;b)</td><td class="entry"><a class="el" href="class_rational_type.html">RationalType</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_rational_type.html#a6881a9f8aa0f189c3cff2305f721c414">operator-=</a>(const RationalType &amp;b)</td><td class="entry"><a class="el" href="class_rational_type.html">RationalType</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_rational_type.html#a3635767c9f938bce5c6310ddc1c44801">operator/=</a>(const RationalType &amp;b)</td><td class="entry"><a class="el" href="class_rational_type.html">RationalType</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_rational_type.html#a1dd34debca7b71efec5b70740bd9f4ff">operator&lt;</a>(const RationalType &amp;b) const </td><td class="entry"><a class="el" href="class_rational_type.html">RationalType</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_rational_type.html#ad1e553a2da4313b37b5bf59bdeb16655">operator&lt;&lt;</a>(std::ostream &amp;o, const RationalType &amp;a)</td><td class="entry"><a class="el" href="class_rational_type.html">RationalType</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_rational_type.html#a117224a9c64829b181d814ff0fc7f34f">operator==</a>(const RationalType &amp;b) const </td><td class="entry"><a class="el" href="class_rational_type.html">RationalType</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_rational_type.html#a03ba623b12ad5e6e6df81ba8fad47981">operator&gt;&gt;</a>(std::istream &amp;i, RationalType &amp;a)</td><td class="entry"><a class="el" href="class_rational_type.html">RationalType</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_rational_type.html#a56acb42164affebe8d27a333eadfeb94">RationalType</a>()</td><td class="entry"><a class="el" href="class_rational_type.html">RationalType</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_rational_type.html#a2d1c2b4f68c9bddd74c299c470ed44fb">RationalType</a>(const BigInt &amp;num)</td><td class="entry"><a class="el" href="class_rational_type.html">RationalType</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_rational_type.html#a3e2add02a28225b077eb8c5f8bde025c">RationalType</a>(const BigInt &amp;up, const BigInt &amp;down)</td><td class="entry"><a class="el" href="class_rational_type.html">RationalType</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_rational_type.html#ab0173d0fb9a0ca208d52cae36adee9bc">reduce</a>()</td><td class="entry"><a class="el" href="class_rational_type.html">RationalType</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_rational_type.html#ab200b64618693ea1a166755f8d8bec63">up_</a></td><td class="entry"><a class="el" href="class_rational_type.html">RationalType</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

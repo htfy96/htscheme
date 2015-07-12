@@ -1,4 +1,5 @@
 <map id="types/rational.hpp" name="types/rational.hpp">
-<area shape="rect" id="node2" href="$arch_8hpp.html" title="arch.hpp" alt="" coords="547,80,610,107"/>
-<area shape="rect" id="node11" href="$bigint_8hpp.html" title="utility/bigint.hpp" alt="" coords="1073,80,1169,107"/>
+<area shape="rect" id="node2" href="$types_2arch_8hpp.html" title="arch.hpp" alt="" coords="823,80,886,107"/>
+<area shape="rect" id="node11" href="$rationaltype_8hpp.html" title="utility/rationaltype.hpp" alt="" coords="173,80,297,107"/>
+<area shape="rect" id="node12" href="$bigint_8hpp.html" title="utility/bigint.hpp" alt="" coords="121,155,217,181"/>
 </map>

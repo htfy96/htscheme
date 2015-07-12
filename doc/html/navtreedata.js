@@ -1,10 +1,11 @@
 var NAVTREE =
 [
   [ "ht's Scheme Interpreter", "index.html", [
-    [ "htScheme", "md__r_e_a_d_m_e.html", null ],
+    [ "README", "md__r_e_a_d_m_e.html", null ],
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
       [ "Class Index", "classes.html", null ],
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
         [ "Functions", "functions_func.html", null ],
@@ -31,7 +32,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_8ycm__extra__conf_8py.html"
+"_8ycm__extra__conf_8py.html",
+"struct_token.html#ad77981ec051c2380c38459f8c4392dad"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

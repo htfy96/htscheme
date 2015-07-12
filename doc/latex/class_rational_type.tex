@@ -2,17 +2,51 @@
 \label{class_rational_type}\index{Rational\+Type@{Rational\+Type}}
 
 
-{\ttfamily \#include $<$rational.\+hpp$>$}
+{\ttfamily \#include $<$rationaltype.\+hpp$>$}
 
 
 
-Collaboration diagram for Rational\+Type\+:\nopagebreak
+Inheritance diagram for Rational\+Type\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=140pt]{class_rational_type__coll__graph}
+\includegraphics[width=199pt]{class_rational_type__inherit__graph}
 \end{center}
 \end{figure}
+
+
+Collaboration diagram for Rational\+Type\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{class_rational_type__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_rational_type_a56acb42164affebe8d27a333eadfeb94}{Rational\+Type} ()
+\item 
+\hyperlink{class_rational_type_a2d1c2b4f68c9bddd74c299c470ed44fb}{Rational\+Type} (const \hyperlink{class_big_int}{Big\+Int} \&num)
+\item 
+\hyperlink{class_rational_type_a3e2add02a28225b077eb8c5f8bde025c}{Rational\+Type} (const \hyperlink{class_big_int}{Big\+Int} \&up, const \hyperlink{class_big_int}{Big\+Int} \&down)
+\item 
+\hyperlink{class_rational_type}{Rational\+Type} \& \hyperlink{class_rational_type_a1a1f4ed1f3830f6c4d161d54f59c6e9c}{operator+=} (const \hyperlink{class_rational_type}{Rational\+Type} \&b)
+\item 
+\hyperlink{class_rational_type}{Rational\+Type} \& \hyperlink{class_rational_type_a6881a9f8aa0f189c3cff2305f721c414}{operator-\/=} (const \hyperlink{class_rational_type}{Rational\+Type} \&b)
+\item 
+\hyperlink{class_rational_type}{Rational\+Type} \& \hyperlink{class_rational_type_a1d5f9a09c2fca52e24d6b167359d6ea5}{operator$\ast$=} (const \hyperlink{class_rational_type}{Rational\+Type} \&b)
+\item 
+\hyperlink{class_rational_type}{Rational\+Type} \& \hyperlink{class_rational_type_a3635767c9f938bce5c6310ddc1c44801}{operator/=} (const \hyperlink{class_rational_type}{Rational\+Type} \&b)
+\item 
+bool \hyperlink{class_rational_type_a117224a9c64829b181d814ff0fc7f34f}{operator==} (const \hyperlink{class_rational_type}{Rational\+Type} \&b) const 
+\item 
+bool \hyperlink{class_rational_type_a1dd34debca7b71efec5b70740bd9f4ff}{operator$<$} (const \hyperlink{class_rational_type}{Rational\+Type} \&b) const 
+\item 
+\hyperlink{class_rational_type_a82ffd1cfc06edee058b86122a99acf99}{operator double} ()
+\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -21,20 +55,141 @@ void \hyperlink{class_rational_type_ab0173d0fb9a0ca208d52cae36adee9bc}{reduce} (
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_big_int}{Big\+Int} \hyperlink{class_rational_type_a58e9bbd85d6b1e294f4c43e0720aab1b}{num}
+\hyperlink{class_big_int}{Big\+Int} \hyperlink{class_rational_type_ab200b64618693ea1a166755f8d8bec63}{up\+\_\+}
 \item 
-\hyperlink{class_big_int}{Big\+Int} \hyperlink{class_rational_type_a627974c03034d239eb30970d30bba030}{den}
+\hyperlink{class_big_int}{Big\+Int} \hyperlink{class_rational_type_ac8ef6030f321ab6402d6469f860e7a05}{down\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::istream \& \hyperlink{class_rational_type_a03ba623b12ad5e6e6df81ba8fad47981}{operator$>$$>$} (std\+::istream \&i, \hyperlink{class_rational_type}{Rational\+Type} \&a)
+\item 
+std\+::ostream \& \hyperlink{class_rational_type_ad1e553a2da4313b37b5bf59bdeb16655}{operator$<$$<$} (std\+::ostream \&o, const \hyperlink{class_rational_type}{Rational\+Type} \&a)
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 
 
-Definition at line 6 of file rational.\+hpp.
+Definition at line 7 of file rationaltype.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_rational_type_a56acb42164affebe8d27a333eadfeb94}{}\index{Rational\+Type@{Rational\+Type}!Rational\+Type@{Rational\+Type}}
+\index{Rational\+Type@{Rational\+Type}!Rational\+Type@{Rational\+Type}}
+\subsubsection[{Rational\+Type}]{\setlength{\rightskip}{0pt plus 5cm}Rational\+Type\+::\+Rational\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_rational_type_a56acb42164affebe8d27a333eadfeb94}
+
+
+Definition at line 7 of file rationaltype.\+cpp.
+
+\hypertarget{class_rational_type_a2d1c2b4f68c9bddd74c299c470ed44fb}{}\index{Rational\+Type@{Rational\+Type}!Rational\+Type@{Rational\+Type}}
+\index{Rational\+Type@{Rational\+Type}!Rational\+Type@{Rational\+Type}}
+\subsubsection[{Rational\+Type}]{\setlength{\rightskip}{0pt plus 5cm}Rational\+Type\+::\+Rational\+Type (
+\begin{DoxyParamCaption}
+\item[{const {\bf Big\+Int} \&}]{num}
+\end{DoxyParamCaption}
+)}\label{class_rational_type_a2d1c2b4f68c9bddd74c299c470ed44fb}
+
+
+Definition at line 8 of file rationaltype.\+cpp.
+
+\hypertarget{class_rational_type_a3e2add02a28225b077eb8c5f8bde025c}{}\index{Rational\+Type@{Rational\+Type}!Rational\+Type@{Rational\+Type}}
+\index{Rational\+Type@{Rational\+Type}!Rational\+Type@{Rational\+Type}}
+\subsubsection[{Rational\+Type}]{\setlength{\rightskip}{0pt plus 5cm}Rational\+Type\+::\+Rational\+Type (
+\begin{DoxyParamCaption}
+\item[{const {\bf Big\+Int} \&}]{up, }
+\item[{const {\bf Big\+Int} \&}]{down}
+\end{DoxyParamCaption}
+)}\label{class_rational_type_a3e2add02a28225b077eb8c5f8bde025c}
+
+
+Definition at line 9 of file rationaltype.\+cpp.
 
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_rational_type_a82ffd1cfc06edee058b86122a99acf99}{}\index{Rational\+Type@{Rational\+Type}!operator double@{operator double}}
+\index{operator double@{operator double}!Rational\+Type@{Rational\+Type}}
+\subsubsection[{operator double}]{\setlength{\rightskip}{0pt plus 5cm}Rational\+Type\+::operator double (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_rational_type_a82ffd1cfc06edee058b86122a99acf99}
+
+
+Definition at line 98 of file rationaltype.\+cpp.
+
+\hypertarget{class_rational_type_a1d5f9a09c2fca52e24d6b167359d6ea5}{}\index{Rational\+Type@{Rational\+Type}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!Rational\+Type@{Rational\+Type}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rational\+Type} \& Rational\+Type\+::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Rational\+Type} \&}]{b}
+\end{DoxyParamCaption}
+)}\label{class_rational_type_a1d5f9a09c2fca52e24d6b167359d6ea5}
+
+
+Definition at line 62 of file rationaltype.\+cpp.
+
+\hypertarget{class_rational_type_a1a1f4ed1f3830f6c4d161d54f59c6e9c}{}\index{Rational\+Type@{Rational\+Type}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Rational\+Type@{Rational\+Type}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rational\+Type} \& Rational\+Type\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Rational\+Type} \&}]{b}
+\end{DoxyParamCaption}
+)}\label{class_rational_type_a1a1f4ed1f3830f6c4d161d54f59c6e9c}
+
+
+Definition at line 44 of file rationaltype.\+cpp.
+
+\hypertarget{class_rational_type_a6881a9f8aa0f189c3cff2305f721c414}{}\index{Rational\+Type@{Rational\+Type}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Rational\+Type@{Rational\+Type}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rational\+Type} \& Rational\+Type\+::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Rational\+Type} \&}]{b}
+\end{DoxyParamCaption}
+)}\label{class_rational_type_a6881a9f8aa0f189c3cff2305f721c414}
+
+
+Definition at line 53 of file rationaltype.\+cpp.
+
+\hypertarget{class_rational_type_a3635767c9f938bce5c6310ddc1c44801}{}\index{Rational\+Type@{Rational\+Type}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!Rational\+Type@{Rational\+Type}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rational\+Type} \& Rational\+Type\+::operator/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Rational\+Type} \&}]{b}
+\end{DoxyParamCaption}
+)}\label{class_rational_type_a3635767c9f938bce5c6310ddc1c44801}
+
+
+Definition at line 70 of file rationaltype.\+cpp.
+
+\hypertarget{class_rational_type_a1dd34debca7b71efec5b70740bd9f4ff}{}\index{Rational\+Type@{Rational\+Type}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Rational\+Type@{Rational\+Type}}
+\subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}bool Rational\+Type\+::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Rational\+Type} \&}]{b}
+\end{DoxyParamCaption}
+) const}\label{class_rational_type_a1dd34debca7b71efec5b70740bd9f4ff}
+
+
+Definition at line 32 of file rationaltype.\+cpp.
+
+\hypertarget{class_rational_type_a117224a9c64829b181d814ff0fc7f34f}{}\index{Rational\+Type@{Rational\+Type}!operator==@{operator==}}
+\index{operator==@{operator==}!Rational\+Type@{Rational\+Type}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool Rational\+Type\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Rational\+Type} \&}]{b}
+\end{DoxyParamCaption}
+) const}\label{class_rational_type_a117224a9c64829b181d814ff0fc7f34f}
+
+
+Definition at line 27 of file rationaltype.\+cpp.
+
 \hypertarget{class_rational_type_ab0173d0fb9a0ca208d52cae36adee9bc}{}\index{Rational\+Type@{Rational\+Type}!reduce@{reduce}}
 \index{reduce@{reduce}!Rational\+Type@{Rational\+Type}}
 \subsubsection[{reduce}]{\setlength{\rightskip}{0pt plus 5cm}void Rational\+Type\+::reduce (
@@ -44,23 +199,55 @@ Definition at line 6 of file rational.\+hpp.
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_rational_type_ab0173d0fb9a0ca208d52cae36adee9bc}
 
 
+Definition at line 15 of file rationaltype.\+cpp.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_rational_type_ad1e553a2da4313b37b5bf59bdeb16655}{}\index{Rational\+Type@{Rational\+Type}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Rational\+Type@{Rational\+Type}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{o, }
+\item[{const {\bf Rational\+Type} \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_rational_type_ad1e553a2da4313b37b5bf59bdeb16655}
+
+
+Definition at line 91 of file rationaltype.\+cpp.
+
+\hypertarget{class_rational_type_a03ba623b12ad5e6e6df81ba8fad47981}{}\index{Rational\+Type@{Rational\+Type}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Rational\+Type@{Rational\+Type}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{i, }
+\item[{{\bf Rational\+Type} \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_rational_type_a03ba623b12ad5e6e6df81ba8fad47981}
+
+
+Definition at line 80 of file rationaltype.\+cpp.
+
+
+
 \subsection{Member Data Documentation}
-\hypertarget{class_rational_type_a627974c03034d239eb30970d30bba030}{}\index{Rational\+Type@{Rational\+Type}!den@{den}}
-\index{den@{den}!Rational\+Type@{Rational\+Type}}
-\subsubsection[{den}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Big\+Int} Rational\+Type\+::den\hspace{0.3cm}{\ttfamily [private]}}\label{class_rational_type_a627974c03034d239eb30970d30bba030}
+\hypertarget{class_rational_type_ac8ef6030f321ab6402d6469f860e7a05}{}\index{Rational\+Type@{Rational\+Type}!down\+\_\+@{down\+\_\+}}
+\index{down\+\_\+@{down\+\_\+}!Rational\+Type@{Rational\+Type}}
+\subsubsection[{down\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Big\+Int} Rational\+Type\+::down\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\label{class_rational_type_ac8ef6030f321ab6402d6469f860e7a05}
 
 
-Definition at line 9 of file rational.\+hpp.
+Definition at line 12 of file rationaltype.\+hpp.
 
-\hypertarget{class_rational_type_a58e9bbd85d6b1e294f4c43e0720aab1b}{}\index{Rational\+Type@{Rational\+Type}!num@{num}}
-\index{num@{num}!Rational\+Type@{Rational\+Type}}
-\subsubsection[{num}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Big\+Int} Rational\+Type\+::num\hspace{0.3cm}{\ttfamily [private]}}\label{class_rational_type_a58e9bbd85d6b1e294f4c43e0720aab1b}
-
-
-Definition at line 9 of file rational.\+hpp.
+\hypertarget{class_rational_type_ab200b64618693ea1a166755f8d8bec63}{}\index{Rational\+Type@{Rational\+Type}!up\+\_\+@{up\+\_\+}}
+\index{up\+\_\+@{up\+\_\+}!Rational\+Type@{Rational\+Type}}
+\subsubsection[{up\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Big\+Int} Rational\+Type\+::up\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\label{class_rational_type_ab200b64618693ea1a166755f8d8bec63}
 
 
+Definition at line 12 of file rationaltype.\+hpp.
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-types/\hyperlink{rational_8hpp}{rational.\+hpp}\end{DoxyCompactItemize}
+utility/\hyperlink{rationaltype_8hpp}{rationaltype.\+hpp}\item 
+utility/\hyperlink{rationaltype_8cpp}{rationaltype.\+cpp}\end{DoxyCompactItemize}

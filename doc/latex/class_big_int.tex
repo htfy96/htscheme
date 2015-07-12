@@ -50,6 +50,8 @@ bool \hyperlink{class_big_int_ad6a59ed7dedbe35433c1a83ca751fe88}{operator!=} (co
 bool \hyperlink{class_big_int_ae5bdb87103df4be652062b015a1fa653}{operator$>$=} (const \hyperlink{class_big_int}{Big\+Int} \&b) const 
 \item 
 bool \hyperlink{class_big_int_ada9b7b9e96bb3aad13c48637397b6f31}{operator$<$=} (const \hyperlink{class_big_int}{Big\+Int} \&b) const 
+\item 
+\hyperlink{class_big_int_a79b9a7b9d93e3c0a932491d613d618e5}{operator double} ()
 \end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
@@ -80,11 +82,15 @@ bool \hyperlink{class_big_int_afc36eaf290d1b537127ba9f651b5db86}{non\+Neg}
 \subsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
+class \hyperlink{class_big_int_ac8333f53b448f1cebfd3288e276ea6a3}{Rational\+Type}
+\item 
 std\+::istream \& \hyperlink{class_big_int_abfb3d978331870b4cba82ece17354f44}{operator$>$$>$} (std\+::istream \&i, \hyperlink{class_big_int}{Big\+Int} \&b)
 \item 
 std\+::ostream \& \hyperlink{class_big_int_a0d8814d1177634c5e0ee08e2bbccf328}{operator$<$$<$} (std\+::ostream \&o, const \hyperlink{class_big_int}{Big\+Int} \&b)
 \item 
 {\footnotesize template$<$typename Compare\+Func $>$ }\\bool \hyperlink{class_big_int_a95ccae99f465fac11bf28196f62dac03}{raw\+Compare} (const \hyperlink{class_big_int}{Big\+Int} \&a, const \hyperlink{class_big_int}{Big\+Int} \&b)
+\item 
+\hyperlink{class_big_int}{Big\+Int} \hyperlink{class_big_int_aa1e6ea48e6ed1d605d5f45ed64053273}{gcd} (\hyperlink{class_big_int}{Big\+Int} a, \hyperlink{class_big_int}{Big\+Int} b)
 \end{DoxyCompactItemize}
 
 
@@ -175,6 +181,17 @@ Definition at line 315 of file bigint.\+cpp.
 
 
 Definition at line 15 of file bigint.\+cpp.
+
+\hypertarget{class_big_int_a79b9a7b9d93e3c0a932491d613d618e5}{}\index{Big\+Int@{Big\+Int}!operator double@{operator double}}
+\index{operator double@{operator double}!Big\+Int@{Big\+Int}}
+\subsubsection[{operator double}]{\setlength{\rightskip}{0pt plus 5cm}Big\+Int\+::operator double (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\label{class_big_int_a79b9a7b9d93e3c0a932491d613d618e5}
+
+
+Definition at line 388 of file bigint.\+cpp.
 
 \hypertarget{class_big_int_ad6a59ed7dedbe35433c1a83ca751fe88}{}\index{Big\+Int@{Big\+Int}!operator"!=@{operator"!=}}
 \index{operator"!=@{operator"!=}!Big\+Int@{Big\+Int}}
@@ -421,6 +438,18 @@ Definition at line 309 of file bigint.\+cpp.
 
 
 \subsection{Friends And Related Function Documentation}
+\hypertarget{class_big_int_aa1e6ea48e6ed1d605d5f45ed64053273}{}\index{Big\+Int@{Big\+Int}!gcd@{gcd}}
+\index{gcd@{gcd}!Big\+Int@{Big\+Int}}
+\subsubsection[{gcd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Big\+Int} gcd (
+\begin{DoxyParamCaption}
+\item[{{\bf Big\+Int}}]{a, }
+\item[{{\bf Big\+Int}}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_big_int_aa1e6ea48e6ed1d605d5f45ed64053273}
+
+
+Definition at line 376 of file bigint.\+cpp.
+
 \hypertarget{class_big_int_a0d8814d1177634c5e0ee08e2bbccf328}{}\index{Big\+Int@{Big\+Int}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!Big\+Int@{Big\+Int}}
 \subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
@@ -444,6 +473,13 @@ Definition at line 248 of file bigint.\+cpp.
 
 
 Definition at line 240 of file bigint.\+cpp.
+
+\hypertarget{class_big_int_ac8333f53b448f1cebfd3288e276ea6a3}{}\index{Big\+Int@{Big\+Int}!Rational\+Type@{Rational\+Type}}
+\index{Rational\+Type@{Rational\+Type}!Big\+Int@{Big\+Int}}
+\subsubsection[{Rational\+Type}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Rational\+Type}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_big_int_ac8333f53b448f1cebfd3288e276ea6a3}
+
+
+Definition at line 52 of file bigint.\+hpp.
 
 \hypertarget{class_big_int_a95ccae99f465fac11bf28196f62dac03}{}\index{Big\+Int@{Big\+Int}!raw\+Compare@{raw\+Compare}}
 \index{raw\+Compare@{raw\+Compare}!Big\+Int@{Big\+Int}}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['makerelativepathsinflagsabsolute',['MakeRelativePathsInFlagsAbsolute',['../_8ycm__extra__conf_8py.html#aa20d30f8cc08fc0ab076b4cf458e0d3d',1,'.ycm_extra_conf.py']]]
+  ['judge',['judge',['../class_op_plus_a_s_t_parser.html#a7275117187eae6fb59ebfb58e988b863',1,'OpPlusASTParser::judge()'],['../class_op_minus_a_s_t_parser.html#ac9ffe930b5614d5708a3d8ad9bc6f3d6',1,'OpMinusASTParser::judge()']]]
 ];

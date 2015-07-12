@@ -1,0 +1,148 @@
+\hypertarget{class_parsers_helper}{}\section{Parsers\+Helper Class Reference}
+\label{class_parsers_helper}\index{Parsers\+Helper@{Parsers\+Helper}}
+
+
+{\ttfamily \#include $<$all.\+hpp$>$}
+
+
+
+Collaboration diagram for Parsers\+Helper\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{class_parsers_helper__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_parsers_helper_a4abfe81f7251ffe4635c2ed2e482645d}{Parsers\+Helper} ()
+\item 
+void \hyperlink{class_parsers_helper_aa3c66d731d1e5e762aedc61d36e97cc6}{parse} (\hyperlink{struct_a_s_t_node}{A\+S\+T\+Node} \&astnode)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{class_parsers_helper_affae95c60593e3a8154f29e7b10daf17}{operator()} (T \&)
+\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{class_parsers_helper_ac5239b5c4a61b2f239f668b738f613bea11c61fd76dd1cc499d0a82c995b29009}{Construct}, 
+\hyperlink{class_parsers_helper_ac5239b5c4a61b2f239f668b738f613beae4bcb2b09e1ae01be6741b0d5dff5252}{Parse}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ std\+::vector$<$ \hyperlink{parsers_2all_8hpp_abe36ed7c3b8a2eebe6d943c84fe72b9c}{Parser\+Type} $>$ $>$ \hyperlink{class_parsers_helper_a1c30abdf7ce5ad7d5e67237f88f18223}{a}
+\item 
+int \hyperlink{class_parsers_helper_a51c199f259d9aadab7d02681c9e57c49}{cur}
+\item 
+\hyperlink{struct_a_s_t_node}{A\+S\+T\+Node} $\ast$ \hyperlink{class_parsers_helper_a241ca292b5a231634a4486120c1d4b9f}{nod}
+\item 
+bool \hyperlink{class_parsers_helper_a88e598a10d698b0962efa12ee6121436}{ok}
+\item 
+enum Parsers\+Helper\+:: \{ ... \}  \hyperlink{class_parsers_helper_a268b5522cce719a0c28d3e48d9b5cc04}{state}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 30 of file all.\+hpp.
+
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_parsers_helper_ac5239b5c4a61b2f239f668b738f613be}{}\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily [private]}}\label{class_parsers_helper_ac5239b5c4a61b2f239f668b738f613be}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Construct@{Construct}!Parsers\+Helper@{Parsers\+Helper}}\index{Parsers\+Helper@{Parsers\+Helper}!Construct@{Construct}}\item[{\em 
+\hypertarget{class_parsers_helper_ac5239b5c4a61b2f239f668b738f613bea11c61fd76dd1cc499d0a82c995b29009}{}Construct\label{class_parsers_helper_ac5239b5c4a61b2f239f668b738f613bea11c61fd76dd1cc499d0a82c995b29009}
+}]\index{Parse@{Parse}!Parsers\+Helper@{Parsers\+Helper}}\index{Parsers\+Helper@{Parsers\+Helper}!Parse@{Parse}}\item[{\em 
+\hypertarget{class_parsers_helper_ac5239b5c4a61b2f239f668b738f613beae4bcb2b09e1ae01be6741b0d5dff5252}{}Parse\label{class_parsers_helper_ac5239b5c4a61b2f239f668b738f613beae4bcb2b09e1ae01be6741b0d5dff5252}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 36 of file all.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_parsers_helper_a4abfe81f7251ffe4635c2ed2e482645d}{}\index{Parsers\+Helper@{Parsers\+Helper}!Parsers\+Helper@{Parsers\+Helper}}
+\index{Parsers\+Helper@{Parsers\+Helper}!Parsers\+Helper@{Parsers\+Helper}}
+\subsubsection[{Parsers\+Helper}]{\setlength{\rightskip}{0pt plus 5cm}Parsers\+Helper\+::\+Parsers\+Helper (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_parsers_helper_a4abfe81f7251ffe4635c2ed2e482645d}
+
+
+Definition at line 5 of file all.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_parsers_helper_affae95c60593e3a8154f29e7b10daf17}{}\index{Parsers\+Helper@{Parsers\+Helper}!operator()@{operator()}}
+\index{operator()@{operator()}!Parsers\+Helper@{Parsers\+Helper}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void Parsers\+Helper\+::operator() (
+\begin{DoxyParamCaption}
+\item[{T \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_parsers_helper_affae95c60593e3a8154f29e7b10daf17}
+
+
+Definition at line 44 of file all.\+hpp.
+
+\hypertarget{class_parsers_helper_aa3c66d731d1e5e762aedc61d36e97cc6}{}\index{Parsers\+Helper@{Parsers\+Helper}!parse@{parse}}
+\index{parse@{parse}!Parsers\+Helper@{Parsers\+Helper}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}void Parsers\+Helper\+::parse (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+S\+T\+Node} \&}]{astnode}
+\end{DoxyParamCaption}
+)}\label{class_parsers_helper_aa3c66d731d1e5e762aedc61d36e97cc6}
+
+
+Definition at line 12 of file all.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_parsers_helper_a1c30abdf7ce5ad7d5e67237f88f18223}{}\index{Parsers\+Helper@{Parsers\+Helper}!a@{a}}
+\index{a@{a}!Parsers\+Helper@{Parsers\+Helper}}
+\subsubsection[{a}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$std\+::vector$<${\bf Parser\+Type}$>$ $>$ Parsers\+Helper\+::a\hspace{0.3cm}{\ttfamily [private]}}\label{class_parsers_helper_a1c30abdf7ce5ad7d5e67237f88f18223}
+
+
+Definition at line 32 of file all.\+hpp.
+
+\hypertarget{class_parsers_helper_a51c199f259d9aadab7d02681c9e57c49}{}\index{Parsers\+Helper@{Parsers\+Helper}!cur@{cur}}
+\index{cur@{cur}!Parsers\+Helper@{Parsers\+Helper}}
+\subsubsection[{cur}]{\setlength{\rightskip}{0pt plus 5cm}int Parsers\+Helper\+::cur\hspace{0.3cm}{\ttfamily [private]}}\label{class_parsers_helper_a51c199f259d9aadab7d02681c9e57c49}
+
+
+Definition at line 33 of file all.\+hpp.
+
+\hypertarget{class_parsers_helper_a241ca292b5a231634a4486120c1d4b9f}{}\index{Parsers\+Helper@{Parsers\+Helper}!nod@{nod}}
+\index{nod@{nod}!Parsers\+Helper@{Parsers\+Helper}}
+\subsubsection[{nod}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\+S\+T\+Node}$\ast$ Parsers\+Helper\+::nod\hspace{0.3cm}{\ttfamily [private]}}\label{class_parsers_helper_a241ca292b5a231634a4486120c1d4b9f}
+
+
+Definition at line 34 of file all.\+hpp.
+
+\hypertarget{class_parsers_helper_a88e598a10d698b0962efa12ee6121436}{}\index{Parsers\+Helper@{Parsers\+Helper}!ok@{ok}}
+\index{ok@{ok}!Parsers\+Helper@{Parsers\+Helper}}
+\subsubsection[{ok}]{\setlength{\rightskip}{0pt plus 5cm}bool Parsers\+Helper\+::ok\hspace{0.3cm}{\ttfamily [private]}}\label{class_parsers_helper_a88e598a10d698b0962efa12ee6121436}
+
+
+Definition at line 35 of file all.\+hpp.
+
+\hypertarget{class_parsers_helper_a268b5522cce719a0c28d3e48d9b5cc04}{}\index{Parsers\+Helper@{Parsers\+Helper}!state@{state}}
+\index{state@{state}!Parsers\+Helper@{Parsers\+Helper}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}enum \{ ... \}   Parsers\+Helper\+::state\hspace{0.3cm}{\ttfamily [private]}}\label{class_parsers_helper_a268b5522cce719a0c28d3e48d9b5cc04}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+parsers/\hyperlink{parsers_2all_8hpp}{all.\+hpp}\item 
+parsers/\hyperlink{parsers_2all_8cpp}{all.\+cpp}\end{DoxyCompactItemize}

@@ -1,5 +1,6 @@
 var class_tokenizer =
 [
+    [ "Tokenizer", "class_tokenizer.html#a2a6c04ea8c784f66bebcb6df7073769c", null ],
     [ "Tokenizer", "class_tokenizer.html#a6edc9ba4af94d2aa55f48a83c903800f", null ],
     [ "parse", "class_tokenizer.html#ae928efe72c00908a3529747b4cfd01d5", null ],
     [ "split", "class_tokenizer.html#a8bd8a4eb5df764f6128028daa0e9044b", null ],

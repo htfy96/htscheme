@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['simple',['Simple',['../ast_8hpp.html#acac9cbaeea226ed297804c012dc12b16aebfbf7dc5cde0772efb1aa49712bd76b',1,'ast.hpp']]],
-  ['string',['String',['../arch_8hpp.html#aa520fbf142ba1e7e659590c07da31921ade17ec82ff106e0c2b4417f5ca231eae',1,'arch.hpp']]]
+  ['rational',['Rational',['../types_2arch_8hpp.html#aa520fbf142ba1e7e659590c07da31921ac484461d6c31e2ef0d6ea82009ad1575',1,'arch.hpp']]],
+  ['rightparenthesis',['RightParenthesis',['../types_2arch_8hpp.html#aa520fbf142ba1e7e659590c07da31921aa6ae499ba91edf718de60cefdb91e070',1,'arch.hpp']]]
 ];
