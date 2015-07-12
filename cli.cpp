@@ -12,7 +12,7 @@
 #include <algorithm>
 #include <memory>
 
-const std::string banner = "Welcome to htScheme! This version was compiled on "+std::string(__DATE__)+ \
+const std::string banner = "Welcome to htScheme command-line interpreter! This version was compiled on "+std::string(__DATE__)+ \
                             " at "+std::string(__TIME__);
 SchemeUnit su;
 Tokenizer to;
