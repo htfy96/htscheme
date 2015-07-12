@@ -27,7 +27,7 @@ int main()
 
 
     std::cout<< banner <<std::endl;
-    std::cout<< std::setprecision(7);
+    std::cout<< std::setprecision(17);
     while (true)
     {
         std::cout<<">>> ";
