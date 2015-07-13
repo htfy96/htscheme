@@ -20,12 +20,18 @@ void OpDivideASTParser::parse(PASTNode astnode, ParsersHelper& parserHelper)
         throw std::runtime_error(" / operator must have at least one parameter ");
     astnode->type = Simple;
     auto myParserHelper(parserHelper);
+
     auto secondCh = ++astnode->ch.begin();
     myParserHelper.parse(*secondCh);
+    if (astnode->ch.size()==2)
+    {
+        astnode->token.tokenType = Rational;
+        astnode->token.info = RationalType(1);
+    } else
     astnode->token = (*secondCh)->token;
     LOG((*secondCh)->token.info)
     //cout<<astnode.token.info<<endl;
-    std::for_each( ++secondCh, astnode->ch.end(), [&myParserHelper, &astnode](std::shared_ptr<ASTNode> an)
+    std::for_each( (astnode->ch.size()==2)?++astnode->ch.begin():++secondCh, astnode->ch.end(), [&myParserHelper, &astnode](std::shared_ptr<ASTNode> an)
                 {                
                 myParserHelper.parse(an);
                 if (an->token.tokenType!= Rational && an->token.tokenType!=Float)
