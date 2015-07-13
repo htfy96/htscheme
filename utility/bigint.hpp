@@ -32,9 +32,11 @@ class BigInt
         BigInt& operator *= (const BigInt& b);
         BigInt& operator /= (const BigInt& b);
         BigInt& operator %= (const BigInt& b);
+        BigInt& operator *= (const int32_t b);
         BigInt operator + (const BigInt& b) const;
         BigInt operator - (const BigInt& b) const;
         BigInt operator * (const BigInt& b) const;
+        BigInt operator * (const int32_t b) const;
         BigInt operator / (const BigInt& b) const;
         BigInt operator % (const BigInt& b) const;
         BigInt operator - () const;
