@@ -1,6 +1,14 @@
 #ifndef __PARSERS_ALL
 #define __PARSERS_ALL
 
+#ifndef BOOST_MPL_CFG_NO_PREPROCESSED_HEADERS
+#define BOOST_MPL_CFG_NO_PREPROCESSED_HEADERS
+#endif
+
+#ifndef BOOST_MPL_LIMIT_VECTOR_SIZE 
+#define BOOST_MPL_LIMIT_VECTOR_SIZE 50
+#endif
+
 #include <boost/mpl/size.hpp>
 #include <boost/mpl/at.hpp>
 #include <boost/mpl/vector.hpp>
