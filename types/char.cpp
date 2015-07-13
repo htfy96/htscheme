@@ -15,13 +15,11 @@ CharParser::InfoType CharParser::get( const std::string& token)
     return token[2];
 }
 
-std::ostream& operator << (std::ostream& o, const CharParser::InfoType& info)
-{
-    if (info==' ')
-      return o<<"#\\space";
-    if (info=='\n')
-      return o<<"#\\newline";
-    return o<<info.inner;
-}
 
+
+
+std::ostream& operator << (std::ostream& o, const Wrapper<CharType>& a)
+{
+    return o<<"#\\";
+}
 const TokenType CharParser::type = Char;

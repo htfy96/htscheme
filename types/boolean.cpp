@@ -13,9 +13,9 @@ BooleanParser::InfoType BooleanParser::get(const std::string& token)
     return token=="true" || token=="#t" || token=="#T";
 }
 
-std::ostream& operator <<(std::ostream& o, const BooleanParser::InfoType& w)
+std::ostream& operator <<(std::ostream& o, const Wrapper<BooleanParser::InfoType>& w)
 {
-    if (w) return o<<"#t"; else return o<<"#f";
+    if (w.inner) return o<<"#t"; else return o<<"#f";
 }
 
 const TokenType BooleanParser::type = Boolean;
