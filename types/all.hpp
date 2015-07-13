@@ -24,10 +24,11 @@
 #include "string.hpp"
 #include "boolean.hpp"
 #include "parenthesis.hpp"
+#include "char.hpp"
 #include "ops.hpp"
 
 //Add your parser name here
-#define PARSERS_TUPLE (BooleanParser, RationalParser, \
+#define PARSERS_TUPLE (CharParser, BooleanParser, RationalParser, \
                         OpPlusParser, OpMinusParser, OpMultiplyParser, OpDivideParser , FloatParser ,\
                         StringParser , LeftParenthesisParser, RightParenthesisParser)
 
