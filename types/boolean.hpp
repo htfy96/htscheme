@@ -6,4 +6,5 @@ typedef Wrapper<bool> BooleanType;
 
 PARSER_DECLARATION(BooleanParser, Boolean, BooleanType)
 
+std::ostream& operator <<(std::ostream& o, const Wrapper<BooleanParser::InfoType>& w);
 #endif

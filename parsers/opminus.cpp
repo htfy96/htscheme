@@ -22,9 +22,14 @@ void OpMinusASTParser::parse(PASTNode astnode, ParsersHelper& parserHelper)
     astnode->type = Simple;
     auto secondCh = ++astnode->ch.begin();
     myParserHelper.parse(*secondCh);
+    if (astnode->ch.size()==2)
+    {
+        astnode->token.tokenType = Rational;
+        astnode -> token.info = RationalType(0);
+    } else
     astnode->token = (*secondCh)->token;
     //cout<<astnode.token.info<<endl;
-    std::for_each( ++secondCh, astnode->ch.end(), [&myParserHelper, &astnode](std::shared_ptr<ASTNode> an)
+    std::for_each((astnode->ch.size()==2)? ++astnode->ch.begin() : ++secondCh, astnode->ch.end(), [&myParserHelper, &astnode](std::shared_ptr<ASTNode> an)
                 {                
                 myParserHelper.parse(an);
                 if (an->token.tokenType!= Rational && an->token.tokenType!=Float)

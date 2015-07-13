@@ -275,6 +275,30 @@ BigInt BigInt::operator- (const BigInt& b) const
     return ans;
 }
 
+BigInt& BigInt::operator*= (const int32_t b)
+{
+    if (d.size()<len+2)
+      d.resize(len+2,0);
+    int32_t jw=0;
+    for(size_t i=0; i<len;++i)
+    {
+        d[i]*=b;
+        d[i]+=jw;
+        jw=d[i]/10000;
+        d[i]%=10000;
+    }
+    if (jw) d[len++]=jw;
+    while (len>1 && !d[len-1]) --len;
+    return *this;
+}
+
+BigInt BigInt::operator* (const int32_t b) const
+{
+    BigInt ans(*this);
+    return ans*=b;
+}
+
+
 BigInt BigInt::operator* (const BigInt& b) const
 {
     //std::cout<<" LOG: MULTI"<< *this<<" "<<b<<std::endl;
@@ -321,15 +345,17 @@ std::pair<BigInt&, BigInt> BigInt::divandmod(const BigInt& b)
     if (b.isZero()) throw std::runtime_error("division to zero");
     nonNeg = !(nonNeg ^ b.nonNeg);
     if (isZero()) nonNeg =true;
-    BigInt ten(10000), now;
+    const BigInt ten(10000);
+    BigInt now;
     //std::cout<<b<<std::endl;
+    int32_t l,r,mid;
     for(int i=len-1; i>=0; --i)
     {
-        now *= ten;
+        now *= 10000;
         now += d[i];
         d[i]=0;
-        int32_t l=0, r=10000;
-        int32_t mid = (l+r)/2;
+        l=0; r=10000;
+        mid = (l+r)/2;
         while (l<r-1)
         {
             mid = (l+r)/2;
@@ -348,8 +374,7 @@ std::pair<BigInt&, BigInt> BigInt::divandmod(const BigInt& b)
     }
     while (len>1 && d[len-1]==0) --len;
 
-    std::pair<BigInt&, BigInt> ans(*this, now);
-    return ans;
+    return std::pair<BigInt&, BigInt> (*this, now);
 }
 
 
