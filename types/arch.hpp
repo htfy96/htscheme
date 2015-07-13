@@ -27,6 +27,7 @@ enum TokenType
     String,
     Boolean,
     Char,
+    Complex,
     Null
 };
 

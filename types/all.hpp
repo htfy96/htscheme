@@ -19,8 +19,7 @@
 #include <boost/preprocessor.hpp>
 
 #include "arch.hpp"
-#include "rational.hpp"
-#include "float.hpp"
+#include "complex.hpp"
 #include "string.hpp"
 #include "boolean.hpp"
 #include "parenthesis.hpp"
@@ -28,8 +27,8 @@
 #include "ops.hpp"
 
 //Add your parser name here
-#define PARSERS_TUPLE (CharParser, BooleanParser, RationalParser, \
-                        OpPlusParser, OpMinusParser, OpMultiplyParser, OpDivideParser , FloatParser ,\
+#define PARSERS_TUPLE (CharParser, BooleanParser, ComplexParser, \
+                        OpPlusParser, OpMinusParser, OpMultiplyParser, OpDivideParser , \
                         StringParser , LeftParenthesisParser, RightParenthesisParser)
 
 

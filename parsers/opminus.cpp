@@ -1,5 +1,6 @@
 
 #include "opminus.hpp"
+#include "types/all.hpp"
 #include "ast.hpp"
 #include "all.hpp"
 #include "types.hpp"

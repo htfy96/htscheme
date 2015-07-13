@@ -15,6 +15,7 @@ class RationalType: public
     RationalType();
     RationalType(const BigInt& num);
     RationalType(const BigInt& up, const BigInt& down);
+    explicit RationalType(const double a);
     RationalType& operator += (const RationalType& b);
     RationalType& operator -= (const RationalType& b);
     RationalType& operator *= (const RationalType& b);
@@ -23,7 +24,7 @@ class RationalType: public
     bool operator < (const RationalType& b) const;
     friend std::istream& operator >>(std::istream& i, RationalType& a);
     friend std::ostream& operator <<(std::ostream& o, const RationalType& a);
-    operator double();
+    operator double() const;
 };
 
 

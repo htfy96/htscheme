@@ -1,10 +1,15 @@
 #include "rationaltype.hpp"
 #include "utility/bigint.hpp"
+#include "utility/debug.hpp"
 #include <stdexcept>
 #include <iostream>
 #include <string>
+#include <iomanip>
+#include <cstdlib>
+#include <cstring>
+#include <sstream>
 
-RationalType::RationalType(): RationalType(0) {}
+RationalType::RationalType(): RationalType(0.0) {}
 RationalType::RationalType(const BigInt& num): RationalType(num,1) {}
 RationalType::RationalType(const BigInt& up, const BigInt& down):
     up_(up), down_(down)
@@ -95,8 +100,54 @@ std::ostream& operator <<(std::ostream& o, const RationalType& a)
     return o;
 }
 
-RationalType::operator double()
+RationalType::operator double() const
 {
     return up_.operator double() / down_.operator double();
+}
+
+namespace 
+{
+    std::pair<std::string, std::string> getUpAndDown(const double a)
+    {
+        std::pair<std::string, std::string> ans;
+        std::stringstream ss("");
+        ss<<std::scientific<<std::setprecision(17)<<a;
+        std::cout<<ss.str()<<std::endl;
+        std::string d = ss.str().substr(0,19);
+        d.erase(1,1);
+        std::string q = ss.str().substr(ss.str().rfind('e')+1);
+        int po = std::atoi(q.c_str())-17;
+        if (po>0)
+        {
+            ans.first = d;
+            for (int i=0;i<po;++i) ans.first.push_back('0');
+            ans.second = "0";
+        } else
+          if (po==0)
+          {
+              ans.first= d;
+              ans.second="0";
+          }
+          else
+          {
+              ans.first = d;
+              ans.second = '1';
+              for(int i=0;i<-po;++i) ans.second.push_back('0');
+          }
+
+        //std::cout<< ans.first<<"/"<<ans.second<<std::endl;
+        //std::cout<< "|"<<ans.second <<"|"<< std::endl;
+        //std::cout << ans.second.length() <<std::endl;
+        //std::cout << ( ans.second == std::string("1")) <<std::endl;
+        //std::cout<< BigInt( ans.second ) <<std::endl;
+        return ans;
+    }
+}
+
+RationalType::RationalType(const double a):
+    up_(BigInt(getUpAndDown(a).first) ), down_( BigInt(getUpAndDown(a).second)) 
+{
+    //std::cout<< up_<<" "<<down_ <<std::endl;
+    reduce();
 }
 
