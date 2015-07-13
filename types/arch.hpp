@@ -9,7 +9,7 @@
 #include <boost/mpl/at.hpp>
 #include <boost/variant.hpp>
 #include <boost/preprocessor.hpp>
-
+#include "utility/wrapper.hpp"
 
 using namespace std;
 
@@ -25,16 +25,22 @@ enum TokenType
     Float,
     Rational,
     String,
-    Boolean
+    Boolean,
+    Char,
+    Null
 };
 
-#define PARSER_DECLARATION(NAME_,TYPE_,INFOTYPE_) \
-struct NAME_ \
+#define PARSER_DECLARATION(A_,B_,C_) PARSER_DECLARATION_SIMPLE(A_,B_,C_)
+
+
+
+#define PARSER_DECLARATION_SIMPLE(NAME_,TYPE_,INFOTYPE_) \
+struct NAME_  \
 {               \
     typedef INFOTYPE_ InfoType; \
     static const TokenType type;      \
     static bool judge(const std::string& token); \
     static InfoType get(const std::string& token);  \
-};  
+}; 
 
 #endif

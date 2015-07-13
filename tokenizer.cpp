@@ -55,6 +55,14 @@ void Tokenizer::split(const std::vector<std::string>& lines)
 
                 while (pos<lines[i].length() && (lines[i][pos]==' ' || lines[i][pos]=='\t'))
                   ++pos;
+
+                if (lines[i][pos]=='#' && pos<lines[i].length()-2 && lines[i][pos+1]=='\\')
+                {
+                    rawTokens.push_back(lines[i].substr(pos,3));
+                    pos += 3;
+                    if (pos>=lines[i].length()) pos = lines[i].npos;
+                }
+                if (pos>=lines[i].length()) break;
                 size_t until = std::min( lines[i].find(' ', pos), lines[i].find('\t', pos));
                 std::string t;
                 if (until == lines[i].npos)

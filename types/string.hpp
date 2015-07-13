@@ -2,6 +2,6 @@
 #define __SCHEME_TYPES_STRING
 #include "arch.hpp"
 #include <string>
-
-PARSER_DECLARATION(StringParser, String, std::string)
+typedef Wrapper<std::string> StringType;
+PARSER_DECLARATION(StringParser, String, StringType)
 #endif

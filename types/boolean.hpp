@@ -2,8 +2,8 @@
 #define __SCHEME_TYPES_BOOLEAN
 #include "arch.hpp"
 #include <string>
-typedef bool BooleanType;
+typedef Wrapper<bool> BooleanType;
 
-PARSER_DECLARATION(BooleanParser, Boolean, bool)
+PARSER_DECLARATION(BooleanParser, Boolean, BooleanType)
 
 #endif
