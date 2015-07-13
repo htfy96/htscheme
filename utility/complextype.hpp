@@ -31,8 +31,15 @@ class ComplexType:
         friend std::istream& operator >>(std::istream& i, ComplexType& a);
         friend std::ostream& operator <<(std::ostream& o, const ComplexType& a);
         bool exact() const;
+        bool isReal() const;
+        bool isRational() const;
+        RationalType getRealR() const;
+        RationalType getImagR() const;
+        double getRealD() const;
+        double getImagD() const;
         void toexact();
         void toinexact();
+
 };
 
 

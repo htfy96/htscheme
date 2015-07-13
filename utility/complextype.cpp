@@ -1,4 +1,3 @@
-/*
 #include "complextype.hpp"
 #include "rationaltype.hpp"
 
@@ -31,6 +30,127 @@ void ComplexType::toinexact()
     imagr_.~RationalType();
     exact_ = false;
 }
-*/
+
+void ComplexType::toexact()
+{
+    if (exact_) return;
+    realr_ = RationalType(reald_);
+    imagr_ = RationalType(imagd_);
+    exact_ = true;
+}
+
+bool ComplexType::exact() const
+{
+    return exact_;
+}
+
+double ComplexType::getRealD() const
+{
+    return reald_;
+}
+
+double ComplexType::getImagD() const
+{
+    return imagd_;
+}
+
+RationalType ComplexType::getRealR() const
+{
+    return realr_;
+}
+
+RationalType ComplexType::getImagR() const
+{
+    return imagr_;
+}
+
+bool ComplexType::isReal() const
+{
+    return exact_ ? imagr_==0 : imagd_ == 0.0;
+}
+
+bool ComplexType::isRational() const
+{
+    return exact_ && imagr_ == 0;
+}
+
+ComplexType& ComplexType::operator+= (const ComplexType& b)
+{
+    if (exact() && b.exact())
+    {
+        realr_+=b.realr_;
+        imagr_+=b.imagr_;
+        return *this;
+    } else
+    {
+        toinexact();
+        ComplexType mid(b);
+        mid.toinexact();
+        reald_ += mid.reald_;
+        imagd_ += mid.imagd_;
+        return *this;
+    }
+}
 
 
+ComplexType& ComplexType::operator-= (const ComplexType& b)
+{
+    if (exact() && b.exact())
+    {
+        realr_-=b.realr_;
+        imagr_-=b.imagr_;
+        return *this;
+    } else
+    {
+        toinexact();
+        ComplexType mid(b);
+        mid.toinexact();
+        reald_ -= mid.reald_;
+        imagd_ -= mid.imagd_;
+        return *this;
+    }
+}
+
+ComplexType& ComplexType::operator*= (const ComplexType& b)
+{
+    if (exact() && b.exact())
+    {
+        RationalType oldrealr(realr_);
+        realr_ = realr_ * b.realr_ - imagr_ * b.imagr_;
+        imagr_ = oldrealr * b.imagr_ + b.realr_ * imagr_;
+        return *this;
+    }
+    else
+    {
+        toinexact();
+        ComplexType mid(b);
+        mid.toinexact();
+        double oldreald(reald_);
+
+        reald_ = reald_ * b.reald_ - imagd_ * b.imagd_;
+        imagd_ = oldreald * b.imagd_ + b.reald_ * imagd_;
+        return *this;
+    }
+}
+//Pending to change
+ComplexType& ComplexType::operator/= (const ComplexType& b)
+{
+    if (exact() && b.exact())
+    {
+        RationalType oldrealr(realr_);
+        realr_ = realr_ * b.realr_ - imagr_ * b.imagr_;
+        imagr_ = oldrealr * b.imagr_ + b.realr_ * imagr_;
+        return *this;
+    }
+    else
+    {
+        toinexact();
+        ComplexType mid(b);
+        mid.toinexact();
+        double oldreald(reald_);
+
+        reald_ = reald_ * b.reald_ - imagd_ * b.imagd_;
+        imagd_ = oldreald * b.imagd_ + b.reald_ * imagd_;
+        return *this;
+    }
+}
