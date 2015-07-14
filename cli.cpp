@@ -21,26 +21,24 @@ ParsersHelper ph;
 char *buf;
 int main()
 {
-    //INDEBUG = false;
+    INDEBUG = false;
     std::string sent = "";
     std::string line;
 
 
-    std::cout<< banner <<std::endl;
     std::cout<< std::setprecision(17);
-    while (true)
+    while (!cin.eof())
     {
-        std::cout<<">>> ";
         try
         {
             while (true)
             {
-                if (sent!="") std::cout<<"... ";
                 std::getline(std::cin, line);
+                std::remove(line.begin(), line.end(), '\r');
                 if (cin.eof()) return 0;
                 sent += line + '\n';
                 std::stringstream ss(sent);
-                //std::cout<<sent<<std::endl;
+                //std::cout<<ss.str()<<std::endl;
                 su.preprocess(ss);
                 to.split(su.lines);
                 if (to.complete)
