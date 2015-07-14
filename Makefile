@@ -23,7 +23,7 @@ BASICTYPES = $(filter-out types/all.o, $(TYPES))
 DEP = dep.d
 
 all:
-	$(MAKE) $(BIN)
+	$(MAKE)  cli preprocessortest tokenizertest biginttest asttest parserstest rationaltypetest complextypetest
 
 include $(DEP)
 
