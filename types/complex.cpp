@@ -10,7 +10,10 @@ bool ComplexParser::judge( const std::string& token)
     if (*token.rbegin() == 'i')
     {
         size_t pos = std::min( token.rfind('+') , token.rfind('-'));
-        if (pos == token.npos) return false;
+        if (pos == token.npos) return 
+          FloatParser::judge(token.substr(0,token.size()-1)) ||
+              RationalParser::judge( token.substr(0,token.size()-1));
+
         std::string s1 = token.substr(0,pos);
         std::string s2 = token.substr(pos,token.size()-pos-1);
         return (FloatParser::judge(s1) || RationalParser::judge(s1)) && (

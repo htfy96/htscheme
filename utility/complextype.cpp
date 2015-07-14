@@ -169,10 +169,16 @@ std::istream& operator >> (std::istream& i, ComplexType& c)
     if (*s.rbegin() != 'i') pos = s.npos;
     if (pos == s.npos)
     {
+        if (*s.rbegin() != 'i')
         if (RationalParser::judge(s))
           c = ComplexType( RationalParser::get(s));
         else 
           c= ComplexType( FloatParser::get(s));
+        else
+          if (RationalParser::judge(s))
+            c = ComplexType(RationalType(0), RationalParser::get(s));
+          else 
+            c= ComplexType(0.0, FloatParser::get(s));
     }
     else
     {
