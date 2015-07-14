@@ -21,7 +21,7 @@ ParsersHelper ph;
 char *buf;
 int main()
 {
-    //INDEBUG = false;
+    INDEBUG = false;
     std::string sent = "";
     std::string line;
 
