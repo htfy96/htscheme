@@ -23,7 +23,7 @@ BASICTYPES = $(filter-out types/all.o, $(TYPES))
 DEP = dep.d
 
 all:
-	$(MAKE) cli preprocessortest tokenizertest biginttest rationaltypetest asttest parserstest
+	$(MAKE) cli preprocessortest tokenizertest biginttest rationaltypetest asttest parserstest complextypetest
 
 include $(DEP)
 
@@ -46,6 +46,9 @@ parserstest: test/parserstest.o preprocessor.o tokenizer.o ast.o $(TYPES) $(PARS
 	$(CXX) $(CPPFLAGS) $(INTEST) $(filter %.o,$^) -o $@
 
 rationaltypetest: test/rationaltypetest.o utility/rationaltype.o utility/bigint.o
+	$(CXX) $(CPPFLAGS) $(INTEST) $(filter %.o,$^) -o $@
+
+complextypetest: test/complextypetest.o $(UTILITY) types/float.o types/rational.o
 	$(CXX) $(CPPFLAGS) $(INTEST) $(filter %.o,$^) -o $@
 
 .PHONY: clean all
