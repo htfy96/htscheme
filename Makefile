@@ -1,5 +1,5 @@
-CPPFLAGS = -I . -I $(CURDIR) -isystem $(CURDIR)/sys  -ggdb  -pipe -std=c++11  -O2
-CXX = ccache clang++
+CPPFLAGS = -I . -I $(CURDIR) -isystem $(CURDIR)/sys -std=c++11  -O2
+CXX = g++
 
 INTEST = -D INTEST
 OBJ = $(wildcard *.o test/*.o utility/*.o types/*.o parsers/*.o)
