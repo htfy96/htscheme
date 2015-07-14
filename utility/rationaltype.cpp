@@ -112,7 +112,7 @@ namespace
         std::pair<std::string, std::string> ans;
         std::stringstream ss("");
         ss<<std::scientific<<std::setprecision(17)<<a;
-        std::cout<<ss.str()<<std::endl;
+        //std::cout<<ss.str()<<std::endl;
         std::string d = ss.str().substr(0,19);
         d.erase(1,1);
         std::string q = ss.str().substr(ss.str().rfind('e')+1);
