@@ -1,6 +1,6 @@
 
-#ifndef BOOST_MPL_LIST_AUX_SIZE_HPP_INCLUDED
-#define BOOST_MPL_LIST_AUX_SIZE_HPP_INCLUDED
+#ifndef BOOST_MPL_LIST_LIST0_C_HPP_INCLUDED
+#define BOOST_MPL_LIST_LIST0_C_HPP_INCLUDED
 
 // Copyright Aleksey Gurtovoy 2000-2004
 //
@@ -14,20 +14,18 @@
 // $Date$
 // $Revision$
 
-#include <boost/mpl/size_fwd.hpp>
-#include <boost/mpl/list/aux_/tag.hpp>
+#include <boost/mpl/list/list0.hpp>
+#include <boost/mpl/integral_c.hpp>
 
 namespace boost { namespace mpl {
 
-template<>
-struct size_impl< aux::list_tag >
+template< typename T > struct list0_c
+    : l_end
 {
-    template< typename List > struct apply
-        : List::size
-    {
-    };
+    typedef l_end type;
+    typedef T value_type;
 };
 
 }}
 
-#endif // BOOST_MPL_LIST_AUX_SIZE_HPP_INCLUDED
+#endif // BOOST_MPL_LIST_LIST0_C_HPP_INCLUDED

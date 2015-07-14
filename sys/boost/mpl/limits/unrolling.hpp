@@ -1,6 +1,6 @@
 
-#ifndef BOOST_MPL_LIST_AUX_TAG_HPP_INCLUDED
-#define BOOST_MPL_LIST_AUX_TAG_HPP_INCLUDED
+#ifndef BOOST_MPL_LIMITS_UNROLLING_HPP_INCLUDED
+#define BOOST_MPL_LIMITS_UNROLLING_HPP_INCLUDED
 
 // Copyright Aleksey Gurtovoy 2000-2004
 //
@@ -14,11 +14,8 @@
 // $Date$
 // $Revision$
 
-namespace boost { namespace mpl { namespace aux {
+#if !defined(BOOST_MPL_LIMIT_UNROLLING)
+#   define BOOST_MPL_LIMIT_UNROLLING 4
+#endif
 
-struct list_tag;
-struct l_iter_tag;
-
-}}}
-
-#endif // BOOST_MPL_LIST_AUX_TAG_HPP_INCLUDED
+#endif // BOOST_MPL_LIMITS_UNROLLING_HPP_INCLUDED
