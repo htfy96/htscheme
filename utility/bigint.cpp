@@ -414,7 +414,7 @@ BigInt gcd(BigInt a, BigInt b)
     return a;
 }
 
-BigInt::operator double()
+BigInt::operator double() const
 {
     double res=0;
     for(int i=len-1;i>=0;--i)

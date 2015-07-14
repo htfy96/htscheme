@@ -13,6 +13,9 @@ int main()
     cout<<a-b<<endl;
     cout<<a*b<<endl;
     cout<<a/b<<endl;
+
+    double c;
+    cout<< RationalType(c)+a <<endl;
     return 0;
 }
 #endif

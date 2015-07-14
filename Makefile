@@ -1,9 +1,9 @@
-CPPFLAGS = -I . -I $(CURDIR) -isystem $(CURDIR)/sys   -std=c++11 -O2
-CXX = g++
+CPPFLAGS = -I . -I $(CURDIR) -isystem $(CURDIR)/sys  -ggdb  -pipe -std=c++11  -O2
+CXX = ccache clang++
 
 INTEST = -D INTEST
 OBJ = $(wildcard *.o test/*.o utility/*.o types/*.o parsers/*.o)
-BIN = $(wildcard cli preprocessortest tokenizertest biginttest typestest asttest parserstest rationaltypetest)
+BIN = $(wildcard cli preprocessortest tokenizertest biginttest typestest asttest parserstest rationaltypetest complextypetest)
 
 TYPESCPP = $(wildcard types/*.cpp)
 TYPESHPP = $(wildcard types/*.hpp)
@@ -45,6 +45,9 @@ parserstest: test/parserstest.o preprocessor.o tokenizer.o ast.o $(TYPES) $(PARS
 	$(CXX) $(CPPFLAGS) $(INTEST) $(filter %.o,$^) -o $@
 
 rationaltypetest: test/rationaltypetest.o utility/rationaltype.o utility/bigint.o
+	$(CXX) $(CPPFLAGS) $(INTEST) $(filter %.o,$^) -o $@
+
+complextypetest: test/complextypetest.o $(UTILITY) types/float.o types/rational.o
 	$(CXX) $(CPPFLAGS) $(INTEST) $(filter %.o,$^) -o $@
 
 .PHONY: clean all

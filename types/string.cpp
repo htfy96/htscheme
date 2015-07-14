@@ -14,10 +14,10 @@ StringParser::InfoType StringParser::get (const std::string& token)
     return token.substr(1,token.size()-2);
 }
 
-std::ostream& operator << (std::ostream& o, const Wrapper<StringParser::InfoType> &info)
+std::ostream& operator << (std::ostream& o, const StringParser::InfoType &info)
 {
     o<<'"';
-    o<<info.inner;
+    o<<static_cast<std::string>(info);
     return o<<'"';
 }
 
