@@ -6,6 +6,7 @@
 #include <cstddef>
 #include <algorithm>
 #include <iostream>
+#include <stdexcept>
 
 namespace 
 {
