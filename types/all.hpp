@@ -26,6 +26,8 @@
 #include "parenthesis.hpp"
 #include "char.hpp"
 #include "ops.hpp"
+#include "rational.hpp"
+#include "float.hpp" //included but not used
 
 //Add your parser name here
 #define PARSERS_TUPLE (CharParser, BooleanParser, RationalParser, \

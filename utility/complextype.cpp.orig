@@ -1,3 +1,4 @@
+/*
 #include "complextype.hpp"
 #include "rationaltype.hpp"
 #include "types/rational.hpp"
@@ -34,8 +35,11 @@ void ComplexType::toinexact()
     imagd_ = static_cast<double> (imagr_);
     exact_ = false;
 }
+*/
 
 
+<<<<<<< HEAD
+=======
 ComplexType& ComplexType::operator-= (const ComplexType& b)
 {
     if (exact() && b.exact())
@@ -155,3 +159,4 @@ std::ostream& operator << (std::ostream& o,  const ComplexType& c)
     }
     return o;
 }
+>>>>>>> d697ea0... Implement ComplexType
