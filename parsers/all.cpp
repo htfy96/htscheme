@@ -1,5 +1,6 @@
 #include "all.hpp"
 #include "utility/debug.hpp"
+#include "boost/ref.hpp"
 #include <stdexcept>
 #include <string>
 #include <algorithm>
@@ -20,7 +21,7 @@ void ParsersHelper::parse(PASTNode astnode)
     ok = false;
     cur = 0;
     nod = astnode;
-    boost::mpl::for_each< ParsersType > (*this);
+    boost::mpl::for_each< ParsersType > (boost::ref(*this));
     if (!ok) 
     {
         std::string errmsg = "Cannot Parse Node (";
