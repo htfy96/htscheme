@@ -23,8 +23,7 @@ class RationalType: public
     bool operator < (const RationalType& b) const;
     friend std::istream& operator >>(std::istream& i, RationalType& a);
     friend std::ostream& operator <<(std::ostream& o, const RationalType& a);
-    operator double() const;
-    bool getSign() const;
+    operator double();
 };
 
 
