@@ -151,3 +151,8 @@ RationalType::RationalType(const double a):
     reduce();
 }
 
+bool RationalType::getSign() const
+{
+    return up_.nonNeg;
+}
+

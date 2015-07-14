@@ -1,11 +1,17 @@
 #include "complextype.hpp"
 #include "rationaltype.hpp"
+#include "types/rational.hpp"
+#include "types/float.hpp"
+#include <iostream>
+#include <stdexcept>
+#include <string>
+#include <cmath>
 
 ComplexType::ComplexType(): ComplexType( RationalType(0) ) {}
-ComplexType::ComplexType(const RationalType& a): ComplexType( a , RationalType(1)) {}
+ComplexType::ComplexType(const RationalType& a): ComplexType( a , RationalType(0)) {}
 ComplexType::ComplexType(const RationalType& a, const RationalType& b):
     realr_(a),imagr_(b),exact_(true) {}
-ComplexType::ComplexType(const double a): ComplexType(a,1.0) {}
+ComplexType::ComplexType(const double a): ComplexType(a,0.0) {}
 ComplexType::ComplexType(const double a, const double b) : reald_(a), imagd_(b), exact_(false) {}
 
 ComplexType::ComplexType(const RationalType& a, const double b):
@@ -25,9 +31,7 @@ void ComplexType::toinexact()
 {
     if (!exact_) return;
     reald_ = static_cast<double> (realr_);
-    imagd_ = static_cast<double> (imagd_);
-    realr_.~RationalType();
-    imagr_.~RationalType();
+    imagd_ = static_cast<double> (imagr_);
     exact_ = false;
 }
 
@@ -127,19 +131,20 @@ ComplexType& ComplexType::operator*= (const ComplexType& b)
         mid.toinexact();
         double oldreald(reald_);
 
-        reald_ = reald_ * b.reald_ - imagd_ * b.imagd_;
-        imagd_ = oldreald * b.imagd_ + b.reald_ * imagd_;
+        reald_ = reald_ * mid.reald_ - imagd_ * mid.imagd_;
+        imagd_ = oldreald * mid.imagd_ + mid.reald_ * imagd_;
         return *this;
     }
 }
-//Pending to change
+
 ComplexType& ComplexType::operator/= (const ComplexType& b)
 {
     if (exact() && b.exact())
     {
+        RationalType down = b.realr_ * b.realr_ + b.imagr_ * b.imagr_;
         RationalType oldrealr(realr_);
-        realr_ = realr_ * b.realr_ - imagr_ * b.imagr_;
-        imagr_ = oldrealr * b.imagr_ + b.realr_ * imagr_;
+        realr_ = (realr_ * b.realr_ + imagr_ * b.imagr_) / down;
+        imagr_ = (imagr_ * b.realr_ - oldrealr * b.imagr_) / down;
         return *this;
     }
     else
@@ -148,9 +153,66 @@ ComplexType& ComplexType::operator/= (const ComplexType& b)
         ComplexType mid(b);
         mid.toinexact();
         double oldreald(reald_);
+        double down =mid.reald_ * mid.reald_ + mid.imagd_ * mid.imagd_;
+        reald_ = (reald_ * mid.reald_ + imagd_ * mid.imagd_) / down;
+        imagd_ = (imagd_ * mid.reald_ - oldreald * mid.imagd_) / down;
 
-        reald_ = reald_ * b.reald_ - imagd_ * b.imagd_;
-        imagd_ = oldreald * b.imagd_ + b.reald_ * imagd_;
         return *this;
     }
+}
+
+std::istream& operator >> (std::istream& i, ComplexType& c)
+{
+    std::string s;
+    i>>s;
+    size_t pos = std::min(s.rfind('+'), s.rfind('-'));
+    if (*s.rbegin() != 'i') pos = s.npos;
+    if (pos == s.npos)
+    {
+        if (RationalParser::judge(s))
+          c = ComplexType( RationalParser::get(s));
+        else 
+          c= ComplexType( FloatParser::get(s));
+    }
+    else
+    {
+        std::string s1 = s.substr(0,pos);
+        std::string s2 = s.substr(pos, s.size() - pos-1);
+        if (RationalParser::judge(s1))
+          if (RationalParser::judge(s2))
+            c= ComplexType(RationalParser::get(s1), RationalParser::get(s2));
+        else
+          c = ComplexType(RationalParser::get(s1), FloatParser::get(s2));
+        else if (RationalParser::judge(s2))
+          c= ComplexType( FloatParser::get(s1), RationalParser::get(s2));
+        else
+          c= ComplexType( FloatParser::get(s1), FloatParser::get(s2));
+    }
+    return i;
+}
+
+std::ostream& operator << (std::ostream& o,  const ComplexType& c)
+{
+    if ( (c.exact() && c.realr_ ==0 && c.imagr_==0) || (!c.exact() && c.reald_ ==0.0 && c.imagd_ ==0.0))
+      return o<<'0';
+
+    if (c.exact() && c.realr_ != 0)
+        o<< c.realr_;
+    else
+      if (std::fabs(c.reald_)>1e-300)
+      o<<c.reald_;
+
+    if (!c.isReal())
+    {
+    o<< (( (c.exact() && c.imagr_.getSign()) || (!c.exact() && c.imagd_>=0.0))?"+":"");
+
+    if (c.exact())
+      o<<c.imagr_;
+    else
+      o<<c.imagd_;
+
+    
+      o<<'i';
+    }
+    return o;
 }
