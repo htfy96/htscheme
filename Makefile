@@ -1,9 +1,8 @@
-
-CPPFLAGS = -I . -I $(CURDIR) -isystem $(CURDIR)/sys  -ggdb  -pipe -std=c++11  -O2 -Wnon-template-friend
+CPPFLAGS = -I . -I "$(CURDIR)" -isystem "$(CURDIR)/sys"  -ggdb  -pipe -std=c++11  -O2
 CXX = ccache clang++
-=======
 
 INTEST = -D INTEST
+CPPFLAGS += $(INTEST)
 OBJ = $(wildcard *.o test/*.o utility/*.o types/*.o parsers/*.o)
 BIN = $(wildcard cli preprocessortest tokenizertest biginttest typestest asttest parserstest rationaltypetest complextypetest)
 
