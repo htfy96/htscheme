@@ -1,7 +1,8 @@
-CPPFLAGS = -I . -I $(CURDIR)  -isystem $(CURDIR)/sys -std=c++11  -O2 -Wno-non-template-friend -static
-CXX = g++
+CPPFLAGS = -I . -I $(CURDIR)  -isystem $(CURDIR)/sys -std=c++11  -O2 -static
+CXX = ccache clang++
 
 INTEST = -D INTEST
+CPPFLAGS += $(INTEST)
 OBJ = $(wildcard *.o test/*.o utility/*.o types/*.o parsers/*.o)
 BIN = $(wildcard cli preprocessortest tokenizertest biginttest typestest asttest parserstest rationaltypetest complextypetest)
 
@@ -22,7 +23,7 @@ BASICTYPES = $(filter-out types/all.o, $(TYPES))
 DEP = dep.d
 
 all:
-	$(MAKE) cli 
+	$(MAKE) cli preprocessortest tokenizertest biginttest asttest parserstest rationaltypetest complextypetest
 
 include $(DEP)
 
