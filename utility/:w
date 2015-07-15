@@ -113,10 +113,10 @@ namespace
         std::stringstream ss("");
         ss<<std::scientific<<std::setprecision(15)<<a;
         std::cout<<ss.str()<<std::endl;
-        std::string d = ss.str().substr(0, a>=0?17:18);
+        std::string d = ss.str().substr(0, a>=0?17:19);
         d.erase(d.find('.'),1);
         std::string q = ss.str().substr(ss.str().rfind('e')+1);
-        int po = std::atoi(q.c_str())-15;
+        int po = std::atoi(q.c_str())-17;
         if (po>0)
         {
             ans.first = d;

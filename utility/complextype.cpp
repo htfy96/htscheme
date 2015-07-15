@@ -27,20 +27,22 @@ bool ComplexType::operator==(const ComplexType& b) const
     else return reald_ == b.reald_ && imagd_ == b.imagd_ ;
 }
 
-void ComplexType::toinexact()
+ComplexType& ComplexType::toinexact()
 {
-    if (!exact_) return;
+    if (!exact_) return *this;
     reald_ = static_cast<double> (realr_);
     imagd_ = static_cast<double> (imagr_);
     exact_ = false;
+    return *this;
 }
 
-void ComplexType::toexact()
+ComplexType& ComplexType::toexact()
 {
-    if (exact_) return;
+    if (exact_) return *this;
     realr_ = RationalType(reald_);
     imagr_ = RationalType(imagd_);
     exact_ = true;
+    return *this;
 }
 
 bool ComplexType::exact() const

@@ -7,7 +7,7 @@ bool IdentifierParser::judge(const std::string& token)
     if (!token.size()) return false;
     if (!std::isalpha(token[0])) return false;
     for(auto &c:token)
-      if (!std::isalnum(c) && c!='-' && c!='_') return false;
+      if (!std::isalnum(c) && c!='-' && c!='_' && c!='>') return false;
     return true;
 }
 

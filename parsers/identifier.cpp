@@ -16,7 +16,9 @@ namespace
         {"max", HT::max},
         {"min", HT::min},
         {"real-part", HT::realpart},
-        {"imag-part",HT::imagpart}
+        {"imag-part",HT::imagpart},
+        {"exact->inexact",HT::exactToInexact},
+        {"inexact->exact", HT::inexactToExact}
     };
 }
 

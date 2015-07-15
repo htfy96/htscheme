@@ -7,6 +7,8 @@
 #include "abs.hpp"
 #include "imagpart.hpp"
 #include "realpart.hpp"
+#include "exacttoinexact.hpp"
+#include "inexacttoexact.hpp"
 
 
 #endif
