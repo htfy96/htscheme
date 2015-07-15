@@ -21,19 +21,17 @@ ParsersHelper ph;
 char *buf;
 int main()
 {
-    INDEBUG = true;
+    INDEBUG = false;
     std::string sent = "";
     std::string line;
 
-    std::cout<<banner<<std::endl;
     std::cout<< std::setprecision(17);
-    while (true)
+    while (cin)
     {
         try
         {
             while (true)
             {
-                if (sent == "") std::cout<<">>> "; else std::cout<<"... ";
                 std::getline(std::cin, line);
                 std::remove(line.begin(), line.end(), '\r');
                 if (cin.eof()) return 0;
