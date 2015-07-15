@@ -130,4 +130,6 @@ void Tokenizer::parse(const std::list<std::string> & rawTokens)
                 }
             );
     complete &= (dep==0);
+    if (dep<0)
+      throw std::runtime_error("Unexpected )");
 }

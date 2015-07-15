@@ -234,7 +234,8 @@ std::ostream& operator << (std::ostream& o,  const ComplexType& c)
 
     if (!c.isReal())
     {
-    o<< (( (c.exact() && c.imagr_.getSign()) || (!c.exact() && c.imagd_>=0.0))?"+":"");
+    o<< (( (c.exact() && c.imagr_.getSign()) || (!c.exact() && c.imagd_>=0.0)) && \
+                ( (c.exact() && c.realr_ !=0) || (!c.exact() && c.reald_ !=0.0 )) ?"+":"");
 
     if (c.exact())
       o<<c.imagr_;

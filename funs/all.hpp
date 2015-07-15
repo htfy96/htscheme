@@ -5,7 +5,8 @@
 #include "min.hpp"
 #include "max.hpp"
 #include "abs.hpp"
-
+#include "imagpart.hpp"
+#include "realpart.hpp"
 
 
 #endif
