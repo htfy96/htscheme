@@ -202,9 +202,9 @@ std::istream& operator >> (std::istream& i, ComplexType& c)
           c= ComplexType( FloatParser::get(s));
         else
           if (RationalParser::judge(s))
-            c = ComplexType(RationalType(0), RationalParser::get(s));
+            c = ComplexType(RationalType(0), RationalParser::get(s.substr(0,s.size()-1)));
           else 
-            c= ComplexType(0.0, FloatParser::get(s));
+            c= ComplexType(0.0, FloatParser::get(s.substr(0,s.size()-1)));
     }
     else
     {
