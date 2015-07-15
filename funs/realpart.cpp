@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> c912b35... Implement Real-part and Imag-part
-#include "imagpart.hpp"
+#include "realpart.hpp"
 #include "ast.hpp"
 #include "parsers.hpp"
 #include "types.hpp"
@@ -10,7 +6,7 @@
 #include <stdexcept>
 namespace HT
 {
-    void imagpart(PASTNode astnode, ParsersHelper& ph)
+    void realpart(PASTNode astnode, ParsersHelper& ph)
     {
         auto myParserHelper(ph);
         if (astnode->ch.size()!=2)
@@ -23,9 +19,9 @@ namespace HT
 
         astnode->type = Simple;
         if (cast.exact())
-          astnode->token.info = ComplexType(cast.getImagR());
+          astnode->token.info = ComplexType(cast.getRealR());
         else
-          astnode->token.info = ComplexType(cast.getImagD());
+          astnode->token.info = ComplexType(cast.getRealD());
 
         astnode->remove();
     }

@@ -7,8 +7,11 @@
 #include "abs.hpp"
 #include "imagpart.hpp"
 #include "realpart.hpp"
+<<<<<<< HEAD
 #include "exacttoinexact.hpp"
 #include "inexacttoexact.hpp"
+=======
+>>>>>>> c912b35... Implement Real-part and Imag-part
 
 
 #endif

@@ -16,9 +16,13 @@ namespace
         {"max", HT::max},
         {"min", HT::min},
         {"real-part", HT::realpart},
+<<<<<<< HEAD
         {"imag-part",HT::imagpart},
         {"exact->inexact",HT::exactToInexact},
         {"inexact->exact", HT::inexactToExact}
+=======
+        {"imag-part",HT::imagpart}
+>>>>>>> c912b35... Implement Real-part and Imag-part
     };
 }
 

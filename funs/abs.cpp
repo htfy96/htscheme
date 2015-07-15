@@ -13,9 +13,9 @@ namespace HT
           throw std::runtime_error("Abs can only have one parameter");
         auto & secondCh = *astnode->ch.rbegin();
         ph.parse(secondCh);
-        auto cast = boost::get<ComplexType>(secondCh->token.info);
-        if (secondCh->token.tokenType != Complex || ! cast.isReal())
+        if (secondCh->token.tokenType != Complex || ! boost::get<ComplexType>(secondCh->token.info).isReal())
           throw std::runtime_error("The argument of Abs must be real");
+        auto cast = boost::get<ComplexType>(secondCh->token.info);
 
         astnode->type = Simple;
         if (cast.isRational())
