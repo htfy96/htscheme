@@ -33,6 +33,7 @@ class ComplexType:
         bool exact() const;
         bool isReal() const;
         bool isRational() const;
+        bool isInt() const;
         RationalType getRealR() const;
         RationalType getImagR() const;
         double getRealD() const;

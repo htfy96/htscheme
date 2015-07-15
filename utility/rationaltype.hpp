@@ -27,6 +27,9 @@ class RationalType: public
     operator double() const;
     RationalType operator -();
     bool getSign() const;
+    bool isInt() const;
+    BigInt getUp() const;
+    BigInt getDown() const;
 };
 
 

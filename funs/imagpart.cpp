@@ -22,6 +22,7 @@ namespace HT
         auto cast = boost::get<ComplexType>(secondCh->token.info);
 
         astnode->type = Simple;
+        astnode->token.tokenType = Complex;
         if (cast.exact())
           astnode->token.info = ComplexType(cast.getImagR());
         else
