@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> c912b35... Implement Real-part and Imag-part
 #include "imagpart.hpp"
 #include "ast.hpp"
 #include "parsers.hpp"

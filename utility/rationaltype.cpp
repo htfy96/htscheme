@@ -116,7 +116,7 @@ namespace
         std::string d = ss.str().substr(0, a>=0?19:20);
         d.erase(d.find('.'),1);
         std::string q = ss.str().substr(ss.str().rfind('e')+1);
-        int po = std::atoi(q.c_str())-17;
+        int po = std::atoi(q.c_str())-15;
         if (po>0)
         {
             ans.first = d;
@@ -135,11 +135,11 @@ namespace
               for(int i=0;i<-po;++i) ans.second.push_back('0');
           }
 
-        //std::cout<< ans.first<<"/"<<ans.second<<std::endl;
+        std::cout<< ans.first<<"/"<<ans.second<<std::endl;
         //std::cout<< "|"<<ans.second <<"|"<< std::endl;
         //std::cout << ans.second.length() <<std::endl;
         //std::cout << ( ans.second == std::string("1")) <<std::endl;
-        //std::cout<< BigInt( ans.second ) <<std::endl;
+        std::cout<< BigInt( ans.second ) <<std::endl;
         return ans;
     }
 }
