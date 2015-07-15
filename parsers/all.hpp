@@ -23,11 +23,11 @@
 #include "opminus.hpp"
 #include "opmultiply.hpp"
 #include "opdivide.hpp"
-
+#include "identifier.hpp"
 #include <memory>
 
 //Add your AST Parser here
-#define ASTPARSERS_TUPLE (OpPlusASTParser, OpMinusASTParser, OpMultiplyASTParser, OpDivideASTParser)
+#define ASTPARSERS_TUPLE (OpPlusASTParser, OpMinusASTParser, OpMultiplyASTParser, OpDivideASTParser, IdentifierASTParser)
 
 
 #define AST_TUPLESIZE BOOST_PP_TUPLE_SIZE(ASTPARSERS_TUPLE)
@@ -74,6 +74,12 @@ template <typename T> void ParsersHelper::operator() (T&)
                 break;
             }
     }
+}
+
+#define TOKENTYPE_JUDGER(ASTPARSER_, TOKENTYPE_)\
+bool ASTPARSER_::judge(const PASTNode astnode, const ParsersHelper& parserHelper)\
+{   \
+        return astnode->ch.size() &&  (*astnode->ch.begin())->token.tokenType ==  TOKENTYPE_; \
 }
 #endif
 

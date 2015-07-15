@@ -68,6 +68,30 @@ RationalType ComplexType::getImagR() const
     return imagr_;
 }
 
+ComplexType& ComplexType::setImagD(const double b)
+{
+    imagd_ = b;
+    return *this;
+}
+
+ComplexType& ComplexType::setRealD(const double b)
+{
+    reald_ = b;
+    return *this;
+}
+
+ComplexType& ComplexType::setImagR(const RationalType& b)
+{
+    imagr_ = b;
+    return *this;
+}
+
+ComplexType& ComplexType::setRealR(const RationalType& b)
+{
+    realr_ = b;
+    return *this;
+}
+
 bool ComplexType::isReal() const
 {
     return exact_ ? imagr_==0 : imagd_ == 0.0;
@@ -221,4 +245,19 @@ std::ostream& operator << (std::ostream& o,  const ComplexType& c)
       o<<'i';
     }
     return o;
+}
+
+ComplexType ComplexType::operator - ()
+{
+    if (exact_)
+    {
+        realr_ = -realr_;
+        imagr_ = -imagr_;
+    }
+    else
+    {
+        reald_ = -reald_;
+        imagd_ = -imagd_;
+    }
+    return *this;
 }

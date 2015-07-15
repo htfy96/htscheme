@@ -2,12 +2,6 @@
 #define __SCHEME_PARSERS_OPDIVIDE
 #include "ast.hpp"
 #include "arch.hpp"
-class OpDivideASTParser:public ASTParser
-{
-    public:
-        bool judge(const PASTNode astnode, const ParsersHelper& parserHelper);
-        void parse(PASTNode astnode, ParsersHelper& parserHelper);
-};
 
-
+ASTParserBuilder(OpDivideASTParser)
 #endif

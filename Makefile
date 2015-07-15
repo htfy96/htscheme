@@ -3,7 +3,7 @@ CXX = ccache clang++
 
 INTEST = -D INTEST
 CPPFLAGS += $(INTEST)
-OBJ = $(wildcard *.o test/*.o utility/*.o types/*.o parsers/*.o)
+OBJ = $(wildcard *.o test/*.o utility/*.o types/*.o parsers/*.o funs/*.o)
 BIN = $(wildcard cli preprocessortest tokenizertest biginttest typestest asttest parserstest rationaltypetest complextypetest)
 
 TYPESCPP = $(wildcard types/*.cpp)
@@ -18,6 +18,10 @@ UTILITYCPP = $(wildcard utility/*.cpp)
 UTILITYHPP = $(wildcard utility/*.hpp)
 UTILITY = $(patsubst %.cpp,%.o,$(UTILITYCPP)) $(UTILITYHPP)
 
+FUNSCPP = $(wildcard funs/*.cpp)
+FUNSHPP = $(wildcard funs/*.hpp)
+FUNS = $(patsubst %.cpp,%.o,$(FUNSCPP)) $(FUNSHPP)
+
 BASICTYPES = $(filter-out types/all.o, $(TYPES))
 
 DEP = dep.d
@@ -27,7 +31,7 @@ all:
 
 include $(DEP)
 
-cli: cli.o preprocessor.o tokenizer.o ast.o $(TYPES) $(PARSERS) $(UTILITY) 
+cli: cli.o preprocessor.o tokenizer.o ast.o $(TYPES) $(PARSERS) $(UTILITY) $(FUNS)
 	$(CXX) $(CPPFLAGS) $(filter %.o,$^) -o $@
 
 preprocessortest: test/preprocessortest.o preprocessor.o
@@ -42,7 +46,7 @@ biginttest: test/biginttest.o utility/bigint.o
 asttest: test/asttest.o preprocessor.o tokenizer.o ast.o $(TYPES) $(UTILITY)
 	$(CXX) $(CPPFLAGS) $(INTEST) $(filter %.o,$^) -o $@
 
-parserstest: test/parserstest.o preprocessor.o tokenizer.o ast.o $(TYPES) $(PARSERS) $(UTILITY)
+parserstest: test/parserstest.o preprocessor.o tokenizer.o ast.o $(TYPES) $(PARSERS) $(UTILITY) $(FUNS)
 	$(CXX) $(CPPFLAGS) $(INTEST) $(filter %.o,$^) -o $@
 
 rationaltypetest: test/rationaltypetest.o utility/rationaltype.o utility/bigint.o

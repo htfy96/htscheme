@@ -7,10 +7,7 @@
 #include <string>
 #include <stdexcept>
 #include <memory>
-bool OpPlusASTParser::judge(const PASTNode astnode, const ParsersHelper& parserHelper)
-{
-    return astnode->ch.size() &&  (* astnode->ch.begin())->token.tokenType == OpPlus; 
-}
+TOKENTYPE_JUDGER(OpPlusASTParser, OpPlus)
 
 void OpPlusASTParser::parse(PASTNode astnode, ParsersHelper& parserHelper)
 {

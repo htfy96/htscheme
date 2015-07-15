@@ -37,6 +37,11 @@ class ComplexType:
         RationalType getImagR() const;
         double getRealD() const;
         double getImagD() const;
+        ComplexType& setRealR(const RationalType& b);
+        ComplexType& setImagR(const RationalType& b);
+        ComplexType& setRealD(const double b);
+        ComplexType& setImagD(const double d);
+        ComplexType operator -();
         void toexact();
         void toinexact();
 

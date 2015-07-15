@@ -156,3 +156,10 @@ bool RationalType::getSign() const
     return up_.nonNeg;
 }
 
+RationalType RationalType::operator-()
+{
+    RationalType w(*this);
+    w.up_ = -w.up_;
+    return w;
+}
+

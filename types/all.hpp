@@ -27,11 +27,12 @@
 #include "ops.hpp"
 #include "rational.hpp"
 #include "float.hpp" //included but not used
+#include "identifier.hpp"
 
 //Add your parser name here
 #define PARSERS_TUPLE (CharParser, BooleanParser, ComplexParser, \
                         OpPlusParser, OpMinusParser, OpMultiplyParser, OpDivideParser , \
-                        StringParser , LeftParenthesisParser, RightParenthesisParser)
+                        StringParser , LeftParenthesisParser, RightParenthesisParser, IdentifierParser)
 
 
 #define PARSERS_SIZE BOOST_PP_TUPLE_SIZE(PARSERS_TUPLE)
