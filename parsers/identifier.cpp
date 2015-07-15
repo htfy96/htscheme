@@ -14,7 +14,11 @@ namespace
     std::unordered_map<std::string, FuncType> innerFunc = {
         {"abs", HT::abs},
         {"max", HT::max},
-        {"min", HT::min}
+        {"min", HT::min},
+        {"real-part", HT::realpart},
+        {"imag-part",HT::imagpart},
+        {"exact->inexact",HT::exactToInexact},
+        {"inexact->exact", HT::inexactToExact}
     };
 }
 

@@ -16,6 +16,7 @@ bool ComplexParser::judge( const std::string& token)
 
         std::string s1 = token.substr(0,pos);
         std::string s2 = token.substr(pos,token.size()-pos-1);
+        if (pos == 0) return RationalParser::judge(s2) || FloatParser::judge(s2); else
         return (FloatParser::judge(s1) || RationalParser::judge(s1)) && (
                     RationalParser::judge(s2) || FloatParser::judge(s2));
     }

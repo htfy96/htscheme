@@ -42,8 +42,8 @@ class ComplexType:
         ComplexType& setRealD(const double b);
         ComplexType& setImagD(const double d);
         ComplexType operator -();
-        void toexact();
-        void toinexact();
+        ComplexType& toexact();
+        ComplexType& toinexact();
 
 };
 
