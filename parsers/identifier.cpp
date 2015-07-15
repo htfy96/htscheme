@@ -18,7 +18,9 @@ namespace
         {"real-part", HT::realpart},
         {"imag-part",HT::imagpart},
         {"exact->inexact",HT::exactToInexact},
-        {"inexact->exact", HT::inexactToExact}
+        {"inexact->exact", HT::inexactToExact},
+        {"quotient", HT::quotient},
+        {"remainder", HT::remainder}
     };
 }
 

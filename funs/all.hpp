@@ -9,6 +9,8 @@
 #include "realpart.hpp"
 #include "exacttoinexact.hpp"
 #include "inexacttoexact.hpp"
+#include "quotient.hpp"
+#include "remainder.hpp"
 
 
 #endif

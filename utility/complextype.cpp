@@ -264,3 +264,8 @@ ComplexType ComplexType::operator - ()
     }
     return *this;
 }
+
+bool ComplexType::isInt() const
+{
+    return isRational() && realr_.isInt();
+}

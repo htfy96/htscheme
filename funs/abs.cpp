@@ -18,6 +18,7 @@ namespace HT
         auto cast = boost::get<ComplexType>(secondCh->token.info);
 
         astnode->type = Simple;
+        astnode->token.tokenType = Complex;
         if (cast.isRational())
         {
             if (!cast.getRealR().getSign())

@@ -19,6 +19,7 @@ namespace HT
 
         astnode->type = Simple;
         astnode->token.info = boost::get<ComplexType>(secondCh->token.info);
+        astnode->token.tokenType = Complex;
         std::for_each( ++astnode->ch.begin(), astnode->ch.end(), [&ph, &astnode](PASTNode an)
                     {
                     ph.parse(an);
