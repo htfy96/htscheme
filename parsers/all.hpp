@@ -16,7 +16,10 @@
 #include <boost/variant.hpp>
 #include <boost/preprocessor.hpp>
 #include <vector>
+#include <list>
+#include <unordered_map>
 #include "ast.hpp"
+#include "utility/debug.hpp"
 
 #include "opplus.hpp"
 
@@ -24,10 +27,15 @@
 #include "opmultiply.hpp"
 #include "opdivide.hpp"
 #include "identifier.hpp"
+#include "define.hpp"
+#include "lambdadefine.hpp"
+#include "macro.hpp"
+#include "lambda.hpp"
+#include "opif.hpp"
 #include <memory>
 
 //Add your AST Parser here
-#define ASTPARSERS_TUPLE (OpPlusASTParser, OpMinusASTParser, OpMultiplyASTParser, OpDivideASTParser, IdentifierASTParser)
+#define ASTPARSERS_TUPLE ( OpPlusASTParser, OpMinusASTParser, OpMultiplyASTParser, OpDivideASTParser, DefineASTParser, MacroASTParser, LambdaDefineASTParser,  IdentifierASTParser, LambdaASTParser ,OpIfASTParser)
 
 
 #define AST_TUPLESIZE BOOST_PP_TUPLE_SIZE(ASTPARSERS_TUPLE)
@@ -46,11 +54,14 @@ class ParsersHelper
     PASTNode nod;
     bool ok;
     enum {Construct, Parse} state;
+    static int cnt;
     public:
 // there is nothing to do here  
     ParsersHelper();
-    void parse(PASTNode astnode);
+    void parse(PASTNode& astnode);
+    void apply(PASTNode& c);
     template <typename T> void operator() (T&);
+    std::shared_ptr<std::unordered_map<std::string, PASTNode> > symbols;
 };
 
 template <typename T> void ParsersHelper::operator() (T&)
@@ -64,6 +75,7 @@ template <typename T> void ParsersHelper::operator() (T&)
             }
         case Parse:
             {
+                if (ok) break;
                 if (boost::get< T > (a->at(cur)) .judge(nod, *this))
                 {
                     boost::get<T>(a->at(cur)).parse(nod, *this);

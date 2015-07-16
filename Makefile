@@ -1,4 +1,4 @@
-CPPFLAGS = -I . -I $(CURDIR)  -isystem $(CURDIR)/sys -std=c++11  -O2 -static
+CPPFLAGS = -I . -I $(CURDIR)  -isystem $(CURDIR)/sys -std=c++11  -ggdb -O2 -static
 CXX = ccache clang++
 
 INTEST = -D INTEST

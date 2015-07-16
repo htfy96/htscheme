@@ -1,3 +1,5 @@
+
+#include "utility/debug.hpp"
 #include "complextype.hpp"
 #include "rationaltype.hpp"
 #include "types/rational.hpp"
@@ -167,9 +169,10 @@ ComplexType& ComplexType::operator/= (const ComplexType& b)
 {
     if (exact() && b.exact())
     {
+        LOG("exact!"<<realr_<<" "<<imagr_)
         RationalType down = b.realr_ * b.realr_ + b.imagr_ * b.imagr_;
         RationalType oldrealr(realr_);
-        realr_ = (realr_ * b.realr_ + imagr_ * b.imagr_) / down;
+        realr_ = RationalType(realr_ * b.realr_ + imagr_ * b.imagr_) / down;
         imagr_ = (imagr_ * b.realr_ - oldrealr * b.imagr_) / down;
         return *this;
     }
@@ -191,6 +194,7 @@ std::istream& operator >> (std::istream& i, ComplexType& c)
 {
     std::string s;
     i>>s;
+    LOG(s)
     size_t pos = std::min(s.rfind('+'), s.rfind('-'));
     if (*s.rbegin() != 'i') pos = s.npos;
     if (pos == s.npos)
@@ -201,7 +205,7 @@ std::istream& operator >> (std::istream& i, ComplexType& c)
         else 
           c= ComplexType( FloatParser::get(s));
         else
-          if (RationalParser::judge(s))
+          if (RationalParser::judge(s.substr(0,s.size()-1)))
             c = ComplexType(RationalType(0), RationalParser::get(s.substr(0,s.size()-1)));
           else 
             c= ComplexType(0.0, FloatParser::get(s.substr(0,s.size()-1)));
@@ -210,9 +214,9 @@ std::istream& operator >> (std::istream& i, ComplexType& c)
     {
         std::string s1 = s.substr(0,pos);
         std::string s2 = s.substr(pos, s.size() - pos-1);
-        if (RationalParser::judge(s1))
+        if (!s1.size() || RationalParser::judge(s1) )
           if (RationalParser::judge(s2))
-            c= ComplexType(RationalParser::get(s1), RationalParser::get(s2));
+            c= ComplexType(s1!="" ? RationalParser::get(s1) : RationalType(0)  , RationalParser::get(s2));
         else
           c = ComplexType(RationalParser::get(s1), FloatParser::get(s2));
         else if (RationalParser::judge(s2))
@@ -231,7 +235,7 @@ std::ostream& operator << (std::ostream& o,  const ComplexType& c)
     if (c.exact() && c.realr_ != 0)
         o<< c.realr_;
     else
-      if (std::fabs(c.reald_)>1e-300)
+      if (std::fabs(c.reald_)>1e-18)
       o<<c.reald_;
 
     if (!c.isReal())

@@ -20,6 +20,7 @@ struct ASTNode: public std::enable_shared_from_this<ASTNode>
     ASTNode(const NodeType& nodeType_, const Token& token_, PASTNode parent_);
     std::shared_ptr<ASTNode> add(const ASTNode &node);
     void remove();
+    PASTNode deepcopy();
 };
 
 
