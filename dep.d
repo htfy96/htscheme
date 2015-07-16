@@ -5,7 +5,34 @@ abs.o: funs/abs.cpp funs/abs.hpp funs/arch.hpp ast.hpp types.hpp \
   types/char.hpp types/ops.hpp types/rational.hpp types/float.hpp \
   types/identifier.hpp parsers.hpp parsers/all.hpp parsers/opplus.hpp \
   parsers/arch.hpp parsers/opminus.hpp parsers/opmultiply.hpp \
-  parsers/opdivide.hpp
+  parsers/opdivide.hpp parsers/identifier.hpp parsers/define.hpp
+exacttoinexact.o: funs/exacttoinexact.cpp funs/exacttoinexact.hpp \
+  funs/arch.hpp ast.hpp types.hpp types/all.hpp types/arch.hpp \
+  utility/wrapper.hpp types/complex.hpp utility/complextype.hpp \
+  utility/rationaltype.hpp utility/bigint.hpp types/string.hpp \
+  types/boolean.hpp types/parenthesis.hpp types/char.hpp types/ops.hpp \
+  types/rational.hpp types/float.hpp types/identifier.hpp parsers.hpp \
+  parsers/all.hpp parsers/opplus.hpp parsers/arch.hpp \
+  parsers/opminus.hpp parsers/opmultiply.hpp parsers/opdivide.hpp \
+  parsers/identifier.hpp parsers/define.hpp
+imagpart.o: funs/imagpart.cpp funs/imagpart.hpp funs/arch.hpp ast.hpp \
+  types.hpp types/all.hpp types/arch.hpp utility/wrapper.hpp \
+  types/complex.hpp utility/complextype.hpp utility/rationaltype.hpp \
+  utility/bigint.hpp types/string.hpp types/boolean.hpp \
+  types/parenthesis.hpp types/char.hpp types/ops.hpp types/rational.hpp \
+  types/float.hpp types/identifier.hpp parsers.hpp parsers/all.hpp \
+  parsers/opplus.hpp parsers/arch.hpp parsers/opminus.hpp \
+  parsers/opmultiply.hpp parsers/opdivide.hpp parsers/identifier.hpp \
+  parsers/define.hpp
+inexacttoexact.o: funs/inexacttoexact.cpp funs/inexacttoexact.hpp \
+  funs/arch.hpp ast.hpp types.hpp types/all.hpp types/arch.hpp \
+  utility/wrapper.hpp types/complex.hpp utility/complextype.hpp \
+  utility/rationaltype.hpp utility/bigint.hpp types/string.hpp \
+  types/boolean.hpp types/parenthesis.hpp types/char.hpp types/ops.hpp \
+  types/rational.hpp types/float.hpp types/identifier.hpp parsers.hpp \
+  parsers/all.hpp parsers/opplus.hpp parsers/arch.hpp \
+  parsers/opminus.hpp parsers/opmultiply.hpp parsers/opdivide.hpp \
+  parsers/identifier.hpp parsers/define.hpp
 max.o: funs/max.cpp funs/max.hpp funs/arch.hpp ast.hpp types.hpp \
   types/all.hpp types/arch.hpp utility/wrapper.hpp types/complex.hpp \
   utility/complextype.hpp utility/rationaltype.hpp utility/bigint.hpp \
@@ -13,7 +40,7 @@ max.o: funs/max.cpp funs/max.hpp funs/arch.hpp ast.hpp types.hpp \
   types/char.hpp types/ops.hpp types/rational.hpp types/float.hpp \
   types/identifier.hpp parsers.hpp parsers/all.hpp parsers/opplus.hpp \
   parsers/arch.hpp parsers/opminus.hpp parsers/opmultiply.hpp \
-  parsers/opdivide.hpp
+  parsers/opdivide.hpp parsers/identifier.hpp parsers/define.hpp
 min.o: funs/min.cpp funs/max.hpp funs/arch.hpp ast.hpp types.hpp \
   types/all.hpp types/arch.hpp utility/wrapper.hpp types/complex.hpp \
   utility/complextype.hpp utility/rationaltype.hpp utility/bigint.hpp \
@@ -21,7 +48,34 @@ min.o: funs/min.cpp funs/max.hpp funs/arch.hpp ast.hpp types.hpp \
   types/char.hpp types/ops.hpp types/rational.hpp types/float.hpp \
   types/identifier.hpp parsers.hpp parsers/all.hpp parsers/opplus.hpp \
   parsers/arch.hpp parsers/opminus.hpp parsers/opmultiply.hpp \
-  parsers/opdivide.hpp
+  parsers/opdivide.hpp parsers/identifier.hpp parsers/define.hpp
+quotient.o: funs/quotient.cpp funs/quotient.hpp funs/arch.hpp ast.hpp \
+  types.hpp types/all.hpp types/arch.hpp utility/wrapper.hpp \
+  types/complex.hpp utility/complextype.hpp utility/rationaltype.hpp \
+  utility/bigint.hpp types/string.hpp types/boolean.hpp \
+  types/parenthesis.hpp types/char.hpp types/ops.hpp types/rational.hpp \
+  types/float.hpp types/identifier.hpp parsers.hpp parsers/all.hpp \
+  parsers/opplus.hpp parsers/arch.hpp parsers/opminus.hpp \
+  parsers/opmultiply.hpp parsers/opdivide.hpp parsers/identifier.hpp \
+  parsers/define.hpp
+realpart.o: funs/realpart.cpp funs/realpart.hpp funs/arch.hpp ast.hpp \
+  types.hpp types/all.hpp types/arch.hpp utility/wrapper.hpp \
+  types/complex.hpp utility/complextype.hpp utility/rationaltype.hpp \
+  utility/bigint.hpp types/string.hpp types/boolean.hpp \
+  types/parenthesis.hpp types/char.hpp types/ops.hpp types/rational.hpp \
+  types/float.hpp types/identifier.hpp parsers.hpp parsers/all.hpp \
+  parsers/opplus.hpp parsers/arch.hpp parsers/opminus.hpp \
+  parsers/opmultiply.hpp parsers/opdivide.hpp parsers/identifier.hpp \
+  parsers/define.hpp
+remainder.o: funs/remainder.cpp funs/remainder.hpp funs/arch.hpp ast.hpp \
+  types.hpp types/all.hpp types/arch.hpp utility/wrapper.hpp \
+  types/complex.hpp utility/complextype.hpp utility/rationaltype.hpp \
+  utility/bigint.hpp types/string.hpp types/boolean.hpp \
+  types/parenthesis.hpp types/char.hpp types/ops.hpp types/rational.hpp \
+  types/float.hpp types/identifier.hpp parsers.hpp parsers/all.hpp \
+  parsers/opplus.hpp parsers/arch.hpp parsers/opminus.hpp \
+  parsers/opmultiply.hpp parsers/opdivide.hpp parsers/identifier.hpp \
+  parsers/define.hpp
 all.o: parsers/all.cpp parsers/all.hpp ast.hpp types.hpp types/all.hpp \
   types/arch.hpp utility/wrapper.hpp types/complex.hpp \
   utility/complextype.hpp utility/rationaltype.hpp utility/bigint.hpp \
@@ -29,7 +83,15 @@ all.o: parsers/all.cpp parsers/all.hpp ast.hpp types.hpp types/all.hpp \
   types/char.hpp types/ops.hpp types/rational.hpp types/float.hpp \
   types/identifier.hpp parsers/opplus.hpp parsers/arch.hpp \
   parsers/opminus.hpp parsers/opmultiply.hpp parsers/opdivide.hpp \
-  utility/debug.hpp
+  parsers/identifier.hpp parsers/define.hpp utility/debug.hpp
+define.o: parsers/define.cpp parsers/define.hpp parsers/arch.hpp ast.hpp \
+  types.hpp types/all.hpp types/arch.hpp utility/wrapper.hpp \
+  types/complex.hpp utility/complextype.hpp utility/rationaltype.hpp \
+  utility/bigint.hpp types/string.hpp types/boolean.hpp \
+  types/parenthesis.hpp types/char.hpp types/ops.hpp types/rational.hpp \
+  types/float.hpp types/identifier.hpp parsers/all.hpp \
+  parsers/opplus.hpp parsers/opminus.hpp parsers/opmultiply.hpp \
+  parsers/opdivide.hpp parsers/identifier.hpp utility/debug.hpp
 identifier.o: parsers/identifier.cpp parsers/all.hpp ast.hpp types.hpp \
   types/all.hpp types/arch.hpp utility/wrapper.hpp types/complex.hpp \
   utility/complextype.hpp utility/rationaltype.hpp utility/bigint.hpp \
@@ -37,8 +99,10 @@ identifier.o: parsers/identifier.cpp parsers/all.hpp ast.hpp types.hpp \
   types/char.hpp types/ops.hpp types/rational.hpp types/float.hpp \
   types/identifier.hpp parsers/opplus.hpp parsers/arch.hpp \
   parsers/opminus.hpp parsers/opmultiply.hpp parsers/opdivide.hpp \
-  parsers/identifier.hpp funs.hpp funs/all.hpp funs/arch.hpp parsers.hpp \
-  funs/min.hpp funs/max.hpp funs/abs.hpp
+  parsers/identifier.hpp parsers/define.hpp funs.hpp funs/all.hpp \
+  funs/arch.hpp parsers.hpp funs/min.hpp funs/max.hpp funs/abs.hpp \
+  funs/imagpart.hpp funs/realpart.hpp funs/exacttoinexact.hpp \
+  funs/inexacttoexact.hpp funs/quotient.hpp funs/remainder.hpp
 opdivide.o: parsers/opdivide.cpp parsers/opdivide.hpp ast.hpp types.hpp \
   types/all.hpp types/arch.hpp utility/wrapper.hpp types/complex.hpp \
   utility/complextype.hpp utility/rationaltype.hpp utility/bigint.hpp \
@@ -46,28 +110,31 @@ opdivide.o: parsers/opdivide.cpp parsers/opdivide.hpp ast.hpp types.hpp \
   types/char.hpp types/ops.hpp types/rational.hpp types/float.hpp \
   types/identifier.hpp parsers/arch.hpp parsers/all.hpp \
   parsers/opplus.hpp parsers/opminus.hpp parsers/opmultiply.hpp \
-  utility/debug.hpp
+  parsers/identifier.hpp parsers/define.hpp utility/debug.hpp
 opminus.o: parsers/opminus.cpp parsers/opminus.hpp ast.hpp types.hpp \
   types/all.hpp types/arch.hpp utility/wrapper.hpp types/complex.hpp \
   utility/complextype.hpp utility/rationaltype.hpp utility/bigint.hpp \
   types/string.hpp types/boolean.hpp types/parenthesis.hpp \
   types/char.hpp types/ops.hpp types/rational.hpp types/float.hpp \
   types/identifier.hpp parsers/arch.hpp parsers/all.hpp \
-  parsers/opplus.hpp parsers/opmultiply.hpp parsers/opdivide.hpp
+  parsers/opplus.hpp parsers/opmultiply.hpp parsers/opdivide.hpp \
+  parsers/identifier.hpp parsers/define.hpp
 opmultiply.o: parsers/opmultiply.cpp parsers/opmultiply.hpp ast.hpp \
   types.hpp types/all.hpp types/arch.hpp utility/wrapper.hpp \
   types/complex.hpp utility/complextype.hpp utility/rationaltype.hpp \
   utility/bigint.hpp types/string.hpp types/boolean.hpp \
   types/parenthesis.hpp types/char.hpp types/ops.hpp types/rational.hpp \
   types/float.hpp types/identifier.hpp parsers/arch.hpp parsers/all.hpp \
-  parsers/opplus.hpp parsers/opminus.hpp parsers/opdivide.hpp
+  parsers/opplus.hpp parsers/opminus.hpp parsers/opdivide.hpp \
+  parsers/identifier.hpp parsers/define.hpp
 opplus.o: parsers/opplus.cpp parsers/opplus.hpp ast.hpp types.hpp \
   types/all.hpp types/arch.hpp utility/wrapper.hpp types/complex.hpp \
   utility/complextype.hpp utility/rationaltype.hpp utility/bigint.hpp \
   types/string.hpp types/boolean.hpp types/parenthesis.hpp \
   types/char.hpp types/ops.hpp types/rational.hpp types/float.hpp \
   types/identifier.hpp parsers/arch.hpp parsers/all.hpp \
-  parsers/opminus.hpp parsers/opmultiply.hpp parsers/opdivide.hpp
+  parsers/opminus.hpp parsers/opmultiply.hpp parsers/opdivide.hpp \
+  parsers/identifier.hpp parsers/define.hpp
 asttest.o: test/asttest.cpp ast.hpp types.hpp types/all.hpp \
   types/arch.hpp utility/wrapper.hpp types/complex.hpp \
   utility/complextype.hpp utility/rationaltype.hpp utility/bigint.hpp \
@@ -84,7 +151,8 @@ parserstest.o: test/parserstest.cpp preprocessor.hpp tokenizer.hpp \
   types/parenthesis.hpp types/char.hpp types/ops.hpp types/rational.hpp \
   types/float.hpp types/identifier.hpp ast.hpp parsers.hpp \
   parsers/all.hpp parsers/opplus.hpp parsers/arch.hpp \
-  parsers/opminus.hpp parsers/opmultiply.hpp parsers/opdivide.hpp
+  parsers/opminus.hpp parsers/opmultiply.hpp parsers/opdivide.hpp \
+  parsers/identifier.hpp parsers/define.hpp
 preprocessortest.o: test/preprocessortest.cpp preprocessor.hpp
 rationaltypetest.o: test/rationaltypetest.cpp utility/rationaltype.hpp \
   utility/bigint.hpp
@@ -143,9 +211,9 @@ string.o: types/string.cpp types/string.hpp types/arch.hpp \
   types/rational.hpp types/float.hpp types/identifier.hpp \
   utility/strutility.hpp
 bigint.o: utility/bigint.cpp utility/bigint.hpp utility/strutility.hpp
-complextype.o: utility/complextype.cpp utility/complextype.hpp \
-  utility/rationaltype.hpp utility/bigint.hpp types/rational.hpp \
-  types/arch.hpp utility/wrapper.hpp types/float.hpp
+complextype.o: utility/complextype.cpp utility/debug.hpp \
+  utility/complextype.hpp utility/rationaltype.hpp utility/bigint.hpp \
+  types/rational.hpp types/arch.hpp utility/wrapper.hpp types/float.hpp
 debug.o: utility/debug.cpp utility/debug.hpp
 rationaltype.o: utility/rationaltype.cpp utility/rationaltype.hpp \
   utility/bigint.hpp utility/debug.hpp

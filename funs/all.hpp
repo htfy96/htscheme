@@ -11,6 +11,7 @@
 #include "inexacttoexact.hpp"
 #include "quotient.hpp"
 #include "remainder.hpp"
+#include "equal.hpp"
 
 
 #endif

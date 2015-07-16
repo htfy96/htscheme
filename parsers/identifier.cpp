@@ -20,7 +20,8 @@ namespace
         {"exact->inexact",HT::exactToInexact},
         {"inexact->exact", HT::inexactToExact},
         {"quotient", HT::quotient},
-        {"remainder", HT::remainder}
+        {"remainder", HT::remainder},
+        {"=", HT::equal}
     };
 }
 
