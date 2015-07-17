@@ -21,7 +21,15 @@ namespace
         {"inexact->exact", HT::inexactToExact},
         {"quotient", HT::quotient},
         {"remainder", HT::remainder},
-        {"=", HT::equal}
+        {"=", HT::equal},
+        {"numerator", HT::numerator},
+        {"denominator", HT::denominator},
+        {"floor", HT::floor},
+        {"ceiling", HT::ceiling},
+        {"truncate", HT::truncate},
+        {"modulo", HT::modulo},
+        {"expt", HT::expt},
+        {"sqrt", HT::sqrt}
     };
 }
 

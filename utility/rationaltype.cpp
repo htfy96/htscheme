@@ -177,3 +177,8 @@ BigInt RationalType::getDown() const
 {
     return down_;
 }
+
+BigInt RationalType::toInt() const
+{
+    return up_ / down_;
+}

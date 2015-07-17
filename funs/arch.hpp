@@ -2,5 +2,6 @@
 #define __SCHEME_FUNS_ARCH
 #include "ast.hpp"
 #include "parsers.hpp"
+#include <cmath>
 //Pending
 #endif

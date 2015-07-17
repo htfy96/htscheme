@@ -3,7 +3,9 @@
 #include "ast.hpp"
 #include "parsers.hpp"
 #include "types.hpp"
+#include "utility/itoa.hpp"
 #include <boost/variant.hpp>
+#include <cmath>
 #include <stdexcept>
 #include <algorithm>
 namespace HT
@@ -25,9 +27,21 @@ namespace HT
 
         astnode->type = Simple;
         astnode->token.tokenType = Complex;
-        astnode->token.info = ComplexType( boost::get<ComplexType>(secondCh->token.info).getRealR().getUp() % 
-            boost::get<ComplexType>(thirdCh->token.info).getRealR().getUp() );
+        auto cast =boost::get<ComplexType>(secondCh->token.info);
 
+        if (cast.toInt().isZero()) astnode->token.info = ComplexType(0);
+        else
+        {
+            astnode->token.info = ComplexType(cast.toInt()  \
+                        % 
+                        boost::get<ComplexType>(thirdCh->token.info).toInt()) ;
+            if (!cast.exact() || !boost::get<ComplexType>(thirdCh->token.info).exact())
+              astnode->token.info = boost::get<ComplexType>(astnode->token.info).toinexact();
+
+            astnode->token.info = ComplexType( boost::get<ComplexType>(astnode->token.info).toInt().setSign(
+                            boost::get<ComplexType>(secondCh->token.info).toInt().getSign()));
+
+        }
         astnode->remove();
     }
 }
