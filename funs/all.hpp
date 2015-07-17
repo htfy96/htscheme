@@ -1,6 +1,8 @@
 #ifndef __SCHEME_FUNS_ALL
 #define __SCHEME_FUNS_ALL
 
+#include <cmath>
+
 #include "arch.hpp"
 #include "min.hpp"
 #include "max.hpp"
@@ -12,6 +14,14 @@
 #include "quotient.hpp"
 #include "remainder.hpp"
 #include "equal.hpp"
+#include "numerator.hpp"
+#include "denominator.hpp"
+#include "floor.hpp"
+#include "ceiling.hpp"
+#include "truncate.hpp"
+#include "modulo.hpp"
+#include "expt.hpp"
+#include "sqrt.hpp"
 
 
 #endif

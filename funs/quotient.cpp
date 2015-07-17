@@ -5,6 +5,7 @@
 #include <boost/variant.hpp>
 #include <stdexcept>
 #include <algorithm>
+#include <cmath>
 namespace HT
 {
     void quotient(PASTNode astnode, ParsersHelper& ph)
@@ -24,8 +25,10 @@ namespace HT
 
         astnode->type = Simple;
         astnode->token.tokenType = Complex;
-         astnode->token.info = ComplexType( boost::get<ComplexType>(secondCh->token.info).getRealR().getUp() / 
-            boost::get<ComplexType>(thirdCh->token.info).getRealR().getUp() );
+        if ( boost::get<ComplexType>(secondCh->token.info).toInt().isZero()) 
+          astnode->token.info = ComplexType(0); else
+         astnode->token.info = ComplexType( boost::get<ComplexType>(secondCh->token.info).toInt() / 
+            boost::get<ComplexType>(thirdCh->token.info).toInt() );
 
         astnode->remove();
     }

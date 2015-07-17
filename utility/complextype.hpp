@@ -34,6 +34,7 @@ class ComplexType:
         bool isReal() const;
         bool isRational() const;
         bool isInt() const;
+        BigInt toInt() const;
         RationalType getRealR() const;
         RationalType getImagR() const;
         double getRealD() const;

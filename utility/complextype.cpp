@@ -5,6 +5,7 @@
 #include "types/rational.hpp"
 #include "types/float.hpp"
 #include <iostream>
+#include <iomanip>
 #include <stdexcept>
 #include <string>
 #include <cmath>
@@ -236,7 +237,7 @@ std::ostream& operator << (std::ostream& o,  const ComplexType& c)
         o<< c.realr_;
     else
       if (std::fabs(c.reald_)>1e-18)
-      o<<c.reald_;
+      o<<std::setprecision(16)<<c.reald_;
 
     if (!c.isReal())
     {
@@ -246,7 +247,7 @@ std::ostream& operator << (std::ostream& o,  const ComplexType& c)
     if (c.exact())
       o<<c.imagr_;
     else
-      o<<c.imagd_;
+      o<<std::setprecision(16)<<c.imagd_;
 
     
       o<<'i';
@@ -271,5 +272,16 @@ ComplexType ComplexType::operator - ()
 
 bool ComplexType::isInt() const
 {
-    return isRational() && realr_.isInt();
+    return (isRational() && realr_.isInt()) || (isReal() && !exact() && std::floor(reald_)==reald_);
+}
+
+BigInt ComplexType::toInt() const
+{
+    if (exact())
+      return getRealR().getUp().setSign(getRealR().getSign());
+    else
+    {
+        auto k = RationalType(getRealD());
+      return k.getUp().setSign(k.getSign());
+    }
 }

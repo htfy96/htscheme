@@ -30,6 +30,7 @@ class RationalType: public
     bool isInt() const;
     BigInt getUp() const;
     BigInt getDown() const;
+    BigInt toInt() const;
 };
 
 

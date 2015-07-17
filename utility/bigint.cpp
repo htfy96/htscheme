@@ -337,6 +337,7 @@ BigInt& BigInt::operator *= (const BigInt& b)
 BigInt& BigInt::setSign(const bool sign)
 {
     nonNeg = sign;
+    if (isZero()) nonNeg=true;
     return *this;
 }
 
@@ -428,4 +429,7 @@ BigInt::operator double() const
     return res;
 }   
         
-
+bool BigInt::getSign() const
+{
+    return nonNeg;
+}
