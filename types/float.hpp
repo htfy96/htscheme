@@ -3,6 +3,6 @@
 #include "arch.hpp"
 #include <string>
 
-PARSER_DECLARATION(FloatParser, Float, double)
+PARSER_DECLARATION(FloatParser, Float, long double)
     
 #endif

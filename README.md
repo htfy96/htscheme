@@ -150,6 +150,7 @@ Type:1 Token.info:0 TokenType:0 //headNode
 **Warning** --DO NOT-- directly call `helper.parse(*ch[xx])` in `xxxASTParser::parse(ASTNode& parent, ParsersHelper& helper)` ! Instead, you should copy construct a new `ParsersHelper` to parse its children.
 
 
+
 ###Add your own Token Parser
 
  > An token parser is a struct with static member functions which judge whether a string is a token of this type then convert it to InfoType

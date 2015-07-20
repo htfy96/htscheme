@@ -28,10 +28,11 @@
 #include "rational.hpp"
 #include "float.hpp" //included but not used
 #include "identifier.hpp"
+#include "lambda.hpp"
 
 //Add your parser name here
 #define PARSERS_TUPLE (CharParser, BooleanParser, ComplexParser, \
-                        OpPlusParser, OpMinusParser, OpMultiplyParser, OpDivideParser , \
+                        OpPlusParser, OpMinusParser, OpMultiplyParser, OpDivideParser , OpDefineParser, OpMacroParser,OpLambdaParser, OpIfParser ,\
                         StringParser , LeftParenthesisParser, RightParenthesisParser, IdentifierParser)
 
 
@@ -47,8 +48,10 @@ BOOST_PP_TUPLE_REM_CTOR(PARSERS_TUPLE)
 
 
 typedef boost::variant<
+int,
 #include BOOST_PP_LOCAL_ITERATE()
-int 
+LambdaType,
+int
 > InfoTypes;
 struct Token
 {

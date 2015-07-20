@@ -2,6 +2,7 @@
 #include "all.hpp"
 #include "float.hpp"
 #include "rational.hpp"
+#include "utility/debug.hpp"
 #include <string>
 #include <algorithm>
 #include <sstream>
@@ -9,13 +10,17 @@ bool ComplexParser::judge( const std::string& token)
 {
     if (*token.rbegin() == 'i')
     {
-        size_t pos = std::min( token.rfind('+') , token.rfind('-'));
-        if (pos == token.npos) return 
-          FloatParser::judge(token.substr(0,token.size()-1)) ||
-              RationalParser::judge( token.substr(0,token.size()-1));
+        int pos = 0;
+        for (int i = token.size()-1; i>=0; --i)
+            if ((token[i] == '+' || token[i]=='-') && (!i || token[i-1]!='e'))
+            {
+                pos = i;
+                break;
+            }
 
         std::string s1 = token.substr(0,pos);
         std::string s2 = token.substr(pos,token.size()-pos-1);
+        LOG(s1<<"  s2: "<<s2)
         if (pos == 0) return RationalParser::judge(s2) || FloatParser::judge(s2); else
         return (FloatParser::judge(s1) || RationalParser::judge(s1)) && (
                     RationalParser::judge(s2) || FloatParser::judge(s2));

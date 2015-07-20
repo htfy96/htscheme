@@ -58,6 +58,22 @@ BigInt& BigInt::assign(const std::string& s)
     d.clear();
     len=0;
     nonNeg = true;
+
+    if (s=="+")
+    {
+        len=1;
+        d.push_back(1);
+        nonNeg = true;
+        return *this;
+    }
+
+    if (s=="-")
+    {
+        len=1;
+        d.push_back(1);
+        nonNeg = false;
+        return *this;
+    }
     int beg = -1;
     for(size_t i=0;i<s.size();++i)
         if (s[i]=='-')
@@ -337,6 +353,7 @@ BigInt& BigInt::operator *= (const BigInt& b)
 BigInt& BigInt::setSign(const bool sign)
 {
     nonNeg = sign;
+    if (isZero()) nonNeg=true;
     return *this;
 }
 
@@ -414,9 +431,9 @@ BigInt gcd(BigInt a, BigInt b)
     return a;
 }
 
-BigInt::operator double() const
+BigInt::operator long double() const
 {
-    double res=0;
+    long double res=0;
     for(int i=len-1;i>=0;--i)
     {
         res *= 10000;
@@ -428,4 +445,7 @@ BigInt::operator double() const
     return res;
 }   
         
-
+bool BigInt::getSign() const
+{
+    return nonNeg;
+}

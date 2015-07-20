@@ -33,7 +33,9 @@ void OpDivideASTParser::parse(PASTNode astnode, ParsersHelper& parserHelper)
                 myParserHelper.parse(an);
                 if (an->token.tokenType != Complex) 
                 throw std::runtime_error("parameter of - must be ComplexType");
+                LOG("divide "<<boost::get<ComplexType>(an->token.info))
                 astnode->token.info = boost::get<ComplexType>(astnode->token.info) / boost::get<ComplexType>(an->token.info);
+                LOG("after division"<<boost::get<ComplexType>(astnode->token.info))
                 });
 
     astnode->remove();

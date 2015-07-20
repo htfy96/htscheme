@@ -52,20 +52,34 @@ int main()
 
             ast.buildAST(to.tokens);
             LOG(ast)
+            AST newast(ast);
+            newast.astHead = newast.astHead->deepcopy();
+            LOG(newast)
+            for(auto c=ast.astHead->ch.begin();c!=ast.astHead->ch.end();++c)
+
+            {
+                //cout<<astnode<<endl;
+                //cout<<astnode->token.info<<endl;
+                auto &astnode =*c;
+                LOG("parsing@! "<< astnode->token.info)
+                    if (ph.symbols->size())LOG("INDEX" <<  ( * ph.symbols->begin()).second->ch.size())
+                      ph.parse(*c);
+
+                //std::cout<< astnode->token.info <<" ";
+                LOG("SIZE "<< ph.symbols->size() )
+            };
             std::for_each(ast.astHead->ch.begin(), ast.astHead->ch.end(), [&](std::shared_ptr<ASTNode> astnode)
                         {
-                        //cout<<astnode<<endl;
-                        //cout<<astnode->token.info<<endl;
-                        LOG("parsing@! "<< astnode->token.info)
-                        ph.parse(astnode);
-                        std::cout<< astnode->token.info <<" ";
+                        if (astnode->token.tokenType != Null) std::cout<< astnode->token.info << " ";
                         });
             if (ast.astHead->ch.size())
               std::cout<<std::endl;
+            LOG(ast);
             sent = "";
         } catch (std::runtime_error& re)
         {
             std::cout<<re.what() <<endl;
+            LOG(ast)
             sent = "";
         }
     }

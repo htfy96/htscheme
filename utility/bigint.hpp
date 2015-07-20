@@ -14,13 +14,11 @@ class BigInt
         std::vector<int32_t> d;
         size_t len;
         bool nonNeg;
-        bool isZero() const;
         BigInt& rawPlus(const BigInt& b);
         BigInt& rawMinus(const BigInt& b);
         std::pair<BigInt&,BigInt> divandmod(const BigInt& b);
         bool rawSmaller(const BigInt& b) const;
         bool rawGreater(const BigInt& b) const;
-        BigInt& setSign(const bool sign);
     public:
         BigInt(long long num);
         BigInt(const std::string& s);
@@ -48,10 +46,13 @@ class BigInt
         bool operator != (const BigInt& b) const;
         bool operator >= (const BigInt& b) const;
         bool operator <= (const BigInt& b) const;
-        explicit operator double() const;
+        explicit operator long double() const;
         template<typename CompareFunc> friend bool rawCompare(const BigInt& a, const BigInt& b);
         friend BigInt gcd(BigInt a, BigInt b);
         friend class RationalType;
+        BigInt& setSign(const bool sign);
+        bool getSign() const;
+        bool isZero() const;
 
 };
 

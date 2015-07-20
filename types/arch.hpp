@@ -16,6 +16,7 @@ using namespace std;
 //Add your TokenType Here
 enum TokenType
 {
+    Null,
     LeftParenthesis,
     RightParenthesis,
     OpPlus,
@@ -28,8 +29,12 @@ enum TokenType
     Boolean,
     Char,
     Complex,
-    Null,
-    Identifier
+    Identifier,
+    OpDefine,
+    OpMacro,
+    OpLambda,
+    OpIf,
+    Lambda
 };
 
 #define PARSER_DECLARATION(A_,B_,C_) PARSER_DECLARATION_SIMPLE(A_,B_,C_)

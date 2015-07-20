@@ -5,6 +5,7 @@
 
 bool RationalParser::judge( const std::string &token)
 {
+    if (token=="+" || token=="-") return true;
     size_t pos = token.find('/');
     if (pos != token.npos)
       return isSimpleInt(token.substr(0,pos)) && isSimpleInt(token.substr(pos+1));

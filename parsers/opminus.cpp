@@ -21,6 +21,7 @@ void OpMinusASTParser::parse(PASTNode astnode, ParsersHelper& parserHelper)
       throw std::runtime_error(" - operator must have at least one parameter ");
     auto myParserHelper(parserHelper);
     astnode->type = Simple;
+    astnode->token.tokenType = Complex;
     auto secondCh = ++astnode->ch.begin();
     myParserHelper.parse(*secondCh);
     if (astnode->ch.size()==2)

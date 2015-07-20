@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> c912b35... Implement Real-part and Imag-part
 #include "imagpart.hpp"
 #include "ast.hpp"
 #include "parsers.hpp"
@@ -22,6 +18,7 @@ namespace HT
         auto cast = boost::get<ComplexType>(secondCh->token.info);
 
         astnode->type = Simple;
+        astnode->token.tokenType = Complex;
         if (cast.exact())
           astnode->token.info = ComplexType(cast.getImagR());
         else
