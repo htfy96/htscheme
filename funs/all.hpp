@@ -22,6 +22,8 @@
 #include "modulo.hpp"
 #include "expt.hpp"
 #include "sqrt.hpp"
-
+#include "round.hpp"
+#include "gcd.hpp"
+#include "lcm.hpp"
 
 #endif

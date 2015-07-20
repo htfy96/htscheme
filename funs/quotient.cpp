@@ -29,7 +29,8 @@ namespace HT
           astnode->token.info = ComplexType(0); else
          astnode->token.info = ComplexType( boost::get<ComplexType>(secondCh->token.info).toInt() / 
             boost::get<ComplexType>(thirdCh->token.info).toInt() );
-
+        astnode->type = Simple;
+        astnode->token.tokenType = Complex;
         astnode->remove();
     }
 }

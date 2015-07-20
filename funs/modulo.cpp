@@ -54,7 +54,8 @@ namespace HT
                   }
               }
         }
-
+        astnode->type = Simple;
+        astnode->token.tokenType = Complex;
         astnode->remove();
     }
 }

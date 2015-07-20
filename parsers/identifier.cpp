@@ -29,7 +29,10 @@ namespace
         {"truncate", HT::truncate},
         {"modulo", HT::modulo},
         {"expt", HT::expt},
-        {"sqrt", HT::sqrt}
+        {"sqrt", HT::sqrt},
+        {"round", HT::round},
+        {"gcd", HT::gcd},
+        {"lcm", HT::lcm}
     };
 }
 

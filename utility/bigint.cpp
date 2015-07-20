@@ -58,6 +58,22 @@ BigInt& BigInt::assign(const std::string& s)
     d.clear();
     len=0;
     nonNeg = true;
+
+    if (s=="+")
+    {
+        len=1;
+        d.push_back(1);
+        nonNeg = true;
+        return *this;
+    }
+
+    if (s=="-")
+    {
+        len=1;
+        d.push_back(1);
+        nonNeg = false;
+        return *this;
+    }
     int beg = -1;
     for(size_t i=0;i<s.size();++i)
         if (s[i]=='-')
