@@ -17,7 +17,7 @@ void LambdaASTParser::parse(PASTNode astnode, ParsersHelper &parserHelper)
     auto c1=res.parameter.begin();
     auto c2=++astnode->ch.begin(); 
 
-    
+    auto bak = (*myparser.symbols);
     while (c1!=res.parameter.end())
     {
         myparser.parse(*c2);
@@ -30,6 +30,7 @@ void LambdaASTParser::parse(PASTNode astnode, ParsersHelper &parserHelper)
     *astnode = *res.code;
 
     myparser.parse(astnode);
+    (*myparser.symbols) = bak;
 }
     
 

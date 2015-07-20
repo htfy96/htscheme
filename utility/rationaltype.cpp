@@ -8,6 +8,7 @@
 #include <cstdlib>
 #include <cstring>
 #include <sstream>
+#include <cmath>
 
 RationalType::RationalType(): RationalType(0.0) {}
 RationalType::RationalType(const BigInt& num): RationalType(num,1) {}
@@ -100,14 +101,14 @@ std::ostream& operator <<(std::ostream& o, const RationalType& a)
     return o;
 }
 
-RationalType::operator double() const
+RationalType::operator long double() const
 {
-    return up_.operator double() / down_.operator double();
+    return up_.operator long double() / down_.operator long double();
 }
 
 namespace 
 {
-    std::pair<std::string, std::string> getUpAndDown(const double a)
+    std::pair<std::string, std::string> getUpAndDown(const long double a)
     {
         std::pair<std::string, std::string> ans;
         std::stringstream ss("");
@@ -144,11 +145,29 @@ namespace
     }
 }
 
-RationalType::RationalType(const double a):
-    up_(BigInt(getUpAndDown(a).first) ), down_( BigInt(getUpAndDown(a).second)) 
+RationalType::RationalType(double a):up_(1), down_(1)
 {
     //std::cout<< up_<<" "<<down_ <<std::endl;
+    bool si = a>=0;
+    a = std::fabs(a);
+    while (a != std::floor(a))
+    {
+        a*=2;
+        LOG(a)
+        down_*=2;
+    }
+    LOG("after div:"<<a);
+    while (a && a/2 == std::floor(a/2))
+    {
+        a/=2;
+        up_*=2;
+    }
+    LOG(a)
+    LOG( (long long)std::floor(a));
+    up_ *= BigInt(std::floor(a));
     reduce();
+    up_.setSign(si);
+    LOG(*this)
 }
 
 bool RationalType::getSign() const

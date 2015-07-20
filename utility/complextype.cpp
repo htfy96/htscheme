@@ -14,14 +14,14 @@ ComplexType::ComplexType(): ComplexType( RationalType(0) ) {}
 ComplexType::ComplexType(const RationalType& a): ComplexType( a , RationalType(0)) {}
 ComplexType::ComplexType(const RationalType& a, const RationalType& b):
     realr_(a),imagr_(b),exact_(true) {}
-ComplexType::ComplexType(const double a): ComplexType(a,0.0) {}
-ComplexType::ComplexType(const double a, const double b) : reald_(a), imagd_(b), exact_(false) {}
+ComplexType::ComplexType(const long double a): ComplexType(a,0.0) {}
+ComplexType::ComplexType(const long double a, const long double b) : reald_(a), imagd_(b), exact_(false) {}
 
-ComplexType::ComplexType(const RationalType& a, const double b):
-    reald_(static_cast<double>(a)), imagd_(b), exact_(false) {}
+ComplexType::ComplexType(const RationalType& a, const long double b):
+    reald_(static_cast<long double>(a)), imagd_(b), exact_(false) {}
 
-ComplexType::ComplexType(const double a, const RationalType& b):
-        reald_(a), imagd_(static_cast<double>(b)), exact_(false) {}
+ComplexType::ComplexType(const long double a, const RationalType& b):
+        reald_(a), imagd_(static_cast<long double>(b)), exact_(false) {}
 
 bool ComplexType::operator==(const ComplexType& b) const
 {
@@ -33,8 +33,8 @@ bool ComplexType::operator==(const ComplexType& b) const
 ComplexType& ComplexType::toinexact()
 {
     if (!exact_) return *this;
-    reald_ = static_cast<double> (realr_);
-    imagd_ = static_cast<double> (imagr_);
+    reald_ = static_cast<long double> (realr_);
+    imagd_ = static_cast<long double> (imagr_);
     exact_ = false;
     return *this;
 }
@@ -53,12 +53,12 @@ bool ComplexType::exact() const
     return exact_;
 }
 
-double ComplexType::getRealD() const
+long double ComplexType::getRealD() const
 {
     return reald_;
 }
 
-double ComplexType::getImagD() const
+long double ComplexType::getImagD() const
 {
     return imagd_;
 }
@@ -73,13 +73,13 @@ RationalType ComplexType::getImagR() const
     return imagr_;
 }
 
-ComplexType& ComplexType::setImagD(const double b)
+ComplexType& ComplexType::setImagD(const long double b)
 {
     imagd_ = b;
     return *this;
 }
 
-ComplexType& ComplexType::setRealD(const double b)
+ComplexType& ComplexType::setRealD(const long double b)
 {
     reald_ = b;
     return *this;
@@ -158,7 +158,7 @@ ComplexType& ComplexType::operator*= (const ComplexType& b)
         toinexact();
         ComplexType mid(b);
         mid.toinexact();
-        double oldreald(reald_);
+        long double oldreald(reald_);
 
         reald_ = reald_ * mid.reald_ - imagd_ * mid.imagd_;
         imagd_ = oldreald * mid.imagd_ + mid.reald_ * imagd_;
@@ -182,11 +182,11 @@ ComplexType& ComplexType::operator/= (const ComplexType& b)
         toinexact();
         ComplexType mid(b);
         mid.toinexact();
-        double oldreald(reald_);
-        double down =mid.reald_ * mid.reald_ + mid.imagd_ * mid.imagd_;
+        long double oldreald(reald_);
+        long double down =mid.reald_ * mid.reald_ + mid.imagd_ * mid.imagd_;
         reald_ = (reald_ * mid.reald_ + imagd_ * mid.imagd_) / down;
         imagd_ = (imagd_ * mid.reald_ - oldreald * mid.imagd_) / down;
-
+        LOG( reald_ <<" "<<imagd_)
         return *this;
     }
 }
@@ -196,20 +196,26 @@ std::istream& operator >> (std::istream& i, ComplexType& c)
     std::string s;
     i>>s;
     LOG(s)
-    size_t pos = std::min(s.rfind('+'), s.rfind('-'));
-    if (*s.rbegin() != 'i') pos = s.npos;
+        size_t pos = s.npos;
+    for (int i = s.size()-1; i>=0; --i)
+      if ((s[i] == '+' || s[i]=='-') && (!i || s[i-1]!='e'))
+      {
+          pos = i;
+          break;
+      }
+
+    if (*s.rbegin() != 'i')
+      if (RationalParser::judge(s))
+        c = ComplexType( RationalParser::get(s));
+      else 
+        c= ComplexType( FloatParser::get(s));
+    else
     if (pos == s.npos)
     {
-        if (*s.rbegin() != 'i')
-        if (RationalParser::judge(s))
-          c = ComplexType( RationalParser::get(s));
+        if (RationalParser::judge(s.substr(0,s.size()-1)))
+          c = ComplexType(RationalType(0), RationalParser::get(s.substr(0,s.size()-1)));
         else 
-          c= ComplexType( FloatParser::get(s));
-        else
-          if (RationalParser::judge(s.substr(0,s.size()-1)))
-            c = ComplexType(RationalType(0), RationalParser::get(s.substr(0,s.size()-1)));
-          else 
-            c= ComplexType(0.0, FloatParser::get(s.substr(0,s.size()-1)));
+          c= ComplexType(0.0, FloatParser::get(s.substr(0,s.size()-1)));
     }
     else
     {
@@ -218,8 +224,8 @@ std::istream& operator >> (std::istream& i, ComplexType& c)
         if (!s1.size() || RationalParser::judge(s1) )
           if (RationalParser::judge(s2))
             c= ComplexType(s1!="" ? RationalParser::get(s1) : RationalType(0)  , RationalParser::get(s2));
-        else
-          c = ComplexType(RationalParser::get(s1), FloatParser::get(s2));
+          else
+            c = ComplexType(RationalParser::get(s1), FloatParser::get(s2));
         else if (RationalParser::judge(s2))
           c= ComplexType( FloatParser::get(s1), RationalParser::get(s2));
         else
@@ -236,7 +242,7 @@ std::ostream& operator << (std::ostream& o,  const ComplexType& c)
     if (c.exact() && c.realr_ != 0)
         o<< c.realr_;
     else
-      if (std::fabs(c.reald_)>1e-18)
+      if (std::fabs(c.reald_)>1e-203)
       o<<std::setprecision(16)<<c.reald_;
 
     if (!c.isReal())

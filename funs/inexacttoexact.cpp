@@ -19,7 +19,8 @@ namespace HT
         auto cast = boost::get<ComplexType>(secondCh->token.info);
 
         astnode->type = Simple;
-        astnode->token.info = cast.toexact();
+        astnode->token.tokenType = Complex;
+        astnode->token.info = ComplexType(cast.toexact());
         astnode->remove();
     }
 
