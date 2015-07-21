@@ -118,6 +118,8 @@ void Tokenizer::parse(const std::list<std::string> & rawTokens)
     ParserVisitor parserVisitor;
     for_each(rawTokens.begin(), rawTokens.end(), [&](const std::string& rawToken)
                 {
+                if (rawToken!="\r")
+                {
                 parserVisitor.parse(rawToken);
                 if (!parserVisitor.ok) throw std::runtime_error("unrecognized token: `"+rawToken+"`");
                 Token token;
@@ -127,6 +129,7 @@ void Tokenizer::parse(const std::list<std::string> & rawTokens)
                 tokens.push_back(token);
                 if (token.tokenType == LeftParenthesis) ++dep;
                 if (token.tokenType == RightParenthesis) --dep;
+                }
                 }
             );
     complete &= (dep==0);

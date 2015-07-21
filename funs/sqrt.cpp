@@ -22,8 +22,26 @@ namespace HT
         astnode->token.tokenType = Complex;
         
         cast.toinexact();
-        if (cast.getRealD()<0)
-          throw std::runtime_error("the argument of sqrt must >=0");
+       if (cast == 0) 
+            astnode->token.info = ComplexType(0.0);
+        else
+        {
+            // (a+bi)^(c+di) =
+            // r1^c * e^(-d*theta1) * e^((thera1*c + dln(r1))i)
+            long double r1 = std::hypot(cast.getRealD(), cast.getImagD());
+            long double theta = std::atan2(cast.getImagD() , cast.getRealD());
+            long double c = 0.5;
+            long double d = 0;
+            
+            long double coef = std::pow(r1,c) * std::exp(-d * theta);
+            long double tmp = theta * c + d* std::log(r1);
+            LOG("r1"<<r1<<" theta"<<theta<<" c="<<c<<" d="<<d<<"  coef ="<<coef<<"  tmp="<<tmp)
+            astnode->token.info = 
+                ComplexType(
+                            coef * std::cos(tmp),
+                            coef * std::sin(tmp)
+                           );
+        }
         astnode->token.info = ComplexType( std::sqrt( cast.getRealD()) );
         astnode->remove();
     }
