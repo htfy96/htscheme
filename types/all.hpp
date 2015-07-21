@@ -31,8 +31,8 @@
 #include "lambda.hpp"
 
 //Add your parser name here
-#define PARSERS_TUPLE (CharParser, BooleanParser, ComplexParser, \
-                        OpPlusParser, OpMinusParser, OpMultiplyParser, OpDivideParser , OpDefineParser, OpMacroParser,OpLambdaParser, OpIfParser ,\
+#define PARSERS_TUPLE (CharParser, BooleanParser, \
+                        OpPlusParser, OpMinusParser, OpMultiplyParser, OpDivideParser , ComplexParser, OpDefineParser, OpMacroParser,OpLambdaParser, OpIfParser ,\
                         StringParser , LeftParenthesisParser, RightParenthesisParser, IdentifierParser)
 
 
