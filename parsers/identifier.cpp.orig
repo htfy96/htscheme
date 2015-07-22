@@ -16,15 +16,6 @@ namespace
         {"max", HT::max},
         {"min", HT::min},
         {"real-part", HT::realpart},
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {"imag-part",HT::imagpart},
-        {"exact->inexact",HT::exactToInexact},
-        {"inexact->exact", HT::inexactToExact}
-=======
-        {"imag-part",HT::imagpart}
->>>>>>> c912b35... Implement Real-part and Imag-part
-=======
         {"imag-part",HT::imagpart},
         {"exact->inexact",HT::exactToInexact},
         {"inexact->exact", HT::inexactToExact},
@@ -38,11 +29,14 @@ namespace
         {"truncate", HT::truncate},
         {"modulo", HT::modulo},
         {"expt", HT::expt},
+<<<<<<< HEAD
         {"sqrt", HT::sqrt},
         {"round", HT::round},
         {"gcd", HT::gcd},
         {"lcm", HT::lcm}
->>>>>>> test
+=======
+        {"sqrt", HT::sqrt}
+>>>>>>> cec19aa5e73cc23649fdeadf5fd92821ef5bfb3c
     };
 }
 

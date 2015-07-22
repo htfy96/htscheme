@@ -7,6 +7,10 @@
 #include <cmath>
 #include <stdexcept>
 #include <algorithm>
+<<<<<<< HEAD
+
+=======
+>>>>>>> cec19aa5e73cc23649fdeadf5fd92821ef5bfb3c
 namespace HT
 {
     void expt(PASTNode astnode, ParsersHelper& ph)
@@ -18,11 +22,19 @@ namespace HT
         auto & secondCh = *(++astnode->ch.begin());
         ph.parse(secondCh);
         ph.parse(thirdCh);
+<<<<<<< HEAD
         if (secondCh->token.tokenType!=Complex )
           throw std::runtime_error("The arguments of expt should be Complex");
         
         if (thirdCh->token.tokenType!=Complex )
           throw std::runtime_error("The arguments of expt should be Complex");
+=======
+        if (secondCh->token.tokenType!=Complex || !boost::get<ComplexType>(secondCh->token.info).isReal())
+          throw std::runtime_error("The arguments of expt should be Real");
+        
+        if (thirdCh->token.tokenType!=Complex || !boost::get<ComplexType>(thirdCh->token.info).isReal())
+          throw std::runtime_error("The arguments of expt should be Real");
+>>>>>>> cec19aa5e73cc23649fdeadf5fd92821ef5bfb3c
 
         astnode->type = Simple;
         astnode->token.tokenType = Complex;
@@ -31,6 +43,7 @@ namespace HT
         cast.toinexact();
         third.toinexact();
 
+<<<<<<< HEAD
         if (cast == 0) 
             astnode->token.info = ComplexType(0.0);
         else
@@ -52,6 +65,9 @@ namespace HT
                            );
         }
 
+=======
+        astnode->token.info = ComplexType( std::pow( cast.getRealD(), third.getRealD()));
+>>>>>>> cec19aa5e73cc23649fdeadf5fd92821ef5bfb3c
 
         
 

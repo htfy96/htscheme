@@ -236,10 +236,9 @@ std::istream& operator >> (std::istream& i, ComplexType& c)
 
 std::ostream& operator << (std::ostream& o,  const ComplexType& c)
 {
-    if ( (c.exact() && c.realr_ ==0 && c.imagr_==0) || (!c.exact() && c.reald_ ==0.0 && c.imagd_ ==0.0))
-      return o<<'0';
+  
 
-    if (c.exact() && c.realr_ != 0)
+    if (c.exact() )
         o<< c.realr_;
     else
       if (std::fabs(c.reald_)>1e-203)
