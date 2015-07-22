@@ -32,7 +32,7 @@ namespace HT
                     now = gcd( now, cast.toInt());
                     });
 
-        astnode->token.info = ComplexType(now);
+        astnode->token.info = ComplexType(now.setSign(true));
         astnode->type = Simple;
         astnode->token.tokenType = Complex;
         astnode->remove();

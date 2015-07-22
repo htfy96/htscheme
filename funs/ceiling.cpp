@@ -24,7 +24,7 @@ namespace HT
         astnode->token.info = ComplexType(
                     std::ceil(
                         cast.toinexact().getRealD()
-                        )).toexact();
+                        ));
         else
         {
             auto rat = cast.getRealR();

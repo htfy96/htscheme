@@ -22,7 +22,7 @@ namespace HT
         astnode->token.tokenType = Complex;
 
         if (!cast.exact())
-          astnode->token.info = ComplexType(std::floor(cast.getRealD())).toexact();
+          astnode->token.info = ComplexType(std::floor(cast.getRealD()));
         else
         {
             auto rat = cast.getRealR();

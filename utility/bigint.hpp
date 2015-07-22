@@ -7,6 +7,8 @@
 #include <cstddef>
 #include <utility>
 
+class BigInt;
+template<typename CompareFunc> bool rawCompare(const BigInt& a, const BigInt& b);
 
 class BigInt
 {
@@ -57,4 +59,14 @@ class BigInt
 };
 
 
+template<typename CompareFunc>
+bool rawCompare(const BigInt& a, const BigInt& b)
+{
+    CompareFunc com = CompareFunc();
+    if (a.len != b.len ) return com(a.len, b.len);
+    for (int i=a.len-1; i>=0; --i)
+      if (a.d[i] != b.d[i])
+        return com(a.d[i],b.d[i]);
+    return false;
+}
 #endif
