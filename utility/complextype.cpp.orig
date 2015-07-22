@@ -33,13 +33,8 @@ bool ComplexType::operator==(const ComplexType& b) const
 ComplexType& ComplexType::toinexact()
 {
     if (!exact_) return *this;
-<<<<<<< HEAD
-    reald_ = static_cast<double> (realr_);
-    imagd_ = static_cast<double> (imagr_);
-=======
     reald_ = static_cast<long double> (realr_);
     imagd_ = static_cast<long double> (imagr_);
->>>>>>> test
     exact_ = false;
     return *this;
 }
@@ -201,6 +196,7 @@ std::istream& operator >> (std::istream& i, ComplexType& c)
     std::string s;
     i>>s;
     LOG(s)
+<<<<<<< HEAD
         size_t pos = s.npos;
     for (int i = s.size()-1; i>=0; --i)
       if ((s[i] == '+' || s[i]=='-') && (!i || s[i-1]!='e'))
@@ -215,12 +211,25 @@ std::istream& operator >> (std::istream& i, ComplexType& c)
       else 
         c= ComplexType( FloatParser::get(s));
     else
+=======
+    size_t pos = std::min(s.rfind('+'), s.rfind('-'));
+    if (*s.rbegin() != 'i') pos = s.npos;
+>>>>>>> cec19aa5e73cc23649fdeadf5fd92821ef5bfb3c
     if (pos == s.npos)
     {
         if (RationalParser::judge(s.substr(0,s.size()-1)))
           c = ComplexType(RationalType(0), RationalParser::get(s.substr(0,s.size()-1)));
         else 
+<<<<<<< HEAD
           c= ComplexType(0.0, FloatParser::get(s.substr(0,s.size()-1)));
+=======
+          c= ComplexType( FloatParser::get(s));
+        else
+          if (RationalParser::judge(s.substr(0,s.size()-1)))
+            c = ComplexType(RationalType(0), RationalParser::get(s.substr(0,s.size()-1)));
+          else 
+            c= ComplexType(0.0, FloatParser::get(s.substr(0,s.size()-1)));
+>>>>>>> cec19aa5e73cc23649fdeadf5fd92821ef5bfb3c
     }
     else
     {
@@ -229,8 +238,13 @@ std::istream& operator >> (std::istream& i, ComplexType& c)
         if (!s1.size() || RationalParser::judge(s1) )
           if (RationalParser::judge(s2))
             c= ComplexType(s1!="" ? RationalParser::get(s1) : RationalType(0)  , RationalParser::get(s2));
+<<<<<<< HEAD
           else
             c = ComplexType(RationalParser::get(s1), FloatParser::get(s2));
+=======
+        else
+          c = ComplexType(RationalParser::get(s1), FloatParser::get(s2));
+>>>>>>> cec19aa5e73cc23649fdeadf5fd92821ef5bfb3c
         else if (RationalParser::judge(s2))
           c= ComplexType( FloatParser::get(s1), RationalParser::get(s2));
         else
@@ -247,7 +261,11 @@ std::ostream& operator << (std::ostream& o,  const ComplexType& c)
     if (c.exact() && c.realr_ != 0)
         o<< c.realr_;
     else
+<<<<<<< HEAD
       if (std::fabs(c.reald_)>1e-203)
+=======
+      if (std::fabs(c.reald_)>1e-18)
+>>>>>>> cec19aa5e73cc23649fdeadf5fd92821ef5bfb3c
       o<<std::setprecision(16)<<c.reald_;
 
     if (!c.isReal())

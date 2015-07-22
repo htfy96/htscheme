@@ -7,8 +7,6 @@
 #include <cmath>
 #include <stdexcept>
 #include <algorithm>
-
-namespace HT
 {
     void expt(PASTNode astnode, ParsersHelper& ph)
     {

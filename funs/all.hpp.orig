@@ -9,14 +9,6 @@
 #include "abs.hpp"
 #include "imagpart.hpp"
 #include "realpart.hpp"
-<<<<<<< HEAD
-<<<<<<< HEAD
-#include "exacttoinexact.hpp"
-#include "inexacttoexact.hpp"
-=======
->>>>>>> c912b35... Implement Real-part and Imag-part
-
-=======
 #include "exacttoinexact.hpp"
 #include "inexacttoexact.hpp"
 #include "quotient.hpp"
@@ -30,9 +22,12 @@
 #include "modulo.hpp"
 #include "expt.hpp"
 #include "sqrt.hpp"
+<<<<<<< HEAD
 #include "round.hpp"
 #include "gcd.hpp"
 #include "lcm.hpp"
->>>>>>> test
+=======
+
+>>>>>>> cec19aa5e73cc23649fdeadf5fd92821ef5bfb3c
 
 #endif
