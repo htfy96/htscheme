@@ -42,7 +42,6 @@ namespace HT
                             coef * std::sin(tmp)
                            );
         }
-        astnode->token.info = ComplexType( std::sqrt( cast.getRealD()) );
         astnode->remove();
     }
 

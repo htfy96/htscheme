@@ -44,7 +44,7 @@ bool RationalType::operator< (const RationalType& b) const
     if (up_.nonNeg && b.up_.nonNeg)
       return up_ * b.down_ < down_ * b.up_;
     else
-      return up_ * b.down_ > down_ * b.up_;
+      return rawCompare<std::greater<int32_t> >(up_ * b.down_ , down_ * b.up_);
 }
 
 RationalType& RationalType::operator+= (const RationalType& b)

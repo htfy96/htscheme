@@ -36,7 +36,7 @@ namespace HT
         
 
 
-        astnode->token.info = ComplexType(ans);
+        astnode->token.info = ComplexType(ans.setSign(true));
         astnode->type = Simple;
         astnode->token.tokenType = Complex;
         astnode->remove();
