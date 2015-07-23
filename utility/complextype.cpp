@@ -99,7 +99,7 @@ ComplexType& ComplexType::setRealR(const RationalType& b)
 
 bool ComplexType::isReal() const
 {
-    return exact_ ? imagr_==0 : imagd_ == 0.0;
+    return exact_ && imagr_==0 : imagd_ == 0.0;
 }
 
 bool ComplexType::isRational() const

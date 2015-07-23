@@ -7,6 +7,7 @@
 #include <cmath>
 #include <stdexcept>
 #include <algorithm>
+#include <complex>
 
 namespace HT
 {
@@ -38,18 +39,14 @@ namespace HT
         {
             // (a+bi)^(c+di) =
             // r1^c * e^(-d*theta1) * e^((thera1*c + dln(r1))i)
-            long double r1 = std::hypot(cast.getRealD(), cast.getImagD());
-            long double theta = std::atan2(cast.getImagD() , cast.getRealD());
-            long double c = third.getRealD();
-            long double d = third.getImagD();
-            
-            long double coef = std::pow(r1,c) * std::exp(-d * theta);
-            long double tmp = theta * c + d* std::log(r1);
-            LOG("r1"<<r1<<" theta"<<theta<<" c="<<c<<" d="<<d<<"  coef ="<<coef<<"  tmp="<<tmp)
+            std::complex<long double> a(cast.getRealD(), cast.getImagD());
+            std::complex<long double> b(third.getRealD(), third.getImagD());
+            auto ans = std::pow(a,b);
+    
             astnode->token.info = 
                 ComplexType(
-                            coef * std::cos(tmp),
-                            coef * std::sin(tmp)
+                            ans.real(),
+                            ans.imag()
                            );
         }
 

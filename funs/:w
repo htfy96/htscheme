@@ -15,8 +15,8 @@ namespace HT
           throw std::runtime_error("Expt can only have one parameter");
         auto & secondCh = *astnode->ch.rbegin();
         ph.parse(secondCh);
-        if (secondCh->token.tokenType != Complex)
-          throw std::runtime_error("The argument of sqrt must be complex");
+        if (secondCh->token.tokenType != Complex || ! boost::get<ComplexType>(secondCh->token.info).isReal())
+          throw std::runtime_error("The argument of sqrt must be real");
         auto cast = boost::get<ComplexType>(secondCh->token.info);
 
         astnode->type = Simple;
@@ -30,15 +30,15 @@ namespace HT
             // (a+bi)^(c+di) =
             // r1^c * e^(-d*theta1) * e^((thera1*c + dln(r1))i)
             std::complex<long double> a(cast.getRealD(), cast.getImagD());
-            auto ans = std::sqrt(a);
             astnode->token.info = 
                 ComplexType(
-                            ans.real(),
-                            ans.imag()
+                            coef * std::cos(tmp),
+                            coef * std::sin(tmp)
                            );
         }
         astnode->remove();
     }
+
 }
 
 

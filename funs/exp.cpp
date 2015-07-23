@@ -1,4 +1,4 @@
-#include "sqrt.hpp"
+#include "exp.hpp"
 #include "ast.hpp"
 #include "parsers.hpp"
 #include "types.hpp"
@@ -8,15 +8,15 @@
 #include <complex>
 namespace HT
 {
-    void sqrt(PASTNode astnode, ParsersHelper& ph)
+    void exp(PASTNode astnode, ParsersHelper& ph)
     {
         auto myParserHelper(ph);
         if (astnode->ch.size()!=2)
-          throw std::runtime_error("Expt can only have one parameter");
+          throw std::runtime_error("exp can only have one parameter");
         auto & secondCh = *astnode->ch.rbegin();
         ph.parse(secondCh);
         if (secondCh->token.tokenType != Complex)
-          throw std::runtime_error("The argument of sqrt must be complex");
+          throw std::runtime_error("The argument of exp must be complex");
         auto cast = boost::get<ComplexType>(secondCh->token.info);
 
         astnode->type = Simple;
@@ -30,7 +30,7 @@ namespace HT
             // (a+bi)^(c+di) =
             // r1^c * e^(-d*theta1) * e^((thera1*c + dln(r1))i)
             std::complex<long double> a(cast.getRealD(), cast.getImagD());
-            auto ans = std::sqrt(a);
+            auto ans = std::exp(a);
             astnode->token.info = 
                 ComplexType(
                             ans.real(),
