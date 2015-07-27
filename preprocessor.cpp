@@ -2,6 +2,7 @@
 #include <string>
 #include <cstddef>
 #include "preprocessor.hpp"
+#include "utility/debug.hpp"
 
 SchemeUnit::SchemeUnit()
 { }
@@ -18,7 +19,8 @@ void SchemeUnit::preprocess(std::istream& schemeStream)
     lines.clear();
     while (!schemeStream.eof())
     {
-        getline(schemeStream, buffer);
+        std::getline(schemeStream, buffer);
+        LOG("a line "<<buffer);
         processMultilineComment(buffer);
 
         stripSemiColon(buffer);

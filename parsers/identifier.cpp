@@ -45,7 +45,15 @@ namespace
         {"tan", HT::tan},
         {"asin", HT::asin},
         {"acos", HT::acos},
-        {"atan", HT::atan}
+        {"atan", HT::atan},
+        {"<", HT::l},
+        {"<=", HT::le},
+        {">", HT::g},
+        {">=", HT::ge},
+        {"magnitude", HT::magnitude},
+        {"angle", HT::angle},
+        {"exact?", HT::isexact},
+        {"inexact?", HT::isinexact}
     };
 }
 
