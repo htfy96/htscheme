@@ -9,6 +9,7 @@
 #include <string>
 #include <iomanip>
 #include <stdexcept>
+#include <fstream>
 #include <algorithm>
 #include <memory>
 
@@ -19,9 +20,36 @@ Tokenizer to;
 AST ast;
 ParsersHelper ph;
 char *buf;
+
+void initilize()
+{
+    try
+    {
+    const std::string basename = "base.ht";
+    std::ifstream f;
+    f.open(basename);
+    if (!f.good())
+      throw std::runtime_error("");
+    su.preprocess(f);
+    LOG("preprocess succeeded");
+    to.split(su.lines);
+    to.parse(to.rawTokens);
+    ast.buildAST(to.tokens);
+    std::for_each(ast.astHead->ch.begin(), ast.astHead->ch.end(), [&](PASTNode an)
+                {
+                ph.parse(an);
+                });
+    }
+    catch (...)
+    {
+        LOG("Initilization failed");
+    }
+}
 int main()
 {
     INDEBUG = false;
+
+    initilize();
     std::string sent = "";
     std::string line;
 

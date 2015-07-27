@@ -32,7 +32,28 @@ namespace
         {"sqrt", HT::sqrt},
         {"round", HT::round},
         {"gcd", HT::gcd},
-        {"lcm", HT::lcm}
+        {"lcm", HT::lcm},
+        {"integer?", HT::isinteger},
+        {"rational?", HT::isrational},
+        {"real?", HT::isreal},
+        {"complex?", HT::iscomplex},
+        {"number?", HT::isnumber},
+        {"exp", HT::exp},
+        {"log", HT::log},
+        {"sin", HT::sin},
+        {"cos", HT::cos},
+        {"tan", HT::tan},
+        {"asin", HT::asin},
+        {"acos", HT::acos},
+        {"atan", HT::atan},
+        {"<", HT::l},
+        {"<=", HT::le},
+        {">", HT::g},
+        {">=", HT::ge},
+        {"magnitude", HT::magnitude},
+        {"angle", HT::angle},
+        {"exact?", HT::isexact},
+        {"inexact?", HT::isinexact}
     };
 }
 

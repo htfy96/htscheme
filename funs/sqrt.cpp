@@ -5,6 +5,7 @@
 #include <boost/variant.hpp>
 #include <stdexcept>
 #include <cmath>
+#include <complex>
 namespace HT
 {
     void sqrt(PASTNode astnode, ParsersHelper& ph)
@@ -14,8 +15,8 @@ namespace HT
           throw std::runtime_error("Expt can only have one parameter");
         auto & secondCh = *astnode->ch.rbegin();
         ph.parse(secondCh);
-        if (secondCh->token.tokenType != Complex || ! boost::get<ComplexType>(secondCh->token.info).isReal())
-          throw std::runtime_error("The argument of sqrt must be real");
+        if (secondCh->token.tokenType != Complex)
+          throw std::runtime_error("The argument of sqrt must be complex");
         auto cast = boost::get<ComplexType>(secondCh->token.info);
 
         astnode->type = Simple;
@@ -28,23 +29,16 @@ namespace HT
         {
             // (a+bi)^(c+di) =
             // r1^c * e^(-d*theta1) * e^((thera1*c + dln(r1))i)
-            long double r1 = std::hypot(cast.getRealD(), cast.getImagD());
-            long double theta = std::atan2(cast.getImagD() , cast.getRealD());
-            long double c = 0.5;
-            long double d = 0;
-            
-            long double coef = std::pow(r1,c) * std::exp(-d * theta);
-            long double tmp = theta * c + d* std::log(r1);
-            LOG("r1"<<r1<<" theta"<<theta<<" c="<<c<<" d="<<d<<"  coef ="<<coef<<"  tmp="<<tmp)
+            std::complex<long double> a(cast.getRealD(), cast.getImagD());
+            auto ans = std::sqrt(a);
             astnode->token.info = 
                 ComplexType(
-                            coef * std::cos(tmp),
-                            coef * std::sin(tmp)
+                            ans.real(),
+                            ans.imag()
                            );
         }
         astnode->remove();
     }
-
 }
 
 

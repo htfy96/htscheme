@@ -25,5 +25,12 @@
 #include "round.hpp"
 #include "gcd.hpp"
 #include "lcm.hpp"
+#include "typesjudge.hpp"
+#include "exp.hpp"
+#include "log.hpp"
+#include "triangle.hpp"
+#include "inequality.hpp"
+#include "complexfun.hpp"
+#include "exactjudge.hpp"
 
 #endif
