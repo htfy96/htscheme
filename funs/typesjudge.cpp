@@ -2,19 +2,17 @@
 #include "ast.hpp"
 #include "parsers.hpp"
 #include "types.hpp"
+#include "all.hpp"
 #include <boost/variant.hpp>
 #include <stdexcept>
 namespace HT
 {
     void isinteger(PASTNode astnode, ParsersHelper& ph)
     {
-        auto myParserHelper(ph);
-        if (astnode->ch.size()!=2)
-          throw std::runtime_error("integer? can only have one parameter");
+        validateEach(astnode, ph, "integer?", 1, [](PASTNode an){return true;});
         astnode->type = Simple;
         astnode->token.tokenType = Boolean;
         auto & secondCh = *astnode->ch.rbegin();
-        ph.parse(secondCh);
         if (secondCh->token.tokenType != Complex)
         {
           astnode->token.info = BooleanType(false);

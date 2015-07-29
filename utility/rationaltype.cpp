@@ -30,6 +30,17 @@ void RationalType::reduce()
     up_.nonNeg = finalSign;
 }
 
+void RationalType::lazyreduce()
+{
+    if (down_.isZero()) throw std::runtime_error("division by zero");
+    bool finalSign = !(up_.nonNeg ^ down_.nonNeg);
+    if (up_.len>200 && !(rand()%5))
+    up_.nonNeg = true;
+    down_.nonNeg = true;
+    up_.nonNeg = finalSign;
+}
+
+
 bool RationalType::operator==(const RationalType& b) const
 {
     return up_ == b.up_ && down_ == b.down_;

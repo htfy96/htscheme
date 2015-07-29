@@ -53,7 +53,11 @@ namespace
         {"magnitude", HT::magnitude},
         {"angle", HT::angle},
         {"exact?", HT::isexact},
-        {"inexact?", HT::isinexact}
+        {"inexact?", HT::isinexact},
+        {"string=?", HT::isStrEqual},
+        {"string-ci=?", HT::isStrEqualCI},
+        {"char=?", HT::isCharEqual},
+        {"char-ci=?", HT::isCharEqualCI}
     };
 }
 

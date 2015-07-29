@@ -4,11 +4,13 @@
 #include "types.hpp"
 #include <boost/variant.hpp>
 #include <stdexcept>
+#include <cmath>
 #include <string>
 #include <complex>
 
 namespace 
 {
+    const double pi= std::acos(-1.0);
     void validate(PASTNode astnode, ParsersHelper& ph, const std::string& fnname)
     {
         auto myParserHelper(ph);
@@ -46,6 +48,7 @@ namespace HT
         astnode->token.tokenType = Complex;
 
         auto res = std::atan2(w.getImagD(), w.getRealD());
+        if (std::fabs(res+ pi)<1e-6) res = -res;
         astnode->token.info = ComplexType(res);
 
         astnode->remove();

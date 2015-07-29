@@ -237,11 +237,10 @@ std::istream& operator >> (std::istream& i, ComplexType& c)
 std::ostream& operator << (std::ostream& o,  const ComplexType& c)
 {
   
-
     if (c.exact() )
         o<< c.realr_;
     else
-      if (std::fabs(c.reald_)>1e-203)
+      if (std::fabs(c.reald_)>1e-203 || c.isReal())
       o<<std::setprecision(16)<<c.reald_;
 
     if (!c.isReal())

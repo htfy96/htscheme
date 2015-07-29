@@ -2,6 +2,7 @@
 #include "ast.hpp"
 #include "parsers.hpp"
 #include "types.hpp"
+#include "all.hpp"
 #include <boost/variant.hpp>
 #include <stdexcept>
 #include <cmath>
@@ -9,13 +10,11 @@ namespace HT
 {
     void truncate(PASTNode astnode, ParsersHelper& ph)
     {
-        auto myParserHelper(ph);
-        if (astnode->ch.size()!=2)
-          throw std::runtime_error("truncate can only have one parameter");
         auto & secondCh = *astnode->ch.rbegin();
-        ph.parse(secondCh);
-        if (secondCh->token.tokenType != Complex || ! boost::get<ComplexType>(secondCh->token.info).isReal())
-          throw std::runtime_error("The truncate of floor must be real");
+        validateEach(astnode, ph, "truncate", 1, [](PASTNode an)
+                    {
+                    return an->token.tokenType == Complex && boost::get<ComplexType>(an->token.info).isReal();
+                    });
         auto cast = boost::get<ComplexType>(secondCh->token.info);
 
         astnode->type = Simple;

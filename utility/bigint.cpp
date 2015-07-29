@@ -382,7 +382,7 @@ std::pair<BigInt&, BigInt> BigInt::divandmod(const BigInt& b)
     }
     while (len>1 && d[len-1]==0) --len;
 
-    return std::pair<BigInt&, BigInt> (*this, now);
+    return std::pair<BigInt&, BigInt> (*this, std::move(now));
 }
 
 

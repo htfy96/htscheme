@@ -1,0 +1,5 @@
+(define pi 3.141592653589793238462643383279)
+(define make-rectangular (lambda (x y) (+ x (* y 0+1i))))
+(define make-polar (lambda (x y) (+ (* x (cos y)) (* x (sin y) 0+1i))))
+(define positive? (lambda (x) (> x 0)))
+(define negative? (lambda (x) (< x 0)))

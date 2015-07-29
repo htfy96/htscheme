@@ -11,6 +11,7 @@ class RationalType: public
 {
     BigInt up_, down_;
     void reduce();
+    void lazyreduce();
     public:
     RationalType();
     RationalType(const BigInt& num);

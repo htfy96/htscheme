@@ -72,6 +72,7 @@ namespace HT
         astnode->token.tokenType = Complex;
         auto a = std::complex<long double>(cast.getRealD(), cast.getImagD());
         auto ans = std::asin(a);
+        if (a.imag() == 0.0 && a.real()>1.0) ans = std::complex<long double>(ans.real(), -ans.imag());
         astnode->token.info = ComplexType(
                     ans.real(),
                     ans.imag()
@@ -88,6 +89,7 @@ namespace HT
         LOG("arg of acos:"<<a)
         auto ans = std::acos(a);
         LOG("acos="<<ans)
+        if (a.imag() == 0.0 && a.real()>1.0) ans = std::complex<long double>(ans.real(), -ans.imag());
         astnode->token.info = ComplexType(
                     ans.real(),
                     ans.imag()

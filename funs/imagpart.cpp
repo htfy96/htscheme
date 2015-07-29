@@ -23,7 +23,7 @@ namespace HT
           astnode->token.info = ComplexType(cast.getImagR());
         else
           astnode->token.info = ComplexType(cast.getImagD());
-
+        LOG("imagd"<<cast.getImagD());
         astnode->remove();
     }
 

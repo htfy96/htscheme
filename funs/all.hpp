@@ -32,5 +32,7 @@
 #include "inequality.hpp"
 #include "complexfun.hpp"
 #include "exactjudge.hpp"
+#include "strequal.hpp"
+#include "charequal.hpp"
 
 #endif
