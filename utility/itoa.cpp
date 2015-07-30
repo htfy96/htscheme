@@ -10,4 +10,12 @@ namespace HT
         ss<<b;
         return ss.str();
     }
+
+
+    template<typename T> std::string toString(const T& b)
+    {
+        std::stringstream ss("");
+        ss<<b;
+        return ss.str();
+    }
 }

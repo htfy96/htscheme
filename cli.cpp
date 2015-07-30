@@ -47,7 +47,7 @@ void initilize()
 }
 int main()
 {
-    INDEBUG = true;
+    INDEBUG = false;
 
     initilize();
     std::string sent = "";
