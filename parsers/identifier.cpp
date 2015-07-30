@@ -58,6 +58,7 @@ namespace
         {"string-ci=?", HT::isStrEqualCI},
         {"char=?", HT::isCharEqual},
         {"char-ci=?", HT::isCharEqualCI}
+        {"lcm", HT::lcm}
     };
 }
 
